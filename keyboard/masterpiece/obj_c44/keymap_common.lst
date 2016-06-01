@@ -1,0 +1,448 @@
+   1               		.file	"keymap_common.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.keymap_key_to_keycode,"ax",@progbits
+  17               	.global	keymap_key_to_keycode
+  19               	keymap_key_to_keycode:
+  20               	.LFB5:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LBB2:
+  26               	.LSM1:
+  27 0000 E62F      		mov r30,r22
+  28               	.LVL1:
+  29 0002 F0E0      		ldi r31,lo8(0)
+  30               	.LVL2:
+  31 0004 EE0F      		lsl r30
+  32 0006 FF1F      		rol r31
+  33               	.LVL3:
+  34 0008 9CE0      		ldi r25,lo8(12)
+  35 000a 799F      		mul r23,r25
+  36 000c 9001      		movw r18,r0
+  37 000e 1124      		clr r1
+  38               	.LVL4:
+  39 0010 E20F      		add r30,r18
+  40 0012 F31F      		adc r31,r19
+  41 0014 90E6      		ldi r25,lo8(96)
+  42 0016 899F      		mul r24,r25
+  43 0018 C001      		movw r24,r0
+  44 001a 1124      		clr r1
+  45               	.LVL5:
+  46 001c E80F      		add r30,r24
+  47 001e F91F      		adc r31,r25
+  48 0020 E050      		subi r30,lo8(-(keymaps))
+  49 0022 F040      		sbci r31,hi8(-(keymaps))
+  50               	/* #APP */
+  51               	 ;  17 "keymap_common.c" 1
+  52 0024 2591      		lpm r18, Z+
+  53 0026 3491      		lpm r19, Z
+  54               		
+  55               	 ;  0 "" 2
+  56               	.LVL6:
+  57               	/* #NOAPP */
+  58               	.LBE2:
+  59               	.LSM2:
+  60 0028 C901      		movw r24,r18
+  61               	.LVL7:
+  62               	/* epilogue start */
+  63 002a 0895      		ret
+  64               	.LFE5:
+  66               		.section	.text.keymap_fn_to_action,"ax",@progbits
+  67               	.global	keymap_fn_to_action
+  69               	keymap_fn_to_action:
+  70               	.LFB6:
+  71               	.LSM3:
+  72               	.LVL8:
+  73               	/* prologue: function */
+  74               	/* frame size = 0 */
+  75               	.LBB3:
+  76               	.LSM4:
+  77 0000 FC01      		movw r30,r24
+  78               	.LVL9:
+  79 0002 EE0F      		lsl r30
+  80 0004 FF1F      		rol r31
+  81 0006 E050      		subi r30,lo8(-(fn_actions-384))
+  82 0008 F040      		sbci r31,hi8(-(fn_actions-384))
+  83               	/* #APP */
+  84               	 ;  23 "keymap_common.c" 1
+  85 000a 2591      		lpm r18, Z+
+  86 000c 3491      		lpm r19, Z
+  87               		
+  88               	 ;  0 "" 2
+  89               	.LVL10:
+  90               	/* #NOAPP */
+  91               	.LBE3:
+  92               	.LSM5:
+  93 000e C901      		movw r24,r18
+  94               	.LVL11:
+  95               	/* epilogue start */
+  96 0010 0895      		ret
+  97               	.LFE6:
+  99               		.section	.text.keymap_func_to_action,"ax",@progbits
+ 100               	.global	keymap_func_to_action
+ 102               	keymap_func_to_action:
+ 103               	.LFB7:
+ 104               	.LSM6:
+ 105               	.LVL12:
+ 106               	/* prologue: function */
+ 107               	/* frame size = 0 */
+ 108               	.LBB4:
+ 109               	.LSM7:
+ 110 0000 FC01      		movw r30,r24
+ 111               	.LVL13:
+ 112 0002 EE0F      		lsl r30
+ 113 0004 FF1F      		rol r31
+ 114 0006 E050      		subi r30,lo8(-(fn_actions))
+ 115 0008 F040      		sbci r31,hi8(-(fn_actions))
+ 116               	/* #APP */
+ 117               	 ;  29 "keymap_common.c" 1
+ 118 000a 2591      		lpm r18, Z+
+ 119 000c 3491      		lpm r19, Z
+ 120               		
+ 121               	 ;  0 "" 2
+ 122               	.LVL14:
+ 123               	/* #NOAPP */
+ 124               	.LBE4:
+ 125               	.LSM8:
+ 126 000e C901      		movw r24,r18
+ 127               	.LVL15:
+ 128               	/* epilogue start */
+ 129 0010 0895      		ret
+ 130               	.LFE7:
+ 132               		.section	.text.action_for_key,"ax",@progbits
+ 133               	.global	action_for_key
+ 135               	action_for_key:
+ 136               	.LFB8:
+ 137               	.LSM9:
+ 138               	.LVL16:
+ 139               	/* prologue: function */
+ 140               	/* frame size = 0 */
+ 141               	.LSM10:
+ 142 0000 0E94 0000 		call keymap_key_to_keycode
+ 143               	.LVL17:
+ 144 0004 9C01      		movw r18,r24
+ 145               	.LVL18:
+ 146               	.LSM11:
+ 147 0006 8050      		subi r24,lo8(-(-256))
+ 148 0008 9140      		sbci r25,hi8(-(-256))
+ 149 000a 8050      		subi r24,lo8(7936)
+ 150 000c 9F41      		sbci r25,hi8(7936)
+ 151 000e 00F4      		brsh .L8
+ 152               	.LBB11:
+ 153               	.LSM12:
+ 154 0010 C901      		movw r24,r18
+ 155 0012 9F71      		andi r25,hi8(8191)
+ 156 0014 00C0      		rjmp .L23
+ 157               	.L8:
+ 158               	.LBE11:
+ 159               	.LSM13:
+ 160 0016 C901      		movw r24,r18
+ 161 0018 8050      		subi r24,lo8(-(-8192))
+ 162 001a 9042      		sbci r25,hi8(-(-8192))
+ 163 001c 8050      		subi r24,lo8(4096)
+ 164 001e 9041      		sbci r25,hi8(4096)
+ 165 0020 00F4      		brsh .L10
+ 166               	.LSM14:
+ 167 0022 C901      		movw r24,r18
+ 168 0024 9F70      		andi r25,hi8(4095)
+ 169 0026 0E94 0000 		call keymap_func_to_action
+ 170               	.LVL19:
+ 171 002a 00C0      		rjmp .L23
+ 172               	.LVL20:
+ 173               	.L10:
+ 174               	.LSM15:
+ 175 002c C901      		movw r24,r18
+ 176 002e 8050      		subi r24,lo8(-(-12288))
+ 177 0030 9043      		sbci r25,hi8(-(-12288))
+ 178 0032 8050      		subi r24,lo8(4096)
+ 179 0034 9041      		sbci r25,hi8(4096)
+ 180 0036 00F4      		brsh .L11
+ 181               	.LBB12:
+ 182               	.LSM16:
+ 183 0038 C901      		movw r24,r18
+ 184 003a 9070      		andi r25,hi8(255)
+ 185 003c 906C      		ori r25,hi8(-16384)
+ 186 003e 00C0      		rjmp .L23
+ 187               	.L11:
+ 188               	.LBE12:
+ 189               	.LSM17:
+ 190 0040 C901      		movw r24,r18
+ 191 0042 8050      		subi r24,lo8(-(-24576))
+ 192 0044 9046      		sbci r25,hi8(-(-24576))
+ 193 0046 8050      		subi r24,lo8(4096)
+ 194 0048 9041      		sbci r25,hi8(4096)
+ 195 004a 00F0      		brlo .L49
+ 196               	.L12:
+ 197               	.LSM18:
+ 198 004c 37FF      		sbrs r19,7
+ 199 004e 00C0      		rjmp .L13
+ 200               	.L49:
+ 201               	.LBB13:
+ 202               	.LSM19:
+ 203 0050 C901      		movw r24,r18
+ 204 0052 906F      		ori r25,hi8(-4096)
+ 205 0054 00C0      		rjmp .L23
+ 206               	.L13:
+ 207               	.LBE13:
+ 208               	.LSM20:
+ 209 0056 C901      		movw r24,r18
+ 210 0058 805C      		subi r24,lo8(-(-192))
+ 211 005a 9040      		sbci r25,hi8(-(-192))
+ 212 005c 8097      		sbiw r24,32
+ 213 005e 00F4      		brsh .L14
+ 214               	.LSM21:
+ 215 0060 C901      		movw r24,r18
+ 216 0062 0E94 0000 		call keymap_fn_to_action
+ 217               	.LVL21:
+ 218 0066 00C0      		rjmp .L23
+ 219               	.LVL22:
+ 220               	.L14:
+ 221               	.LBB14:
+ 222               	.LBB15:
+ 223               	.LSM22:
+ 224 0068 2B3B      		cpi r18,187
+ 225 006a 3105      		cpc r19,__zero_reg__
+ 226 006c 00F4      		brsh .L22
+ 227 006e 283A      		cpi r18,168
+ 228 0070 3105      		cpc r19,__zero_reg__
+ 229 0072 00F4      		brsh .L20
+ 230 0074 253A      		cpi r18,165
+ 231 0076 3105      		cpc r19,__zero_reg__
+ 232 0078 00F4      		brsh .L19
+ 233 007a 2430      		cpi r18,4
+ 234 007c 3105      		cpc r19,__zero_reg__
+ 235 007e 00F4      		brsh .L18
+ 236 0080 2130      		cpi r18,1
+ 237 0082 3105      		cpc r19,__zero_reg__
+ 238 0084 01F0      		breq .+2
+ 239 0086 00C0      		rjmp .L16
+ 240 0088 00C0      		rjmp .L50
+ 241               	.L22:
+ 242 008a 203E      		cpi r18,224
+ 243 008c 3105      		cpc r19,__zero_reg__
+ 244 008e 00F4      		brsh .+2
+ 245 0090 00C0      		rjmp .L16
+ 246 0092 283E      		cpi r18,232
+ 247 0094 3105      		cpc r19,__zero_reg__
+ 248 0096 00F0      		brlo .L18
+ 249 0098 C901      		movw r24,r18
+ 250 009a 805F      		subi r24,lo8(-(-240))
+ 251 009c 9040      		sbci r25,hi8(-(-240))
+ 252 009e 4097      		sbiw r24,16
+ 253 00a0 00F0      		brlo .+2
+ 254 00a2 00C0      		rjmp .L16
+ 255 00a4 00C0      		rjmp .L51
+ 256               	.L18:
+ 257               	.LSM23:
+ 258 00a6 C901      		movw r24,r18
+ 259               	.LVL23:
+ 260 00a8 00C0      		rjmp .L23
+ 261               	.LVL24:
+ 262               	.L19:
+ 263               	.LSM24:
+ 264 00aa 253A      		cpi r18,165
+ 265 00ac 3105      		cpc r19,__zero_reg__
+ 266 00ae 01F4      		brne .L24
+ 267 00b0 81E8      		ldi r24,lo8(16513)
+ 268 00b2 90E4      		ldi r25,hi8(16513)
+ 269 00b4 00C0      		rjmp .L23
+ 270               	.L24:
+ 271 00b6 263A      		cpi r18,166
+ 272 00b8 3105      		cpc r19,__zero_reg__
+ 273 00ba 01F0      		breq .L26
+ 274 00bc 83E8      		ldi r24,lo8(16515)
+ 275 00be 90E4      		ldi r25,hi8(16515)
+ 276 00c0 00C0      		rjmp .L23
+ 277               	.L26:
+ 278 00c2 82E8      		ldi r24,lo8(16514)
+ 279 00c4 90E4      		ldi r25,hi8(16514)
+ 280 00c6 00C0      		rjmp .L23
+ 281               	.L20:
+ 282               	.LSM25:
+ 283 00c8 283A      		cpi r18,168
+ 284 00ca 3105      		cpc r19,__zero_reg__
+ 285 00cc 01F4      		brne .L27
+ 286 00ce 82EE      		ldi r24,lo8(17634)
+ 287 00d0 94E4      		ldi r25,hi8(17634)
+ 288 00d2 00C0      		rjmp .L23
+ 289               	.L27:
+ 290 00d4 293A      		cpi r18,169
+ 291 00d6 3105      		cpc r19,__zero_reg__
+ 292 00d8 01F4      		brne .L29
+ 293 00da 89EE      		ldi r24,lo8(17641)
+ 294 00dc 94E4      		ldi r25,hi8(17641)
+ 295 00de 00C0      		rjmp .L23
+ 296               	.L29:
+ 297 00e0 2A3A      		cpi r18,170
+ 298 00e2 3105      		cpc r19,__zero_reg__
+ 299 00e4 01F4      		brne .L30
+ 300 00e6 8AEE      		ldi r24,lo8(17642)
+ 301 00e8 94E4      		ldi r25,hi8(17642)
+ 302 00ea 00C0      		rjmp .L23
+ 303               	.L30:
+ 304 00ec 2B3A      		cpi r18,171
+ 305 00ee 3105      		cpc r19,__zero_reg__
+ 306 00f0 01F4      		brne .L31
+ 307 00f2 85EB      		ldi r24,lo8(17589)
+ 308 00f4 94E4      		ldi r25,hi8(17589)
+ 309 00f6 00C0      		rjmp .L23
+ 310               	.L31:
+ 311 00f8 2C3A      		cpi r18,172
+ 312 00fa 3105      		cpc r19,__zero_reg__
+ 313 00fc 01F4      		brne .L32
+ 314 00fe 86EB      		ldi r24,lo8(17590)
+ 315 0100 94E4      		ldi r25,hi8(17590)
+ 316 0102 00C0      		rjmp .L23
+ 317               	.L32:
+ 318 0104 2D3A      		cpi r18,173
+ 319 0106 3105      		cpc r19,__zero_reg__
+ 320 0108 01F4      		brne .L33
+ 321 010a 87EB      		ldi r24,lo8(17591)
+ 322 010c 94E4      		ldi r25,hi8(17591)
+ 323 010e 00C0      		rjmp .L23
+ 324               	.L33:
+ 325 0110 203B      		cpi r18,176
+ 326 0112 3105      		cpc r19,__zero_reg__
+ 327 0114 01F4      		brne .L34
+ 328 0116 8CEC      		ldi r24,lo8(17612)
+ 329 0118 94E4      		ldi r25,hi8(17612)
+ 330 011a 00C0      		rjmp .L23
+ 331               	.L34:
+ 332 011c 2E3A      		cpi r18,174
+ 333 011e 3105      		cpc r19,__zero_reg__
+ 334 0120 01F4      		brne .L35
+ 335 0122 8DEC      		ldi r24,lo8(17613)
+ 336 0124 94E4      		ldi r25,hi8(17613)
+ 337 0126 00C0      		rjmp .L23
+ 338               	.L35:
+ 339 0128 2F3A      		cpi r18,175
+ 340 012a 3105      		cpc r19,__zero_reg__
+ 341 012c 01F4      		brne .L36
+ 342 012e 83E8      		ldi r24,lo8(17795)
+ 343 0130 95E4      		ldi r25,hi8(17795)
+ 344 0132 00C0      		rjmp .L23
+ 345               	.L36:
+ 346 0134 213B      		cpi r18,177
+ 347 0136 3105      		cpc r19,__zero_reg__
+ 348 0138 01F4      		brne .L37
+ 349 013a 8AE8      		ldi r24,lo8(17802)
+ 350 013c 95E4      		ldi r25,hi8(17802)
+ 351 013e 00C0      		rjmp .L23
+ 352               	.L37:
+ 353 0140 223B      		cpi r18,178
+ 354 0142 3105      		cpc r19,__zero_reg__
+ 355 0144 01F4      		brne .L38
+ 356 0146 82E9      		ldi r24,lo8(17810)
+ 357 0148 95E4      		ldi r25,hi8(17810)
+ 358 014a 00C0      		rjmp .L23
+ 359               	.L38:
+ 360 014c 233B      		cpi r18,179
+ 361 014e 3105      		cpc r19,__zero_reg__
+ 362 0150 01F4      		brne .L39
+ 363 0152 84E9      		ldi r24,lo8(17812)
+ 364 0154 95E4      		ldi r25,hi8(17812)
+ 365 0156 00C0      		rjmp .L23
+ 366               	.L39:
+ 367 0158 243B      		cpi r18,180
+ 368 015a 3105      		cpc r19,__zero_reg__
+ 369 015c 01F4      		brne .L40
+ 370 015e 81E2      		ldi r24,lo8(17953)
+ 371 0160 96E4      		ldi r25,hi8(17953)
+ 372 0162 00C0      		rjmp .L23
+ 373               	.L40:
+ 374 0164 253B      		cpi r18,181
+ 375 0166 3105      		cpc r19,__zero_reg__
+ 376 0168 01F4      		brne .L41
+ 377 016a 83E2      		ldi r24,lo8(17955)
+ 378 016c 96E4      		ldi r25,hi8(17955)
+ 379 016e 00C0      		rjmp .L23
+ 380               	.L41:
+ 381 0170 263B      		cpi r18,182
+ 382 0172 3105      		cpc r19,__zero_reg__
+ 383 0174 01F4      		brne .L42
+ 384 0176 84E2      		ldi r24,lo8(17956)
+ 385 0178 96E4      		ldi r25,hi8(17956)
+ 386 017a 00C0      		rjmp .L23
+ 387               	.L42:
+ 388 017c 273B      		cpi r18,183
+ 389 017e 3105      		cpc r19,__zero_reg__
+ 390 0180 01F4      		brne .L43
+ 391 0182 85E2      		ldi r24,lo8(17957)
+ 392 0184 96E4      		ldi r25,hi8(17957)
+ 393 0186 00C0      		rjmp .L23
+ 394               	.L43:
+ 395 0188 283B      		cpi r18,184
+ 396 018a 3105      		cpc r19,__zero_reg__
+ 397 018c 01F4      		brne .L44
+ 398 018e 86E2      		ldi r24,lo8(17958)
+ 399 0190 96E4      		ldi r25,hi8(17958)
+ 400 0192 00C0      		rjmp .L23
+ 401               	.L44:
+ 402 0194 293B      		cpi r18,185
+ 403 0196 3105      		cpc r19,__zero_reg__
+ 404 0198 01F4      		brne .L45
+ 405 019a 87E2      		ldi r24,lo8(17959)
+ 406 019c 96E4      		ldi r25,hi8(17959)
+ 407 019e 00C0      		rjmp .L23
+ 408               	.L45:
+ 409 01a0 2A3B      		cpi r18,186
+ 410 01a2 3105      		cpc r19,__zero_reg__
+ 411 01a4 01F0      		breq .L46
+ 412 01a6 80E0      		ldi r24,lo8(17408)
+ 413 01a8 94E4      		ldi r25,hi8(17408)
+ 414 01aa 00C0      		rjmp .L23
+ 415               	.L46:
+ 416 01ac 8AE2      		ldi r24,lo8(17962)
+ 417 01ae 96E4      		ldi r25,hi8(17962)
+ 418 01b0 00C0      		rjmp .L23
+ 419               	.L51:
+ 420               	.LSM26:
+ 421 01b2 C901      		movw r24,r18
+ 422               	.LVL25:
+ 423 01b4 9065      		ori r25,hi8(20480)
+ 424 01b6 00C0      		rjmp .L23
+ 425               	.LVL26:
+ 426               	.L50:
+ 427               	.LSM27:
+ 428 01b8 81E0      		ldi r24,lo8(1)
+ 429 01ba 90E0      		ldi r25,hi8(1)
+ 430               	.LVL27:
+ 431 01bc 00C0      		rjmp .L23
+ 432               	.LVL28:
+ 433               	.L16:
+ 434               	.LSM28:
+ 435 01be 80E0      		ldi r24,lo8(0)
+ 436 01c0 90E0      		ldi r25,hi8(0)
+ 437               	.LVL29:
+ 438               	.L23:
+ 439               	.LVL30:
+ 440               	/* epilogue start */
+ 441               	.LBE15:
+ 442               	.LBE14:
+ 443               	.LSM29:
+ 444 01c2 0895      		ret
+ 445               	.LFE8:
+ 495               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 keymap_common.c
+C:\cygwin64\tmp/ccXkU7V7.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccXkU7V7.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccXkU7V7.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccXkU7V7.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccXkU7V7.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccXkU7V7.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccXkU7V7.s:19     .text.keymap_key_to_keycode:00000000 keymap_key_to_keycode
+C:\cygwin64\tmp/ccXkU7V7.s:69     .text.keymap_fn_to_action:00000000 keymap_fn_to_action
+C:\cygwin64\tmp/ccXkU7V7.s:102    .text.keymap_func_to_action:00000000 keymap_func_to_action
+C:\cygwin64\tmp/ccXkU7V7.s:135    .text.action_for_key:00000000 action_for_key
+
+UNDEFINED SYMBOLS
+keymaps
+fn_actions

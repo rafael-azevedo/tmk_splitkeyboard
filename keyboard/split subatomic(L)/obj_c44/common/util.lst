@@ -1,0 +1,494 @@
+   1               		.file	"util.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.bitpop,"ax",@progbits
+  17               	.global	bitpop
+  19               	bitpop:
+  20               	.LFB2:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25 0000 982F      		mov r25,r24
+  26               	.LSM1:
+  27 0002 20E0      		ldi r18,lo8(0)
+  28               	.LVL1:
+  29 0004 00C0      		rjmp .L2
+  30               	.LVL2:
+  31               	.L3:
+  32               	.LSM2:
+  33 0006 892F      		mov r24,r25
+  34 0008 8150      		subi r24,lo8(-(-1))
+  35 000a 9823      		and r25,r24
+  36               	.LSM3:
+  37 000c 2F5F      		subi r18,lo8(-(1))
+  38               	.LVL3:
+  39               	.L2:
+  40 000e 9923      		tst r25
+  41 0010 01F4      		brne .L3
+  42               	.LSM4:
+  43 0012 822F      		mov r24,r18
+  44               	/* epilogue start */
+  45 0014 0895      		ret
+  46               	.LFE2:
+  48               		.section	.text.bitpop16,"ax",@progbits
+  49               	.global	bitpop16
+  51               	bitpop16:
+  52               	.LFB3:
+  53               	.LSM5:
+  54               	.LVL4:
+  55               	/* prologue: function */
+  56               	/* frame size = 0 */
+  57 0000 9C01      		movw r18,r24
+  58               	.LSM6:
+  59 0002 40E0      		ldi r20,lo8(0)
+  60               	.LVL5:
+  61 0004 00C0      		rjmp .L6
+  62               	.LVL6:
+  63               	.L7:
+  64               	.LSM7:
+  65 0006 C901      		movw r24,r18
+  66 0008 0197      		sbiw r24,1
+  67 000a 2823      		and r18,r24
+  68 000c 3923      		and r19,r25
+  69               	.LSM8:
+  70 000e 4F5F      		subi r20,lo8(-(1))
+  71               	.LVL7:
+  72               	.L6:
+  73 0010 2115      		cp r18,__zero_reg__
+  74 0012 3105      		cpc r19,__zero_reg__
+  75 0014 01F4      		brne .L7
+  76               	.LSM9:
+  77 0016 842F      		mov r24,r20
+  78               	/* epilogue start */
+  79 0018 0895      		ret
+  80               	.LFE3:
+  82               		.section	.text.bitpop32,"ax",@progbits
+  83               	.global	bitpop32
+  85               	bitpop32:
+  86               	.LFB4:
+  87               	.LSM10:
+  88               	.LVL8:
+  89               	/* prologue: function */
+  90               	/* frame size = 0 */
+  91 0000 9B01      		movw r18,r22
+  92 0002 AC01      		movw r20,r24
+  93               	.LSM11:
+  94 0004 60E0      		ldi r22,lo8(0)
+  95               	.LVL9:
+  96 0006 00C0      		rjmp .L10
+  97               	.L11:
+  98               	.LSM12:
+  99 0008 DA01      		movw r26,r20
+ 100 000a C901      		movw r24,r18
+ 101 000c 0197      		sbiw r24,1
+ 102 000e A109      		sbc r26,__zero_reg__
+ 103 0010 B109      		sbc r27,__zero_reg__
+ 104 0012 2823      		and r18,r24
+ 105 0014 3923      		and r19,r25
+ 106 0016 4A23      		and r20,r26
+ 107 0018 5B23      		and r21,r27
+ 108               	.LSM13:
+ 109 001a 6F5F      		subi r22,lo8(-(1))
+ 110               	.L10:
+ 111 001c 2115      		cp r18,__zero_reg__
+ 112 001e 3105      		cpc r19,__zero_reg__
+ 113 0020 4105      		cpc r20,__zero_reg__
+ 114 0022 5105      		cpc r21,__zero_reg__
+ 115 0024 01F4      		brne .L11
+ 116               	.LSM14:
+ 117 0026 862F      		mov r24,r22
+ 118               	/* epilogue start */
+ 119 0028 0895      		ret
+ 120               	.LFE4:
+ 122               		.section	.text.biton,"ax",@progbits
+ 123               	.global	biton
+ 125               	biton:
+ 126               	.LFB5:
+ 127               	.LSM15:
+ 128               	.LVL10:
+ 129               	/* prologue: function */
+ 130               	/* frame size = 0 */
+ 131               	.LSM16:
+ 132 0000 282F      		mov r18,r24
+ 133 0002 2295      		swap r18
+ 134               	.LVL11:
+ 135 0004 2F70      		andi r18,lo8(15)
+ 136 0006 01F4      		brne .L14
+ 137 0008 282F      		mov r18,r24
+ 138 000a 80E0      		ldi r24,lo8(0)
+ 139               	.LVL12:
+ 140 000c 00C0      		rjmp .L15
+ 141               	.LVL13:
+ 142               	.L14:
+ 143 000e 84E0      		ldi r24,lo8(4)
+ 144               	.LVL14:
+ 145               	.L15:
+ 146               	.LSM17:
+ 147 0010 922F      		mov r25,r18
+ 148 0012 9695      		lsr r25
+ 149 0014 9695      		lsr r25
+ 150               	.LVL15:
+ 151 0016 01F4      		brne .L16
+ 152 0018 922F      		mov r25,r18
+ 153 001a 00C0      		rjmp .L17
+ 154               	.LVL16:
+ 155               	.L16:
+ 156 001c 8E5F      		subi r24,lo8(-(2))
+ 157               	.LVL17:
+ 158               	.L17:
+ 159               	.LSM18:
+ 160 001e 9695      		lsr r25
+ 161 0020 01F0      		breq .L18
+ 162 0022 8F5F      		subi r24,lo8(-(1))
+ 163               	.L18:
+ 164               	.LVL18:
+ 165               	.LSM19:
+ 166 0024 0895      		ret
+ 167               	.LFE5:
+ 169               		.section	.text.biton16,"ax",@progbits
+ 170               	.global	biton16
+ 172               	biton16:
+ 173               	.LFB6:
+ 174               	.LSM20:
+ 175               	.LVL19:
+ 176               	/* prologue: function */
+ 177               	/* frame size = 0 */
+ 178               	.LSM21:
+ 179 0000 292F      		mov r18,r25
+ 180               	.LVL20:
+ 181 0002 30E0      		ldi r19,lo8(0)
+ 182               	.LVL21:
+ 183 0004 2115      		cp r18,__zero_reg__
+ 184 0006 3105      		cpc r19,__zero_reg__
+ 185 0008 01F4      		brne .L21
+ 186 000a 9C01      		movw r18,r24
+ 187               	.LVL22:
+ 188 000c 80E0      		ldi r24,lo8(0)
+ 189               	.LVL23:
+ 190 000e 00C0      		rjmp .L22
+ 191               	.LVL24:
+ 192               	.L21:
+ 193 0010 88E0      		ldi r24,lo8(8)
+ 194               	.LVL25:
+ 195               	.L22:
+ 196               	.LSM22:
+ 197 0012 A901      		movw r20,r18
+ 198 0014 74E0      		ldi r23,4
+ 199 0016 5695      	1:	lsr r21
+ 200 0018 4795      		ror r20
+ 201 001a 7A95      		dec r23
+ 202 001c 01F4      		brne 1b
+ 203               	.LVL26:
+ 204 001e 4115      		cp r20,__zero_reg__
+ 205 0020 5105      		cpc r21,__zero_reg__
+ 206 0022 01F4      		brne .L23
+ 207 0024 A901      		movw r20,r18
+ 208 0026 00C0      		rjmp .L24
+ 209               	.LVL27:
+ 210               	.L23:
+ 211 0028 8C5F      		subi r24,lo8(-(4))
+ 212               	.LVL28:
+ 213               	.L24:
+ 214               	.LSM23:
+ 215 002a 9A01      		movw r18,r20
+ 216 002c 3695      		lsr r19
+ 217 002e 2795      		ror r18
+ 218 0030 3695      		lsr r19
+ 219 0032 2795      		ror r18
+ 220               	.LVL29:
+ 221 0034 2115      		cp r18,__zero_reg__
+ 222 0036 3105      		cpc r19,__zero_reg__
+ 223 0038 01F4      		brne .L25
+ 224 003a 9A01      		movw r18,r20
+ 225 003c 00C0      		rjmp .L26
+ 226               	.LVL30:
+ 227               	.L25:
+ 228 003e 8E5F      		subi r24,lo8(-(2))
+ 229               	.LVL31:
+ 230               	.L26:
+ 231               	.LSM24:
+ 232 0040 3695      		lsr r19
+ 233 0042 2795      		ror r18
+ 234 0044 232B      		or r18,r19
+ 235 0046 01F0      		breq .L27
+ 236 0048 8F5F      		subi r24,lo8(-(1))
+ 237               	.L27:
+ 238               	.LVL32:
+ 239               	.LSM25:
+ 240 004a 0895      		ret
+ 241               	.LFE6:
+ 243               		.section	.text.biton32,"ax",@progbits
+ 244               	.global	biton32
+ 246               	biton32:
+ 247               	.LFB7:
+ 248               	.LSM26:
+ 249               	.LVL33:
+ 250               	/* prologue: function */
+ 251               	/* frame size = 0 */
+ 252 0000 9B01      		movw r18,r22
+ 253 0002 AC01      		movw r20,r24
+ 254               	.LSM27:
+ 255 0004 AA27      		clr r26
+ 256 0006 BB27      		clr r27
+ 257               	.LVL34:
+ 258 0008 0097      		sbiw r24,0
+ 259 000a A105      		cpc r26,__zero_reg__
+ 260 000c B105      		cpc r27,__zero_reg__
+ 261 000e 01F4      		brne .L30
+ 262 0010 DA01      		movw r26,r20
+ 263 0012 C901      		movw r24,r18
+ 264 0014 60E0      		ldi r22,lo8(0)
+ 265               	.LVL35:
+ 266 0016 00C0      		rjmp .L31
+ 267               	.LVL36:
+ 268               	.L30:
+ 269 0018 60E1      		ldi r22,lo8(16)
+ 270               	.LVL37:
+ 271               	.L31:
+ 272               	.LSM28:
+ 273 001a 292F      		mov r18,r25
+ 274 001c 3A2F      		mov r19,r26
+ 275 001e 4B2F      		mov r20,r27
+ 276 0020 5527      		clr r21
+ 277               	.LVL38:
+ 278 0022 2115      		cp r18,__zero_reg__
+ 279 0024 3105      		cpc r19,__zero_reg__
+ 280 0026 4105      		cpc r20,__zero_reg__
+ 281 0028 5105      		cpc r21,__zero_reg__
+ 282 002a 01F4      		brne .L32
+ 283 002c 9C01      		movw r18,r24
+ 284 002e AD01      		movw r20,r26
+ 285 0030 00C0      		rjmp .L33
+ 286               	.LVL39:
+ 287               	.L32:
+ 288 0032 685F      		subi r22,lo8(-(8))
+ 289               	.LVL40:
+ 290               	.L33:
+ 291               	.LSM29:
+ 292 0034 DA01      		movw r26,r20
+ 293 0036 C901      		movw r24,r18
+ 294 0038 74E0      		ldi r23,4
+ 295 003a B695      	1:	lsr r27
+ 296 003c A795      		ror r26
+ 297 003e 9795      		ror r25
+ 298 0040 8795      		ror r24
+ 299 0042 7A95      		dec r23
+ 300 0044 01F4      		brne 1b
+ 301               	.LVL41:
+ 302 0046 0097      		sbiw r24,0
+ 303 0048 A105      		cpc r26,__zero_reg__
+ 304 004a B105      		cpc r27,__zero_reg__
+ 305 004c 01F4      		brne .L34
+ 306 004e DA01      		movw r26,r20
+ 307 0050 C901      		movw r24,r18
+ 308 0052 00C0      		rjmp .L35
+ 309               	.LVL42:
+ 310               	.L34:
+ 311 0054 6C5F      		subi r22,lo8(-(4))
+ 312               	.LVL43:
+ 313               	.L35:
+ 314               	.LSM30:
+ 315 0056 9C01      		movw r18,r24
+ 316 0058 AD01      		movw r20,r26
+ 317 005a F2E0      		ldi r31,2
+ 318 005c 5695      	1:	lsr r21
+ 319 005e 4795      		ror r20
+ 320 0060 3795      		ror r19
+ 321 0062 2795      		ror r18
+ 322 0064 FA95      		dec r31
+ 323 0066 01F4      		brne 1b
+ 324               	.LVL44:
+ 325 0068 2115      		cp r18,__zero_reg__
+ 326 006a 3105      		cpc r19,__zero_reg__
+ 327 006c 4105      		cpc r20,__zero_reg__
+ 328 006e 5105      		cpc r21,__zero_reg__
+ 329 0070 01F4      		brne .L36
+ 330 0072 9C01      		movw r18,r24
+ 331 0074 AD01      		movw r20,r26
+ 332 0076 00C0      		rjmp .L37
+ 333               	.LVL45:
+ 334               	.L36:
+ 335 0078 6E5F      		subi r22,lo8(-(2))
+ 336               	.LVL46:
+ 337               	.L37:
+ 338               	.LSM31:
+ 339 007a 5695      		lsr r21
+ 340 007c 4795      		ror r20
+ 341 007e 3795      		ror r19
+ 342 0080 2795      		ror r18
+ 343 0082 2115      		cp r18,__zero_reg__
+ 344 0084 3105      		cpc r19,__zero_reg__
+ 345 0086 4105      		cpc r20,__zero_reg__
+ 346 0088 5105      		cpc r21,__zero_reg__
+ 347 008a 01F0      		breq .L38
+ 348 008c 6F5F      		subi r22,lo8(-(1))
+ 349               	.L38:
+ 350               	.LSM32:
+ 351 008e 862F      		mov r24,r22
+ 352               	/* epilogue start */
+ 353 0090 0895      		ret
+ 354               	.LFE7:
+ 356               		.section	.text.bitrev,"ax",@progbits
+ 357               	.global	bitrev
+ 359               	bitrev:
+ 360               	.LFB8:
+ 361               	.LSM33:
+ 362               	.LVL47:
+ 363               	/* prologue: function */
+ 364               	/* frame size = 0 */
+ 365               	.LSM34:
+ 366 0000 282F      		mov r18,r24
+ 367 0002 2295      		swap r18
+ 368 0004 2F70      		andi r18,lo8(15)
+ 369 0006 8295      		swap r24
+ 370               	.LVL48:
+ 371 0008 807F      		andi r24,lo8(-16)
+ 372 000a 282B      		or r18,r24
+ 373               	.LSM35:
+ 374 000c 30E0      		ldi r19,lo8(0)
+ 375 000e C901      		movw r24,r18
+ 376               	.LVL49:
+ 377 0010 8C7C      		andi r24,lo8(204)
+ 378 0012 9070      		andi r25,hi8(204)
+ 379 0014 9595      		asr r25
+ 380 0016 8795      		ror r24
+ 381 0018 9595      		asr r25
+ 382 001a 8795      		ror r24
+ 383 001c 2373      		andi r18,lo8(51)
+ 384 001e 3070      		andi r19,hi8(51)
+ 385 0020 220F      		lsl r18
+ 386 0022 331F      		rol r19
+ 387 0024 220F      		lsl r18
+ 388 0026 331F      		rol r19
+ 389 0028 822B      		or r24,r18
+ 390               	.LVL50:
+ 391               	.LSM36:
+ 392 002a 282F      		mov r18,r24
+ 393 002c 30E0      		ldi r19,lo8(0)
+ 394 002e C901      		movw r24,r18
+ 395               	.LVL51:
+ 396 0030 8A7A      		andi r24,lo8(170)
+ 397 0032 9070      		andi r25,hi8(170)
+ 398 0034 9595      		asr r25
+ 399 0036 8795      		ror r24
+ 400 0038 2575      		andi r18,lo8(85)
+ 401 003a 3070      		andi r19,hi8(85)
+ 402 003c 220F      		lsl r18
+ 403 003e 331F      		rol r19
+ 404               	.LSM37:
+ 405 0040 822B      		or r24,r18
+ 406               	/* epilogue start */
+ 407 0042 0895      		ret
+ 408               	.LFE8:
+ 410               		.section	.text.bitrev16,"ax",@progbits
+ 411               	.global	bitrev16
+ 413               	bitrev16:
+ 414               	.LFB9:
+ 415               	.LSM38:
+ 416               	.LVL52:
+ 417 0000 0F93      		push r16
+ 418 0002 1F93      		push r17
+ 419               	/* prologue: function */
+ 420               	/* frame size = 0 */
+ 421 0004 192F      		mov r17,r25
+ 422               	.LVL53:
+ 423               	.LSM39:
+ 424 0006 0E94 0000 		call bitrev
+ 425               	.LVL54:
+ 426 000a 082F      		mov r16,r24
+ 427 000c 812F      		mov r24,r17
+ 428 000e 0E94 0000 		call bitrev
+ 429 0012 502F      		mov r21,r16
+ 430 0014 40E0      		ldi r20,lo8(0)
+ 431 0016 282F      		mov r18,r24
+ 432 0018 30E0      		ldi r19,lo8(0)
+ 433 001a 242B      		or r18,r20
+ 434 001c 352B      		or r19,r21
+ 435               	.LSM40:
+ 436 001e C901      		movw r24,r18
+ 437               	/* epilogue start */
+ 438 0020 1F91      		pop r17
+ 439               	.LVL55:
+ 440 0022 0F91      		pop r16
+ 441 0024 0895      		ret
+ 442               	.LFE9:
+ 444               		.section	.text.bitrev32,"ax",@progbits
+ 445               	.global	bitrev32
+ 447               	bitrev32:
+ 448               	.LFB10:
+ 449               	.LSM41:
+ 450               	.LVL56:
+ 451 0000 AF92      		push r10
+ 452 0002 BF92      		push r11
+ 453 0004 CF92      		push r12
+ 454 0006 DF92      		push r13
+ 455 0008 EF92      		push r14
+ 456 000a FF92      		push r15
+ 457 000c 0F93      		push r16
+ 458 000e 1F93      		push r17
+ 459               	/* prologue: function */
+ 460               	/* frame size = 0 */
+ 461 0010 7B01      		movw r14,r22
+ 462 0012 8C01      		movw r16,r24
+ 463               	.LSM42:
+ 464 0014 CB01      		movw r24,r22
+ 465 0016 0E94 0000 		call bitrev16
+ 466               	.LVL57:
+ 467 001a 5C01      		movw r10,r24
+ 468 001c 7801      		movw r14,r16
+ 469 001e 0027      		clr r16
+ 470 0020 1127      		clr r17
+ 471               	.LVL58:
+ 472 0022 C701      		movw r24,r14
+ 473 0024 0E94 0000 		call bitrev16
+ 474 0028 CC24      		clr r12
+ 475 002a DD24      		clr r13
+ 476 002c 6501      		movw r12,r10
+ 477 002e BB24      		clr r11
+ 478 0030 AA24      		clr r10
+ 479 0032 A0E0      		ldi r26,lo8(0)
+ 480 0034 B0E0      		ldi r27,hi8(0)
+ 481 0036 A82A      		or r10,r24
+ 482 0038 B92A      		or r11,r25
+ 483 003a CA2A      		or r12,r26
+ 484 003c DB2A      		or r13,r27
+ 485               	.LSM43:
+ 486 003e B501      		movw r22,r10
+ 487 0040 C601      		movw r24,r12
+ 488               	/* epilogue start */
+ 489 0042 1F91      		pop r17
+ 490 0044 0F91      		pop r16
+ 491 0046 FF90      		pop r15
+ 492 0048 EF90      		pop r14
+ 493 004a DF90      		pop r13
+ 494 004c CF90      		pop r12
+ 495 004e BF90      		pop r11
+ 496 0050 AF90      		pop r10
+ 497 0052 0895      		ret
+ 498               	.LFE10:
+ 588               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 util.c
+C:\cygwin64\tmp/ccM7PKoj.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccM7PKoj.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccM7PKoj.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccM7PKoj.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccM7PKoj.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccM7PKoj.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccM7PKoj.s:19     .text.bitpop:00000000 bitpop
+C:\cygwin64\tmp/ccM7PKoj.s:51     .text.bitpop16:00000000 bitpop16
+C:\cygwin64\tmp/ccM7PKoj.s:85     .text.bitpop32:00000000 bitpop32
+C:\cygwin64\tmp/ccM7PKoj.s:125    .text.biton:00000000 biton
+C:\cygwin64\tmp/ccM7PKoj.s:172    .text.biton16:00000000 biton16
+C:\cygwin64\tmp/ccM7PKoj.s:246    .text.biton32:00000000 biton32
+C:\cygwin64\tmp/ccM7PKoj.s:359    .text.bitrev:00000000 bitrev
+C:\cygwin64\tmp/ccM7PKoj.s:413    .text.bitrev16:00000000 bitrev16
+C:\cygwin64\tmp/ccM7PKoj.s:447    .text.bitrev32:00000000 bitrev32
+
+NO UNDEFINED SYMBOLS

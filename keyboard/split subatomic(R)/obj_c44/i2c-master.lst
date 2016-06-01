@@ -1,0 +1,262 @@
+   1               		.file	"i2c-master.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.i2c_master_init,"ax",@progbits
+  17               	.global	i2c_master_init
+  19               	i2c_master_init:
+  20               	.LFB3:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LSM1:
+  25 0000 1092 B900 		sts 185,__zero_reg__
+  26               	.LSM2:
+  27 0004 88E4      		ldi r24,lo8(72)
+  28 0006 8093 B800 		sts 184,r24
+  29               	/* epilogue start */
+  30               	.LSM3:
+  31 000a 0895      		ret
+  32               	.LFE3:
+  34               		.section	.text.i2c_master_start,"ax",@progbits
+  35               	.global	i2c_master_start
+  37               	i2c_master_start:
+  38               	.LFB4:
+  39               	.LSM4:
+  40               	.LVL0:
+  41               	/* prologue: function */
+  42               	/* frame size = 0 */
+  43 0000 982F      		mov r25,r24
+  44               	.LSM5:
+  45 0002 84EA      		ldi r24,lo8(-92)
+  46               	.LVL1:
+  47 0004 8093 BC00 		sts 188,r24
+  48 0008 20E0      		ldi r18,lo8(0)
+  49 000a 30E0      		ldi r19,hi8(0)
+  50               	.LVL2:
+  51 000c 00C0      		rjmp .L4
+  52               	.L6:
+  53               	.LBB10:
+  54               	.LBB11:
+  55               	.LSM6:
+  56 000e 2F5F      		subi r18,lo8(-(1))
+  57 0010 3F4F      		sbci r19,hi8(-(1))
+  58               	.L4:
+  59               	.LSM7:
+  60 0012 8091 BC00 		lds r24,188
+  61 0016 87FD      		sbrc r24,7
+  62 0018 00C0      		rjmp .L5
+  63 001a 283C      		cpi r18,200
+  64 001c 3105      		cpc r19,__zero_reg__
+  65 001e 01F4      		brne .L6
+  66               	.L5:
+  67               	.LBE11:
+  68               	.LBE10:
+  69               	.LSM8:
+  70 0020 8091 B900 		lds r24,185
+  71 0024 887F      		andi r24,lo8(-8)
+  72 0026 8830      		cpi r24,lo8(8)
+  73 0028 01F0      		breq .L7
+  74 002a 8091 B900 		lds r24,185
+  75 002e 887F      		andi r24,lo8(-8)
+  76 0030 8031      		cpi r24,lo8(16)
+  77 0032 01F0      		breq .L7
+  78 0034 91E0      		ldi r25,lo8(1)
+  79               	.LVL3:
+  80 0036 00C0      		rjmp .L8
+  81               	.LVL4:
+  82               	.L7:
+  83               	.LSM9:
+  84 0038 9093 BB00 		sts 187,r25
+  85               	.LSM10:
+  86 003c 84E8      		ldi r24,lo8(-124)
+  87 003e 8093 BC00 		sts 188,r24
+  88 0042 20E0      		ldi r18,lo8(0)
+  89 0044 30E0      		ldi r19,hi8(0)
+  90               	.LVL5:
+  91 0046 00C0      		rjmp .L9
+  92               	.L11:
+  93               	.LBB12:
+  94               	.LBB13:
+  95               	.LSM11:
+  96 0048 2F5F      		subi r18,lo8(-(1))
+  97 004a 3F4F      		sbci r19,hi8(-(1))
+  98               	.L9:
+  99               	.LSM12:
+ 100 004c 8091 BC00 		lds r24,188
+ 101 0050 87FD      		sbrc r24,7
+ 102 0052 00C0      		rjmp .L10
+ 103 0054 283C      		cpi r18,200
+ 104 0056 3105      		cpc r19,__zero_reg__
+ 105 0058 01F4      		brne .L11
+ 106               	.L10:
+ 107               	.LBE13:
+ 108               	.LBE12:
+ 109               	.LSM13:
+ 110 005a 8091 B900 		lds r24,185
+ 111 005e 887F      		andi r24,lo8(-8)
+ 112 0060 8831      		cpi r24,lo8(24)
+ 113 0062 01F4      		brne .L12
+ 114 0064 90E0      		ldi r25,lo8(0)
+ 115               	.LVL6:
+ 116 0066 00C0      		rjmp .L8
+ 117               	.LVL7:
+ 118               	.L12:
+ 119 0068 8091 B900 		lds r24,185
+ 120 006c 90E0      		ldi r25,lo8(0)
+ 121               	.LVL8:
+ 122 006e 887F      		andi r24,lo8(-8)
+ 123 0070 8034      		cpi r24,lo8(64)
+ 124 0072 01F4      		brne .L13
+ 125 0074 91E0      		ldi r25,lo8(1)
+ 126               	.L13:
+ 127 0076 81E0      		ldi r24,lo8(1)
+ 128 0078 9827      		eor r25,r24
+ 129               	.LVL9:
+ 130               	.L8:
+ 131               	.LSM14:
+ 132 007a 892F      		mov r24,r25
+ 133               	/* epilogue start */
+ 134 007c 0895      		ret
+ 135               	.LFE4:
+ 137               		.section	.text.i2c_master_stop,"ax",@progbits
+ 138               	.global	i2c_master_stop
+ 140               	i2c_master_stop:
+ 141               	.LFB5:
+ 142               	.LSM15:
+ 143               	/* prologue: function */
+ 144               	/* frame size = 0 */
+ 145               	.LSM16:
+ 146 0000 84E9      		ldi r24,lo8(-108)
+ 147 0002 8093 BC00 		sts 188,r24
+ 148 0006 20E0      		ldi r18,lo8(0)
+ 149 0008 30E0      		ldi r19,hi8(0)
+ 150               	.LVL10:
+ 151 000a 00C0      		rjmp .L16
+ 152               	.L18:
+ 153               	.LSM17:
+ 154 000c 2F5F      		subi r18,lo8(-(1))
+ 155 000e 3F4F      		sbci r19,hi8(-(1))
+ 156               	.L16:
+ 157               	.LSM18:
+ 158 0010 8091 BC00 		lds r24,188
+ 159 0014 84FD      		sbrc r24,4
+ 160 0016 00C0      		rjmp .L19
+ 161 0018 283C      		cpi r18,200
+ 162 001a 3105      		cpc r19,__zero_reg__
+ 163 001c 01F4      		brne .L18
+ 164               	.L19:
+ 165 001e 0895      		ret
+ 166               	.LFE5:
+ 168               		.section	.text.i2c_master_write,"ax",@progbits
+ 169               	.global	i2c_master_write
+ 171               	i2c_master_write:
+ 172               	.LFB6:
+ 173               	.LSM19:
+ 174               	.LVL11:
+ 175               	/* prologue: function */
+ 176               	/* frame size = 0 */
+ 177               	.LSM20:
+ 178 0000 8093 BB00 		sts 187,r24
+ 179               	.LSM21:
+ 180 0004 84E8      		ldi r24,lo8(-124)
+ 181               	.LVL12:
+ 182 0006 8093 BC00 		sts 188,r24
+ 183 000a 20E0      		ldi r18,lo8(0)
+ 184 000c 30E0      		ldi r19,hi8(0)
+ 185               	.LVL13:
+ 186 000e 00C0      		rjmp .L21
+ 187               	.L23:
+ 188               	.LBB14:
+ 189               	.LBB15:
+ 190               	.LSM22:
+ 191 0010 2F5F      		subi r18,lo8(-(1))
+ 192 0012 3F4F      		sbci r19,hi8(-(1))
+ 193               	.L21:
+ 194               	.LSM23:
+ 195 0014 8091 BC00 		lds r24,188
+ 196 0018 87FD      		sbrc r24,7
+ 197 001a 00C0      		rjmp .L22
+ 198 001c 283C      		cpi r18,200
+ 199 001e 3105      		cpc r19,__zero_reg__
+ 200 0020 01F4      		brne .L23
+ 201               	.L22:
+ 202               	.LBE15:
+ 203               	.LBE14:
+ 204               	.LSM24:
+ 205 0022 8091 B900 		lds r24,185
+ 206 0026 90E0      		ldi r25,lo8(0)
+ 207 0028 887F      		andi r24,lo8(-8)
+ 208 002a 8832      		cpi r24,lo8(40)
+ 209 002c 01F0      		breq .L24
+ 210 002e 91E0      		ldi r25,lo8(1)
+ 211               	.L24:
+ 212               	.LSM25:
+ 213 0030 892F      		mov r24,r25
+ 214               	/* epilogue start */
+ 215 0032 0895      		ret
+ 216               	.LFE6:
+ 218               		.section	.text.i2c_master_read,"ax",@progbits
+ 219               	.global	i2c_master_read
+ 221               	i2c_master_read:
+ 222               	.LFB7:
+ 223               	.LSM26:
+ 224               	.LVL14:
+ 225               	/* prologue: function */
+ 226               	/* frame size = 0 */
+ 227               	.LSM27:
+ 228 0000 26E0      		ldi r18,6
+ 229 0002 880F      	1:	lsl r24
+ 230 0004 991F      		rol r25
+ 231 0006 2A95      		dec r18
+ 232 0008 01F4      		brne 1b
+ 233               	.LVL15:
+ 234 000a 8468      		ori r24,lo8(-124)
+ 235 000c 8093 BC00 		sts 188,r24
+ 236 0010 20E0      		ldi r18,lo8(0)
+ 237 0012 30E0      		ldi r19,hi8(0)
+ 238               	.LVL16:
+ 239 0014 00C0      		rjmp .L27
+ 240               	.L29:
+ 241               	.LBB16:
+ 242               	.LBB17:
+ 243               	.LSM28:
+ 244 0016 2F5F      		subi r18,lo8(-(1))
+ 245 0018 3F4F      		sbci r19,hi8(-(1))
+ 246               	.L27:
+ 247               	.LSM29:
+ 248 001a 8091 BC00 		lds r24,188
+ 249 001e 87FD      		sbrc r24,7
+ 250 0020 00C0      		rjmp .L28
+ 251 0022 283C      		cpi r18,200
+ 252 0024 3105      		cpc r19,__zero_reg__
+ 253 0026 01F4      		brne .L29
+ 254               	.L28:
+ 255               	.LBE17:
+ 256               	.LBE16:
+ 257               	.LSM30:
+ 258 0028 8091 BB00 		lds r24,187
+ 259               	/* epilogue start */
+ 260               	.LSM31:
+ 261 002c 0895      		ret
+ 262               	.LFE7:
+ 320               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 i2c-master.c
+C:\cygwin64\tmp/ccEp3Obu.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccEp3Obu.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccEp3Obu.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccEp3Obu.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccEp3Obu.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccEp3Obu.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccEp3Obu.s:19     .text.i2c_master_init:00000000 i2c_master_init
+C:\cygwin64\tmp/ccEp3Obu.s:37     .text.i2c_master_start:00000000 i2c_master_start
+C:\cygwin64\tmp/ccEp3Obu.s:140    .text.i2c_master_stop:00000000 i2c_master_stop
+C:\cygwin64\tmp/ccEp3Obu.s:171    .text.i2c_master_write:00000000 i2c_master_write
+C:\cygwin64\tmp/ccEp3Obu.s:221    .text.i2c_master_read:00000000 i2c_master_read
+
+NO UNDEFINED SYMBOLS

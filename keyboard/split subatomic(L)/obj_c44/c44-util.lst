@@ -1,0 +1,153 @@
+   1               		.file	"c44-util.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.has_usb,"ax",@progbits
+  17               	.global	has_usb
+  19               	has_usb:
+  20               	.LFB101:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LSM1:
+  25 0000 E8ED      		ldi r30,lo8(216)
+  26 0002 F0E0      		ldi r31,hi8(216)
+  27 0004 8081      		ld r24,Z
+  28 0006 8061      		ori r24,lo8(16)
+  29 0008 8083      		st Z,r24
+  30               	.LBB31:
+  31               	.LBB32:
+  32               	.LBB33:
+  33               	.LBB34:
+  34               	.LSM2:
+  35 000a 8AE1      		ldi r24,lo8(26)
+  36               	.LVL0:
+  37               	/* #APP */
+  38               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  39 000c 8A95      		1: dec r24
+  40 000e 01F4      		brne 1b
+  41               	 ;  0 "" 2
+  42               	/* #NOAPP */
+  43               	.LBE34:
+  44               	.LBE33:
+  45               	.LBE32:
+  46               	.LBE31:
+  47               	.LSM3:
+  48 0010 8091 D900 		lds r24,217
+  49               	.LVL1:
+  50               	.LSM4:
+  51 0014 8170      		andi r24,lo8(1)
+  52               	/* epilogue start */
+  53 0016 0895      		ret
+  54               	.LFE101:
+  56               		.section	.text.setup_set_handedness,"ax",@progbits
+  57               	.global	setup_set_handedness
+  59               	setup_set_handedness:
+  60               	.LFB103:
+  61               	.LSM5:
+  62               	/* prologue: function */
+  63               	/* frame size = 0 */
+  64               	.LSM6:
+  65 0000 80E0      		ldi r24,lo8(EEMEM_isLeftHand)
+  66 0002 90E0      		ldi r25,hi8(EEMEM_isLeftHand)
+  67 0004 0E94 0000 		call __eerd_byte_m32u4
+  68 0008 1092 0000 		sts isLeftHand,__zero_reg__
+  69 000c 8823      		tst r24
+  70 000e 01F0      		breq .L5
+  71 0010 81E0      		ldi r24,lo8(1)
+  72 0012 8093 0000 		sts isLeftHand,r24
+  73               	.L5:
+  74 0016 0895      		ret
+  75               	.LFE103:
+  77               		.section	.text.setup_hardware,"ax",@progbits
+  78               	.global	setup_hardware
+  80               	setup_hardware:
+  81               	.LFB102:
+  82               	.LSM7:
+  83               	/* prologue: function */
+  84               	/* frame size = 0 */
+  85               	.LSM8:
+  86 0000 84B7      		in r24,84-32
+  87 0002 877F      		andi r24,lo8(-9)
+  88 0004 84BF      		out 84-32,r24
+  89               	.LSM9:
+  90 0006 88E1      		ldi r24,lo8(24)
+  91               	/* #APP */
+  92               	 ;  20 "c44-util.c" 1
+  93 0008 0FB6      		in __tmp_reg__, __SREG__
+  94 000a F894      		cli
+  95 000c 8093 6000 		sts 96, r24
+  96 0010 1092 6000 		sts 96, __zero_reg__
+  97 0014 0FBE      		out __SREG__,__tmp_reg__
+  98               		
+  99               	 ;  0 "" 2
+ 100               	/* #NOAPP */
+ 101               	.LBB35:
+ 102               	.LSM10:
+ 103 0016 80E0      		ldi r24,lo8(0)
+ 104 0018 90E0      		ldi r25,hi8(0)
+ 105 001a 20E8      		ldi r18,lo8(-128)
+ 106               	/* #APP */
+ 107               	 ;  23 "c44-util.c" 1
+ 108 001c 0FB6      		in __tmp_reg__,__SREG__
+ 109 001e F894      		cli
+ 110 0020 2093 6100 		sts 97, r18
+ 111 0024 8093 6100 		sts 97, r24
+ 112 0028 0FBE      		out __SREG__, __tmp_reg__
+ 113               	 ;  0 "" 2
+ 114               	/* #NOAPP */
+ 115               	.LBE35:
+ 116               	.LSM11:
+ 117 002a 0E94 0000 		call USB_Disable
+ 118               	.LSM12:
+ 119 002e 0E94 0000 		call USB_Init
+ 120               	.LBB36:
+ 121               	.LBB37:
+ 122               	.LBB38:
+ 123               	.LBB39:
+ 124               	.LSM13:
+ 125 0032 E2EE      		ldi r30,lo8(226)
+ 126 0034 F0E0      		ldi r31,hi8(226)
+ 127 0036 8081      		ld r24,Z
+ 128 0038 8460      		ori r24,lo8(4)
+ 129 003a 8083      		st Z,r24
+ 130               	/* epilogue start */
+ 131               	.LBE39:
+ 132               	.LBE38:
+ 133               	.LBE37:
+ 134               	.LBE36:
+ 135               	.LSM14:
+ 136 003c 0895      		ret
+ 137               	.LFE102:
+ 139               	.global	EEMEM_isLeftHand
+ 140               		.section	.eeprom,"aw",@progbits
+ 143               	EEMEM_isLeftHand:
+ 144 0000 01        		.byte	1
+ 145               	.global	isLeftHand
+ 146               		.section	.data.isLeftHand,"aw",@progbits
+ 149               	isLeftHand:
+ 150 0000 01        		.byte	1
+ 191               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 c44-util.c
+C:\cygwin64\tmp/ccPasytg.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccPasytg.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccPasytg.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccPasytg.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccPasytg.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccPasytg.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccPasytg.s:19     .text.has_usb:00000000 has_usb
+C:\cygwin64\tmp/ccPasytg.s:59     .text.setup_set_handedness:00000000 setup_set_handedness
+C:\cygwin64\tmp/ccPasytg.s:143    .eeprom:00000000 EEMEM_isLeftHand
+C:\cygwin64\tmp/ccPasytg.s:149    .data.isLeftHand:00000000 isLeftHand
+C:\cygwin64\tmp/ccPasytg.s:80     .text.setup_hardware:00000000 setup_hardware
+
+UNDEFINED SYMBOLS
+__eerd_byte_m32u4
+USB_Disable
+USB_Init
+__do_copy_data

@@ -1,0 +1,1794 @@
+   1               		.file	"HIDParser.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.USB_GetHIDReportItemInfo,"ax",@progbits
+  17               	.global	USB_GetHIDReportItemInfo
+  19               	USB_GetHIDReportItemInfo:
+  20               	.LFB18:
+  21               	.LSM0:
+  22               	.LVL0:
+  23 0000 CF92      		push r12
+  24 0002 DF92      		push r13
+  25 0004 EF92      		push r14
+  26 0006 FF92      		push r15
+  27 0008 0F93      		push r16
+  28 000a 1F93      		push r17
+  29 000c CF93      		push r28
+  30 000e DF93      		push r29
+  31               	/* prologue: function */
+  32               	/* frame size = 0 */
+  33 0010 6C01      		movw r12,r24
+  34 0012 EB01      		movw r28,r22
+  35               	.LSM1:
+  36 0014 6115      		cp r22,__zero_reg__
+  37 0016 7105      		cpc r23,__zero_reg__
+  38 0018 01F4      		brne .+2
+  39 001a 00C0      		rjmp .L2
+  40               	.LVL1:
+  41               	.LSM2:
+  42 001c 2885      		ldd r18,Y+8
+  43               	.LSM3:
+  44 001e E880      		ld r14,Y
+  45 0020 F980      		ldd r15,Y+1
+  46               	.LVL2:
+  47               	.LSM4:
+  48 0022 9D81      		ldd r25,Y+5
+  49 0024 9923      		tst r25
+  50 0026 01F0      		breq .L3
+  51               	.LVL3:
+  52               	.LSM5:
+  53 0028 F601      		movw r30,r12
+  54 002a 8081      		ld r24,Z
+  55 002c 9817      		cp r25,r24
+  56 002e 01F0      		breq .+2
+  57 0030 00C0      		rjmp .L2
+  58               	.LSM6:
+  59 0032 0894      		sec
+  60 0034 C11C      		adc r12,__zero_reg__
+  61 0036 D11C      		adc r13,__zero_reg__
+  62               	.LVL4:
+  63               	.L3:
+  64               	.LSM7:
+  65 0038 022F      		mov r16,r18
+  66               	.LVL5:
+  67 003a 10E0      		ldi r17,lo8(0)
+  68               	.LVL6:
+  69               	.LSM8:
+  70 003c 8AA1      		ldd r24,Y+34
+  71 003e 9BA1      		ldd r25,Y+35
+  72 0040 ACA1      		ldd r26,Y+36
+  73 0042 BDA1      		ldd r27,Y+37
+  74 0044 8EA3      		std Y+38,r24
+  75 0046 9FA3      		std Y+39,r25
+  76 0048 A8A7      		std Y+40,r26
+  77 004a B9A7      		std Y+41,r27
+  78               	.LSM9:
+  79 004c 1AA2      		std Y+34,__zero_reg__
+  80 004e 1BA2      		std Y+35,__zero_reg__
+  81 0050 1CA2      		std Y+36,__zero_reg__
+  82 0052 1DA2      		std Y+37,__zero_reg__
+  83 0054 41E0      		ldi r20,lo8(1)
+  84 0056 50E0      		ldi r21,hi8(1)
+  85 0058 60E0      		ldi r22,hlo8(1)
+  86 005a 70E0      		ldi r23,hhi8(1)
+  87               	.LVL7:
+  88 005c 00C0      		rjmp .L4
+  89               	.L6:
+  90               	.LSM10:
+  91 005e F701      		movw r30,r14
+  92 0060 93E0      		ldi r25,3
+  93 0062 F695      	1:	lsr r31
+  94 0064 E795      		ror r30
+  95 0066 9A95      		dec r25
+  96 0068 01F4      		brne 1b
+  97 006a EC0D      		add r30,r12
+  98 006c FD1D      		adc r31,r13
+  99 006e 8081      		ld r24,Z
+ 100 0070 90E0      		ldi r25,lo8(0)
+ 101 0072 9701      		movw r18,r14
+ 102 0074 2770      		andi r18,lo8(7)
+ 103 0076 3070      		andi r19,hi8(7)
+ 104 0078 00C0      		rjmp 2f
+ 105 007a 9595      	1:	asr r25
+ 106 007c 8795      		ror r24
+ 107 007e 2A95      	2:	dec r18
+ 108 0080 02F4      		brpl 1b
+ 109 0082 80FF      		sbrs r24,0
+ 110 0084 00C0      		rjmp .L5
+ 111               	.LSM11:
+ 112 0086 8AA1      		ldd r24,Y+34
+ 113 0088 9BA1      		ldd r25,Y+35
+ 114 008a ACA1      		ldd r26,Y+36
+ 115 008c BDA1      		ldd r27,Y+37
+ 116 008e 842B      		or r24,r20
+ 117 0090 952B      		or r25,r21
+ 118 0092 A62B      		or r26,r22
+ 119 0094 B72B      		or r27,r23
+ 120 0096 8AA3      		std Y+34,r24
+ 121 0098 9BA3      		std Y+35,r25
+ 122 009a ACA3      		std Y+36,r26
+ 123 009c BDA3      		std Y+37,r27
+ 124               	.L5:
+ 125               	.LSM12:
+ 126 009e 0894      		sec
+ 127 00a0 E11C      		adc r14,__zero_reg__
+ 128 00a2 F11C      		adc r15,__zero_reg__
+ 129               	.LSM13:
+ 130 00a4 440F      		lsl r20
+ 131 00a6 551F      		rol r21
+ 132 00a8 661F      		rol r22
+ 133 00aa 771F      		rol r23
+ 134 00ac 0150      		subi r16,lo8(-(-1))
+ 135 00ae 1040      		sbci r17,hi8(-(-1))
+ 136               	.LVL8:
+ 137               	.L4:
+ 138               	.LSM14:
+ 139 00b0 0115      		cp r16,__zero_reg__
+ 140 00b2 1105      		cpc r17,__zero_reg__
+ 141 00b4 01F4      		brne .L6
+ 142 00b6 81E0      		ldi r24,lo8(1)
+ 143 00b8 00C0      		rjmp .L7
+ 144               	.LVL9:
+ 145               	.L2:
+ 146 00ba 80E0      		ldi r24,lo8(0)
+ 147               	.LVL10:
+ 148               	.L7:
+ 149               	/* epilogue start */
+ 150               	.LSM15:
+ 151 00bc DF91      		pop r29
+ 152 00be CF91      		pop r28
+ 153 00c0 1F91      		pop r17
+ 154               	.LVL11:
+ 155 00c2 0F91      		pop r16
+ 156               	.LVL12:
+ 157 00c4 FF90      		pop r15
+ 158 00c6 EF90      		pop r14
+ 159               	.LVL13:
+ 160 00c8 DF90      		pop r13
+ 161 00ca CF90      		pop r12
+ 162               	.LVL14:
+ 163 00cc 0895      		ret
+ 164               	.LFE18:
+ 166               		.section	.text.USB_SetHIDReportItemInfo,"ax",@progbits
+ 167               	.global	USB_SetHIDReportItemInfo
+ 169               	USB_SetHIDReportItemInfo:
+ 170               	.LFB19:
+ 171               	.LSM16:
+ 172               	.LVL15:
+ 173 0000 8F92      		push r8
+ 174 0002 9F92      		push r9
+ 175 0004 AF92      		push r10
+ 176 0006 BF92      		push r11
+ 177 0008 CF92      		push r12
+ 178 000a DF92      		push r13
+ 179 000c EF92      		push r14
+ 180 000e FF92      		push r15
+ 181 0010 0F93      		push r16
+ 182 0012 1F93      		push r17
+ 183 0014 CF93      		push r28
+ 184 0016 DF93      		push r29
+ 185               	/* prologue: function */
+ 186               	/* frame size = 0 */
+ 187 0018 5C01      		movw r10,r24
+ 188 001a EB01      		movw r28,r22
+ 189               	.LSM17:
+ 190 001c 6115      		cp r22,__zero_reg__
+ 191 001e 7105      		cpc r23,__zero_reg__
+ 192 0020 01F4      		brne .+2
+ 193 0022 00C0      		rjmp .L15
+ 194               	.LVL16:
+ 195               	.LSM18:
+ 196 0024 9885      		ldd r25,Y+8
+ 197               	.LSM19:
+ 198 0026 6881      		ld r22,Y
+ 199 0028 7981      		ldd r23,Y+1
+ 200               	.LVL17:
+ 201               	.LSM20:
+ 202 002a 8D81      		ldd r24,Y+5
+ 203 002c 8823      		tst r24
+ 204 002e 01F0      		breq .L11
+ 205               	.LSM21:
+ 206 0030 F501      		movw r30,r10
+ 207 0032 8193      		st Z+,r24
+ 208 0034 5F01      		movw r10,r30
+ 209               	.L11:
+ 210               	.LSM22:
+ 211 0036 C92E      		mov r12,r25
+ 212               	.LVL18:
+ 213 0038 DD24      		clr r13
+ 214               	.LVL19:
+ 215               	.LSM23:
+ 216 003a 8AA1      		ldd r24,Y+34
+ 217 003c 9BA1      		ldd r25,Y+35
+ 218 003e ACA1      		ldd r26,Y+36
+ 219 0040 BDA1      		ldd r27,Y+37
+ 220 0042 8EA3      		std Y+38,r24
+ 221 0044 9FA3      		std Y+39,r25
+ 222 0046 A8A7      		std Y+40,r26
+ 223 0048 B9A7      		std Y+41,r27
+ 224 004a 51E0      		ldi r21,lo8(1)
+ 225 004c E52E      		mov r14,r21
+ 226 004e F12C      		mov r15,__zero_reg__
+ 227 0050 012D      		mov r16,__zero_reg__
+ 228 0052 112D      		mov r17,__zero_reg__
+ 229               	.LVL20:
+ 230               	.LSM24:
+ 231 0054 41E0      		ldi r20,lo8(1)
+ 232 0056 842E      		mov r8,r20
+ 233 0058 912C      		mov r9,__zero_reg__
+ 234 005a 00C0      		rjmp .L12
+ 235               	.L14:
+ 236 005c CB01      		movw r24,r22
+ 237 005e 8770      		andi r24,lo8(7)
+ 238 0060 9070      		andi r25,hi8(7)
+ 239 0062 9401      		movw r18,r8
+ 240 0064 00C0      		rjmp 2f
+ 241 0066 220F      	1:	lsl r18
+ 242 0068 331F      		rol r19
+ 243 006a 8A95      	2:	dec r24
+ 244 006c 02F4      		brpl 1b
+ 245 006e C901      		movw r24,r18
+ 246 0070 AA27      		clr r26
+ 247 0072 97FD      		sbrc r25,7
+ 248 0074 A095      		com r26
+ 249 0076 BA2F      		mov r27,r26
+ 250 0078 2AA1      		ldd r18,Y+34
+ 251 007a 3BA1      		ldd r19,Y+35
+ 252 007c 4CA1      		ldd r20,Y+36
+ 253 007e 5DA1      		ldd r21,Y+37
+ 254 0080 8223      		and r24,r18
+ 255 0082 9323      		and r25,r19
+ 256 0084 A423      		and r26,r20
+ 257 0086 B523      		and r27,r21
+ 258 0088 0097      		sbiw r24,0
+ 259 008a A105      		cpc r26,__zero_reg__
+ 260 008c B105      		cpc r27,__zero_reg__
+ 261 008e 01F0      		breq .L13
+ 262               	.LSM25:
+ 263 0090 FB01      		movw r30,r22
+ 264 0092 33E0      		ldi r19,3
+ 265 0094 F695      	1:	lsr r31
+ 266 0096 E795      		ror r30
+ 267 0098 3A95      		dec r19
+ 268 009a 01F4      		brne 1b
+ 269 009c EA0D      		add r30,r10
+ 270 009e FB1D      		adc r31,r11
+ 271 00a0 8081      		ld r24,Z
+ 272 00a2 8E29      		or r24,r14
+ 273 00a4 8083      		st Z,r24
+ 274               	.L13:
+ 275               	.LSM26:
+ 276 00a6 6F5F      		subi r22,lo8(-(1))
+ 277 00a8 7F4F      		sbci r23,hi8(-(1))
+ 278               	.LSM27:
+ 279 00aa EE0C      		lsl r14
+ 280 00ac FF1C      		rol r15
+ 281 00ae 001F      		rol r16
+ 282 00b0 111F      		rol r17
+ 283 00b2 0894      		sec
+ 284 00b4 C108      		sbc r12,__zero_reg__
+ 285 00b6 D108      		sbc r13,__zero_reg__
+ 286               	.LVL21:
+ 287               	.L12:
+ 288               	.LSM28:
+ 289 00b8 C114      		cp r12,__zero_reg__
+ 290 00ba D104      		cpc r13,__zero_reg__
+ 291 00bc 01F4      		brne .L14
+ 292               	.LVL22:
+ 293               	.L15:
+ 294               	/* epilogue start */
+ 295               	.LSM29:
+ 296 00be DF91      		pop r29
+ 297 00c0 CF91      		pop r28
+ 298               	.LVL23:
+ 299 00c2 1F91      		pop r17
+ 300 00c4 0F91      		pop r16
+ 301 00c6 FF90      		pop r15
+ 302 00c8 EF90      		pop r14
+ 303               	.LVL24:
+ 304 00ca DF90      		pop r13
+ 305               	.LVL25:
+ 306 00cc CF90      		pop r12
+ 307               	.LVL26:
+ 308 00ce BF90      		pop r11
+ 309 00d0 AF90      		pop r10
+ 310               	.LVL27:
+ 311 00d2 9F90      		pop r9
+ 312 00d4 8F90      		pop r8
+ 313 00d6 0895      		ret
+ 314               	.LFE19:
+ 316               		.section	.text.USB_GetHIDReportSize,"ax",@progbits
+ 317               	.global	USB_GetHIDReportSize
+ 319               	USB_GetHIDReportSize:
+ 320               	.LFB20:
+ 321               	.LSM30:
+ 322               	.LVL28:
+ 323               	/* prologue: function */
+ 324               	/* frame size = 0 */
+ 325               	.LSM31:
+ 326 0000 E42F      		mov r30,r20
+ 327 0002 F0E0      		ldi r31,lo8(0)
+ 328 0004 EE0F      		lsl r30
+ 329 0006 FF1F      		rol r31
+ 330 0008 EF56      		subi r30,lo8(-(913))
+ 331 000a FC4F      		sbci r31,hi8(-(913))
+ 332 000c E80F      		add r30,r24
+ 333 000e F91F      		adc r31,r25
+ 334 0010 DC01      		movw r26,r24
+ 335 0012 A057      		subi r26,lo8(-(912))
+ 336 0014 BC4F      		sbci r27,hi8(-(912))
+ 337 0016 90E0      		ldi r25,lo8(0)
+ 338               	.LVL29:
+ 339               	.L20:
+ 340               	.LBB2:
+ 341               	.LBB3:
+ 342               	.LSM32:
+ 343 0018 2081      		ld r18,Z
+ 344 001a 3181      		ldd r19,Z+1
+ 345               	.LSM33:
+ 346 001c 8C91      		ld r24,X
+ 347               	.LVL30:
+ 348 001e 8617      		cp r24,r22
+ 349 0020 01F4      		brne .L17
+ 350               	.LSM34:
+ 351 0022 40E0      		ldi r20,lo8(0)
+ 352 0024 50E0      		ldi r21,hi8(0)
+ 353               	.LVL31:
+ 354 0026 C901      		movw r24,r18
+ 355 0028 8770      		andi r24,lo8(7)
+ 356 002a 9070      		andi r25,hi8(7)
+ 357 002c 892B      		or r24,r25
+ 358 002e 01F0      		breq .L18
+ 359 0030 41E0      		ldi r20,lo8(1)
+ 360 0032 50E0      		ldi r21,hi8(1)
+ 361               	.L18:
+ 362 0034 63E0      		ldi r22,3
+ 363 0036 3695      	1:	lsr r19
+ 364 0038 2795      		ror r18
+ 365 003a 6A95      		dec r22
+ 366 003c 01F4      		brne 1b
+ 367               	.LVL32:
+ 368 003e 240F      		add r18,r20
+ 369 0040 351F      		adc r19,r21
+ 370 0042 00C0      		rjmp .L19
+ 371               	.LVL33:
+ 372               	.L17:
+ 373               	.LBE3:
+ 374               	.LSM35:
+ 375 0044 9F5F      		subi r25,lo8(-(1))
+ 376 0046 3796      		adiw r30,7
+ 377 0048 1796      		adiw r26,7
+ 378 004a 9A30      		cpi r25,lo8(10)
+ 379 004c 01F4      		brne .L20
+ 380 004e 20E0      		ldi r18,lo8(0)
+ 381 0050 30E0      		ldi r19,hi8(0)
+ 382               	.LVL34:
+ 383               	.L19:
+ 384               	.LBE2:
+ 385               	.LSM36:
+ 386 0052 C901      		movw r24,r18
+ 387               	/* epilogue start */
+ 388 0054 0895      		ret
+ 389               	.LFE20:
+ 391               		.section	.text.USB_ProcessHIDReport,"ax",@progbits
+ 392               	.global	USB_ProcessHIDReport
+ 394               	USB_ProcessHIDReport:
+ 395               	.LFB17:
+ 396               	.LSM37:
+ 397               	.LVL35:
+ 398 0000 2F92      		push r2
+ 399 0002 3F92      		push r3
+ 400 0004 4F92      		push r4
+ 401 0006 5F92      		push r5
+ 402 0008 6F92      		push r6
+ 403 000a 7F92      		push r7
+ 404 000c 8F92      		push r8
+ 405 000e 9F92      		push r9
+ 406 0010 AF92      		push r10
+ 407 0012 BF92      		push r11
+ 408 0014 CF92      		push r12
+ 409 0016 DF92      		push r13
+ 410 0018 EF92      		push r14
+ 411 001a FF92      		push r15
+ 412 001c 0F93      		push r16
+ 413 001e 1F93      		push r17
+ 414 0020 DF93      		push r29
+ 415 0022 CF93      		push r28
+ 416 0024 CDB7      		in r28,__SP_L__
+ 417 0026 DEB7      		in r29,__SP_H__
+ 418 0028 C959      		subi r28,lo8(-(-153))
+ 419 002a D040      		sbci r29,hi8(-(-153))
+ 420 002c 0FB6      		in __tmp_reg__,__SREG__
+ 421 002e F894      		cli
+ 422 0030 DEBF      		out __SP_H__,r29
+ 423 0032 0FBE      		out __SREG__,__tmp_reg__
+ 424 0034 CDBF      		out __SP_L__,r28
+ 425               	/* prologue: function */
+ 426               	/* frame size = 153 */
+ 427 0036 CF57      		subi r28,lo8(-129)
+ 428 0038 DF4F      		sbci r29,hi8(-129)
+ 429 003a 9983      		std Y+1,r25
+ 430 003c 8883      		st Y,r24
+ 431 003e C158      		subi r28,lo8(129)
+ 432 0040 D040      		sbci r29,hi8(129)
+ 433 0042 CD57      		subi r28,lo8(-131)
+ 434 0044 DF4F      		sbci r29,hi8(-131)
+ 435 0046 7983      		std Y+1,r23
+ 436 0048 6883      		st Y,r22
+ 437 004a C358      		subi r28,lo8(131)
+ 438 004c D040      		sbci r29,hi8(131)
+ 439 004e 1A01      		movw r2,r20
+ 440               	.LSM38:
+ 441 0050 E0E9      		ldi r30,lo8(912)
+ 442 0052 8E2E      		mov r8,r30
+ 443 0054 E3E0      		ldi r30,hi8(912)
+ 444 0056 9E2E      		mov r9,r30
+ 445               	.LVL36:
+ 446 0058 840E      		add r8,r20
+ 447 005a 951E      		adc r9,r21
+ 448               	.LSM39:
+ 449 005c 89ED      		ldi r24,lo8(985)
+ 450 005e 93E0      		ldi r25,hi8(985)
+ 451               	.LVL37:
+ 452 0060 DA01      		movw r26,r20
+ 453 0062 FC01      		movw r30,r24
+ 454 0064 1D92      		st X+,__zero_reg__
+ 455 0066 3197      		sbiw r30,1
+ 456 0068 01F4      		brne .-6
+ 457               	.LSM40:
+ 458 006a FE01      		movw r30,r28
+ 459 006c FB96      		adiw r30,59
+ 460 006e 8CE1      		ldi r24,lo8(28)
+ 461 0070 DF01      		movw r26,r30
+ 462 0072 1D92      		st X+,__zero_reg__
+ 463 0074 8A95      	        dec r24
+ 464 0076 01F4      		brne .-6
+ 465               	.LSM41:
+ 466 0078 87E0      		ldi r24,lo8(7)
+ 467 007a D401      		movw r26,r8
+ 468 007c 1D92      		st X+,__zero_reg__
+ 469 007e 8A95      	        dec r24
+ 470 0080 01F4      		brne .-6
+ 471               	.LSM42:
+ 472 0082 DA01      		movw r26,r20
+ 473 0084 A157      		subi r26,lo8(-(911))
+ 474 0086 BC4F      		sbci r27,hi8(-(911))
+ 475 0088 81E0      		ldi r24,lo8(1)
+ 476 008a 8C93      		st X,r24
+ 477               	.LBB4:
+ 478               	.LSM43:
+ 479 008c 9A01      		movw r18,r20
+ 480 008e 275B      		subi r18,lo8(-(841))
+ 481 0090 3C4F      		sbci r19,hi8(-(841))
+ 482 0092 E796      		adiw r28,117-62
+ 483 0094 3FAF      		std Y+63,r19
+ 484 0096 2EAF      		std Y+62,r18
+ 485 0098 E797      		sbiw r28,117-62
+ 486               	.LVL38:
+ 487               	.LBB5:
+ 488               	.LSM44:
+ 489 009a 405B      		subi r20,lo8(-(848))
+ 490 009c 5C4F      		sbci r21,hi8(-(848))
+ 491               	.LVL39:
+ 492 009e E596      		adiw r28,115-62
+ 493 00a0 5FAF      		std Y+63,r21
+ 494 00a2 4EAF      		std Y+62,r20
+ 495 00a4 E597      		sbiw r28,115-62
+ 496               	.LVL40:
+ 497               	.LSM45:
+ 498 00a6 C101      		movw r24,r2
+ 499 00a8 8857      		subi r24,lo8(-(904))
+ 500 00aa 9C4F      		sbci r25,hi8(-(904))
+ 501 00ac EF96      		adiw r28,125-62
+ 502 00ae 9FAF      		std Y+63,r25
+ 503 00b0 8EAF      		std Y+62,r24
+ 504 00b2 EF97      		sbiw r28,125-62
+ 505 00b4 6F01      		movw r12,r30
+ 506               	.LVL41:
+ 507 00b6 AA24      		clr r10
+ 508 00b8 BB24      		clr r11
+ 509               	.LVL42:
+ 510 00ba 60E0      		ldi r22,lo8(0)
+ 511               	.LVL43:
+ 512 00bc EB96      		adiw r28,119-60
+ 513 00be 1CAE      		std Y+60,__zero_reg__
+ 514 00c0 1DAE      		std Y+61,__zero_reg__
+ 515 00c2 1EAE      		std Y+62,__zero_reg__
+ 516 00c4 1FAE      		std Y+63,__zero_reg__
+ 517 00c6 EB97      		sbiw r28,119-60
+ 518 00c8 4424      		clr r4
+ 519 00ca 5524      		clr r5
+ 520 00cc 3201      		movw r6,r4
+ 521               	.LBE5:
+ 522               	.LBB6:
+ 523               	.LBB8:
+ 524               	.LSM46:
+ 525 00ce F101      		movw r30,r2
+ 526 00d0 EA52      		subi r30,lo8(-(982))
+ 527 00d2 FC4F      		sbci r31,hi8(-(982))
+ 528 00d4 C257      		subi r28,lo8(-142)
+ 529 00d6 DF4F      		sbci r29,hi8(-142)
+ 530 00d8 F983      		std Y+1,r31
+ 531 00da E883      		st Y,r30
+ 532 00dc CE58      		subi r28,lo8(142)
+ 533 00de D040      		sbci r29,hi8(142)
+ 534               	.LBE8:
+ 535               	.LBE6:
+ 536               	.LSM47:
+ 537 00e0 C856      		subi r28,lo8(-152)
+ 538 00e2 DF4F      		sbci r29,hi8(-152)
+ 539 00e4 D982      		std Y+1,r13
+ 540 00e6 C882      		st Y,r12
+ 541 00e8 C859      		subi r28,lo8(152)
+ 542 00ea D040      		sbci r29,hi8(152)
+ 543               	.LSM48:
+ 544 00ec 9601      		movw r18,r12
+ 545 00ee 245E      		subi r18,lo8(-(28))
+ 546 00f0 3F4F      		sbci r19,hi8(-(28))
+ 547 00f2 C057      		subi r28,lo8(-144)
+ 548 00f4 DF4F      		sbci r29,hi8(-144)
+ 549 00f6 3983      		std Y+1,r19
+ 550 00f8 2883      		st Y,r18
+ 551 00fa C059      		subi r28,lo8(144)
+ 552 00fc D040      		sbci r29,hi8(144)
+ 553               	.LSM49:
+ 554 00fe A101      		movw r20,r2
+ 555 0100 4852      		subi r20,lo8(-(984))
+ 556 0102 5C4F      		sbci r21,hi8(-(984))
+ 557 0104 CE56      		subi r28,lo8(-146)
+ 558 0106 DF4F      		sbci r29,hi8(-146)
+ 559 0108 5983      		std Y+1,r21
+ 560 010a 4883      		st Y,r20
+ 561 010c C259      		subi r28,lo8(146)
+ 562 010e D040      		sbci r29,hi8(146)
+ 563               	.LBB11:
+ 564               	.LSM50:
+ 565 0110 CC56      		subi r28,lo8(-148)
+ 566 0112 DF4F      		sbci r29,hi8(-148)
+ 567 0114 B983      		std Y+1,r27
+ 568 0116 A883      		st Y,r26
+ 569 0118 C459      		subi r28,lo8(148)
+ 570 011a D040      		sbci r29,hi8(148)
+ 571 011c C401      		movw r24,r8
+ 572 011e CA56      		subi r28,lo8(-150)
+ 573 0120 DF4F      		sbci r29,hi8(-150)
+ 574 0122 8882      		st Y,r8
+ 575 0124 C659      		subi r28,lo8(150)
+ 576 0126 D040      		sbci r29,hi8(150)
+ 577               	.LVL44:
+ 578 0128 C956      		subi r28,lo8(-151)
+ 579 012a DF4F      		sbci r29,hi8(-151)
+ 580 012c 9883      		st Y,r25
+ 581 012e C759      		subi r28,lo8(151)
+ 582 0130 D040      		sbci r29,hi8(151)
+ 583 0132 00C0      		rjmp .L24
+ 584               	.LVL45:
+ 585               	.L93:
+ 586               	.LBE11:
+ 587               	.LSM51:
+ 588 0134 CF57      		subi r28,lo8(-129)
+ 589 0136 DF4F      		sbci r29,hi8(-129)
+ 590 0138 A881      		ld r26,Y
+ 591 013a B981      		ldd r27,Y+1
+ 592 013c C158      		subi r28,lo8(129)
+ 593 013e D040      		sbci r29,hi8(129)
+ 594 0140 4D91      		ld r20,X+
+ 595               	.LVL46:
+ 596 0142 CF57      		subi r28,lo8(-129)
+ 597 0144 DF4F      		sbci r29,hi8(-129)
+ 598 0146 B983      		std Y+1,r27
+ 599 0148 A883      		st Y,r26
+ 600 014a C158      		subi r28,lo8(129)
+ 601 014c D040      		sbci r29,hi8(129)
+ 602               	.LVL47:
+ 603               	.LSM52:
+ 604 014e CD57      		subi r28,lo8(-131)
+ 605 0150 DF4F      		sbci r29,hi8(-131)
+ 606 0152 E881      		ld r30,Y
+ 607 0154 F981      		ldd r31,Y+1
+ 608 0156 C358      		subi r28,lo8(131)
+ 609 0158 D040      		sbci r29,hi8(131)
+ 610 015a 3197      		sbiw r30,1
+ 611 015c CD57      		subi r28,lo8(-131)
+ 612 015e DF4F      		sbci r29,hi8(-131)
+ 613 0160 F983      		std Y+1,r31
+ 614 0162 E883      		st Y,r30
+ 615 0164 C358      		subi r28,lo8(131)
+ 616 0166 D040      		sbci r29,hi8(131)
+ 617               	.LVL48:
+ 618               	.LSM53:
+ 619 0168 242F      		mov r18,r20
+ 620 016a 30E0      		ldi r19,lo8(0)
+ 621 016c C158      		subi r28,lo8(-127)
+ 622 016e DF4F      		sbci r29,hi8(-127)
+ 623 0170 3983      		std Y+1,r19
+ 624 0172 2883      		st Y,r18
+ 625 0174 CF57      		subi r28,lo8(127)
+ 626 0176 D040      		sbci r29,hi8(127)
+ 627 0178 2370      		andi r18,lo8(3)
+ 628 017a 3070      		andi r19,hi8(3)
+ 629 017c 2230      		cpi r18,2
+ 630 017e 3105      		cpc r19,__zero_reg__
+ 631 0180 01F4      		brne .+2
+ 632 0182 00C0      		rjmp .L27
+ 633 0184 2330      		cpi r18,3
+ 634 0186 3105      		cpc r19,__zero_reg__
+ 635 0188 01F0      		breq .L28
+ 636 018a 2130      		cpi r18,1
+ 637 018c 3105      		cpc r19,__zero_reg__
+ 638 018e 01F4      		brne .+2
+ 639 0190 00C0      		rjmp .L26
+ 640 0192 EE24      		clr r14
+ 641 0194 FF24      		clr r15
+ 642 0196 8701      		movw r16,r14
+ 643               	.LVL49:
+ 644 0198 00C0      		rjmp .L29
+ 645               	.L28:
+ 646               	.LSM54:
+ 647 019a CF57      		subi r28,lo8(-129)
+ 648 019c DF4F      		sbci r29,hi8(-129)
+ 649 019e A881      		ld r26,Y
+ 650 01a0 B981      		ldd r27,Y+1
+ 651 01a2 C158      		subi r28,lo8(129)
+ 652 01a4 D040      		sbci r29,hi8(129)
+ 653 01a6 1396      		adiw r26,3
+ 654 01a8 8C91      		ld r24,X
+ 655 01aa 90E0      		ldi r25,lo8(0)
+ 656 01ac A0E0      		ldi r26,lo8(0)
+ 657 01ae B0E0      		ldi r27,hi8(0)
+ 658 01b0 182F      		mov r17,r24
+ 659 01b2 0027      		clr r16
+ 660 01b4 FF24      		clr r15
+ 661 01b6 EE24      		clr r14
+ 662               	.LVL50:
+ 663 01b8 CF57      		subi r28,lo8(-129)
+ 664 01ba DF4F      		sbci r29,hi8(-129)
+ 665 01bc E881      		ld r30,Y
+ 666 01be F981      		ldd r31,Y+1
+ 667 01c0 C158      		subi r28,lo8(129)
+ 668 01c2 D040      		sbci r29,hi8(129)
+ 669 01c4 8281      		ldd r24,Z+2
+ 670 01c6 90E0      		ldi r25,lo8(0)
+ 671 01c8 A0E0      		ldi r26,lo8(0)
+ 672 01ca B0E0      		ldi r27,hi8(0)
+ 673 01cc DC01      		movw r26,r24
+ 674 01ce 9927      		clr r25
+ 675 01d0 8827      		clr r24
+ 676 01d2 E82A      		or r14,r24
+ 677 01d4 F92A      		or r15,r25
+ 678 01d6 0A2B      		or r16,r26
+ 679 01d8 1B2B      		or r17,r27
+ 680 01da 8081      		ld r24,Z
+ 681 01dc 90E0      		ldi r25,lo8(0)
+ 682 01de A0E0      		ldi r26,lo8(0)
+ 683 01e0 B0E0      		ldi r27,hi8(0)
+ 684 01e2 E82A      		or r14,r24
+ 685 01e4 F92A      		or r15,r25
+ 686 01e6 0A2B      		or r16,r26
+ 687 01e8 1B2B      		or r17,r27
+ 688 01ea F181      		ldd r31,Z+1
+ 689               	.LVL51:
+ 690 01ec CA57      		subi r28,lo8(-134)
+ 691 01ee DF4F      		sbci r29,hi8(-134)
+ 692 01f0 F883      		st Y,r31
+ 693 01f2 C658      		subi r28,lo8(134)
+ 694 01f4 D040      		sbci r29,hi8(134)
+ 695 01f6 CB57      		subi r28,lo8(-133)
+ 696 01f8 DF4F      		sbci r29,hi8(-133)
+ 697 01fa 1882      		st Y,__zero_reg__
+ 698 01fc C558      		subi r28,lo8(133)
+ 699 01fe D040      		sbci r29,hi8(133)
+ 700 0200 CB57      		subi r28,lo8(-133)
+ 701 0202 DF4F      		sbci r29,hi8(-133)
+ 702 0204 E881      		ld r30,Y
+ 703 0206 F981      		ldd r31,Y+1
+ 704 0208 C558      		subi r28,lo8(133)
+ 705 020a D040      		sbci r29,hi8(133)
+ 706 020c CF01      		movw r24,r30
+ 707 020e A0E0      		ldi r26,lo8(0)
+ 708 0210 B0E0      		ldi r27,hi8(0)
+ 709 0212 E82A      		or r14,r24
+ 710 0214 F92A      		or r15,r25
+ 711 0216 0A2B      		or r16,r26
+ 712 0218 1B2B      		or r17,r27
+ 713               	.LSM55:
+ 714 021a CD57      		subi r28,lo8(-131)
+ 715 021c DF4F      		sbci r29,hi8(-131)
+ 716 021e 8881      		ld r24,Y
+ 717 0220 9981      		ldd r25,Y+1
+ 718 0222 C358      		subi r28,lo8(131)
+ 719 0224 D040      		sbci r29,hi8(131)
+ 720 0226 0497      		sbiw r24,4
+ 721 0228 CD57      		subi r28,lo8(-131)
+ 722 022a DF4F      		sbci r29,hi8(-131)
+ 723 022c 9983      		std Y+1,r25
+ 724 022e 8883      		st Y,r24
+ 725 0230 C358      		subi r28,lo8(131)
+ 726 0232 D040      		sbci r29,hi8(131)
+ 727               	.LVL52:
+ 728               	.LSM56:
+ 729 0234 CF57      		subi r28,lo8(-129)
+ 730 0236 DF4F      		sbci r29,hi8(-129)
+ 731 0238 A881      		ld r26,Y
+ 732 023a B981      		ldd r27,Y+1
+ 733 023c C158      		subi r28,lo8(129)
+ 734 023e D040      		sbci r29,hi8(129)
+ 735 0240 1496      		adiw r26,4
+ 736 0242 00C0      		rjmp .L99
+ 737               	.LVL53:
+ 738               	.L27:
+ 739               	.LSM57:
+ 740 0244 CF57      		subi r28,lo8(-129)
+ 741 0246 DF4F      		sbci r29,hi8(-129)
+ 742 0248 E881      		ld r30,Y
+ 743 024a F981      		ldd r31,Y+1
+ 744 024c C158      		subi r28,lo8(129)
+ 745 024e D040      		sbci r29,hi8(129)
+ 746 0250 F181      		ldd r31,Z+1
+ 747               	.LVL54:
+ 748 0252 C857      		subi r28,lo8(-136)
+ 749 0254 DF4F      		sbci r29,hi8(-136)
+ 750 0256 F883      		st Y,r31
+ 751 0258 C858      		subi r28,lo8(136)
+ 752 025a D040      		sbci r29,hi8(136)
+ 753 025c C957      		subi r28,lo8(-135)
+ 754 025e DF4F      		sbci r29,hi8(-135)
+ 755 0260 1882      		st Y,__zero_reg__
+ 756 0262 C758      		subi r28,lo8(135)
+ 757 0264 D040      		sbci r29,hi8(135)
+ 758 0266 CF57      		subi r28,lo8(-129)
+ 759 0268 DF4F      		sbci r29,hi8(-129)
+ 760 026a A881      		ld r26,Y
+ 761 026c B981      		ldd r27,Y+1
+ 762 026e C158      		subi r28,lo8(129)
+ 763 0270 D040      		sbci r29,hi8(129)
+ 764 0272 8C91      		ld r24,X
+ 765 0274 90E0      		ldi r25,lo8(0)
+ 766 0276 C957      		subi r28,lo8(-135)
+ 767 0278 DF4F      		sbci r29,hi8(-135)
+ 768 027a E881      		ld r30,Y
+ 769 027c F981      		ldd r31,Y+1
+ 770 027e C758      		subi r28,lo8(135)
+ 771 0280 D040      		sbci r29,hi8(135)
+ 772 0282 8E2B      		or r24,r30
+ 773 0284 9F2B      		or r25,r31
+ 774 0286 7C01      		movw r14,r24
+ 775               	.LVL55:
+ 776 0288 00E0      		ldi r16,lo8(0)
+ 777 028a 10E0      		ldi r17,hi8(0)
+ 778               	.LVL56:
+ 779               	.LSM58:
+ 780 028c CD57      		subi r28,lo8(-131)
+ 781 028e DF4F      		sbci r29,hi8(-131)
+ 782 0290 8881      		ld r24,Y
+ 783 0292 9981      		ldd r25,Y+1
+ 784 0294 C358      		subi r28,lo8(131)
+ 785 0296 D040      		sbci r29,hi8(131)
+ 786 0298 0297      		sbiw r24,2
+ 787 029a CD57      		subi r28,lo8(-131)
+ 788 029c DF4F      		sbci r29,hi8(-131)
+ 789 029e 9983      		std Y+1,r25
+ 790 02a0 8883      		st Y,r24
+ 791 02a2 C358      		subi r28,lo8(131)
+ 792 02a4 D040      		sbci r29,hi8(131)
+ 793               	.LVL57:
+ 794               	.LSM59:
+ 795 02a6 1296      		adiw r26,2
+ 796               	.L99:
+ 797 02a8 CF57      		subi r28,lo8(-129)
+ 798 02aa DF4F      		sbci r29,hi8(-129)
+ 799 02ac B983      		std Y+1,r27
+ 800 02ae A883      		st Y,r26
+ 801 02b0 C158      		subi r28,lo8(129)
+ 802 02b2 D040      		sbci r29,hi8(129)
+ 803               	.LVL58:
+ 804 02b4 00C0      		rjmp .L29
+ 805               	.LVL59:
+ 806               	.L26:
+ 807               	.LSM60:
+ 808 02b6 CF57      		subi r28,lo8(-129)
+ 809 02b8 DF4F      		sbci r29,hi8(-129)
+ 810 02ba A881      		ld r26,Y
+ 811 02bc B981      		ldd r27,Y+1
+ 812 02be C158      		subi r28,lo8(129)
+ 813 02c0 D040      		sbci r29,hi8(129)
+ 814 02c2 8D91      		ld r24,X+
+ 815 02c4 CF57      		subi r28,lo8(-129)
+ 816 02c6 DF4F      		sbci r29,hi8(-129)
+ 817 02c8 B983      		std Y+1,r27
+ 818 02ca A883      		st Y,r26
+ 819 02cc C158      		subi r28,lo8(129)
+ 820 02ce D040      		sbci r29,hi8(129)
+ 821               	.LVL60:
+ 822 02d0 E82E      		mov r14,r24
+ 823 02d2 FF24      		clr r15
+ 824 02d4 00E0      		ldi r16,lo8(0)
+ 825 02d6 10E0      		ldi r17,hi8(0)
+ 826               	.LSM61:
+ 827 02d8 CD57      		subi r28,lo8(-131)
+ 828 02da DF4F      		sbci r29,hi8(-131)
+ 829 02dc E881      		ld r30,Y
+ 830 02de F981      		ldd r31,Y+1
+ 831 02e0 C358      		subi r28,lo8(131)
+ 832 02e2 D040      		sbci r29,hi8(131)
+ 833 02e4 3197      		sbiw r30,1
+ 834 02e6 CD57      		subi r28,lo8(-131)
+ 835 02e8 DF4F      		sbci r29,hi8(-131)
+ 836 02ea F983      		std Y+1,r31
+ 837 02ec E883      		st Y,r30
+ 838 02ee C358      		subi r28,lo8(131)
+ 839 02f0 D040      		sbci r29,hi8(131)
+ 840               	.LVL61:
+ 841               	.L29:
+ 842               	.LSM62:
+ 843 02f2 C158      		subi r28,lo8(-127)
+ 844 02f4 DF4F      		sbci r29,hi8(-127)
+ 845 02f6 8881      		ld r24,Y
+ 846 02f8 9981      		ldd r25,Y+1
+ 847 02fa CF57      		subi r28,lo8(127)
+ 848 02fc D040      		sbci r29,hi8(127)
+ 849 02fe 8C7F      		andi r24,lo8(252)
+ 850 0300 9070      		andi r25,hi8(252)
+ 851 0302 8436      		cpi r24,100
+ 852 0304 9105      		cpc r25,__zero_reg__
+ 853 0306 01F4      		brne .+2
+ 854 0308 00C0      		rjmp .L40
+ 855 030a 8536      		cpi r24,101
+ 856 030c 9105      		cpc r25,__zero_reg__
+ 857 030e 04F4      		brge .L49
+ 858 0310 8432      		cpi r24,36
+ 859 0312 9105      		cpc r25,__zero_reg__
+ 860 0314 01F4      		brne .+2
+ 861 0316 00C0      		rjmp .L35
+ 862 0318 8532      		cpi r24,37
+ 863 031a 9105      		cpc r25,__zero_reg__
+ 864 031c 04F4      		brge .L50
+ 865 031e 8830      		cpi r24,8
+ 866 0320 9105      		cpc r25,__zero_reg__
+ 867 0322 01F4      		brne .+2
+ 868 0324 00C0      		rjmp .L32
+ 869 0326 8930      		cpi r24,9
+ 870 0328 9105      		cpc r25,__zero_reg__
+ 871 032a 04F4      		brge .L51
+ 872 032c 0497      		sbiw r24,4
+ 873 032e 01F0      		breq .+2
+ 874 0330 00C0      		rjmp .L30
+ 875 0332 00C0      		rjmp .L101
+ 876               	.L51:
+ 877 0334 8431      		cpi r24,20
+ 878 0336 9105      		cpc r25,__zero_reg__
+ 879 0338 01F4      		brne .+2
+ 880 033a 00C0      		rjmp .L33
+ 881 033c 4897      		sbiw r24,24
+ 882 033e 01F0      		breq .+2
+ 883 0340 00C0      		rjmp .L30
+ 884 0342 00C0      		rjmp .L102
+ 885               	.L50:
+ 886 0344 8433      		cpi r24,52
+ 887 0346 9105      		cpc r25,__zero_reg__
+ 888 0348 01F4      		brne .+2
+ 889 034a 00C0      		rjmp .L37
+ 890 034c 8533      		cpi r24,53
+ 891 034e 9105      		cpc r25,__zero_reg__
+ 892 0350 04F4      		brge .L52
+ 893 0352 8897      		sbiw r24,40
+ 894 0354 01F0      		breq .+2
+ 895 0356 00C0      		rjmp .L30
+ 896 0358 00C0      		rjmp .L103
+ 897               	.L52:
+ 898 035a 8434      		cpi r24,68
+ 899 035c 9105      		cpc r25,__zero_reg__
+ 900 035e 01F4      		brne .+2
+ 901 0360 00C0      		rjmp .L38
+ 902 0362 8435      		cpi r24,84
+ 903 0364 9105      		cpc r25,__zero_reg__
+ 904 0366 01F0      		breq .+2
+ 905 0368 00C0      		rjmp .L30
+ 906 036a 00C0      		rjmp .L104
+ 907               	.L49:
+ 908 036c 8439      		cpi r24,148
+ 909 036e 9105      		cpc r25,__zero_reg__
+ 910 0370 01F4      		brne .+2
+ 911 0372 00C0      		rjmp .L44
+ 912 0374 8539      		cpi r24,149
+ 913 0376 9105      		cpc r25,__zero_reg__
+ 914 0378 04F4      		brge .L53
+ 915 037a 8038      		cpi r24,128
+ 916 037c 9105      		cpc r25,__zero_reg__
+ 917 037e 01F0      		breq .L42
+ 918 0380 8138      		cpi r24,129
+ 919 0382 9105      		cpc r25,__zero_reg__
+ 920 0384 04F4      		brge .L54
+ 921 0386 8437      		cpi r24,116
+ 922 0388 9105      		cpc r25,__zero_reg__
+ 923 038a 01F0      		breq .+2
+ 924 038c 00C0      		rjmp .L30
+ 925 038e 00C0      		rjmp .L105
+ 926               	.L54:
+ 927 0390 8438      		cpi r24,132
+ 928 0392 9105      		cpc r25,__zero_reg__
+ 929 0394 01F4      		brne .+2
+ 930 0396 00C0      		rjmp .L43
+ 931 0398 8039      		cpi r24,144
+ 932 039a 9105      		cpc r25,__zero_reg__
+ 933 039c 01F0      		breq .+2
+ 934 039e 00C0      		rjmp .L30
+ 935 03a0 00C0      		rjmp .L42
+ 936               	.L53:
+ 937 03a2 803B      		cpi r24,176
+ 938 03a4 9105      		cpc r25,__zero_reg__
+ 939 03a6 01F0      		breq .L42
+ 940 03a8 813B      		cpi r24,177
+ 941 03aa 9105      		cpc r25,__zero_reg__
+ 942 03ac 04F4      		brge .L55
+ 943 03ae 803A      		cpi r24,160
+ 944 03b0 9105      		cpc r25,__zero_reg__
+ 945 03b2 01F4      		brne .+2
+ 946 03b4 00C0      		rjmp .L45
+ 947 03b6 843A      		cpi r24,164
+ 948 03b8 9105      		cpc r25,__zero_reg__
+ 949 03ba 01F0      		breq .+2
+ 950 03bc 00C0      		rjmp .L30
+ 951 03be 00C0      		rjmp .L106
+ 952               	.L55:
+ 953 03c0 843B      		cpi r24,180
+ 954 03c2 9105      		cpc r25,__zero_reg__
+ 955 03c4 01F4      		brne .+2
+ 956 03c6 00C0      		rjmp .L47
+ 957 03c8 803C      		cpi r24,192
+ 958 03ca 9105      		cpc r25,__zero_reg__
+ 959 03cc 01F0      		breq .+2
+ 960 03ce 00C0      		rjmp .L30
+ 961 03d0 00C0      		rjmp .L107
+ 962               	.L102:
+ 963 03d2 D501      		movw r26,r10
+ 964 03d4 2701      		movw r4,r14
+ 965 03d6 3801      		movw r6,r16
+ 966 03d8 00C0      		rjmp .L56
+ 967               	.LVL62:
+ 968               	.L42:
+ 969               	.LBB12:
+ 970               	.LBB7:
+ 971               	.LSM63:
+ 972 03da C757      		subi r28,lo8(-137)
+ 973 03dc DF4F      		sbci r29,hi8(-137)
+ 974 03de C882      		st Y,r12
+ 975 03e0 C958      		subi r28,lo8(137)
+ 976 03e2 D040      		sbci r29,hi8(137)
+ 977 03e4 C657      		subi r28,lo8(-138)
+ 978 03e6 DF4F      		sbci r29,hi8(-138)
+ 979 03e8 D882      		st Y,r13
+ 980 03ea CA58      		subi r28,lo8(138)
+ 981 03ec D040      		sbci r29,hi8(138)
+ 982 03ee EC96      		adiw r28,123-63
+ 983 03f0 1FAE      		std Y+63,__zero_reg__
+ 984 03f2 EC97      		sbiw r28,123-63
+ 985               	.LVL63:
+ 986               	.LSM64:
+ 987 03f4 4C7F      		andi r20,lo8(-4)
+ 988 03f6 C557      		subi r28,lo8(-139)
+ 989 03f8 DF4F      		sbci r29,hi8(-139)
+ 990 03fa 4883      		st Y,r20
+ 991 03fc CB58      		subi r28,lo8(139)
+ 992 03fe D040      		sbci r29,hi8(139)
+ 993               	.LSM65:
+ 994 0400 9701      		movw r18,r14
+ 995               	.LVL64:
+ 996 0402 2170      		andi r18,lo8(1)
+ 997 0404 3070      		andi r19,hi8(1)
+ 998 0406 C457      		subi r28,lo8(-140)
+ 999 0408 DF4F      		sbci r29,hi8(-140)
+ 1000 040a 3983      		std Y+1,r19
+ 1001 040c 2883      		st Y,r18
+ 1002 040e CC58      		subi r28,lo8(140)
+ 1003 0410 D040      		sbci r29,hi8(140)
+ 1004 0412 00C0      		rjmp .L57
+ 1005               	.LVL65:
+ 1006               	.L106:
+ 1007               	.LBE7:
+ 1008               	.LBE12:
+ 1009               	.LSM66:
+ 1010 0414 C057      		subi r28,lo8(-144)
+ 1011 0416 DF4F      		sbci r29,hi8(-144)
+ 1012 0418 4881      		ld r20,Y
+ 1013 041a 5981      		ldd r21,Y+1
+ 1014 041c C059      		subi r28,lo8(144)
+ 1015 041e D040      		sbci r29,hi8(144)
+ 1016               	.LVL66:
+ 1017 0420 C416      		cp r12,r20
+ 1018 0422 D506      		cpc r13,r21
+ 1019 0424 01F4      		brne .L58
+ 1020 0426 81E0      		ldi r24,lo8(1)
+ 1021 0428 00C0      		rjmp .L59
+ 1022               	.L58:
+ 1023               	.LSM67:
+ 1024 042a D601      		movw r26,r12
+ 1025 042c 5C96      		adiw r26,28
+ 1026 042e F601      		movw r30,r12
+ 1027 0430 8AE2      		ldi r24,lo8(42)
+ 1028               	.LVL67:
+ 1029               	.L60:
+ 1030 0432 0190      		ld r0,Z+
+ 1031 0434 0D92      		st X+,r0
+ 1032 0436 8150      		subi r24,lo8(-(-1))
+ 1033 0438 01F4      		brne .L60
+ 1034               	.LSM68:
+ 1035 043a 8CE1      		ldi r24,lo8(28)
+ 1036 043c 90E0      		ldi r25,hi8(28)
+ 1037 043e C80E      		add r12,r24
+ 1038 0440 D91E      		adc r13,r25
+ 1039               	.LVL68:
+ 1040 0442 00C0      		rjmp .L30
+ 1041               	.LVL69:
+ 1042               	.L47:
+ 1043               	.LSM69:
+ 1044 0444 C856      		subi r28,lo8(-152)
+ 1045 0446 DF4F      		sbci r29,hi8(-152)
+ 1046 0448 A881      		ld r26,Y
+ 1047 044a B981      		ldd r27,Y+1
+ 1048 044c C859      		subi r28,lo8(152)
+ 1049 044e D040      		sbci r29,hi8(152)
+ 1050 0450 CA16      		cp r12,r26
+ 1051 0452 DB06      		cpc r13,r27
+ 1052 0454 01F4      		brne .L61
+ 1053 0456 82E0      		ldi r24,lo8(2)
+ 1054 0458 00C0      		rjmp .L59
+ 1055               	.L61:
+ 1056               	.LSM70:
+ 1057 045a E4EE      		ldi r30,lo8(-28)
+ 1058 045c FFEF      		ldi r31,hi8(-28)
+ 1059 045e CE0E      		add r12,r30
+ 1060 0460 DF1E      		adc r13,r31
+ 1061 0462 00C0      		rjmp .L30
+ 1062               	.L101:
+ 1063               	.LSM71:
+ 1064 0464 2330      		cpi r18,3
+ 1065 0466 3105      		cpc r19,__zero_reg__
+ 1066 0468 01F4      		brne .L62
+ 1067               	.LSM72:
+ 1068 046a C801      		movw r24,r16
+ 1069 046c AA27      		clr r26
+ 1070 046e BB27      		clr r27
+ 1071 0470 F601      		movw r30,r12
+ 1072 0472 9283      		std Z+2,r25
+ 1073 0474 8183      		std Z+1,r24
+ 1074               	.L62:
+ 1075               	.LSM73:
+ 1076 0476 D601      		movw r26,r12
+ 1077 0478 1296      		adiw r26,1+1
+ 1078 047a FC92      		st X,r15
+ 1079 047c EE92      		st -X,r14
+ 1080 047e 1197      		sbiw r26,1
+ 1081 0480 00C0      		rjmp .L30
+ 1082               	.L33:
+ 1083               	.LSM74:
+ 1084 0482 F601      		movw r30,r12
+ 1085 0484 E286      		std Z+10,r14
+ 1086 0486 F386      		std Z+11,r15
+ 1087 0488 0487      		std Z+12,r16
+ 1088 048a 1587      		std Z+13,r17
+ 1089 048c 00C0      		rjmp .L30
+ 1090               	.L35:
+ 1091               	.LSM75:
+ 1092 048e D601      		movw r26,r12
+ 1093 0490 1E96      		adiw r26,14
+ 1094 0492 ED92      		st X+,r14
+ 1095 0494 FD92      		st X+,r15
+ 1096 0496 0D93      		st X+,r16
+ 1097 0498 1C93      		st X,r17
+ 1098 049a 5197      		sbiw r26,14+3
+ 1099 049c 00C0      		rjmp .L30
+ 1100               	.L37:
+ 1101               	.LSM76:
+ 1102 049e F601      		movw r30,r12
+ 1103 04a0 E28A      		std Z+18,r14
+ 1104 04a2 F38A      		std Z+19,r15
+ 1105 04a4 048B      		std Z+20,r16
+ 1106 04a6 158B      		std Z+21,r17
+ 1107 04a8 00C0      		rjmp .L30
+ 1108               	.L38:
+ 1109               	.LSM77:
+ 1110 04aa D601      		movw r26,r12
+ 1111 04ac 5696      		adiw r26,22
+ 1112 04ae ED92      		st X+,r14
+ 1113 04b0 FD92      		st X+,r15
+ 1114 04b2 0D93      		st X+,r16
+ 1115 04b4 1C93      		st X,r17
+ 1116 04b6 5997      		sbiw r26,22+3
+ 1117 04b8 00C0      		rjmp .L30
+ 1118               	.L104:
+ 1119               	.LSM78:
+ 1120 04ba F601      		movw r30,r12
+ 1121 04bc E186      		std Z+9,r14
+ 1122 04be 00C0      		rjmp .L30
+ 1123               	.L40:
+ 1124               	.LSM79:
+ 1125 04c0 D601      		movw r26,r12
+ 1126 04c2 1596      		adiw r26,5
+ 1127 04c4 ED92      		st X+,r14
+ 1128 04c6 FD92      		st X+,r15
+ 1129 04c8 0D93      		st X+,r16
+ 1130 04ca 1C93      		st X,r17
+ 1131 04cc 1897      		sbiw r26,5+3
+ 1132 04ce 00C0      		rjmp .L30
+ 1133               	.L105:
+ 1134               	.LSM80:
+ 1135 04d0 F601      		movw r30,r12
+ 1136 04d2 E082      		st Z,r14
+ 1137 04d4 00C0      		rjmp .L30
+ 1138               	.L44:
+ 1139               	.LSM81:
+ 1140 04d6 D601      		movw r26,r12
+ 1141 04d8 5A96      		adiw r26,26
+ 1142 04da EC92      		st X,r14
+ 1143 04dc 00C0      		rjmp .L30
+ 1144               	.L43:
+ 1145               	.LSM82:
+ 1146 04de 3E2D      		mov r19,r14
+ 1147 04e0 F601      		movw r30,r12
+ 1148 04e2 E38E      		std Z+27,r14
+ 1149               	.LSM83:
+ 1150 04e4 CE56      		subi r28,lo8(-146)
+ 1151 04e6 DF4F      		sbci r29,hi8(-146)
+ 1152 04e8 A881      		ld r26,Y
+ 1153 04ea B981      		ldd r27,Y+1
+ 1154 04ec C259      		subi r28,lo8(146)
+ 1155 04ee D040      		sbci r29,hi8(146)
+ 1156 04f0 8C91      		ld r24,X
+ 1157 04f2 8823      		tst r24
+ 1158 04f4 01F4      		brne .+2
+ 1159 04f6 00C0      		rjmp .L63
+ 1160               	.LBB13:
+ 1161               	.LSM84:
+ 1162 04f8 CC56      		subi r28,lo8(-148)
+ 1163 04fa DF4F      		sbci r29,hi8(-148)
+ 1164 04fc E881      		ld r30,Y
+ 1165 04fe F981      		ldd r31,Y+1
+ 1166 0500 C459      		subi r28,lo8(148)
+ 1167 0502 D040      		sbci r29,hi8(148)
+ 1168 0504 2081      		ld r18,Z
+ 1169 0506 CA56      		subi r28,lo8(-150)
+ 1170 0508 DF4F      		sbci r29,hi8(-150)
+ 1171 050a 8881      		ld r24,Y
+ 1172 050c C659      		subi r28,lo8(150)
+ 1173 050e D040      		sbci r29,hi8(150)
+ 1174 0510 C956      		subi r28,lo8(-151)
+ 1175 0512 DF4F      		sbci r29,hi8(-151)
+ 1176 0514 9881      		ld r25,Y
+ 1177 0516 C759      		subi r28,lo8(151)
+ 1178 0518 D040      		sbci r29,hi8(151)
+ 1179 051a DC01      		movw r26,r24
+ 1180 051c E0E0      		ldi r30,lo8(0)
+ 1181               	.LVL70:
+ 1182 051e 00C0      		rjmp .L64
+ 1183               	.L66:
+ 1184               	.LSM85:
+ 1185 0520 8C91      		ld r24,X
+ 1186 0522 1796      		adiw r26,7
+ 1187 0524 8317      		cp r24,r19
+ 1188 0526 01F4      		brne .L65
+ 1189               	.LSM86:
+ 1190 0528 87E0      		ldi r24,lo8(7)
+ 1191 052a E89F      		mul r30,r24
+ 1192 052c 4001      		movw r8,r0
+ 1193 052e 1124      		clr r1
+ 1194 0530 20E9      		ldi r18,lo8(912)
+ 1195 0532 33E0      		ldi r19,hi8(912)
+ 1196 0534 820E      		add r8,r18
+ 1197 0536 931E      		adc r9,r19
+ 1198 0538 820C      		add r8,r2
+ 1199 053a 931C      		adc r9,r3
+ 1200 053c 00C0      		rjmp .L63
+ 1201               	.L65:
+ 1202               	.LSM87:
+ 1203 053e EF5F      		subi r30,lo8(-(1))
+ 1204               	.L64:
+ 1205 0540 E217      		cp r30,r18
+ 1206 0542 00F0      		brlo .L66
+ 1207               	.LBE13:
+ 1208               	.LSM88:
+ 1209 0544 2A30      		cpi r18,lo8(10)
+ 1210 0546 01F4      		brne .L67
+ 1211 0548 87E0      		ldi r24,lo8(7)
+ 1212 054a 00C0      		rjmp .L59
+ 1213               	.L67:
+ 1214               	.LSM89:
+ 1215 054c 87E0      		ldi r24,lo8(7)
+ 1216 054e 289F      		mul r18,r24
+ 1217 0550 4001      		movw r8,r0
+ 1218 0552 1124      		clr r1
+ 1219 0554 40E9      		ldi r20,lo8(912)
+ 1220 0556 53E0      		ldi r21,hi8(912)
+ 1221               	.LVL71:
+ 1222 0558 840E      		add r8,r20
+ 1223 055a 951E      		adc r9,r21
+ 1224 055c 820C      		add r8,r2
+ 1225 055e 931C      		adc r9,r3
+ 1226 0560 2F5F      		subi r18,lo8(-(1))
+ 1227 0562 CC56      		subi r28,lo8(-148)
+ 1228 0564 DF4F      		sbci r29,hi8(-148)
+ 1229 0566 A881      		ld r26,Y
+ 1230 0568 B981      		ldd r27,Y+1
+ 1231 056a C459      		subi r28,lo8(148)
+ 1232 056c D040      		sbci r29,hi8(148)
+ 1233 056e 2C93      		st X,r18
+ 1234               	.LSM90:
+ 1235 0570 F401      		movw r30,r8
+ 1236               	.LVL72:
+ 1237 0572 1192      		st Z+,__zero_reg__
+ 1238 0574 8A95      	        dec r24
+ 1239 0576 01F4      		brne .-6
+ 1240               	.LVL73:
+ 1241               	.L63:
+ 1242               	.LSM91:
+ 1243 0578 E1E0      		ldi r30,lo8(1)
+ 1244               	.LVL74:
+ 1245 057a CE56      		subi r28,lo8(-146)
+ 1246 057c DF4F      		sbci r29,hi8(-146)
+ 1247 057e A881      		ld r26,Y
+ 1248 0580 B981      		ldd r27,Y+1
+ 1249 0582 C259      		subi r28,lo8(146)
+ 1250 0584 D040      		sbci r29,hi8(146)
+ 1251 0586 EC93      		st X,r30
+ 1252               	.LSM92:
+ 1253 0588 D601      		movw r26,r12
+ 1254 058a 5B96      		adiw r26,27
+ 1255 058c 8C91      		ld r24,X
+ 1256 058e F401      		movw r30,r8
+ 1257 0590 8083      		st Z,r24
+ 1258 0592 00C0      		rjmp .L30
+ 1259               	.L32:
+ 1260               	.LSM93:
+ 1261 0594 6830      		cpi r22,lo8(8)
+ 1262 0596 01F4      		brne .L68
+ 1263 0598 86E0      		ldi r24,lo8(6)
+ 1264 059a 00C0      		rjmp .L59
+ 1265               	.L68:
+ 1266               	.LSM94:
+ 1267 059c E62F      		mov r30,r22
+ 1268 059e F0E0      		ldi r31,lo8(0)
+ 1269 05a0 EE0F      		lsl r30
+ 1270 05a2 FF1F      		rol r31
+ 1271               	.LVL75:
+ 1272 05a4 21E0      		ldi r18,lo8(1)
+ 1273 05a6 30E0      		ldi r19,hi8(1)
+ 1274 05a8 2C0F      		add r18,r28
+ 1275 05aa 3D1F      		adc r19,r29
+ 1276 05ac E20F      		add r30,r18
+ 1277 05ae F31F      		adc r31,r19
+ 1278               	.LVL76:
+ 1279 05b0 F182      		std Z+1,r15
+ 1280 05b2 E082      		st Z,r14
+ 1281 05b4 6F5F      		subi r22,lo8(-(1))
+ 1282               	.LVL77:
+ 1283 05b6 00C0      		rjmp .L30
+ 1284               	.LVL78:
+ 1285               	.L103:
+ 1286               	.LSM95:
+ 1287 05b8 D501      		movw r26,r10
+ 1288 05ba EB96      		adiw r28,119-60
+ 1289 05bc ECAE      		std Y+60,r14
+ 1290 05be FDAE      		std Y+61,r15
+ 1291 05c0 0EAF      		std Y+62,r16
+ 1292 05c2 1FAF      		std Y+63,r17
+ 1293 05c4 EB97      		sbiw r28,119-60
+ 1294 05c6 00C0      		rjmp .L56
+ 1295               	.LVL79:
+ 1296               	.L45:
+ 1297               	.LSM96:
+ 1298 05c8 A114      		cp r10,__zero_reg__
+ 1299 05ca B104      		cpc r11,__zero_reg__
+ 1300 05cc 01F4      		brne .L69
+ 1301 05ce E796      		adiw r28,117-62
+ 1302 05d0 AEAD      		ldd r26,Y+62
+ 1303 05d2 BFAD      		ldd r27,Y+63
+ 1304 05d4 E797      		sbiw r28,117-62
+ 1305 05d6 00C0      		rjmp .L70
+ 1306               	.LVL80:
+ 1307               	.L69:
+ 1308 05d8 E596      		adiw r28,115-62
+ 1309 05da AEAD      		ldd r26,Y+62
+ 1310 05dc BFAD      		ldd r27,Y+63
+ 1311 05de E597      		sbiw r28,115-62
+ 1312 05e0 00C0      		rjmp .L71
+ 1313               	.LVL81:
+ 1314               	.L73:
+ 1315               	.LBB14:
+ 1316               	.LSM97:
+ 1317 05e2 EF96      		adiw r28,125-62
+ 1318 05e4 4EAD      		ldd r20,Y+62
+ 1319 05e6 5FAD      		ldd r21,Y+63
+ 1320 05e8 EF97      		sbiw r28,125-62
+ 1321               	.LVL82:
+ 1322 05ea A417      		cp r26,r20
+ 1323 05ec B507      		cpc r27,r21
+ 1324 05ee 01F4      		brne .L72
+ 1325 05f0 85E0      		ldi r24,lo8(5)
+ 1326 05f2 00C0      		rjmp .L59
+ 1327               	.L72:
+ 1328               	.LSM98:
+ 1329 05f4 1796      		adiw r26,7
+ 1330               	.LVL83:
+ 1331               	.L71:
+ 1332               	.LSM99:
+ 1333 05f6 1596      		adiw r26,5
+ 1334 05f8 8D91      		ld r24,X+
+ 1335 05fa 9C91      		ld r25,X
+ 1336 05fc 1697      		sbiw r26,5+1
+ 1337 05fe 892B      		or r24,r25
+ 1338 0600 01F4      		brne .L73
+ 1339               	.LSM100:
+ 1340 0602 1696      		adiw r26,5+1
+ 1341 0604 BC92      		st X,r11
+ 1342 0606 AE92      		st -X,r10
+ 1343 0608 1597      		sbiw r26,5
+ 1344               	.L70:
+ 1345               	.LBE14:
+ 1346               	.LSM101:
+ 1347 060a EC92      		st X,r14
+ 1348               	.LSM102:
+ 1349 060c F601      		movw r30,r12
+ 1350 060e 8181      		ldd r24,Z+1
+ 1351 0610 9281      		ldd r25,Z+2
+ 1352 0612 1296      		adiw r26,1+1
+ 1353 0614 9C93      		st X,r25
+ 1354 0616 8E93      		st -X,r24
+ 1355 0618 1197      		sbiw r26,1
+ 1356               	.LSM103:
+ 1357 061a 6623      		tst r22
+ 1358 061c 01F0      		breq .L74
+ 1359               	.LSM104:
+ 1360 061e 8981      		ldd r24,Y+1
+ 1361 0620 9A81      		ldd r25,Y+2
+ 1362 0622 1496      		adiw r26,3+1
+ 1363 0624 9C93      		st X,r25
+ 1364 0626 8E93      		st -X,r24
+ 1365 0628 1397      		sbiw r26,3
+ 1366 062a FE01      		movw r30,r28
+ 1367 062c 3196      		adiw r30,1
+ 1368               	.LBB15:
+ 1369               	.LSM105:
+ 1370 062e 462F      		mov r20,r22
+ 1371               	.LVL84:
+ 1372 0630 4150      		subi r20,lo8(-(-1))
+ 1373               	.LVL85:
+ 1374               	.LSM106:
+ 1375 0632 242F      		mov r18,r20
+ 1376 0634 30E0      		ldi r19,lo8(0)
+ 1377 0636 220F      		lsl r18
+ 1378 0638 331F      		rol r19
+ 1379               	.LVL86:
+ 1380 063a 2E0F      		add r18,r30
+ 1381 063c 3F1F      		adc r19,r31
+ 1382 063e 00C0      		rjmp .L75
+ 1383               	.L76:
+ 1384               	.LSM107:
+ 1385 0640 8281      		ldd r24,Z+2
+ 1386 0642 9381      		ldd r25,Z+3
+ 1387 0644 8193      		st Z+,r24
+ 1388 0646 9193      		st Z+,r25
+ 1389               	.L75:
+ 1390               	.LSM108:
+ 1391 0648 E217      		cp r30,r18
+ 1392 064a F307      		cpc r31,r19
+ 1393 064c 01F4      		brne .L76
+ 1394 064e 642F      		mov r22,r20
+ 1395 0650 00C0      		rjmp .L56
+ 1396               	.LVL87:
+ 1397               	.L74:
+ 1398               	.LBE15:
+ 1399               	.LSM109:
+ 1400 0652 EB96      		adiw r28,119-60
+ 1401 0654 2CAD      		ldd r18,Y+60
+ 1402 0656 3DAD      		ldd r19,Y+61
+ 1403 0658 4EAD      		ldd r20,Y+62
+ 1404 065a 5FAD      		ldd r21,Y+63
+ 1405 065c EB97      		sbiw r28,119-60
+ 1406 065e 2415      		cp r18,r4
+ 1407 0660 3505      		cpc r19,r5
+ 1408 0662 4605      		cpc r20,r6
+ 1409 0664 5705      		cpc r21,r7
+ 1410 0666 00F4      		brsh .+2
+ 1411 0668 00C0      		rjmp .L56
+ 1412               	.LSM110:
+ 1413 066a 1496      		adiw r26,3+1
+ 1414 066c 5C92      		st X,r5
+ 1415 066e 4E92      		st -X,r4
+ 1416 0670 1397      		sbiw r26,3
+ 1417 0672 0894      		sec
+ 1418 0674 411C      		adc r4,__zero_reg__
+ 1419 0676 511C      		adc r5,__zero_reg__
+ 1420 0678 611C      		adc r6,__zero_reg__
+ 1421 067a 711C      		adc r7,__zero_reg__
+ 1422 067c 00C0      		rjmp .L56
+ 1423               	.LVL88:
+ 1424               	.L107:
+ 1425               	.LSM111:
+ 1426 067e A114      		cp r10,__zero_reg__
+ 1427 0680 B104      		cpc r11,__zero_reg__
+ 1428 0682 01F4      		brne .L77
+ 1429 0684 84E0      		ldi r24,lo8(4)
+ 1430 0686 00C0      		rjmp .L59
+ 1431               	.L77:
+ 1432               	.LSM112:
+ 1433 0688 F501      		movw r30,r10
+ 1434 068a A581      		ldd r26,Z+5
+ 1435 068c B681      		ldd r27,Z+6
+ 1436               	.LVL89:
+ 1437 068e 00C0      		rjmp .L56
+ 1438               	.LVL90:
+ 1439               	.L91:
+ 1440               	.LBB16:
+ 1441               	.LBB10:
+ 1442               	.LSM113:
+ 1443 0690 DE01      		movw r26,r28
+ 1444 0692 5996      		adiw r26,25
+ 1445 0694 C757      		subi r28,lo8(-137)
+ 1446 0696 DF4F      		sbci r29,hi8(-137)
+ 1447 0698 8881      		ld r24,Y
+ 1448 069a C958      		subi r28,lo8(137)
+ 1449 069c D040      		sbci r29,hi8(137)
+ 1450 069e C657      		subi r28,lo8(-138)
+ 1451 06a0 DF4F      		sbci r29,hi8(-138)
+ 1452 06a2 9881      		ld r25,Y
+ 1453 06a4 CA58      		subi r28,lo8(138)
+ 1454 06a6 D040      		sbci r29,hi8(138)
+ 1455 06a8 9C01      		movw r18,r24
+ 1456 06aa F901      		movw r30,r18
+ 1457 06ac 8AE1      		ldi r24,lo8(26)
+ 1458               	.L78:
+ 1459 06ae 0190      		ld r0,Z+
+ 1460 06b0 0D92      		st X+,r0
+ 1461 06b2 8150      		subi r24,lo8(-(-1))
+ 1462 06b4 01F4      		brne .L78
+ 1463               	.LSM114:
+ 1464 06b6 FD8A      		std Y+21,r15
+ 1465 06b8 EC8A      		std Y+20,r14
+ 1466               	.LSM115:
+ 1467 06ba B88E      		std Y+24,r11
+ 1468 06bc AF8A      		std Y+23,r10
+ 1469               	.LSM116:
+ 1470 06be D601      		movw r26,r12
+ 1471 06c0 5B96      		adiw r26,27
+ 1472 06c2 8C91      		ld r24,X
+ 1473 06c4 8E8B      		std Y+22,r24
+ 1474               	.LSM117:
+ 1475 06c6 6623      		tst r22
+ 1476 06c8 01F0      		breq .L79
+ 1477               	.LSM118:
+ 1478 06ca 4981      		ldd r20,Y+1
+ 1479 06cc 5A81      		ldd r21,Y+2
+ 1480               	.LVL91:
+ 1481 06ce DE01      		movw r26,r28
+ 1482 06d0 1196      		adiw r26,1
+ 1483               	.LBB9:
+ 1484               	.LSM119:
+ 1485 06d2 E62F      		mov r30,r22
+ 1486 06d4 E150      		subi r30,lo8(-(-1))
+ 1487               	.LVL92:
+ 1488               	.LSM120:
+ 1489 06d6 2E2F      		mov r18,r30
+ 1490 06d8 30E0      		ldi r19,lo8(0)
+ 1491 06da 220F      		lsl r18
+ 1492 06dc 331F      		rol r19
+ 1493 06de 2A0F      		add r18,r26
+ 1494 06e0 3B1F      		adc r19,r27
+ 1495 06e2 00C0      		rjmp .L80
+ 1496               	.LVL93:
+ 1497               	.L81:
+ 1498               	.LSM121:
+ 1499 06e4 1296      		adiw r26,2
+ 1500 06e6 8D91      		ld r24,X+
+ 1501 06e8 9C91      		ld r25,X
+ 1502 06ea 1397      		sbiw r26,2+1
+ 1503 06ec 8D93      		st X+,r24
+ 1504 06ee 9D93      		st X+,r25
+ 1505               	.LVL94:
+ 1506               	.L80:
+ 1507               	.LSM122:
+ 1508 06f0 ED96      		adiw r28,124-63
+ 1509 06f2 EFAF      		std Y+63,r30
+ 1510 06f4 ED97      		sbiw r28,124-63
+ 1511               	.LSM123:
+ 1512 06f6 A217      		cp r26,r18
+ 1513 06f8 B307      		cpc r27,r19
+ 1514 06fa 01F4      		brne .L81
+ 1515               	.LVL95:
+ 1516               	.LBE9:
+ 1517               	.LSM124:
+ 1518 06fc 5D8F      		std Y+29,r21
+ 1519 06fe 4C8F      		std Y+28,r20
+ 1520 0700 00C0      		rjmp .L82
+ 1521               	.LVL96:
+ 1522               	.L79:
+ 1523               	.LSM125:
+ 1524 0702 EB96      		adiw r28,119-60
+ 1525 0704 2CAD      		ldd r18,Y+60
+ 1526 0706 3DAD      		ldd r19,Y+61
+ 1527 0708 4EAD      		ldd r20,Y+62
+ 1528 070a 5FAD      		ldd r21,Y+63
+ 1529 070c EB97      		sbiw r28,119-60
+ 1530 070e 2415      		cp r18,r4
+ 1531 0710 3505      		cpc r19,r5
+ 1532 0712 4605      		cpc r20,r6
+ 1533 0714 5705      		cpc r21,r7
+ 1534 0716 00F0      		brlo .L100
+ 1535               	.L83:
+ 1536               	.LSM126:
+ 1537 0718 5D8E      		std Y+29,r5
+ 1538 071a 4C8E      		std Y+28,r4
+ 1539 071c 0894      		sec
+ 1540 071e 411C      		adc r4,__zero_reg__
+ 1541 0720 511C      		adc r5,__zero_reg__
+ 1542 0722 611C      		adc r6,__zero_reg__
+ 1543 0724 711C      		adc r7,__zero_reg__
+ 1544               	.L100:
+ 1545 0726 ED96      		adiw r28,124-63
+ 1546 0728 1FAE      		std Y+63,__zero_reg__
+ 1547 072a ED97      		sbiw r28,124-63
+ 1548               	.LVL97:
+ 1549               	.L82:
+ 1550               	.LSM127:
+ 1551 072c C557      		subi r28,lo8(-139)
+ 1552 072e DF4F      		sbci r29,hi8(-139)
+ 1553 0730 3881      		ld r19,Y
+ 1554 0732 CB58      		subi r28,lo8(139)
+ 1555 0734 D040      		sbci r29,hi8(139)
+ 1556 0736 3038      		cpi r19,lo8(-128)
+ 1557 0738 01F4      		brne .L84
+ 1558               	.LSM128:
+ 1559 073a 1B8A      		std Y+19,__zero_reg__
+ 1560 073c 00C0      		rjmp .L85
+ 1561               	.L84:
+ 1562               	.LSM129:
+ 1563 073e C557      		subi r28,lo8(-139)
+ 1564 0740 DF4F      		sbci r29,hi8(-139)
+ 1565 0742 4881      		ld r20,Y
+ 1566 0744 CB58      		subi r28,lo8(139)
+ 1567 0746 D040      		sbci r29,hi8(139)
+ 1568               	.LVL98:
+ 1569 0748 4039      		cpi r20,lo8(-112)
+ 1570 074a 01F4      		brne .L86
+ 1571               	.LSM130:
+ 1572 074c 51E0      		ldi r21,lo8(1)
+ 1573 074e 5B8B      		std Y+19,r21
+ 1574 0750 00C0      		rjmp .L85
+ 1575               	.L86:
+ 1576               	.LSM131:
+ 1577 0752 82E0      		ldi r24,lo8(2)
+ 1578 0754 8B8B      		std Y+19,r24
+ 1579               	.LVL99:
+ 1580               	.L85:
+ 1581               	.LSM132:
+ 1582 0756 EB89      		ldd r30,Y+19
+ 1583 0758 F0E0      		ldi r31,lo8(0)
+ 1584 075a EE0F      		lsl r30
+ 1585 075c FF1F      		rol r31
+ 1586 075e E80D      		add r30,r8
+ 1587 0760 F91D      		adc r31,r9
+ 1588 0762 8181      		ldd r24,Z+1
+ 1589 0764 9281      		ldd r25,Z+2
+ 1590 0766 9A8B      		std Y+18,r25
+ 1591 0768 898B      		std Y+17,r24
+ 1592               	.LSM133:
+ 1593 076a D601      		movw r26,r12
+ 1594 076c 2C91      		ld r18,X
+ 1595 076e 8181      		ldd r24,Z+1
+ 1596 0770 9281      		ldd r25,Z+2
+ 1597 0772 820F      		add r24,r18
+ 1598 0774 911D      		adc r25,__zero_reg__
+ 1599 0776 9283      		std Z+2,r25
+ 1600 0778 8183      		std Z+1,r24
+ 1601               	.LSM134:
+ 1602 077a EB89      		ldd r30,Y+19
+ 1603 077c F0E0      		ldi r31,lo8(0)
+ 1604 077e EE0F      		lsl r30
+ 1605 0780 FF1F      		rol r31
+ 1606 0782 E80D      		add r30,r8
+ 1607 0784 F91D      		adc r31,r9
+ 1608 0786 C257      		subi r28,lo8(-142)
+ 1609 0788 DF4F      		sbci r29,hi8(-142)
+ 1610 078a A881      		ld r26,Y
+ 1611 078c B981      		ldd r27,Y+1
+ 1612 078e CE58      		subi r28,lo8(142)
+ 1613 0790 D040      		sbci r29,hi8(142)
+ 1614 0792 2D91      		ld r18,X+
+ 1615 0794 3C91      		ld r19,X
+ 1616 0796 8181      		ldd r24,Z+1
+ 1617 0798 9281      		ldd r25,Z+2
+ 1618 079a 8217      		cp r24,r18
+ 1619 079c 9307      		cpc r25,r19
+ 1620 079e 00F4      		brsh .L87
+ 1621 07a0 C901      		movw r24,r18
+ 1622               	.L87:
+ 1623 07a2 C257      		subi r28,lo8(-142)
+ 1624 07a4 DF4F      		sbci r29,hi8(-142)
+ 1625 07a6 E881      		ld r30,Y
+ 1626 07a8 F981      		ldd r31,Y+1
+ 1627 07aa CE58      		subi r28,lo8(142)
+ 1628 07ac D040      		sbci r29,hi8(142)
+ 1629 07ae 9183      		std Z+1,r25
+ 1630 07b0 8083      		st Z,r24
+ 1631               	.LSM135:
+ 1632 07b2 D101      		movw r26,r2
+ 1633 07b4 8C91      		ld r24,X
+ 1634 07b6 8431      		cpi r24,lo8(20)
+ 1635 07b8 01F4      		brne .L88
+ 1636 07ba 83E0      		ldi r24,lo8(3)
+ 1637 07bc 00C0      		rjmp .L59
+ 1638               	.L88:
+ 1639               	.LSM136:
+ 1640 07be BAE2      		ldi r27,lo8(42)
+ 1641 07c0 8B9F      		mul r24,r27
+ 1642 07c2 F001      		movw r30,r0
+ 1643 07c4 1124      		clr r1
+ 1644 07c6 3196      		adiw r30,1
+ 1645 07c8 E20D      		add r30,r2
+ 1646 07ca F31D      		adc r31,r3
+ 1647 07cc DE01      		movw r26,r28
+ 1648 07ce 5196      		adiw r26,17
+ 1649 07d0 8AE2      		ldi r24,lo8(42)
+ 1650               	.L89:
+ 1651 07d2 0D90      		ld r0,X+
+ 1652 07d4 0192      		st Z+,r0
+ 1653 07d6 8150      		subi r24,lo8(-(-1))
+ 1654 07d8 01F4      		brne .L89
+ 1655               	.LSM137:
+ 1656 07da C457      		subi r28,lo8(-140)
+ 1657 07dc DF4F      		sbci r29,hi8(-140)
+ 1658 07de E881      		ld r30,Y
+ 1659 07e0 F981      		ldd r31,Y+1
+ 1660 07e2 CC58      		subi r28,lo8(140)
+ 1661 07e4 D040      		sbci r29,hi8(140)
+ 1662 07e6 EF2B      		or r30,r31
+ 1663 07e8 01F4      		brne .L90
+ 1664 07ea CE01      		movw r24,r28
+ 1665 07ec 4196      		adiw r24,17
+ 1666 07ee 0E94 0000 		call CALLBACK_HIDParser_FilterHIDReportItem
+ 1667               	.LVL100:
+ 1668 07f2 8823      		tst r24
+ 1669 07f4 01F0      		breq .L90
+ 1670               	.LSM138:
+ 1671 07f6 D101      		movw r26,r2
+ 1672 07f8 8C91      		ld r24,X
+ 1673 07fa 8F5F      		subi r24,lo8(-(1))
+ 1674 07fc 8C93      		st X,r24
+ 1675               	.LVL101:
+ 1676               	.L90:
+ 1677               	.LBE10:
+ 1678               	.LSM139:
+ 1679 07fe EC96      		adiw r28,123-63
+ 1680 0800 BFAD      		ldd r27,Y+63
+ 1681 0802 EC97      		sbiw r28,123-63
+ 1682 0804 BF5F      		subi r27,lo8(-(1))
+ 1683 0806 EC96      		adiw r28,123-63
+ 1684 0808 BFAF      		std Y+63,r27
+ 1685 080a EC97      		sbiw r28,123-63
+ 1686               	.LVL102:
+ 1687 080c ED96      		adiw r28,124-63
+ 1688 080e 6FAD      		ldd r22,Y+63
+ 1689 0810 ED97      		sbiw r28,124-63
+ 1690               	.LVL103:
+ 1691               	.L57:
+ 1692 0812 F601      		movw r30,r12
+ 1693 0814 828D      		ldd r24,Z+26
+ 1694 0816 EC96      		adiw r28,123-63
+ 1695 0818 FFAD      		ldd r31,Y+63
+ 1696 081a EC97      		sbiw r28,123-63
+ 1697               	.LVL104:
+ 1698 081c F817      		cp r31,r24
+ 1699 081e 00F4      		brsh .+2
+ 1700 0820 00C0      		rjmp .L91
+ 1701               	.LVL105:
+ 1702               	.L30:
+ 1703 0822 D501      		movw r26,r10
+ 1704               	.LVL106:
+ 1705               	.L56:
+ 1706               	.LBE16:
+ 1707               	.LSM140:
+ 1708 0824 C158      		subi r28,lo8(-127)
+ 1709 0826 DF4F      		sbci r29,hi8(-127)
+ 1710 0828 2881      		ld r18,Y
+ 1711 082a 3981      		ldd r19,Y+1
+ 1712 082c CF57      		subi r28,lo8(127)
+ 1713 082e D040      		sbci r29,hi8(127)
+ 1714 0830 2C70      		andi r18,lo8(12)
+ 1715 0832 3070      		andi r19,hi8(12)
+ 1716 0834 232B      		or r18,r19
+ 1717 0836 01F4      		brne .L92
+ 1718 0838 60E0      		ldi r22,lo8(0)
+ 1719 083a EB96      		adiw r28,119-60
+ 1720 083c 1CAE      		std Y+60,__zero_reg__
+ 1721 083e 1DAE      		std Y+61,__zero_reg__
+ 1722 0840 1EAE      		std Y+62,__zero_reg__
+ 1723 0842 1FAE      		std Y+63,__zero_reg__
+ 1724 0844 EB97      		sbiw r28,119-60
+ 1725 0846 4424      		clr r4
+ 1726 0848 5524      		clr r5
+ 1727 084a 3201      		movw r6,r4
+ 1728               	.LVL107:
+ 1729               	.L92:
+ 1730 084c 5D01      		movw r10,r26
+ 1731               	.LVL108:
+ 1732               	.L24:
+ 1733               	.LBE4:
+ 1734               	.LSM141:
+ 1735 084e CD57      		subi r28,lo8(-131)
+ 1736 0850 DF4F      		sbci r29,hi8(-131)
+ 1737 0852 4881      		ld r20,Y
+ 1738 0854 5981      		ldd r21,Y+1
+ 1739 0856 C358      		subi r28,lo8(131)
+ 1740 0858 D040      		sbci r29,hi8(131)
+ 1741               	.LVL109:
+ 1742 085a 452B      		or r20,r21
+ 1743 085c 01F0      		breq .+2
+ 1744 085e 00C0      		rjmp .L93
+ 1745               	.LSM142:
+ 1746 0860 D101      		movw r26,r2
+ 1747 0862 8C91      		ld r24,X
+ 1748 0864 8823      		tst r24
+ 1749 0866 01F0      		breq .L94
+ 1750 0868 80E0      		ldi r24,lo8(0)
+ 1751 086a 00C0      		rjmp .L59
+ 1752               	.L94:
+ 1753 086c 88E0      		ldi r24,lo8(8)
+ 1754               	.LVL110:
+ 1755               	.L59:
+ 1756               	/* epilogue start */
+ 1757               	.LSM143:
+ 1758 086e C756      		subi r28,lo8(-(153))
+ 1759 0870 DF4F      		sbci r29,hi8(-(153))
+ 1760 0872 0FB6      		in __tmp_reg__,__SREG__
+ 1761 0874 F894      		cli
+ 1762 0876 DEBF      		out __SP_H__,r29
+ 1763 0878 0FBE      		out __SREG__,__tmp_reg__
+ 1764 087a CDBF      		out __SP_L__,r28
+ 1765 087c CF91      		pop r28
+ 1766 087e DF91      		pop r29
+ 1767 0880 1F91      		pop r17
+ 1768 0882 0F91      		pop r16
+ 1769               	.LVL111:
+ 1770 0884 FF90      		pop r15
+ 1771               	.LVL112:
+ 1772 0886 EF90      		pop r14
+ 1773               	.LVL113:
+ 1774 0888 DF90      		pop r13
+ 1775               	.LVL114:
+ 1776 088a CF90      		pop r12
+ 1777               	.LVL115:
+ 1778 088c BF90      		pop r11
+ 1779 088e AF90      		pop r10
+ 1780               	.LVL116:
+ 1781 0890 9F90      		pop r9
+ 1782 0892 8F90      		pop r8
+ 1783               	.LVL117:
+ 1784 0894 7F90      		pop r7
+ 1785 0896 6F90      		pop r6
+ 1786 0898 5F90      		pop r5
+ 1787 089a 4F90      		pop r4
+ 1788 089c 3F90      		pop r3
+ 1789 089e 2F90      		pop r2
+ 1790               	.LVL118:
+ 1791 08a0 0895      		ret
+ 1792               	.LFE17:
+ 1842               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 HIDParser.c
+C:\cygwin64\tmp/cc351qOs.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc351qOs.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc351qOs.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc351qOs.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc351qOs.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc351qOs.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc351qOs.s:19     .text.USB_GetHIDReportItemInfo:00000000 USB_GetHIDReportItemInfo
+C:\cygwin64\tmp/cc351qOs.s:169    .text.USB_SetHIDReportItemInfo:00000000 USB_SetHIDReportItemInfo
+C:\cygwin64\tmp/cc351qOs.s:319    .text.USB_GetHIDReportSize:00000000 USB_GetHIDReportSize
+C:\cygwin64\tmp/cc351qOs.s:394    .text.USB_ProcessHIDReport:00000000 USB_ProcessHIDReport
+
+UNDEFINED SYMBOLS
+CALLBACK_HIDParser_FilterHIDReportItem

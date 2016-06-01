@@ -1,0 +1,148 @@
+   1               		.file	"bootloader.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.init3,"ax",@progbits
+  17               	.global	bootloader_jump_after_watchdog_reset
+  19               	bootloader_jump_after_watchdog_reset:
+  20               	.LFB102:
+  21               	.LSM0:
+  22               	/* prologue: naked */
+  23               	/* frame size = 0 */
+  24               	.LSM1:
+  25 0000 04B6      		in __tmp_reg__,84-32
+  26 0002 03FE      		sbrs __tmp_reg__,3
+  27 0004 00C0      		rjmp .L3
+  28 0006 8091 0000 		lds r24,reset_key
+  29 000a 9091 0000 		lds r25,(reset_key)+1
+  30 000e A091 0000 		lds r26,(reset_key)+2
+  31 0012 B091 0000 		lds r27,(reset_key)+3
+  32 0016 8750      		subi r24,lo8(-1341673465)
+  33 0018 904B      		sbci r25,hi8(-1341673465)
+  34 001a A740      		sbci r26,hlo8(-1341673465)
+  35 001c B04B      		sbci r27,hhi8(-1341673465)
+  36 001e 01F4      		brne .L3
+  37               	.LSM2:
+  38 0020 1092 0000 		sts reset_key,__zero_reg__
+  39 0024 1092 0000 		sts (reset_key)+1,__zero_reg__
+  40 0028 1092 0000 		sts (reset_key)+2,__zero_reg__
+  41 002c 1092 0000 		sts (reset_key)+3,__zero_reg__
+  42               	.LSM3:
+  43 0030 14BE      		out 84-32,__zero_reg__
+  44               	.LSM4:
+  45 0032 84B7      		in r24,84-32
+  46 0034 877F      		andi r24,lo8(-9)
+  47 0036 84BF      		out 84-32,r24
+  48               	.LSM5:
+  49 0038 88E1      		ldi r24,lo8(24)
+  50               	/* #APP */
+  51               	 ;  109 "../../tmk_core/common/avr/bootloader.c" 1
+  52 003a 0FB6      		in __tmp_reg__, __SREG__
+  53 003c F894      		cli
+  54 003e 8093 6000 		sts 96, r24
+  55 0042 1092 6000 		sts 96, __zero_reg__
+  56 0046 0FBE      		out __SREG__,__tmp_reg__
+  57               		
+  58               	 ;  0 "" 2
+  59               	.LSM6:
+  60               	/* #NOAPP */
+  61 0048 E0E0      		ldi r30,lo8(14336)
+  62 004a F8E3      		ldi r31,hi8(14336)
+  63 004c 0995      		icall
+  64               	.L3:
+  65               	/* epilogue start */
+  66               	.LSM7:
+  67               	.LFE102:
+  69               		.section	.text.bootloader_jump,"ax",@progbits
+  70               	.global	bootloader_jump
+  72               	bootloader_jump:
+  73               	.LFB101:
+  74               	.LSM8:
+  75               	/* prologue: function */
+  76               	/* frame size = 0 */
+  77               	.LSM9:
+  78 0000 0E94 0000 		call USB_Disable
+  79               	.LSM10:
+  80               	/* #APP */
+  81               	 ;  78 "../../tmk_core/common/avr/bootloader.c" 1
+  82 0004 F894      		cli
+  83               	 ;  0 "" 2
+  84               	/* #NOAPP */
+  85 0006 80E2      		ldi r24,lo8(20000)
+  86 0008 9EE4      		ldi r25,hi8(20000)
+  87               	.LVL0:
+  88               	.LBB12:
+  89               	.LBB13:
+  90               	.LBB14:
+  91               	.LBB15:
+  92               	.LSM11:
+  93 000a 20E9      		ldi r18,lo8(400)
+  94 000c 31E0      		ldi r19,hi8(400)
+  95               	.L5:
+  96 000e F901      		movw r30,r18
+  97               	.LVL1:
+  98               	/* #APP */
+  99               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 100 0010 3197      		1: sbiw r30,1
+ 101 0012 01F4      		brne 1b
+ 102               	 ;  0 "" 2
+ 103               	/* #NOAPP */
+ 104               	.LBE15:
+ 105               	.LBE14:
+ 106               	.LSM12:
+ 107 0014 0197      		sbiw r24,1
+ 108               	.LSM13:
+ 109 0016 01F4      		brne .L5
+ 110               	.LBE13:
+ 111               	.LBE12:
+ 112               	.LSM14:
+ 113 0018 87E0      		ldi r24,lo8(-1341673465)
+ 114 001a 90EB      		ldi r25,hi8(-1341673465)
+ 115 001c A7E0      		ldi r26,hlo8(-1341673465)
+ 116 001e B0EB      		ldi r27,hhi8(-1341673465)
+ 117               	.LVL2:
+ 118 0020 8093 0000 		sts reset_key,r24
+ 119 0024 9093 0000 		sts (reset_key)+1,r25
+ 120 0028 A093 0000 		sts (reset_key)+2,r26
+ 121 002c B093 0000 		sts (reset_key)+3,r27
+ 122               	.LSM15:
+ 123 0030 2CE0      		ldi r18,lo8(12)
+ 124 0032 88E1      		ldi r24,lo8(24)
+ 125 0034 90E0      		ldi r25,hi8(24)
+ 126               	/* #APP */
+ 127               	 ;  92 "../../tmk_core/common/avr/bootloader.c" 1
+ 128 0036 0FB6      		in __tmp_reg__,__SREG__
+ 129 0038 F894      		cli
+ 130 003a A895      		wdr
+ 131 003c 8093 6000 		sts 96,r24
+ 132 0040 0FBE      		out __SREG__,__tmp_reg__
+ 133 0042 2093 6000 		sts 96,r18
+ 134               		
+ 135               	 ;  0 "" 2
+ 136               	/* #NOAPP */
+ 137               	.L6:
+ 138 0046 00C0      		rjmp .L6
+ 139               	.LFE101:
+ 141               	.global	reset_key
+ 142               		.section	.noinit,"aw",@nobits
+ 145               	reset_key:
+ 146 0000 0000 0000 		.skip 4,0
+ 179               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 bootloader.c
+C:\cygwin64\tmp/cc8yACkx.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc8yACkx.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc8yACkx.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc8yACkx.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc8yACkx.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc8yACkx.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc8yACkx.s:19     .init3:00000000 bootloader_jump_after_watchdog_reset
+C:\cygwin64\tmp/cc8yACkx.s:145    .noinit:00000000 reset_key
+C:\cygwin64\tmp/cc8yACkx.s:72     .text.bootloader_jump:00000000 bootloader_jump
+
+UNDEFINED SYMBOLS
+USB_Disable

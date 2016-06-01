@@ -1,0 +1,268 @@
+   1               		.file	"suspend.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.suspend_idle,"ax",@progbits
+  17               	.global	suspend_idle
+  19               	suspend_idle:
+  20               	.LFB104:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LSM1:
+  26               	/* #APP */
+  27               	 ;  35 "../../tmk_core/common/avr/suspend.c" 1
+  28 0000 F894      		cli
+  29               	 ;  0 "" 2
+  30               	.LSM2:
+  31               	/* #NOAPP */
+  32 0002 83B7      		in r24,83-32
+  33               	.LVL1:
+  34 0004 817F      		andi r24,lo8(-15)
+  35 0006 83BF      		out 83-32,r24
+  36               	.LSM3:
+  37 0008 83B7      		in r24,83-32
+  38 000a 8160      		ori r24,lo8(1)
+  39 000c 83BF      		out 83-32,r24
+  40               	.LSM4:
+  41               	/* #APP */
+  42               	 ;  38 "../../tmk_core/common/avr/suspend.c" 1
+  43 000e 7894      		sei
+  44               	 ;  0 "" 2
+  45               	.LSM5:
+  46               	 ;  39 "../../tmk_core/common/avr/suspend.c" 1
+  47 0010 8895      		sleep
+  48               		
+  49               	 ;  0 "" 2
+  50               	.LSM6:
+  51               	/* #NOAPP */
+  52 0012 83B7      		in r24,83-32
+  53 0014 8E7F      		andi r24,lo8(-2)
+  54 0016 83BF      		out 83-32,r24
+  55               	/* epilogue start */
+  56               	.LSM7:
+  57 0018 0895      		ret
+  58               	.LFE104:
+  60               		.section	.text.suspend_power_down,"ax",@progbits
+  61               	.global	suspend_power_down
+  63               	suspend_power_down:
+  64               	.LFB106:
+  65               	.LSM8:
+  66               	/* prologue: function */
+  67               	/* frame size = 0 */
+  68               	.LBB4:
+  69               	.LBB5:
+  70               	.LSM9:
+  71 0000 8091 0000 		lds r24,USB_DeviceState
+  72 0004 8430      		cpi r24,lo8(4)
+  73 0006 01F0      		breq .L5
+  74               	.LSM10:
+  75 0008 1092 0000 		sts wdt_timeout,__zero_reg__
+  76               	.LSM11:
+  77 000c 20E4      		ldi r18,lo8(64)
+  78 000e 88E1      		ldi r24,lo8(24)
+  79 0010 90E0      		ldi r25,hi8(24)
+  80               	/* #APP */
+  81               	 ;  65 "../../tmk_core/common/avr/suspend.c" 1
+  82 0012 0FB6      		in __tmp_reg__,__SREG__
+  83 0014 F894      		cli
+  84 0016 A895      		wdr
+  85 0018 8093 6000 		sts 96,r24
+  86 001c 0FBE      		out __SREG__,__tmp_reg__
+  87 001e 2093 6000 		sts 96,r18
+  88               		
+  89               	 ;  0 "" 2
+  90               	.LSM12:
+  91               	/* #NOAPP */
+  92 0022 83B7      		in r24,83-32
+  93 0024 817F      		andi r24,lo8(-15)
+  94 0026 8460      		ori r24,lo8(4)
+  95 0028 83BF      		out 83-32,r24
+  96               	.LSM13:
+  97 002a 83B7      		in r24,83-32
+  98 002c 8160      		ori r24,lo8(1)
+  99 002e 83BF      		out 83-32,r24
+ 100               	.LSM14:
+ 101               	/* #APP */
+ 102               	 ;  75 "../../tmk_core/common/avr/suspend.c" 1
+ 103 0030 7894      		sei
+ 104               	 ;  0 "" 2
+ 105               	.LSM15:
+ 106               	 ;  76 "../../tmk_core/common/avr/suspend.c" 1
+ 107 0032 8895      		sleep
+ 108               		
+ 109               	 ;  0 "" 2
+ 110               	.LSM16:
+ 111               	/* #NOAPP */
+ 112 0034 83B7      		in r24,83-32
+ 113 0036 8E7F      		andi r24,lo8(-2)
+ 114 0038 83BF      		out 83-32,r24
+ 115               	.LSM17:
+ 116 003a 88E1      		ldi r24,lo8(24)
+ 117               	/* #APP */
+ 118               	 ;  80 "../../tmk_core/common/avr/suspend.c" 1
+ 119 003c 0FB6      		in __tmp_reg__, __SREG__
+ 120 003e F894      		cli
+ 121 0040 8093 6000 		sts 96, r24
+ 122 0044 1092 6000 		sts 96, __zero_reg__
+ 123 0048 0FBE      		out __SREG__,__tmp_reg__
+ 124               		
+ 125               	 ;  0 "" 2
+ 126               	/* #NOAPP */
+ 127               	.L5:
+ 128 004a 0895      		ret
+ 129               	.LBE5:
+ 130               	.LBE4:
+ 131               	.LFE106:
+ 133               		.section	.text.matrix_power_up,"ax",@progbits
+ 134               		.weak	matrix_power_up
+ 136               	matrix_power_up:
+ 137               	.LFB107:
+ 138               	.LSM18:
+ 139               	/* prologue: function */
+ 140               	/* frame size = 0 */
+ 141               	/* epilogue start */
+ 142               	.LSM19:
+ 143 0000 0895      		ret
+ 144               	.LFE107:
+ 146               		.section	.text.matrix_power_down,"ax",@progbits
+ 147               		.weak	matrix_power_down
+ 149               	matrix_power_down:
+ 150               	.LFB108:
+ 151               	.LSM20:
+ 152               	/* prologue: function */
+ 153               	/* frame size = 0 */
+ 154               	/* epilogue start */
+ 155               	.LSM21:
+ 156 0000 0895      		ret
+ 157               	.LFE108:
+ 159               		.section	.text.__vector_12,"ax",@progbits
+ 160               	.global	__vector_12
+ 162               	__vector_12:
+ 163               	.LFB111:
+ 164               	.LSM22:
+ 165 0000 1F92      		push __zero_reg__
+ 166 0002 0F92      		push r0
+ 167 0004 0FB6      		in r0,__SREG__
+ 168 0006 0F92      		push r0
+ 169 0008 1124      		clr __zero_reg__
+ 170 000a 8F93      		push r24
+ 171 000c 9F93      		push r25
+ 172 000e AF93      		push r26
+ 173 0010 BF93      		push r27
+ 174               	/* prologue: Signal */
+ 175               	/* frame size = 0 */
+ 176               	.LSM23:
+ 177 0012 8091 0000 		lds r24,wdt_timeout
+ 178 0016 8823      		tst r24
+ 179 0018 01F4      		brne .L13
+ 180               	.LSM24:
+ 181 001a 8091 0000 		lds r24,timer_count
+ 182 001e 9091 0000 		lds r25,(timer_count)+1
+ 183 0022 A091 0000 		lds r26,(timer_count)+2
+ 184 0026 B091 0000 		lds r27,(timer_count)+3
+ 185 002a 4196      		adiw r24,17
+ 186 002c A11D      		adc r26,__zero_reg__
+ 187 002e B11D      		adc r27,__zero_reg__
+ 188 0030 8093 0000 		sts timer_count,r24
+ 189 0034 9093 0000 		sts (timer_count)+1,r25
+ 190 0038 A093 0000 		sts (timer_count)+2,r26
+ 191 003c B093 0000 		sts (timer_count)+3,r27
+ 192               	.L13:
+ 193               	/* epilogue start */
+ 194               	.LSM25:
+ 195 0040 BF91      		pop r27
+ 196 0042 AF91      		pop r26
+ 197 0044 9F91      		pop r25
+ 198 0046 8F91      		pop r24
+ 199 0048 0F90      		pop r0
+ 200 004a 0FBE      		out __SREG__,r0
+ 201 004c 0F90      		pop r0
+ 202 004e 1F90      		pop __zero_reg__
+ 203 0050 1895      		reti
+ 204               	.LFE111:
+ 206               		.section	.text.suspend_wakeup_init,"ax",@progbits
+ 207               	.global	suspend_wakeup_init
+ 209               	suspend_wakeup_init:
+ 210               	.LFB110:
+ 211               	.LSM26:
+ 212               	/* prologue: function */
+ 213               	/* frame size = 0 */
+ 214               	.LSM27:
+ 215 0000 0E94 0000 		call clear_keyboard
+ 216               	/* epilogue start */
+ 217               	.LSM28:
+ 218 0004 0895      		ret
+ 219               	.LFE110:
+ 221               		.section	.text.suspend_wakeup_condition,"ax",@progbits
+ 222               	.global	suspend_wakeup_condition
+ 224               	suspend_wakeup_condition:
+ 225               	.LFB109:
+ 226               	.LSM29:
+ 227 0000 1F93      		push r17
+ 228               	/* prologue: function */
+ 229               	/* frame size = 0 */
+ 230               	.LSM30:
+ 231 0002 0E94 0000 		call matrix_power_up
+ 232               	.LSM31:
+ 233 0006 0E94 0000 		call matrix_scan
+ 234               	.LSM32:
+ 235 000a 0E94 0000 		call matrix_power_down
+ 236 000e 10E0      		ldi r17,lo8(0)
+ 237               	.LVL2:
+ 238               	.L19:
+ 239               	.LBB6:
+ 240               	.LSM33:
+ 241 0010 812F      		mov r24,r17
+ 242 0012 0E94 0000 		call matrix_get_row
+ 243 0016 8823      		tst r24
+ 244 0018 01F0      		breq .L17
+ 245 001a 81E0      		ldi r24,lo8(1)
+ 246 001c 00C0      		rjmp .L18
+ 247               	.L17:
+ 248               	.LSM34:
+ 249 001e 1F5F      		subi r17,lo8(-(1))
+ 250 0020 1830      		cpi r17,lo8(8)
+ 251 0022 01F4      		brne .L19
+ 252 0024 80E0      		ldi r24,lo8(0)
+ 253               	.L18:
+ 254               	/* epilogue start */
+ 255               	.LBE6:
+ 256               	.LSM35:
+ 257 0026 1F91      		pop r17
+ 258               	.LVL3:
+ 259 0028 0895      		ret
+ 260               	.LFE109:
+ 262               		.section	.bss.wdt_timeout,"aw",@nobits
+ 265               	wdt_timeout:
+ 266 0000 00        		.skip 1,0
+ 339               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 suspend.c
+C:\cygwin64\tmp/cctW3EjF.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cctW3EjF.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cctW3EjF.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cctW3EjF.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cctW3EjF.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cctW3EjF.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cctW3EjF.s:19     .text.suspend_idle:00000000 suspend_idle
+C:\cygwin64\tmp/cctW3EjF.s:63     .text.suspend_power_down:00000000 suspend_power_down
+C:\cygwin64\tmp/cctW3EjF.s:265    .bss.wdt_timeout:00000000 wdt_timeout
+C:\cygwin64\tmp/cctW3EjF.s:136    .text.matrix_power_up:00000000 matrix_power_up
+C:\cygwin64\tmp/cctW3EjF.s:149    .text.matrix_power_down:00000000 matrix_power_down
+C:\cygwin64\tmp/cctW3EjF.s:162    .text.__vector_12:00000000 __vector_12
+C:\cygwin64\tmp/cctW3EjF.s:209    .text.suspend_wakeup_init:00000000 suspend_wakeup_init
+C:\cygwin64\tmp/cctW3EjF.s:224    .text.suspend_wakeup_condition:00000000 suspend_wakeup_condition
+
+UNDEFINED SYMBOLS
+USB_DeviceState
+timer_count
+clear_keyboard
+matrix_scan
+matrix_get_row
+__do_clear_bss

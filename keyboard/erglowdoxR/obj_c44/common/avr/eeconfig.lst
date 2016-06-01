@@ -1,0 +1,222 @@
+   1               		.file	"eeconfig.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.eeconfig_write_keymap,"ax",@progbits
+  17               	.global	eeconfig_write_keymap
+  19               	eeconfig_write_keymap:
+  20               	.LFB11:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25 0000 682F      		mov r22,r24
+  26               	.LSM1:
+  27 0002 84E0      		ldi r24,lo8(4)
+  28 0004 90E0      		ldi r25,hi8(4)
+  29               	.LVL1:
+  30 0006 0E94 0000 		call __eewr_byte_m32u4
+  31               	.LVL2:
+  32               	/* epilogue start */
+  33 000a 0895      		ret
+  34               	.LFE11:
+  36               		.section	.text.eeconfig_write_default_layer,"ax",@progbits
+  37               	.global	eeconfig_write_default_layer
+  39               	eeconfig_write_default_layer:
+  40               	.LFB9:
+  41               	.LSM2:
+  42               	.LVL3:
+  43               	/* prologue: function */
+  44               	/* frame size = 0 */
+  45 0000 682F      		mov r22,r24
+  46               	.LSM3:
+  47 0002 83E0      		ldi r24,lo8(3)
+  48 0004 90E0      		ldi r25,hi8(3)
+  49               	.LVL4:
+  50 0006 0E94 0000 		call __eewr_byte_m32u4
+  51               	.LVL5:
+  52               	/* epilogue start */
+  53 000a 0895      		ret
+  54               	.LFE9:
+  56               		.section	.text.eeconfig_write_debug,"ax",@progbits
+  57               	.global	eeconfig_write_debug
+  59               	eeconfig_write_debug:
+  60               	.LFB7:
+  61               	.LSM4:
+  62               	.LVL6:
+  63               	/* prologue: function */
+  64               	/* frame size = 0 */
+  65 0000 682F      		mov r22,r24
+  66               	.LSM5:
+  67 0002 82E0      		ldi r24,lo8(2)
+  68 0004 90E0      		ldi r25,hi8(2)
+  69               	.LVL7:
+  70 0006 0E94 0000 		call __eewr_byte_m32u4
+  71               	.LVL8:
+  72               	/* epilogue start */
+  73 000a 0895      		ret
+  74               	.LFE7:
+  76               		.section	.text.eeconfig_read_keymap,"ax",@progbits
+  77               	.global	eeconfig_read_keymap
+  79               	eeconfig_read_keymap:
+  80               	.LFB10:
+  81               	.LSM6:
+  82               	/* prologue: function */
+  83               	/* frame size = 0 */
+  84               	.LSM7:
+  85 0000 84E0      		ldi r24,lo8(4)
+  86 0002 90E0      		ldi r25,hi8(4)
+  87 0004 0E94 0000 		call __eerd_byte_m32u4
+  88               	/* epilogue start */
+  89 0008 0895      		ret
+  90               	.LFE10:
+  92               		.section	.text.eeconfig_read_default_layer,"ax",@progbits
+  93               	.global	eeconfig_read_default_layer
+  95               	eeconfig_read_default_layer:
+  96               	.LFB8:
+  97               	.LSM8:
+  98               	/* prologue: function */
+  99               	/* frame size = 0 */
+ 100               	.LSM9:
+ 101 0000 83E0      		ldi r24,lo8(3)
+ 102 0002 90E0      		ldi r25,hi8(3)
+ 103 0004 0E94 0000 		call __eerd_byte_m32u4
+ 104               	/* epilogue start */
+ 105 0008 0895      		ret
+ 106               	.LFE8:
+ 108               		.section	.text.eeconfig_read_debug,"ax",@progbits
+ 109               	.global	eeconfig_read_debug
+ 111               	eeconfig_read_debug:
+ 112               	.LFB6:
+ 113               	.LSM10:
+ 114               	/* prologue: function */
+ 115               	/* frame size = 0 */
+ 116               	.LSM11:
+ 117 0000 82E0      		ldi r24,lo8(2)
+ 118 0002 90E0      		ldi r25,hi8(2)
+ 119 0004 0E94 0000 		call __eerd_byte_m32u4
+ 120               	/* epilogue start */
+ 121 0008 0895      		ret
+ 122               	.LFE6:
+ 124               		.section	.text.eeconfig_is_enabled,"ax",@progbits
+ 125               	.global	eeconfig_is_enabled
+ 127               	eeconfig_is_enabled:
+ 128               	.LFB5:
+ 129               	.LSM12:
+ 130               	/* prologue: function */
+ 131               	/* frame size = 0 */
+ 132               	.LSM13:
+ 133 0000 80E0      		ldi r24,lo8(0)
+ 134 0002 90E0      		ldi r25,hi8(0)
+ 135 0004 0E94 0000 		call __eerd_word_m32u4
+ 136 0008 20E0      		ldi r18,lo8(0)
+ 137 000a 8D5E      		subi r24,lo8(-275)
+ 138 000c 9E4F      		sbci r25,hi8(-275)
+ 139 000e 01F4      		brne .L14
+ 140 0010 21E0      		ldi r18,lo8(1)
+ 141               	.L14:
+ 142               	.LSM14:
+ 143 0012 822F      		mov r24,r18
+ 144               	/* epilogue start */
+ 145 0014 0895      		ret
+ 146               	.LFE5:
+ 148               		.section	.text.eeconfig_disable,"ax",@progbits
+ 149               	.global	eeconfig_disable
+ 151               	eeconfig_disable:
+ 152               	.LFB4:
+ 153               	.LSM15:
+ 154               	/* prologue: function */
+ 155               	/* frame size = 0 */
+ 156               	.LSM16:
+ 157 0000 80E0      		ldi r24,lo8(0)
+ 158 0002 90E0      		ldi r25,hi8(0)
+ 159 0004 6FEF      		ldi r22,lo8(-1)
+ 160 0006 7FEF      		ldi r23,hi8(-1)
+ 161 0008 0E94 0000 		call __eewr_word_m32u4
+ 162               	/* epilogue start */
+ 163               	.LSM17:
+ 164 000c 0895      		ret
+ 165               	.LFE4:
+ 167               		.section	.text.eeconfig_enable,"ax",@progbits
+ 168               	.global	eeconfig_enable
+ 170               	eeconfig_enable:
+ 171               	.LFB3:
+ 172               	.LSM18:
+ 173               	/* prologue: function */
+ 174               	/* frame size = 0 */
+ 175               	.LSM19:
+ 176 0000 80E0      		ldi r24,lo8(0)
+ 177 0002 90E0      		ldi r25,hi8(0)
+ 178 0004 6DEE      		ldi r22,lo8(-275)
+ 179 0006 7EEF      		ldi r23,hi8(-275)
+ 180 0008 0E94 0000 		call __eewr_word_m32u4
+ 181               	/* epilogue start */
+ 182               	.LSM20:
+ 183 000c 0895      		ret
+ 184               	.LFE3:
+ 186               		.section	.text.eeconfig_init,"ax",@progbits
+ 187               	.global	eeconfig_init
+ 189               	eeconfig_init:
+ 190               	.LFB2:
+ 191               	.LSM21:
+ 192               	/* prologue: function */
+ 193               	/* frame size = 0 */
+ 194               	.LSM22:
+ 195 0000 80E0      		ldi r24,lo8(0)
+ 196 0002 90E0      		ldi r25,hi8(0)
+ 197 0004 6DEE      		ldi r22,lo8(-275)
+ 198 0006 7EEF      		ldi r23,hi8(-275)
+ 199 0008 0E94 0000 		call __eewr_word_m32u4
+ 200               	.LSM23:
+ 201 000c 82E0      		ldi r24,lo8(2)
+ 202 000e 90E0      		ldi r25,hi8(2)
+ 203 0010 60E0      		ldi r22,lo8(0)
+ 204 0012 0E94 0000 		call __eewr_byte_m32u4
+ 205               	.LSM24:
+ 206 0016 83E0      		ldi r24,lo8(3)
+ 207 0018 90E0      		ldi r25,hi8(3)
+ 208 001a 60E0      		ldi r22,lo8(0)
+ 209 001c 0E94 0000 		call __eewr_byte_m32u4
+ 210               	.LSM25:
+ 211 0020 84E0      		ldi r24,lo8(4)
+ 212 0022 90E0      		ldi r25,hi8(4)
+ 213 0024 60E0      		ldi r22,lo8(0)
+ 214 0026 0E94 0000 		call __eewr_byte_m32u4
+ 215               	.LSM26:
+ 216 002a 85E0      		ldi r24,lo8(5)
+ 217 002c 90E0      		ldi r25,hi8(5)
+ 218 002e 60E0      		ldi r22,lo8(0)
+ 219 0030 0E94 0000 		call __eewr_byte_m32u4
+ 220               	/* epilogue start */
+ 221               	.LSM27:
+ 222 0034 0895      		ret
+ 223               	.LFE2:
+ 321               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 eeconfig.c
+C:\cygwin64\tmp/ccMs19Oi.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccMs19Oi.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccMs19Oi.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccMs19Oi.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccMs19Oi.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccMs19Oi.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccMs19Oi.s:19     .text.eeconfig_write_keymap:00000000 eeconfig_write_keymap
+C:\cygwin64\tmp/ccMs19Oi.s:39     .text.eeconfig_write_default_layer:00000000 eeconfig_write_default_layer
+C:\cygwin64\tmp/ccMs19Oi.s:59     .text.eeconfig_write_debug:00000000 eeconfig_write_debug
+C:\cygwin64\tmp/ccMs19Oi.s:79     .text.eeconfig_read_keymap:00000000 eeconfig_read_keymap
+C:\cygwin64\tmp/ccMs19Oi.s:95     .text.eeconfig_read_default_layer:00000000 eeconfig_read_default_layer
+C:\cygwin64\tmp/ccMs19Oi.s:111    .text.eeconfig_read_debug:00000000 eeconfig_read_debug
+C:\cygwin64\tmp/ccMs19Oi.s:127    .text.eeconfig_is_enabled:00000000 eeconfig_is_enabled
+C:\cygwin64\tmp/ccMs19Oi.s:151    .text.eeconfig_disable:00000000 eeconfig_disable
+C:\cygwin64\tmp/ccMs19Oi.s:170    .text.eeconfig_enable:00000000 eeconfig_enable
+C:\cygwin64\tmp/ccMs19Oi.s:189    .text.eeconfig_init:00000000 eeconfig_init
+
+UNDEFINED SYMBOLS
+__eewr_byte_m32u4
+__eerd_byte_m32u4
+__eerd_word_m32u4
+__eewr_word_m32u4

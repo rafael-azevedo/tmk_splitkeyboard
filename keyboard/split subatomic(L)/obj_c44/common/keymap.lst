@@ -1,0 +1,48 @@
+   1               		.file	"keymap.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.action_get_macro,"ax",@progbits
+  17               		.weak	action_get_macro
+  19               	action_get_macro:
+  20               	.LFB5:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LSM1:
+  26 0000 80E0      		ldi r24,lo8(0)
+  27 0002 90E0      		ldi r25,hi8(0)
+  28               	.LVL1:
+  29               	/* epilogue start */
+  30 0004 0895      		ret
+  31               	.LFE5:
+  33               		.section	.text.action_function,"ax",@progbits
+  34               		.weak	action_function
+  36               	action_function:
+  37               	.LFB6:
+  38               	.LSM2:
+  39               	.LVL2:
+  40               	/* prologue: function */
+  41               	/* frame size = 0 */
+  42               	/* epilogue start */
+  43               	.LSM3:
+  44 0000 0895      		ret
+  45               	.LFE6:
+  79               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 keymap.c
+C:\cygwin64\tmp/cczLWwPS.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cczLWwPS.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cczLWwPS.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cczLWwPS.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cczLWwPS.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cczLWwPS.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cczLWwPS.s:19     .text.action_get_macro:00000000 action_get_macro
+C:\cygwin64\tmp/cczLWwPS.s:36     .text.action_function:00000000 action_function
+
+NO UNDEFINED SYMBOLS

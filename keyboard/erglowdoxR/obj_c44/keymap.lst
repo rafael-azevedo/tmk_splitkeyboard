@@ -1,0 +1,363 @@
+   1               		.file	"keymap.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.action_function,"ax",@progbits
+  17               	.global	action_function
+  19               	action_function:
+  20               	.LFB6:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25 0000 FC01      		movw r30,r24
+  26               	.LSM1:
+  27 0002 6330      		cpi r22,lo8(3)
+  28 0004 01F0      		breq .L6
+  29               	.LVL1:
+  30 0006 6430      		cpi r22,lo8(4)
+  31 0008 00F4      		brsh .L11
+  32 000a 6130      		cpi r22,lo8(1)
+  33 000c 01F0      		breq .L4
+  34 000e 8281      		ldd r24,Z+2
+  35 0010 6230      		cpi r22,lo8(2)
+  36 0012 00F4      		brsh .L5
+  37 0014 00C0      		rjmp .L14
+  38               	.LVL2:
+  39               	.L11:
+  40 0016 6530      		cpi r22,lo8(5)
+  41 0018 01F0      		breq .L8
+  42 001a 6530      		cpi r22,lo8(5)
+  43 001c 00F0      		brlo .L7
+  44 001e 6630      		cpi r22,lo8(6)
+  45 0020 01F0      		breq .L9
+  46 0022 6730      		cpi r22,lo8(7)
+  47 0024 01F4      		brne .L12
+  48 0026 00C0      		rjmp .L15
+  49               	.LVL3:
+  50               	.L14:
+  51               	.LSM2:
+  52 0028 8823      		tst r24
+  53 002a 01F0      		breq .L12
+  54               	.LSM3:
+  55 002c 0E94 0000 		call rgblight_toggle
+  56               	.LVL4:
+  57 0030 0895      		ret
+  58               	.LVL5:
+  59               	.L5:
+  60               	.LSM4:
+  61 0032 8823      		tst r24
+  62 0034 01F0      		breq .L12
+  63               	.LSM5:
+  64 0036 0E94 0000 		call rgblight_increase_hue
+  65               	.LVL6:
+  66 003a 0895      		ret
+  67               	.LVL7:
+  68               	.L6:
+  69               	.LSM6:
+  70 003c 8281      		ldd r24,Z+2
+  71 003e 8823      		tst r24
+  72 0040 01F0      		breq .L12
+  73               	.LSM7:
+  74 0042 0E94 0000 		call rgblight_decrease_hue
+  75               	.LVL8:
+  76 0046 0895      		ret
+  77               	.LVL9:
+  78               	.L7:
+  79               	.LSM8:
+  80 0048 8281      		ldd r24,Z+2
+  81 004a 8823      		tst r24
+  82 004c 01F0      		breq .L12
+  83               	.LSM9:
+  84 004e 0E94 0000 		call rgblight_increase_sat
+  85               	.LVL10:
+  86 0052 0895      		ret
+  87               	.LVL11:
+  88               	.L8:
+  89               	.LSM10:
+  90 0054 8281      		ldd r24,Z+2
+  91 0056 8823      		tst r24
+  92 0058 01F0      		breq .L12
+  93               	.LSM11:
+  94 005a 0E94 0000 		call rgblight_decrease_sat
+  95               	.LVL12:
+  96 005e 0895      		ret
+  97               	.LVL13:
+  98               	.L9:
+  99               	.LSM12:
+ 100 0060 8281      		ldd r24,Z+2
+ 101 0062 8823      		tst r24
+ 102 0064 01F0      		breq .L12
+ 103               	.LSM13:
+ 104 0066 0E94 0000 		call rgblight_increase_val
+ 105               	.LVL14:
+ 106 006a 0895      		ret
+ 107               	.LVL15:
+ 108               	.L15:
+ 109               	.LSM14:
+ 110 006c 8281      		ldd r24,Z+2
+ 111 006e 8823      		tst r24
+ 112 0070 01F0      		breq .L12
+ 113               	.LSM15:
+ 114 0072 0E94 0000 		call rgblight_decrease_val
+ 115               	.LVL16:
+ 116 0076 0895      		ret
+ 117               	.LVL17:
+ 118               	.L4:
+ 119               	.LSM16:
+ 120 0078 8281      		ldd r24,Z+2
+ 121 007a 8823      		tst r24
+ 122 007c 01F0      		breq .L12
+ 123               	.LSM17:
+ 124 007e 0E94 0000 		call rgblight_step
+ 125               	.LVL18:
+ 126               	.L12:
+ 127 0082 0895      		ret
+ 128               	.LFE6:
+ 130               		.section	.text.action_get_macro,"ax",@progbits
+ 131               	.global	action_get_macro
+ 133               	action_get_macro:
+ 134               	.LFB5:
+ 135               	.LSM18:
+ 136               	.LVL19:
+ 137               	/* prologue: function */
+ 138               	/* frame size = 0 */
+ 139 0000 FC01      		movw r30,r24
+ 140               	.LSM19:
+ 141 0002 6623      		tst r22
+ 142 0004 01F4      		brne .L17
+ 143               	.LVL20:
+ 144               	.LSM20:
+ 145 0006 8281      		ldd r24,Z+2
+ 146 0008 8823      		tst r24
+ 147 000a 01F0      		breq .L19
+ 148               	.LSM21:
+ 149 000c 85EE      		ldi r24,lo8(-27)
+ 150 000e 0E94 0000 		call register_code
+ 151               	.LVL21:
+ 152 0012 00C0      		rjmp .L17
+ 153               	.LVL22:
+ 154               	.L19:
+ 155               	.LSM22:
+ 156 0014 85EE      		ldi r24,lo8(-27)
+ 157 0016 0E94 0000 		call unregister_code
+ 158               	.LVL23:
+ 159               	.L17:
+ 160               	.LSM23:
+ 161 001a 80E0      		ldi r24,lo8(0)
+ 162 001c 90E0      		ldi r25,hi8(0)
+ 163               	/* epilogue start */
+ 164 001e 0895      		ret
+ 165               	.LFE5:
+ 167               	.global	keymaps
+ 168               		.section	.progmem.data,"a",@progbits
+ 171               	keymaps:
+ 172 0000 5000      		.word	80
+ 173 0002 0100      		.word	1
+ 174 0004 0000      		.word	0
+ 175 0006 0100      		.word	1
+ 176 0008 0000      		.word	0
+ 177 000a 2C00      		.word	44
+ 178 000c 2200      		.word	34
+ 179 000e 1700      		.word	23
+ 180 0010 0A00      		.word	10
+ 181 0012 0500      		.word	5
+ 182 0014 0000      		.word	0
+ 183 0016 2A00      		.word	42
+ 184 0018 2100      		.word	33
+ 185 001a 1500      		.word	21
+ 186 001c 0900      		.word	9
+ 187 001e 1900      		.word	25
+ 188 0020 4F00      		.word	79
+ 189 0022 4D00      		.word	77
+ 190 0024 2000      		.word	32
+ 191 0026 0800      		.word	8
+ 192 0028 0700      		.word	7
+ 193 002a 0600      		.word	6
+ 194 002c 5000      		.word	80
+ 195 002e 4A00      		.word	74
+ 196 0030 1F00      		.word	31
+ 197 0032 1A00      		.word	26
+ 198 0034 1600      		.word	22
+ 199 0036 1B00      		.word	27
+ 200 0038 0100      		.word	1
+ 201 003a E300      		.word	227
+ 202 003c 1E00      		.word	30
+ 203 003e 1400      		.word	20
+ 204 0040 0400      		.word	4
+ 205 0042 0100      		.word	1
+ 206 0044 3400      		.word	52
+ 207 0046 0100      		.word	1
+ 208 0048 2E00      		.word	46
+ 209 004a 4C00      		.word	76
+ 210 004c 2A00      		.word	42
+ 211 004e E100      		.word	225
+ 212 0050 0100      		.word	1
+ 213 0052 0000      		.word	0
+ 214 0054 4F00      		.word	79
+ 215 0056 0100      		.word	1
+ 216 0058 0000      		.word	0
+ 217 005a 0100      		.word	1
+ 218 005c 0000      		.word	0
+ 219 005e C900      		.word	201
+ 220 0060 2300      		.word	35
+ 221 0062 1C00      		.word	28
+ 222 0064 0B00      		.word	11
+ 223 0066 1100      		.word	17
+ 224 0068 0000      		.word	0
+ 225 006a 0100      		.word	1
+ 226 006c 2400      		.word	36
+ 227 006e 1800      		.word	24
+ 228 0070 0D00      		.word	13
+ 229 0072 1000      		.word	16
+ 230 0074 5200      		.word	82
+ 231 0076 4B00      		.word	75
+ 232 0078 2500      		.word	37
+ 233 007a 0C00      		.word	12
+ 234 007c 0E00      		.word	14
+ 235 007e 3600      		.word	54
+ 236 0080 5100      		.word	81
+ 237 0082 2800      		.word	40
+ 238 0084 2600      		.word	38
+ 239 0086 1200      		.word	18
+ 240 0088 0F00      		.word	15
+ 241 008a 3700      		.word	55
+ 242 008c 2F00      		.word	47
+ 243 008e 2B00      		.word	43
+ 244 0090 2700      		.word	39
+ 245 0092 1300      		.word	19
+ 246 0094 0100      		.word	1
+ 247 0096 0100      		.word	1
+ 248 0098 3000      		.word	48
+ 249 009a 4E00      		.word	78
+ 250 009c 2D00      		.word	45
+ 251 009e 3100      		.word	49
+ 252 00a0 0100      		.word	1
+ 253 00a2 E500      		.word	229
+ 254 00a4 C100      		.word	193
+ 255 00a6 0000      		.word	0
+ 256 00a8 0100      		.word	1
+ 257 00aa 0100      		.word	1
+ 258 00ac 0000      		.word	0
+ 259 00ae 0100      		.word	1
+ 260 00b0 0000      		.word	0
+ 261 00b2 C500      		.word	197
+ 262 00b4 3E00      		.word	62
+ 263 00b6 3102      		.word	561
+ 264 00b8 3500      		.word	53
+ 265 00ba 3502      		.word	565
+ 266 00bc 0000      		.word	0
+ 267 00be C600      		.word	198
+ 268 00c0 3D00      		.word	61
+ 269 00c2 3002      		.word	560
+ 270 00c4 2702      		.word	551
+ 271 00c6 3000      		.word	48
+ 272 00c8 0100      		.word	1
+ 273 00ca 0100      		.word	1
+ 274 00cc 3C00      		.word	60
+ 275 00ce 2F02      		.word	559
+ 276 00d0 2602      		.word	550
+ 277 00d2 2F00      		.word	47
+ 278 00d4 0100      		.word	1
+ 279 00d6 C300      		.word	195
+ 280 00d8 3B00      		.word	59
+ 281 00da 1F02      		.word	543
+ 282 00dc 0100      		.word	1
+ 283 00de 0100      		.word	1
+ 284 00e0 0100      		.word	1
+ 285 00e2 C200      		.word	194
+ 286 00e4 3A00      		.word	58
+ 287 00e6 0100      		.word	1
+ 288 00e8 2002      		.word	544
+ 289 00ea 2202      		.word	546
+ 290 00ec 0100      		.word	1
+ 291 00ee C100      		.word	193
+ 292 00f0 0100      		.word	1
+ 293 00f2 0100      		.word	1
+ 294 00f4 0100      		.word	1
+ 295 00f6 0100      		.word	1
+ 296 00f8 0100      		.word	1
+ 297 00fa 0000      		.word	0
+ 298 00fc 0100      		.word	1
+ 299 00fe 0100      		.word	1
+ 300 0100 0000      		.word	0
+ 301 0102 0100      		.word	1
+ 302 0104 0000      		.word	0
+ 303 0106 0100      		.word	1
+ 304 0108 3F00      		.word	63
+ 305 010a 5200      		.word	82
+ 306 010c 5100      		.word	81
+ 307 010e 0100      		.word	1
+ 308 0110 0000      		.word	0
+ 309 0112 0100      		.word	1
+ 310 0114 4000      		.word	64
+ 311 0116 2400      		.word	36
+ 312 0118 2100      		.word	33
+ 313 011a 1E00      		.word	30
+ 314 011c 0100      		.word	1
+ 315 011e 0100      		.word	1
+ 316 0120 4100      		.word	65
+ 317 0122 2500      		.word	37
+ 318 0124 2200      		.word	34
+ 319 0126 1F00      		.word	31
+ 320 0128 3700      		.word	55
+ 321 012a 0100      		.word	1
+ 322 012c 4200      		.word	66
+ 323 012e 2600      		.word	38
+ 324 0130 2300      		.word	35
+ 325 0132 2000      		.word	32
+ 326 0134 2700      		.word	39
+ 327 0136 C800      		.word	200
+ 328 0138 4300      		.word	67
+ 329 013a 2502      		.word	549
+ 330 013c 2E02      		.word	558
+ 331 013e 3100      		.word	49
+ 332 0140 2E00      		.word	46
+ 333 0142 C700      		.word	199
+ 334 0144 4400      		.word	68
+ 335 0146 4500      		.word	69
+ 336 0148 0100      		.word	1
+ 337 014a 0100      		.word	1
+ 338 014c 0100      		.word	1
+ 339 014e 0000      		.word	0
+ 340               	.global	fn_actions
+ 343               	fn_actions:
+ 344 0150 0000      		.skip 2,0
+ 345 0152 00F0      		.word	-4096
+ 346 0154 01F0      		.word	-4095
+ 347 0156 02F0      		.word	-4094
+ 348 0158 03F0      		.word	-4093
+ 349 015a 04F0      		.word	-4092
+ 350 015c 05F0      		.word	-4091
+ 351 015e 06F0      		.word	-4090
+ 352 0160 07F0      		.word	-4089
+ 353 0162 F1A1      		.word	-24079
+ 386               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 keymap.c
+C:\cygwin64\tmp/ccynfiKe.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccynfiKe.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccynfiKe.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccynfiKe.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccynfiKe.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccynfiKe.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccynfiKe.s:19     .text.action_function:00000000 action_function
+C:\cygwin64\tmp/ccynfiKe.s:133    .text.action_get_macro:00000000 action_get_macro
+C:\cygwin64\tmp/ccynfiKe.s:171    .progmem.data:00000000 keymaps
+C:\cygwin64\tmp/ccynfiKe.s:343    .progmem.data:00000150 fn_actions
+
+UNDEFINED SYMBOLS
+rgblight_toggle
+rgblight_increase_hue
+rgblight_decrease_hue
+rgblight_increase_sat
+rgblight_decrease_sat
+rgblight_increase_val
+rgblight_decrease_val
+rgblight_step
+register_code
+unregister_code

@@ -1,0 +1,327 @@
+   1               		.file	"timer.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.timer_init,"ax",@progbits
+  17               	.global	timer_init
+  19               	timer_init:
+  20               	.LFB2:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LSM1:
+  25 0000 82E0      		ldi r24,lo8(2)
+  26 0002 84BD      		out 68-32,r24
+  27               	.LSM2:
+  28 0004 93E0      		ldi r25,lo8(3)
+  29 0006 95BD      		out 69-32,r25
+  30               	.LSM3:
+  31 0008 9AEF      		ldi r25,lo8(-6)
+  32 000a 97BD      		out 71-32,r25
+  33               	.LSM4:
+  34 000c 8093 6E00 		sts 110,r24
+  35               	/* epilogue start */
+  36               	.LSM5:
+  37 0010 0895      		ret
+  38               	.LFE2:
+  40               		.section	.text.timer_clear,"ax",@progbits
+  41               	.global	timer_clear
+  43               	timer_clear:
+  44               	.LFB3:
+  45               	.LSM6:
+  46               	/* prologue: function */
+  47               	/* frame size = 0 */
+  48               	.LSM7:
+  49 0000 8FB7      		in r24,__SREG__
+  50               	.LVL0:
+  51               	.LSM8:
+  52               	/* #APP */
+  53               	 ;  56 "../../tmk_core/common/avr/timer.c" 1
+  54 0002 F894      		cli
+  55               	 ;  0 "" 2
+  56               	.LSM9:
+  57               	/* #NOAPP */
+  58 0004 1092 0000 		sts timer_count,__zero_reg__
+  59 0008 1092 0000 		sts (timer_count)+1,__zero_reg__
+  60 000c 1092 0000 		sts (timer_count)+2,__zero_reg__
+  61 0010 1092 0000 		sts (timer_count)+3,__zero_reg__
+  62               	.LSM10:
+  63 0014 8FBF      		out __SREG__,r24
+  64               	/* epilogue start */
+  65               	.LSM11:
+  66 0016 0895      		ret
+  67               	.LFE3:
+  69               		.section	.text.timer_read,"ax",@progbits
+  70               	.global	timer_read
+  72               	timer_read:
+  73               	.LFB4:
+  74               	.LSM12:
+  75               	/* prologue: function */
+  76               	/* frame size = 0 */
+  77               	.LSM13:
+  78 0000 8FB7      		in r24,__SREG__
+  79               	.LVL1:
+  80               	.LSM14:
+  81               	/* #APP */
+  82               	 ;  67 "../../tmk_core/common/avr/timer.c" 1
+  83 0002 F894      		cli
+  84               	 ;  0 "" 2
+  85               	.LSM15:
+  86               	/* #NOAPP */
+  87 0004 2091 0000 		lds r18,timer_count
+  88 0008 3091 0000 		lds r19,(timer_count)+1
+  89 000c 4091 0000 		lds r20,(timer_count)+2
+  90 0010 5091 0000 		lds r21,(timer_count)+3
+  91               	.LVL2:
+  92               	.LSM16:
+  93 0014 8FBF      		out __SREG__,r24
+  94               	.LSM17:
+  95 0016 C901      		movw r24,r18
+  96               	.LVL3:
+  97               	/* epilogue start */
+  98 0018 0895      		ret
+  99               	.LFE4:
+ 101               		.section	.text.timer_read32,"ax",@progbits
+ 102               	.global	timer_read32
+ 104               	timer_read32:
+ 105               	.LFB5:
+ 106               	.LSM18:
+ 107               	/* prologue: function */
+ 108               	/* frame size = 0 */
+ 109               	.LSM19:
+ 110 0000 8FB7      		in r24,__SREG__
+ 111               	.LVL4:
+ 112               	.LSM20:
+ 113               	/* #APP */
+ 114               	 ;  80 "../../tmk_core/common/avr/timer.c" 1
+ 115 0002 F894      		cli
+ 116               	 ;  0 "" 2
+ 117               	.LSM21:
+ 118               	/* #NOAPP */
+ 119 0004 2091 0000 		lds r18,timer_count
+ 120 0008 3091 0000 		lds r19,(timer_count)+1
+ 121 000c 4091 0000 		lds r20,(timer_count)+2
+ 122 0010 5091 0000 		lds r21,(timer_count)+3
+ 123               	.LVL5:
+ 124               	.LSM22:
+ 125 0014 8FBF      		out __SREG__,r24
+ 126               	.LSM23:
+ 127 0016 B901      		movw r22,r18
+ 128               	.LVL6:
+ 129 0018 CA01      		movw r24,r20
+ 130               	.LVL7:
+ 131               	/* epilogue start */
+ 132 001a 0895      		ret
+ 133               	.LFE5:
+ 135               		.section	.text.timer_elapsed,"ax",@progbits
+ 136               	.global	timer_elapsed
+ 138               	timer_elapsed:
+ 139               	.LFB6:
+ 140               	.LSM24:
+ 141               	.LVL8:
+ 142 0000 EF92      		push r14
+ 143 0002 FF92      		push r15
+ 144 0004 0F93      		push r16
+ 145 0006 1F93      		push r17
+ 146               	/* prologue: function */
+ 147               	/* frame size = 0 */
+ 148 0008 BC01      		movw r22,r24
+ 149               	.LSM25:
+ 150 000a 8FB7      		in r24,__SREG__
+ 151               	.LVL9:
+ 152               	.LSM26:
+ 153               	/* #APP */
+ 154               	 ;  93 "../../tmk_core/common/avr/timer.c" 1
+ 155 000c F894      		cli
+ 156               	 ;  0 "" 2
+ 157               	.LSM27:
+ 158               	/* #NOAPP */
+ 159 000e E090 0000 		lds r14,timer_count
+ 160 0012 F090 0000 		lds r15,(timer_count)+1
+ 161 0016 0091 0000 		lds r16,(timer_count)+2
+ 162 001a 1091 0000 		lds r17,(timer_count)+3
+ 163               	.LVL10:
+ 164               	.LSM28:
+ 165 001e 8FBF      		out __SREG__,r24
+ 166               	.LSM29:
+ 167 0020 A801      		movw r20,r16
+ 168 0022 9701      		movw r18,r14
+ 169 0024 4070      		andi r20,hlo8(65535)
+ 170 0026 5070      		andi r21,hhi8(65535)
+ 171 0028 CB01      		movw r24,r22
+ 172               	.LVL11:
+ 173 002a A0E0      		ldi r26,lo8(0)
+ 174 002c B0E0      		ldi r27,hi8(0)
+ 175               	.LVL12:
+ 176 002e 2817      		cp r18,r24
+ 177 0030 3907      		cpc r19,r25
+ 178 0032 4A07      		cpc r20,r26
+ 179 0034 5B07      		cpc r21,r27
+ 180 0036 00F0      		brlo .L10
+ 181               	.LVL13:
+ 182 0038 9701      		movw r18,r14
+ 183               	.LVL14:
+ 184 003a 261B      		sub r18,r22
+ 185 003c 370B      		sbc r19,r23
+ 186 003e 00C0      		rjmp .L11
+ 187               	.LVL15:
+ 188               	.L10:
+ 189 0040 9B01      		movw r18,r22
+ 190 0042 2095      		com r18
+ 191 0044 3095      		com r19
+ 192 0046 2E0D      		add r18,r14
+ 193 0048 3F1D      		adc r19,r15
+ 194               	.LVL16:
+ 195               	.L11:
+ 196               	.LSM30:
+ 197 004a C901      		movw r24,r18
+ 198               	/* epilogue start */
+ 199 004c 1F91      		pop r17
+ 200 004e 0F91      		pop r16
+ 201 0050 FF90      		pop r15
+ 202 0052 EF90      		pop r14
+ 203               	.LVL17:
+ 204 0054 0895      		ret
+ 205               	.LFE6:
+ 207               		.section	.text.timer_elapsed32,"ax",@progbits
+ 208               	.global	timer_elapsed32
+ 210               	timer_elapsed32:
+ 211               	.LFB7:
+ 212               	.LSM31:
+ 213               	.LVL18:
+ 214 0000 EF92      		push r14
+ 215 0002 FF92      		push r15
+ 216 0004 0F93      		push r16
+ 217 0006 1F93      		push r17
+ 218               	/* prologue: function */
+ 219               	/* frame size = 0 */
+ 220 0008 9B01      		movw r18,r22
+ 221 000a AC01      		movw r20,r24
+ 222               	.LSM32:
+ 223 000c 8FB7      		in r24,__SREG__
+ 224               	.LVL19:
+ 225               	.LSM33:
+ 226               	/* #APP */
+ 227               	 ;  106 "../../tmk_core/common/avr/timer.c" 1
+ 228 000e F894      		cli
+ 229               	 ;  0 "" 2
+ 230               	.LSM34:
+ 231               	/* #NOAPP */
+ 232 0010 E090 0000 		lds r14,timer_count
+ 233 0014 F090 0000 		lds r15,(timer_count)+1
+ 234 0018 0091 0000 		lds r16,(timer_count)+2
+ 235 001c 1091 0000 		lds r17,(timer_count)+3
+ 236               	.LVL20:
+ 237               	.LSM35:
+ 238 0020 8FBF      		out __SREG__,r24
+ 239               	.LSM36:
+ 240 0022 E216      		cp r14,r18
+ 241 0024 F306      		cpc r15,r19
+ 242 0026 0407      		cpc r16,r20
+ 243 0028 1507      		cpc r17,r21
+ 244 002a 00F0      		brlo .L14
+ 245               	.LVL21:
+ 246 002c D801      		movw r26,r16
+ 247 002e C701      		movw r24,r14
+ 248               	.LVL22:
+ 249 0030 821B      		sub r24,r18
+ 250 0032 930B      		sbc r25,r19
+ 251 0034 A40B      		sbc r26,r20
+ 252 0036 B50B      		sbc r27,r21
+ 253 0038 9C01      		movw r18,r24
+ 254 003a AD01      		movw r20,r26
+ 255               	.LVL23:
+ 256 003c 00C0      		rjmp .L15
+ 257               	.LVL24:
+ 258               	.L14:
+ 259 003e 2095      		com r18
+ 260 0040 3095      		com r19
+ 261 0042 4095      		com r20
+ 262 0044 5095      		com r21
+ 263               	.LVL25:
+ 264 0046 2E0D      		add r18,r14
+ 265 0048 3F1D      		adc r19,r15
+ 266 004a 401F      		adc r20,r16
+ 267 004c 511F      		adc r21,r17
+ 268               	.L15:
+ 269               	.LSM37:
+ 270 004e B901      		movw r22,r18
+ 271               	.LVL26:
+ 272 0050 CA01      		movw r24,r20
+ 273               	.LVL27:
+ 274               	/* epilogue start */
+ 275 0052 1F91      		pop r17
+ 276 0054 0F91      		pop r16
+ 277 0056 FF90      		pop r15
+ 278 0058 EF90      		pop r14
+ 279               	.LVL28:
+ 280 005a 0895      		ret
+ 281               	.LFE7:
+ 283               		.section	.text.__vector_21,"ax",@progbits
+ 284               	.global	__vector_21
+ 286               	__vector_21:
+ 287               	.LFB8:
+ 288               	.LSM38:
+ 289 0000 1F92      		push __zero_reg__
+ 290 0002 0F92      		push r0
+ 291 0004 0FB6      		in r0,__SREG__
+ 292 0006 0F92      		push r0
+ 293 0008 1124      		clr __zero_reg__
+ 294 000a 8F93      		push r24
+ 295 000c 9F93      		push r25
+ 296 000e AF93      		push r26
+ 297 0010 BF93      		push r27
+ 298               	/* prologue: Signal */
+ 299               	/* frame size = 0 */
+ 300               	.LSM39:
+ 301 0012 8091 0000 		lds r24,timer_count
+ 302 0016 9091 0000 		lds r25,(timer_count)+1
+ 303 001a A091 0000 		lds r26,(timer_count)+2
+ 304 001e B091 0000 		lds r27,(timer_count)+3
+ 305 0022 0196      		adiw r24,1
+ 306 0024 A11D      		adc r26,__zero_reg__
+ 307 0026 B11D      		adc r27,__zero_reg__
+ 308 0028 8093 0000 		sts timer_count,r24
+ 309 002c 9093 0000 		sts (timer_count)+1,r25
+ 310 0030 A093 0000 		sts (timer_count)+2,r26
+ 311 0034 B093 0000 		sts (timer_count)+3,r27
+ 312               	/* epilogue start */
+ 313               	.LSM40:
+ 314 0038 BF91      		pop r27
+ 315 003a AF91      		pop r26
+ 316 003c 9F91      		pop r25
+ 317 003e 8F91      		pop r24
+ 318 0040 0F90      		pop r0
+ 319 0042 0FBE      		out __SREG__,r0
+ 320 0044 0F90      		pop r0
+ 321 0046 1F90      		pop __zero_reg__
+ 322 0048 1895      		reti
+ 323               	.LFE8:
+ 325               	.global	timer_count
+ 326               		.section	.bss.timer_count,"aw",@nobits
+ 329               	timer_count:
+ 330 0000 0000 0000 		.skip 4,0
+ 403               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 timer.c
+C:\cygwin64\tmp/cco9HZ0Y.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cco9HZ0Y.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cco9HZ0Y.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cco9HZ0Y.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cco9HZ0Y.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cco9HZ0Y.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cco9HZ0Y.s:19     .text.timer_init:00000000 timer_init
+C:\cygwin64\tmp/cco9HZ0Y.s:43     .text.timer_clear:00000000 timer_clear
+C:\cygwin64\tmp/cco9HZ0Y.s:329    .bss.timer_count:00000000 timer_count
+C:\cygwin64\tmp/cco9HZ0Y.s:72     .text.timer_read:00000000 timer_read
+C:\cygwin64\tmp/cco9HZ0Y.s:104    .text.timer_read32:00000000 timer_read32
+C:\cygwin64\tmp/cco9HZ0Y.s:138    .text.timer_elapsed:00000000 timer_elapsed
+C:\cygwin64\tmp/cco9HZ0Y.s:210    .text.timer_elapsed32:00000000 timer_elapsed32
+C:\cygwin64\tmp/cco9HZ0Y.s:286    .text.__vector_21:00000000 __vector_21
+
+UNDEFINED SYMBOLS
+__do_clear_bss

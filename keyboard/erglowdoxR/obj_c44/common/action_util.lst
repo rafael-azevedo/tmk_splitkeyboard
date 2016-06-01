@@ -1,0 +1,460 @@
+   1               		.file	"action_util.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.add_key,"ax",@progbits
+  17               	.global	add_key
+  19               	add_key:
+  20               	.LFB3:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25 0000 382F      		mov r19,r24
+  26               	.LBB7:
+  27               	.LBB8:
+  28               	.LSM1:
+  29 0002 A091 0000 		lds r26,keyboard_report
+  30 0006 B091 0000 		lds r27,(keyboard_report)+1
+  31 000a FD01      		movw r30,r26
+  32 000c 20E0      		ldi r18,lo8(0)
+  33               	.LVL1:
+  34 000e 8FEF      		ldi r24,lo8(-1)
+  35               	.LVL2:
+  36               	.L4:
+  37 0010 9281      		ldd r25,Z+2
+  38 0012 9317      		cp r25,r19
+  39 0014 01F0      		breq .L5
+  40               	.LSM2:
+  41 0016 8F3F      		cpi r24,lo8(-1)
+  42 0018 01F4      		brne .L3
+  43               	.LVL3:
+  44 001a 9923      		tst r25
+  45 001c 01F4      		brne .L3
+  46 001e 822F      		mov r24,r18
+  47               	.L3:
+  48               	.LSM3:
+  49 0020 2F5F      		subi r18,lo8(-(1))
+  50               	.LVL4:
+  51 0022 3196      		adiw r30,1
+  52 0024 2630      		cpi r18,lo8(6)
+  53 0026 01F4      		brne .L4
+  54               	.LSM4:
+  55 0028 8F3F      		cpi r24,lo8(-1)
+  56 002a 01F0      		breq .L5
+  57               	.LVL5:
+  58               	.LSM5:
+  59 002c 9927      		clr r25
+  60 002e 87FD      		sbrc r24,7
+  61 0030 9095      		com r25
+  62               	.LVL6:
+  63 0032 A80F      		add r26,r24
+  64 0034 B91F      		adc r27,r25
+  65 0036 1296      		adiw r26,2
+  66 0038 3C93      		st X,r19
+  67               	.LVL7:
+  68               	.L5:
+  69 003a 0895      		ret
+  70               	.LBE8:
+  71               	.LBE7:
+  72               	.LFE3:
+  74               		.section	.text.del_key,"ax",@progbits
+  75               	.global	del_key
+  77               	del_key:
+  78               	.LFB4:
+  79               	.LSM6:
+  80               	.LVL8:
+  81               	/* prologue: function */
+  82               	/* frame size = 0 */
+  83 0000 982F      		mov r25,r24
+  84               	.LSM7:
+  85 0002 20E0      		ldi r18,lo8(0)
+  86 0004 30E0      		ldi r19,hi8(0)
+  87               	.LVL9:
+  88               	.L9:
+  89               	.LBB9:
+  90               	.LBB10:
+  91               	.LBB11:
+  92               	.LSM8:
+  93 0006 E091 0000 		lds r30,keyboard_report
+  94 000a F091 0000 		lds r31,(keyboard_report)+1
+  95 000e E20F      		add r30,r18
+  96 0010 F31F      		adc r31,r19
+  97 0012 8281      		ldd r24,Z+2
+  98 0014 8917      		cp r24,r25
+  99 0016 01F4      		brne .L8
+ 100               	.LSM9:
+ 101 0018 1282      		std Z+2,__zero_reg__
+ 102               	.L8:
+ 103 001a 2F5F      		subi r18,lo8(-(1))
+ 104 001c 3F4F      		sbci r19,hi8(-(1))
+ 105               	.LSM10:
+ 106 001e 2630      		cpi r18,6
+ 107 0020 3105      		cpc r19,__zero_reg__
+ 108 0022 01F4      		brne .L9
+ 109               	/* epilogue start */
+ 110               	.LBE11:
+ 111               	.LBE10:
+ 112               	.LBE9:
+ 113               	.LSM11:
+ 114 0024 0895      		ret
+ 115               	.LFE4:
+ 117               		.section	.text.clear_keys,"ax",@progbits
+ 118               	.global	clear_keys
+ 120               	clear_keys:
+ 121               	.LFB5:
+ 122               	.LSM12:
+ 123               	/* prologue: function */
+ 124               	/* frame size = 0 */
+ 125               	.LSM13:
+ 126 0000 81E0      		ldi r24,lo8(1)
+ 127 0002 90E0      		ldi r25,hi8(1)
+ 128               	.L13:
+ 129               	.LBB12:
+ 130               	.LSM14:
+ 131 0004 E091 0000 		lds r30,keyboard_report
+ 132 0008 F091 0000 		lds r31,(keyboard_report)+1
+ 133 000c E80F      		add r30,r24
+ 134 000e F91F      		adc r31,r25
+ 135 0010 1082      		st Z,__zero_reg__
+ 136 0012 0196      		adiw r24,1
+ 137               	.LSM15:
+ 138 0014 8830      		cpi r24,8
+ 139 0016 9105      		cpc r25,__zero_reg__
+ 140 0018 01F4      		brne .L13
+ 141               	/* epilogue start */
+ 142               	.LBE12:
+ 143               	.LSM16:
+ 144 001a 0895      		ret
+ 145               	.LFE5:
+ 147               		.section	.text.get_mods,"ax",@progbits
+ 148               	.global	get_mods
+ 150               	get_mods:
+ 151               	.LFB6:
+ 152               	.LSM17:
+ 153               	/* prologue: function */
+ 154               	/* frame size = 0 */
+ 155               	.LSM18:
+ 156 0000 8091 0000 		lds r24,real_mods
+ 157               	/* epilogue start */
+ 158 0004 0895      		ret
+ 159               	.LFE6:
+ 161               		.section	.text.add_mods,"ax",@progbits
+ 162               	.global	add_mods
+ 164               	add_mods:
+ 165               	.LFB7:
+ 166               	.LSM19:
+ 167               	.LVL10:
+ 168               	/* prologue: function */
+ 169               	/* frame size = 0 */
+ 170               	.LSM20:
+ 171 0000 9091 0000 		lds r25,real_mods
+ 172 0004 982B      		or r25,r24
+ 173 0006 9093 0000 		sts real_mods,r25
+ 174               	/* epilogue start */
+ 175 000a 0895      		ret
+ 176               	.LFE7:
+ 178               		.section	.text.del_mods,"ax",@progbits
+ 179               	.global	del_mods
+ 181               	del_mods:
+ 182               	.LFB8:
+ 183               	.LSM21:
+ 184               	.LVL11:
+ 185               	/* prologue: function */
+ 186               	/* frame size = 0 */
+ 187               	.LSM22:
+ 188 0000 8095      		com r24
+ 189               	.LVL12:
+ 190 0002 9091 0000 		lds r25,real_mods
+ 191 0006 9823      		and r25,r24
+ 192 0008 9093 0000 		sts real_mods,r25
+ 193               	/* epilogue start */
+ 194 000c 0895      		ret
+ 195               	.LFE8:
+ 197               		.section	.text.set_mods,"ax",@progbits
+ 198               	.global	set_mods
+ 200               	set_mods:
+ 201               	.LFB9:
+ 202               	.LSM23:
+ 203               	.LVL13:
+ 204               	/* prologue: function */
+ 205               	/* frame size = 0 */
+ 206               	.LSM24:
+ 207 0000 8093 0000 		sts real_mods,r24
+ 208               	/* epilogue start */
+ 209 0004 0895      		ret
+ 210               	.LFE9:
+ 212               		.section	.text.clear_mods,"ax",@progbits
+ 213               	.global	clear_mods
+ 215               	clear_mods:
+ 216               	.LFB10:
+ 217               	.LSM25:
+ 218               	/* prologue: function */
+ 219               	/* frame size = 0 */
+ 220               	.LSM26:
+ 221 0000 1092 0000 		sts real_mods,__zero_reg__
+ 222               	/* epilogue start */
+ 223 0004 0895      		ret
+ 224               	.LFE10:
+ 226               		.section	.text.get_weak_mods,"ax",@progbits
+ 227               	.global	get_weak_mods
+ 229               	get_weak_mods:
+ 230               	.LFB11:
+ 231               	.LSM27:
+ 232               	/* prologue: function */
+ 233               	/* frame size = 0 */
+ 234               	.LSM28:
+ 235 0000 8091 0000 		lds r24,weak_mods
+ 236               	/* epilogue start */
+ 237 0004 0895      		ret
+ 238               	.LFE11:
+ 240               		.section	.text.add_weak_mods,"ax",@progbits
+ 241               	.global	add_weak_mods
+ 243               	add_weak_mods:
+ 244               	.LFB12:
+ 245               	.LSM29:
+ 246               	.LVL14:
+ 247               	/* prologue: function */
+ 248               	/* frame size = 0 */
+ 249               	.LSM30:
+ 250 0000 9091 0000 		lds r25,weak_mods
+ 251 0004 982B      		or r25,r24
+ 252 0006 9093 0000 		sts weak_mods,r25
+ 253               	/* epilogue start */
+ 254 000a 0895      		ret
+ 255               	.LFE12:
+ 257               		.section	.text.del_weak_mods,"ax",@progbits
+ 258               	.global	del_weak_mods
+ 260               	del_weak_mods:
+ 261               	.LFB13:
+ 262               	.LSM31:
+ 263               	.LVL15:
+ 264               	/* prologue: function */
+ 265               	/* frame size = 0 */
+ 266               	.LSM32:
+ 267 0000 8095      		com r24
+ 268               	.LVL16:
+ 269 0002 9091 0000 		lds r25,weak_mods
+ 270 0006 9823      		and r25,r24
+ 271 0008 9093 0000 		sts weak_mods,r25
+ 272               	/* epilogue start */
+ 273 000c 0895      		ret
+ 274               	.LFE13:
+ 276               		.section	.text.set_weak_mods,"ax",@progbits
+ 277               	.global	set_weak_mods
+ 279               	set_weak_mods:
+ 280               	.LFB14:
+ 281               	.LSM33:
+ 282               	.LVL17:
+ 283               	/* prologue: function */
+ 284               	/* frame size = 0 */
+ 285               	.LSM34:
+ 286 0000 8093 0000 		sts weak_mods,r24
+ 287               	/* epilogue start */
+ 288 0004 0895      		ret
+ 289               	.LFE14:
+ 291               		.section	.text.clear_weak_mods,"ax",@progbits
+ 292               	.global	clear_weak_mods
+ 294               	clear_weak_mods:
+ 295               	.LFB15:
+ 296               	.LSM35:
+ 297               	/* prologue: function */
+ 298               	/* frame size = 0 */
+ 299               	.LSM36:
+ 300 0000 1092 0000 		sts weak_mods,__zero_reg__
+ 301               	/* epilogue start */
+ 302 0004 0895      		ret
+ 303               	.LFE15:
+ 305               		.section	.text.set_oneshot_mods,"ax",@progbits
+ 306               	.global	set_oneshot_mods
+ 308               	set_oneshot_mods:
+ 309               	.LFB16:
+ 310               	.LSM37:
+ 311               	.LVL18:
+ 312               	/* prologue: function */
+ 313               	/* frame size = 0 */
+ 314               	.LSM38:
+ 315 0000 8093 0000 		sts oneshot_mods,r24
+ 316               	/* epilogue start */
+ 317               	.LSM39:
+ 318 0004 0895      		ret
+ 319               	.LFE16:
+ 321               		.section	.text.clear_oneshot_mods,"ax",@progbits
+ 322               	.global	clear_oneshot_mods
+ 324               	clear_oneshot_mods:
+ 325               	.LFB17:
+ 326               	.LSM40:
+ 327               	/* prologue: function */
+ 328               	/* frame size = 0 */
+ 329               	.LSM41:
+ 330 0000 1092 0000 		sts oneshot_mods,__zero_reg__
+ 331               	/* epilogue start */
+ 332               	.LSM42:
+ 333 0004 0895      		ret
+ 334               	.LFE17:
+ 336               		.section	.text.has_anykey,"ax",@progbits
+ 337               	.global	has_anykey
+ 339               	has_anykey:
+ 340               	.LFB18:
+ 341               	.LSM43:
+ 342               	/* prologue: function */
+ 343               	/* frame size = 0 */
+ 344               	.LSM44:
+ 345 0000 E091 0000 		lds r30,keyboard_report
+ 346 0004 F091 0000 		lds r31,(keyboard_report)+1
+ 347 0008 20E0      		ldi r18,lo8(0)
+ 348               	.LVL19:
+ 349 000a 91E0      		ldi r25,lo8(1)
+ 350               	.LVL20:
+ 351               	.L42:
+ 352               	.LBB13:
+ 353               	.LSM45:
+ 354 000c 8181      		ldd r24,Z+1
+ 355 000e 8111      		cpse r24,__zero_reg__
+ 356               	.LSM46:
+ 357 0010 2F5F      		subi r18,lo8(-(1))
+ 358               	.L41:
+ 359               	.LSM47:
+ 360 0012 9F5F      		subi r25,lo8(-(1))
+ 361 0014 3196      		adiw r30,1
+ 362 0016 9830      		cpi r25,lo8(8)
+ 363 0018 01F4      		brne .L42
+ 364               	.LBE13:
+ 365               	.LSM48:
+ 366 001a 822F      		mov r24,r18
+ 367               	/* epilogue start */
+ 368 001c 0895      		ret
+ 369               	.LFE18:
+ 371               		.section	.text.get_first_key,"ax",@progbits
+ 372               	.global	get_first_key
+ 374               	get_first_key:
+ 375               	.LFB20:
+ 376               	.LSM49:
+ 377               	/* prologue: function */
+ 378               	/* frame size = 0 */
+ 379               	.LSM50:
+ 380 0000 E091 0000 		lds r30,keyboard_report
+ 381 0004 F091 0000 		lds r31,(keyboard_report)+1
+ 382               	.LSM51:
+ 383 0008 8281      		ldd r24,Z+2
+ 384               	/* epilogue start */
+ 385 000a 0895      		ret
+ 386               	.LFE20:
+ 388               		.section	.text.has_anymod,"ax",@progbits
+ 389               	.global	has_anymod
+ 391               	has_anymod:
+ 392               	.LFB19:
+ 393               	.LSM52:
+ 394               	/* prologue: function */
+ 395               	/* frame size = 0 */
+ 396               	.LSM53:
+ 397 0000 8091 0000 		lds r24,real_mods
+ 398 0004 0E94 0000 		call bitpop
+ 399               	/* epilogue start */
+ 400               	.LSM54:
+ 401 0008 0895      		ret
+ 402               	.LFE19:
+ 404               		.section	.text.send_keyboard_report,"ax",@progbits
+ 405               	.global	send_keyboard_report
+ 407               	send_keyboard_report:
+ 408               	.LFB2:
+ 409               	.LSM55:
+ 410               	/* prologue: function */
+ 411               	/* frame size = 0 */
+ 412               	.LSM56:
+ 413 0000 E091 0000 		lds r30,keyboard_report
+ 414 0004 F091 0000 		lds r31,(keyboard_report)+1
+ 415 0008 8091 0000 		lds r24,real_mods
+ 416 000c 8083      		st Z,r24
+ 417               	.LSM57:
+ 418 000e E091 0000 		lds r30,keyboard_report
+ 419 0012 F091 0000 		lds r31,(keyboard_report)+1
+ 420 0016 8081      		ld r24,Z
+ 421 0018 9091 0000 		lds r25,weak_mods
+ 422 001c 892B      		or r24,r25
+ 423 001e 8083      		st Z,r24
+ 424               	.LSM58:
+ 425 0020 9091 0000 		lds r25,oneshot_mods
+ 426 0024 9923      		tst r25
+ 427 0026 01F0      		breq .L50
+ 428               	.LSM59:
+ 429 0028 E091 0000 		lds r30,keyboard_report
+ 430 002c F091 0000 		lds r31,(keyboard_report)+1
+ 431 0030 8081      		ld r24,Z
+ 432 0032 892B      		or r24,r25
+ 433 0034 8083      		st Z,r24
+ 434               	.LSM60:
+ 435 0036 0E94 0000 		call has_anykey
+ 436 003a 8823      		tst r24
+ 437 003c 01F0      		breq .L50
+ 438               	.LSM61:
+ 439 003e 0E94 0000 		call clear_oneshot_mods
+ 440               	.L50:
+ 441               	.LSM62:
+ 442 0042 8091 0000 		lds r24,keyboard_report
+ 443 0046 9091 0000 		lds r25,(keyboard_report)+1
+ 444 004a 0E94 0000 		call host_keyboard_send
+ 445               	/* epilogue start */
+ 446               	.LSM63:
+ 447 004e 0895      		ret
+ 448               	.LFE2:
+ 450               	.global	keyboard_report
+ 451               		.section	.data.keyboard_report,"aw",@progbits
+ 454               	keyboard_report:
+ 455 0000 0000      		.word	__compound_literal.0
+ 456               		.section	.bss.__compound_literal.0,"aw",@nobits
+ 459               	__compound_literal.0:
+ 460 0000 0000 0000 		.skip 8,0
+ 460      0000 0000 
+ 461               		.section	.bss.real_mods,"aw",@nobits
+ 464               	real_mods:
+ 465 0000 00        		.skip 1,0
+ 466               		.section	.bss.oneshot_mods,"aw",@nobits
+ 469               	oneshot_mods:
+ 470 0000 00        		.skip 1,0
+ 471               		.section	.bss.weak_mods,"aw",@nobits
+ 474               	weak_mods:
+ 475 0000 00        		.skip 1,0
+ 644               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 action_util.c
+C:\cygwin64\tmp/cc3ceuhe.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc3ceuhe.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc3ceuhe.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc3ceuhe.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc3ceuhe.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc3ceuhe.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc3ceuhe.s:19     .text.add_key:00000000 add_key
+C:\cygwin64\tmp/cc3ceuhe.s:454    .data.keyboard_report:00000000 keyboard_report
+C:\cygwin64\tmp/cc3ceuhe.s:77     .text.del_key:00000000 del_key
+C:\cygwin64\tmp/cc3ceuhe.s:120    .text.clear_keys:00000000 clear_keys
+C:\cygwin64\tmp/cc3ceuhe.s:150    .text.get_mods:00000000 get_mods
+C:\cygwin64\tmp/cc3ceuhe.s:464    .bss.real_mods:00000000 real_mods
+C:\cygwin64\tmp/cc3ceuhe.s:164    .text.add_mods:00000000 add_mods
+C:\cygwin64\tmp/cc3ceuhe.s:181    .text.del_mods:00000000 del_mods
+C:\cygwin64\tmp/cc3ceuhe.s:200    .text.set_mods:00000000 set_mods
+C:\cygwin64\tmp/cc3ceuhe.s:215    .text.clear_mods:00000000 clear_mods
+C:\cygwin64\tmp/cc3ceuhe.s:229    .text.get_weak_mods:00000000 get_weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:474    .bss.weak_mods:00000000 weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:243    .text.add_weak_mods:00000000 add_weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:260    .text.del_weak_mods:00000000 del_weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:279    .text.set_weak_mods:00000000 set_weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:294    .text.clear_weak_mods:00000000 clear_weak_mods
+C:\cygwin64\tmp/cc3ceuhe.s:308    .text.set_oneshot_mods:00000000 set_oneshot_mods
+C:\cygwin64\tmp/cc3ceuhe.s:469    .bss.oneshot_mods:00000000 oneshot_mods
+C:\cygwin64\tmp/cc3ceuhe.s:324    .text.clear_oneshot_mods:00000000 clear_oneshot_mods
+C:\cygwin64\tmp/cc3ceuhe.s:339    .text.has_anykey:00000000 has_anykey
+C:\cygwin64\tmp/cc3ceuhe.s:374    .text.get_first_key:00000000 get_first_key
+C:\cygwin64\tmp/cc3ceuhe.s:391    .text.has_anymod:00000000 has_anymod
+C:\cygwin64\tmp/cc3ceuhe.s:407    .text.send_keyboard_report:00000000 send_keyboard_report
+C:\cygwin64\tmp/cc3ceuhe.s:459    .bss.__compound_literal.0:00000000 __compound_literal.0
+
+UNDEFINED SYMBOLS
+bitpop
+host_keyboard_send
+__do_copy_data
+__do_clear_bss

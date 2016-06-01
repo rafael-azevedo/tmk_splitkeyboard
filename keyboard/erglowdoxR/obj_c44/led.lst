@@ -1,0 +1,32 @@
+   1               		.file	"led.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.led_set,"ax",@progbits
+  17               	.global	led_set
+  19               	led_set:
+  20               	.LFB2:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	/* epilogue start */
+  26               	.LSM1:
+  27 0000 0895      		ret
+  28               	.LFE2:
+  54               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 led.c
+C:\cygwin64\tmp/cc5WBuPY.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc5WBuPY.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc5WBuPY.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc5WBuPY.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc5WBuPY.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc5WBuPY.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc5WBuPY.s:19     .text.led_set:00000000 led_set
+
+NO UNDEFINED SYMBOLS

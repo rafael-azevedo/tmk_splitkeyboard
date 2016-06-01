@@ -1,0 +1,2583 @@
+Archive member included because of file (symbol)
+
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                              obj_c44/common/mousekey.o (__fixsfsi)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o) (__fixunssfsi)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                              obj_c44/common/mousekey.o (__floatsisf)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o) (__fp_splitA)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o) (__fp_zero)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                              obj_c44/common/mousekey.o (__mulsf3)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__mulsf3x)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_inf)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_nan)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_pscA)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o) (__fp_pscB)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o) (__fp_round)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              obj_c44/rgblight.o (__udivmodhi4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                              obj_c44/rgblight.o (__divmodhi4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o (exit)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                              obj_c44/matrix.o (__do_copy_data)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              obj_c44/matrix.o (__do_clear_bss)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+                              obj_c44/common/avr/eeconfig.o (__eerd_byte_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+                              obj_c44/rgblight.o (__eerd_dword_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+                              obj_c44/common/avr/eeconfig.o (__eerd_word_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+                              obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o (__eeupd_byte_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+                              obj_c44/common/avr/eeconfig.o (__eewr_byte_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+                              obj_c44/rgblight.o (__eewr_dword_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+                              obj_c44/common/avr/eeconfig.o (__eewr_word_m32u4)
+d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o) (__eerd_blraw_m32u4)
+
+Allocating common symbols
+Common symbol       size              file
+
+rgblight_config     0x4               obj_c44/rgblight.o
+USB_IsInitialized   0x1               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+inmem_config        0x4               obj_c44/rgblight.o
+USB_DeviceState     0x1               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+USB_Device_ConfigurationNumber
+                    0x1               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+led                 0x3c              obj_c44/rgblight.o
+USB_Device_CurrentlySelfPowered
+                    0x1               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+slaveBuffer         0x10              obj_c44/i2c-slave.o
+USB_ControlRequest  0x8               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+USB_Device_RemoteWakeupEnabled
+                    0x1               obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+ .text          0x00000000        0x0 obj_c44/keymap.o
+ .data          0x00000000        0x0 obj_c44/keymap.o
+ .bss           0x00000000        0x0 obj_c44/keymap.o
+ .text          0x00000000        0x0 obj_c44/keymap_common.o
+ .data          0x00000000        0x0 obj_c44/keymap_common.o
+ .bss           0x00000000        0x0 obj_c44/keymap_common.o
+ .text          0x00000000        0x0 obj_c44/matrix.o
+ .data          0x00000000        0x0 obj_c44/matrix.o
+ .bss           0x00000000        0x0 obj_c44/matrix.o
+ .text.matrix_rows
+                0x00000000        0x0 obj_c44/matrix.o
+ .text.matrix_cols
+                0x00000000        0x0 obj_c44/matrix.o
+ .text.matrix_is_modified
+                0x00000000        0x0 obj_c44/matrix.o
+ .text.matrix_is_on
+                0x00000000        0x0 obj_c44/matrix.o
+ .text.matrix_key_count
+                0x00000000        0x0 obj_c44/matrix.o
+ .text          0x00000000        0x0 obj_c44/i2c-master.o
+ .data          0x00000000        0x0 obj_c44/i2c-master.o
+ .bss           0x00000000        0x0 obj_c44/i2c-master.o
+ .text.i2c_master_init
+                0x00000000        0x0 obj_c44/i2c-master.o
+ .text.i2c_master_start
+                0x00000000        0x0 obj_c44/i2c-master.o
+ .text.i2c_master_stop
+                0x00000000        0x0 obj_c44/i2c-master.o
+ .text.i2c_master_write
+                0x00000000        0x0 obj_c44/i2c-master.o
+ .text.i2c_master_read
+                0x00000000        0x0 obj_c44/i2c-master.o
+ .text          0x00000000        0x0 obj_c44/i2c-slave.o
+ .data          0x00000000        0x0 obj_c44/i2c-slave.o
+ .bss           0x00000000        0x0 obj_c44/i2c-slave.o
+ .text.i2c_slave_init
+                0x00000000        0x0 obj_c44/i2c-slave.o
+ .text          0x00000000        0x0 obj_c44/serial.o
+ .data          0x00000000        0x0 obj_c44/serial.o
+ .bss           0x00000000        0x0 obj_c44/serial.o
+ .text          0x00000000        0x0 obj_c44/c44-util.o
+ .data          0x00000000        0x0 obj_c44/c44-util.o
+ .bss           0x00000000        0x0 obj_c44/c44-util.o
+ .text          0x00000000        0x0 obj_c44/main.o
+ .data          0x00000000        0x0 obj_c44/main.o
+ .bss           0x00000000        0x0 obj_c44/main.o
+ .text          0x00000000        0x0 obj_c44/led.o
+ .data          0x00000000        0x0 obj_c44/led.o
+ .bss           0x00000000        0x0 obj_c44/led.o
+ .text          0x00000000        0x0 obj_c44/light_ws2812.o
+ .data          0x00000000        0x0 obj_c44/light_ws2812.o
+ .bss           0x00000000        0x0 obj_c44/light_ws2812.o
+ .text.ws2812_sendarray
+                0x00000000        0x0 obj_c44/light_ws2812.o
+ .text.ws2812_setleds_rgbw
+                0x00000000        0x0 obj_c44/light_ws2812.o
+ .text          0x00000000        0x0 obj_c44/rgblight.o
+ .data          0x00000000        0x0 obj_c44/rgblight.o
+ .bss           0x00000000        0x0 obj_c44/rgblight.o
+ .text.eeconfig_debug_rgblight
+                0x00000000        0x0 obj_c44/rgblight.o
+ .text.rgblight_timer_toggle
+                0x00000000        0x0 obj_c44/rgblight.o
+ .text.rgblight_decrease
+                0x00000000        0x0 obj_c44/rgblight.o
+ .text.rgblight_increase
+                0x00000000        0x0 obj_c44/rgblight.o
+ .text          0x00000000        0x0 obj_c44/common/host.o
+ .data          0x00000000        0x0 obj_c44/common/host.o
+ .bss           0x00000000        0x0 obj_c44/common/host.o
+ .text.host_get_driver
+                0x00000000        0x0 obj_c44/common/host.o
+ .text.host_last_sysytem_report
+                0x00000000        0x0 obj_c44/common/host.o
+ .text.host_last_consumer_report
+                0x00000000        0x0 obj_c44/common/host.o
+ .text          0x00000000        0x0 obj_c44/common/keyboard.o
+ .data          0x00000000        0x0 obj_c44/common/keyboard.o
+ .bss           0x00000000        0x0 obj_c44/common/keyboard.o
+ .text.matrix_setup
+                0x00000000        0x0 obj_c44/common/keyboard.o
+ .text.keyboard_setup
+                0x00000000        0x0 obj_c44/common/keyboard.o
+ .text          0x00000000        0x0 obj_c44/common/action.o
+ .data          0x00000000        0x0 obj_c44/common/action.o
+ .bss           0x00000000        0x0 obj_c44/common/action.o
+ .text.debug_action
+                0x00000000        0x0 obj_c44/common/action.o
+ .text          0x00000000        0x0 obj_c44/common/action_tapping.o
+ .data          0x00000000        0x0 obj_c44/common/action_tapping.o
+ .bss           0x00000000        0x0 obj_c44/common/action_tapping.o
+ .text          0x00000000        0x0 obj_c44/common/action_macro.o
+ .data          0x00000000        0x0 obj_c44/common/action_macro.o
+ .bss           0x00000000        0x0 obj_c44/common/action_macro.o
+ .text          0x00000000        0x0 obj_c44/common/action_layer.o
+ .data          0x00000000        0x0 obj_c44/common/action_layer.o
+ .bss           0x00000000        0x0 obj_c44/common/action_layer.o
+ .text.default_layer_set
+                0x00000000        0x0 obj_c44/common/action_layer.o
+ .text          0x00000000        0x0 obj_c44/common/action_util.o
+ .data          0x00000000        0x0 obj_c44/common/action_util.o
+ .bss           0x00000000        0x0 obj_c44/common/action_util.o
+ .text.get_mods
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text.set_mods
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text.get_weak_mods
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text.set_weak_mods
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text.get_first_key
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text.has_anymod
+                0x00000000        0x0 obj_c44/common/action_util.o
+ .text          0x00000000        0x0 obj_c44/common/keymap.o
+ .data          0x00000000        0x0 obj_c44/common/keymap.o
+ .bss           0x00000000        0x0 obj_c44/common/keymap.o
+ .text.action_get_macro
+                0x00000000        0x0 obj_c44/common/keymap.o
+ .text.action_function
+                0x00000000        0x0 obj_c44/common/keymap.o
+ .text          0x00000000        0x0 obj_c44/common/print.o
+ .data          0x00000000        0x0 obj_c44/common/print.o
+ .bss           0x00000000        0x0 obj_c44/common/print.o
+ .text          0x00000000        0x0 obj_c44/common/debug.o
+ .data          0x00000000        0x0 obj_c44/common/debug.o
+ .bss           0x00000000        0x0 obj_c44/common/debug.o
+ .text          0x00000000        0x0 obj_c44/common/util.o
+ .data          0x00000000        0x0 obj_c44/common/util.o
+ .bss           0x00000000        0x0 obj_c44/common/util.o
+ .text.bitpop   0x00000000        0x0 obj_c44/common/util.o
+ .text.bitpop16
+                0x00000000        0x0 obj_c44/common/util.o
+ .text.bitpop32
+                0x00000000        0x0 obj_c44/common/util.o
+ .text.biton    0x00000000        0x0 obj_c44/common/util.o
+ .text.biton16  0x00000000        0x0 obj_c44/common/util.o
+ .text.biton32  0x00000000        0x0 obj_c44/common/util.o
+ .text.bitrev   0x00000000        0x0 obj_c44/common/util.o
+ .text.bitrev16
+                0x00000000        0x0 obj_c44/common/util.o
+ .text.bitrev32
+                0x00000000        0x0 obj_c44/common/util.o
+ .text          0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .data          0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .bss           0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text.suspend_idle
+                0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text.suspend_power_down
+                0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text.matrix_power_up
+                0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text.matrix_power_down
+                0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text.suspend_wakeup_condition
+                0x00000000        0x0 obj_c44/common/avr/suspend.o
+ .text          0x00000000        0x0 obj_c44/common/avr/xprintf.o
+ .data          0x00000000        0x0 obj_c44/common/avr/xprintf.o
+ .bss           0x00000000        0x0 obj_c44/common/avr/xprintf.o
+ .text          0x00000000        0x0 obj_c44/common/avr/timer.o
+ .data          0x00000000        0x0 obj_c44/common/avr/timer.o
+ .bss           0x00000000        0x0 obj_c44/common/avr/timer.o
+ .text.timer_clear
+                0x00000000        0x0 obj_c44/common/avr/timer.o
+ .text.timer_read32
+                0x00000000        0x0 obj_c44/common/avr/timer.o
+ .text.timer_elapsed32
+                0x00000000        0x0 obj_c44/common/avr/timer.o
+ .text          0x00000000        0x0 obj_c44/common/avr/bootloader.o
+ .data          0x00000000        0x0 obj_c44/common/avr/bootloader.o
+ .bss           0x00000000        0x0 obj_c44/common/avr/bootloader.o
+ .text.bootloader_jump
+                0x00000000        0x0 obj_c44/common/avr/bootloader.o
+ .text          0x00000000        0x0 obj_c44/common/mousekey.o
+ .data          0x00000000        0x0 obj_c44/common/mousekey.o
+ .bss           0x00000000        0x0 obj_c44/common/mousekey.o
+ .text          0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .data          0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .bss           0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_write_keymap
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_write_default_layer
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_write_debug
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_read_keymap
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_read_default_layer
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_read_debug
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_disable
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text.eeconfig_enable
+                0x00000000        0x0 obj_c44/common/avr/eeconfig.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/lufa.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/lufa.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/lufa.o
+ .text.sendchar
+                0x00000000        0x0 obj_c44/protocol/lufa/lufa.o
+ .text.main     0x00000000        0x0 obj_c44/protocol/lufa/lufa.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/descriptor.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/descriptor.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/descriptor.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_GetHIDReportItemInfo
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_SetHIDReportItemInfo
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_GetHIDReportSize
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text.USB_ProcessHIDReport
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .text.USB_Device_SendRemoteWakeup
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_Stream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_Stream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_Stream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_PStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_EStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Control_EStream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_EStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Control_EStream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_EStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_EStream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_EStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_EStream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_PStream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_PStream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Stream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Read_Stream_LE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Write_Stream_BE
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Null_Stream
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text.Endpoint_Discard_Stream
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text.Endpoint_ConfigureEndpointTable
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text.Endpoint_ClearEndpoints
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfType
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfTypeBefore
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorOfTypeAfter
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text.USB_GetNextDescriptorComp
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .text          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+ .data          0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+ .bss           0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+ .text.USB_USBTask
+                0x00000000        0x0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text.libgcc   0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+ .text.avr-libc
+                0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+ .text.avr-libc
+                0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+ .text          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+ .data          0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+ .bss           0x00000000        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+Address of section .data set to 0x800100
+LOAD d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+LOAD obj_c44/keymap.o
+LOAD obj_c44/keymap_common.o
+LOAD obj_c44/matrix.o
+LOAD obj_c44/i2c-master.o
+LOAD obj_c44/i2c-slave.o
+LOAD obj_c44/serial.o
+LOAD obj_c44/c44-util.o
+LOAD obj_c44/main.o
+LOAD obj_c44/led.o
+LOAD obj_c44/light_ws2812.o
+LOAD obj_c44/rgblight.o
+LOAD obj_c44/common/host.o
+LOAD obj_c44/common/keyboard.o
+LOAD obj_c44/common/action.o
+LOAD obj_c44/common/action_tapping.o
+LOAD obj_c44/common/action_macro.o
+LOAD obj_c44/common/action_layer.o
+LOAD obj_c44/common/action_util.o
+LOAD obj_c44/common/keymap.o
+LOAD obj_c44/common/print.o
+LOAD obj_c44/common/debug.o
+LOAD obj_c44/common/util.o
+LOAD obj_c44/common/avr/suspend.o
+LOAD obj_c44/common/avr/xprintf.o
+LOAD obj_c44/common/avr/timer.o
+LOAD obj_c44/common/avr/bootloader.o
+LOAD obj_c44/common/mousekey.o
+LOAD obj_c44/common/avr/eeconfig.o
+LOAD obj_c44/protocol/lufa/lufa.o
+LOAD obj_c44/protocol/lufa/descriptor.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+LOAD obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+LOAD d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a
+LOAD d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x4618
+ *(.vectors)
+ .vectors       0x00000000       0xac d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+ .progmem.data  0x000000ac      0x164 obj_c44/keymap.o
+                0x000000ac                keymaps
+                0x000001fc                fn_actions
+ .progmem.data  0x00000210      0x210 obj_c44/rgblight.o
+                0x00000310                RGBLED_BREATHING_TABLE
+                0x00000417                RGBLED_RAINBOW_SWIRL_INTERVALS
+                0x0000041d                RGBLED_KNIGHT_INTERVALS
+                0x00000210                DIM_CURVE
+                0x00000410                RGBLED_BREATHING_INTERVALS
+                0x00000414                RGBLED_RAINBOW_MOOD_INTERVALS
+                0x0000041a                RGBLED_SNAKE_INTERVALS
+ .progmem.data  0x00000420      0x14c obj_c44/protocol/lufa/descriptor.o
+                0x00000420                KeyboardReport
+                0x0000054c                ManufacturerString
+                0x0000045f                MouseReport
+                0x000004ac                ExtrakeyReport
+                0x00000548                LanguageString
+                0x000004e2                DeviceDescriptor
+                0x00000556                ProductString
+                0x000004f4                ConfigurationDescriptor
+                0x0000056c                . = ALIGN (0x2)
+                0x0000056c                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000056c        0x0 linker stubs
+ *(.trampolines*)
+                0x0000056c                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000056c                __ctors_start = .
+ *(.ctors)
+                0x0000056c                __ctors_end = .
+                0x0000056c                __dtors_start = .
+ *(.dtors)
+                0x0000056c                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000056c        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+                0x0000056c                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000056c        0xc d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+ *(.init2)
+ *(.init3)
+ .init3         0x00000578       0x4e obj_c44/common/avr/bootloader.o
+                0x00000578                bootloader_jump_after_watchdog_reset
+ *(.init3)
+ *(.init4)
+ .init4         0x000005c6       0x16 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                0x000005c6                __do_copy_data
+ .init4         0x000005dc       0x10 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x000005dc                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x000005ec        0x8 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+ *(.init9)
+ *(.text)
+ .text          0x000005f4        0x4 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+                0x000005f4                __vector_38
+                0x000005f4                __vector_22
+                0x000005f4                __vector_28
+                0x000005f4                __vector_34
+                0x000005f4                __vector_24
+                0x000005f4                __bad_interrupt
+                0x000005f4                __vector_6
+                0x000005f4                __vector_31
+                0x000005f4                __vector_35
+                0x000005f4                __vector_39
+                0x000005f4                __vector_3
+                0x000005f4                __vector_23
+                0x000005f4                __vector_30
+                0x000005f4                __vector_25
+                0x000005f4                __vector_13
+                0x000005f4                __vector_17
+                0x000005f4                __vector_19
+                0x000005f4                __vector_7
+                0x000005f4                __vector_41
+                0x000005f4                __vector_27
+                0x000005f4                __vector_5
+                0x000005f4                __vector_33
+                0x000005f4                __vector_37
+                0x000005f4                __vector_4
+                0x000005f4                __vector_9
+                0x000005f4                __vector_2
+                0x000005f4                __vector_15
+                0x000005f4                __vector_29
+                0x000005f4                __vector_40
+                0x000005f4                __vector_8
+                0x000005f4                __vector_26
+                0x000005f4                __vector_14
+                0x000005f4                __vector_16
+                0x000005f4                __vector_18
+                0x000005f4                __vector_20
+                0x000005f4                __vector_42
+                0x000005f8                . = ALIGN (0x2)
+ *(.text.*)
+ .text.action_function
+                0x000005f8       0x84 obj_c44/keymap.o
+                0x000005f8                action_function
+ .text.action_get_macro
+                0x0000067c       0x20 obj_c44/keymap.o
+                0x0000067c                action_get_macro
+ .text.keymap_key_to_keycode
+                0x0000069c       0x2c obj_c44/keymap_common.o
+                0x0000069c                keymap_key_to_keycode
+ .text.keymap_fn_to_action
+                0x000006c8       0x12 obj_c44/keymap_common.o
+                0x000006c8                keymap_fn_to_action
+ .text.keymap_func_to_action
+                0x000006da       0x12 obj_c44/keymap_common.o
+                0x000006da                keymap_func_to_action
+ .text.action_for_key
+                0x000006ec      0x1c4 obj_c44/keymap_common.o
+                0x000006ec                action_for_key
+ .text.matrix_get_row
+                0x000008b0        0xc obj_c44/matrix.o
+                0x000008b0                matrix_get_row
+ .text.matrix_print
+                0x000008bc        0x2 obj_c44/matrix.o
+                0x000008bc                matrix_print
+ .text.unselect_rows
+                0x000008be       0x1e obj_c44/matrix.o
+ .text._matrix_scan
+                0x000008dc      0x144 obj_c44/matrix.o
+                0x000008dc                _matrix_scan
+ .text.matrix_slave_scan
+                0x00000a20       0x36 obj_c44/matrix.o
+                0x00000a20                matrix_slave_scan
+ .text.matrix_scan
+                0x00000a56       0x66 obj_c44/matrix.o
+                0x00000a56                matrix_scan
+ .text.matrix_init
+                0x00000abc       0x40 obj_c44/matrix.o
+                0x00000abc                matrix_init
+ .text.__vector_36
+                0x00000afc       0xd2 obj_c44/i2c-slave.o
+                0x00000afc                __vector_36
+ .text.serial_master_init
+                0x00000bce        0x6 obj_c44/serial.o
+                0x00000bce                serial_master_init
+ .text.serial_slave_init
+                0x00000bd4       0x12 obj_c44/serial.o
+                0x00000bd4                serial_slave_init
+ .text.sync_recv
+                0x00000be6       0x10 obj_c44/serial.o
+ .text.sync_send
+                0x00000bf6        0xe obj_c44/serial.o
+ .text.serial_read_byte
+                0x00000c04       0x2a obj_c44/serial.o
+ .text.serial_write_byte
+                0x00000c2e       0x30 obj_c44/serial.o
+ .text.__vector_1
+                0x00000c5e       0x88 obj_c44/serial.o
+                0x00000c5e                __vector_1
+ .text.serial_transaction
+                0x00000ce6       0x66 obj_c44/serial.o
+                0x00000ce6                serial_transaction
+ .text.has_usb  0x00000d4c       0x18 obj_c44/c44-util.o
+                0x00000d4c                has_usb
+ .text.setup_set_handedness
+                0x00000d64        0x6 obj_c44/c44-util.o
+                0x00000d64                setup_set_handedness
+ .text.setup_hardware
+                0x00000d6a       0x3e obj_c44/c44-util.o
+                0x00000d6a                setup_hardware
+ .text.main     0x00000da8       0x52 obj_c44/main.o
+                0x00000da8                main
+ .text.led_set  0x00000dfa        0x2 obj_c44/led.o
+                0x00000dfa                led_set
+ .text.ws2812_sendarray_mask
+                0x00000dfc       0x42 obj_c44/light_ws2812.o
+                0x00000dfc                ws2812_sendarray_mask
+ .text.ws2812_setleds_pin
+                0x00000e3e       0x1e obj_c44/light_ws2812.o
+                0x00000e3e                ws2812_setleds_pin
+ .text.ws2812_setleds
+                0x00000e5c        0x8 obj_c44/light_ws2812.o
+                0x00000e5c                ws2812_setleds
+ .text.setrgb   0x00000e64        0xa obj_c44/rgblight.o
+                0x00000e64                setrgb
+ .text.sethsv   0x00000e6e      0x1ca obj_c44/rgblight.o
+                0x00000e6e                sethsv
+ .text.rgblight_timer_init
+                0x00001038       0x28 obj_c44/rgblight.o
+                0x00001038                rgblight_timer_init
+ .text.rgblight_timer_enable
+                0x00001060        0xc obj_c44/rgblight.o
+                0x00001060                rgblight_timer_enable
+ .text.rgblight_timer_disable
+                0x0000106c        0xc obj_c44/rgblight.o
+                0x0000106c                rgblight_timer_disable
+ .text.rgblight_set
+                0x00001078       0x30 obj_c44/rgblight.o
+                0x00001078                rgblight_set
+ .text.rgblight_effect_knight
+                0x000010a8      0x198 obj_c44/rgblight.o
+                0x000010a8                rgblight_effect_knight
+ .text.rgblight_effect_snake
+                0x00001240      0x128 obj_c44/rgblight.o
+                0x00001240                rgblight_effect_snake
+ .text.rgblight_effect_rainbow_swirl
+                0x00001368       0x9e obj_c44/rgblight.o
+                0x00001368                rgblight_effect_rainbow_swirl
+ .text.rgblight_setrgb
+                0x00001406       0x1a obj_c44/rgblight.o
+                0x00001406                rgblight_setrgb
+ .text.rgblight_sethsv_noeeprom
+                0x00001420       0x9a obj_c44/rgblight.o
+                0x00001420                rgblight_sethsv_noeeprom
+ .text.rgblight_effect_rainbow_mood
+                0x000014ba       0x60 obj_c44/rgblight.o
+                0x000014ba                rgblight_effect_rainbow_mood
+ .text.rgblight_effect_breathing
+                0x0000151a       0x6c obj_c44/rgblight.o
+                0x0000151a                rgblight_effect_breathing
+ .text.__vector_32
+                0x00001586       0xae obj_c44/rgblight.o
+                0x00001586                __vector_32
+ .text.eeconfig_write_rgblight
+                0x00001634        0xe obj_c44/rgblight.o
+                0x00001634                eeconfig_write_rgblight
+ .text.rgblight_sethsv
+                0x00001642       0xa6 obj_c44/rgblight.o
+                0x00001642                rgblight_sethsv
+ .text.rgblight_decrease_val
+                0x000016e8       0x36 obj_c44/rgblight.o
+                0x000016e8                rgblight_decrease_val
+ .text.rgblight_increase_val
+                0x0000171e       0x38 obj_c44/rgblight.o
+                0x0000171e                rgblight_increase_val
+ .text.rgblight_decrease_sat
+                0x00001756       0x36 obj_c44/rgblight.o
+                0x00001756                rgblight_decrease_sat
+ .text.rgblight_increase_sat
+                0x0000178c       0x38 obj_c44/rgblight.o
+                0x0000178c                rgblight_increase_sat
+ .text.rgblight_decrease_hue
+                0x000017c4       0x40 obj_c44/rgblight.o
+                0x000017c4                rgblight_decrease_hue
+ .text.rgblight_increase_hue
+                0x00001804       0x36 obj_c44/rgblight.o
+                0x00001804                rgblight_increase_hue
+ .text.rgblight_mode
+                0x0000183a       0x82 obj_c44/rgblight.o
+                0x0000183a                rgblight_mode
+ .text.rgblight_step
+                0x000018bc       0x16 obj_c44/rgblight.o
+                0x000018bc                rgblight_step
+ .text.rgblight_toggle
+                0x000018d2       0x54 obj_c44/rgblight.o
+                0x000018d2                rgblight_toggle
+ .text.eeconfig_write_rgblight_default
+                0x00001926       0x2c obj_c44/rgblight.o
+                0x00001926                eeconfig_write_rgblight_default
+ .text.eeconfig_read_rgblight
+                0x00001952        0xa obj_c44/rgblight.o
+                0x00001952                eeconfig_read_rgblight
+ .text.rgblight_init
+                0x0000195c       0x66 obj_c44/rgblight.o
+                0x0000195c                rgblight_init
+ .text.host_set_driver
+                0x000019c2        0xa obj_c44/common/host.o
+                0x000019c2                host_set_driver
+ .text.host_keyboard_leds
+                0x000019cc       0x1a obj_c44/common/host.o
+                0x000019cc                host_keyboard_leds
+ .text.host_keyboard_send
+                0x000019e6       0x16 obj_c44/common/host.o
+                0x000019e6                host_keyboard_send
+ .text.host_mouse_send
+                0x000019fc       0x16 obj_c44/common/host.o
+                0x000019fc                host_mouse_send
+ .text.host_system_send
+                0x00001a12       0x30 obj_c44/common/host.o
+                0x00001a12                host_system_send
+ .text.host_consumer_send
+                0x00001a42       0x30 obj_c44/common/host.o
+                0x00001a42                host_consumer_send
+ .text.keyboard_set_leds
+                0x00001a72        0x6 obj_c44/common/keyboard.o
+                0x00001a72                keyboard_set_leds
+ .text.keyboard_task
+                0x00001a78      0x12c obj_c44/common/keyboard.o
+                0x00001a78                keyboard_task
+ .text.keyboard_init
+                0x00001ba4        0xa obj_c44/common/keyboard.o
+                0x00001ba4                keyboard_init
+ .text.debug_event
+                0x00001bae       0x1e obj_c44/common/action.o
+                0x00001bae                debug_event
+ .text.debug_record
+                0x00001bcc       0x20 obj_c44/common/action.o
+                0x00001bcc                debug_record
+ .text.is_tap_key
+                0x00001bec       0x5a obj_c44/common/action.o
+                0x00001bec                is_tap_key
+ .text.clear_keyboard_but_mods
+                0x00001c46       0x26 obj_c44/common/action.o
+                0x00001c46                clear_keyboard_but_mods
+ .text.clear_keyboard
+                0x00001c6c        0xa obj_c44/common/action.o
+                0x00001c6c                clear_keyboard
+ .text.unregister_mods
+                0x00001c76        0xe obj_c44/common/action.o
+                0x00001c76                unregister_mods
+ .text.register_mods
+                0x00001c84        0xe obj_c44/common/action.o
+                0x00001c84                register_mods
+ .text.unregister_code
+                0x00001c92       0xa6 obj_c44/common/action.o
+                0x00001c92                unregister_code
+ .text.register_code
+                0x00001d38      0x19e obj_c44/common/action.o
+                0x00001d38                register_code
+ .text.process_action
+                0x00001ed6      0x46c obj_c44/common/action.o
+                0x00001ed6                process_action
+ .text.action_exec
+                0x00002342       0x5c obj_c44/common/action.o
+                0x00002342                action_exec
+ .text.debug_waiting_buffer
+                0x0000239e       0x42 obj_c44/common/action_tapping.o
+ .text.debug_tapping_key
+                0x000023e0       0x1e obj_c44/common/action_tapping.o
+ .text.waiting_buffer_scan_tap
+                0x000023fe       0xf8 obj_c44/common/action_tapping.o
+ .text.process_tapping
+                0x000024f6      0x4c6 obj_c44/common/action_tapping.o
+ .text.action_tapping_process
+                0x000029bc      0x17e obj_c44/common/action_tapping.o
+                0x000029bc                action_tapping_process
+ .text.action_macro_play
+                0x00002b3a       0xee obj_c44/common/action_macro.o
+                0x00002b3a                action_macro_play
+ .text.default_layer_debug
+                0x00002c28        0x2 obj_c44/common/action_layer.o
+                0x00002c28                default_layer_debug
+ .text.layer_debug
+                0x00002c2a        0x2 obj_c44/common/action_layer.o
+                0x00002c2a                layer_debug
+ .text.layer_switch_get_action
+                0x00002c2c       0x92 obj_c44/common/action_layer.o
+                0x00002c2c                layer_switch_get_action
+ .text.layer_state_set
+                0x00002cbe       0x16 obj_c44/common/action_layer.o
+ .text.layer_xor
+                0x00002cd4       0x22 obj_c44/common/action_layer.o
+                0x00002cd4                layer_xor
+ .text.layer_and
+                0x00002cf6       0x22 obj_c44/common/action_layer.o
+                0x00002cf6                layer_and
+ .text.layer_or
+                0x00002d18       0x22 obj_c44/common/action_layer.o
+                0x00002d18                layer_or
+ .text.layer_invert
+                0x00002d3a       0x38 obj_c44/common/action_layer.o
+                0x00002d3a                layer_invert
+ .text.layer_off
+                0x00002d72       0x40 obj_c44/common/action_layer.o
+                0x00002d72                layer_off
+ .text.layer_on
+                0x00002db2       0x38 obj_c44/common/action_layer.o
+                0x00002db2                layer_on
+ .text.layer_move
+                0x00002dea       0x20 obj_c44/common/action_layer.o
+                0x00002dea                layer_move
+ .text.layer_clear
+                0x00002e0a        0xe obj_c44/common/action_layer.o
+                0x00002e0a                layer_clear
+ .text.default_layer_state_set
+                0x00002e18       0x16 obj_c44/common/action_layer.o
+ .text.default_layer_xor
+                0x00002e2e       0x22 obj_c44/common/action_layer.o
+                0x00002e2e                default_layer_xor
+ .text.default_layer_and
+                0x00002e50       0x22 obj_c44/common/action_layer.o
+                0x00002e50                default_layer_and
+ .text.default_layer_or
+                0x00002e72       0x22 obj_c44/common/action_layer.o
+                0x00002e72                default_layer_or
+ .text.add_key  0x00002e94       0x3c obj_c44/common/action_util.o
+                0x00002e94                add_key
+ .text.del_key  0x00002ed0       0x26 obj_c44/common/action_util.o
+                0x00002ed0                del_key
+ .text.clear_keys
+                0x00002ef6       0x1c obj_c44/common/action_util.o
+                0x00002ef6                clear_keys
+ .text.add_mods
+                0x00002f12        0xc obj_c44/common/action_util.o
+                0x00002f12                add_mods
+ .text.del_mods
+                0x00002f1e        0xe obj_c44/common/action_util.o
+                0x00002f1e                del_mods
+ .text.clear_mods
+                0x00002f2c        0x6 obj_c44/common/action_util.o
+                0x00002f2c                clear_mods
+ .text.add_weak_mods
+                0x00002f32        0xc obj_c44/common/action_util.o
+                0x00002f32                add_weak_mods
+ .text.del_weak_mods
+                0x00002f3e        0xe obj_c44/common/action_util.o
+                0x00002f3e                del_weak_mods
+ .text.clear_weak_mods
+                0x00002f4c        0x6 obj_c44/common/action_util.o
+                0x00002f4c                clear_weak_mods
+ .text.set_oneshot_mods
+                0x00002f52        0x6 obj_c44/common/action_util.o
+                0x00002f52                set_oneshot_mods
+ .text.clear_oneshot_mods
+                0x00002f58        0x6 obj_c44/common/action_util.o
+                0x00002f58                clear_oneshot_mods
+ .text.has_anykey
+                0x00002f5e       0x1e obj_c44/common/action_util.o
+                0x00002f5e                has_anykey
+ .text.send_keyboard_report
+                0x00002f7c       0x50 obj_c44/common/action_util.o
+                0x00002f7c                send_keyboard_report
+ .text.__vector_12
+                0x00002fcc       0x52 obj_c44/common/avr/suspend.o
+                0x00002fcc                __vector_12
+ .text.suspend_wakeup_init
+                0x0000301e        0x6 obj_c44/common/avr/suspend.o
+                0x0000301e                suspend_wakeup_init
+ .text.timer_init
+                0x00003024       0x12 obj_c44/common/avr/timer.o
+                0x00003024                timer_init
+ .text.timer_read
+                0x00003036       0x1a obj_c44/common/avr/timer.o
+                0x00003036                timer_read
+ .text.timer_elapsed
+                0x00003050       0x56 obj_c44/common/avr/timer.o
+                0x00003050                timer_elapsed
+ .text.__vector_21
+                0x000030a6       0x4a obj_c44/common/avr/timer.o
+                0x000030a6                __vector_21
+ .text.move_unit
+                0x000030f0       0x90 obj_c44/common/mousekey.o
+ .text.wheel_unit
+                0x00003180       0x66 obj_c44/common/mousekey.o
+ .text.mousekey_on
+                0x000031e6       0xd4 obj_c44/common/mousekey.o
+                0x000031e6                mousekey_on
+ .text.mousekey_off
+                0x000032ba      0x110 obj_c44/common/mousekey.o
+                0x000032ba                mousekey_off
+ .text.mousekey_clear
+                0x000033ca       0x18 obj_c44/common/mousekey.o
+                0x000033ca                mousekey_clear
+ .text.mousekey_send
+                0x000033e2       0x16 obj_c44/common/mousekey.o
+                0x000033e2                mousekey_send
+ .text.mousekey_task
+                0x000033f8      0x142 obj_c44/common/mousekey.o
+                0x000033f8                mousekey_task
+ .text.eeconfig_is_enabled
+                0x0000353a       0x16 obj_c44/common/avr/eeconfig.o
+                0x0000353a                eeconfig_is_enabled
+ .text.eeconfig_init
+                0x00003550       0x36 obj_c44/common/avr/eeconfig.o
+                0x00003550                eeconfig_init
+ .text.EVENT_USB_Device_Disconnect
+                0x00003586        0x6 obj_c44/protocol/lufa/lufa.o
+                0x00003586                EVENT_USB_Device_Disconnect
+ .text.EVENT_USB_Device_Reset
+                0x0000358c        0x2 obj_c44/protocol/lufa/lufa.o
+                0x0000358c                EVENT_USB_Device_Reset
+ .text.EVENT_USB_Device_Suspend
+                0x0000358e        0x2 obj_c44/protocol/lufa/lufa.o
+                0x0000358e                EVENT_USB_Device_Suspend
+ .text.keyboard_leds
+                0x00003590        0x6 obj_c44/protocol/lufa/lufa.o
+ .text.send_consumer
+                0x00003596       0x6c obj_c44/protocol/lufa/lufa.o
+ .text.send_system
+                0x00003602       0x6c obj_c44/protocol/lufa/lufa.o
+ .text.send_mouse
+                0x0000366e       0x4c obj_c44/protocol/lufa/lufa.o
+ .text.send_keyboard
+                0x000036ba       0x6e obj_c44/protocol/lufa/lufa.o
+ .text.EVENT_USB_Device_Connect
+                0x00003728       0x1c obj_c44/protocol/lufa/lufa.o
+                0x00003728                EVENT_USB_Device_Connect
+ .text.EVENT_USB_Device_ControlRequest
+                0x00003744      0x184 obj_c44/protocol/lufa/lufa.o
+                0x00003744                EVENT_USB_Device_ControlRequest
+ .text.EVENT_USB_Device_ConfigurationChanged
+                0x000038c8       0x20 obj_c44/protocol/lufa/lufa.o
+                0x000038c8                EVENT_USB_Device_ConfigurationChanged
+ .text.EVENT_USB_Device_WakeUp
+                0x000038e8        0x6 obj_c44/protocol/lufa/lufa.o
+                0x000038e8                EVENT_USB_Device_WakeUp
+ .text.CALLBACK_USB_GetDescriptor
+                0x000038ee       0xc2 obj_c44/protocol/lufa/descriptor.o
+                0x000038ee                CALLBACK_USB_GetDescriptor
+ .text.Endpoint_Write_Control_Stream_LE
+                0x000039b0       0xd4 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x000039b0                Endpoint_Write_Control_Stream_LE
+ .text.Endpoint_Write_Control_PStream_LE
+                0x00003a84       0xd6 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00003a84                Endpoint_Write_Control_PStream_LE
+ .text.Endpoint_Write_Stream_LE
+                0x00003b5a       0xa6 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00003b5a                Endpoint_Write_Stream_LE
+ .text.Endpoint_ConfigureEndpoint_Prv
+                0x00003c00       0x70 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00003c00                Endpoint_ConfigureEndpoint_Prv
+ .text.Endpoint_ClearStatusStage
+                0x00003c70       0x42 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00003c70                Endpoint_ClearStatusStage
+ .text.Endpoint_WaitUntilReady
+                0x00003cb2       0x64 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00003cb2                Endpoint_WaitUntilReady
+ .text.USB_Disable
+                0x00003d16       0x34 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x00003d16                USB_Disable
+ .text.USB_ResetInterface
+                0x00003d4a       0x8e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x00003d4a                USB_ResetInterface
+ .text.USB_Init
+                0x00003dd8       0x24 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x00003dd8                USB_Init
+ .text.USB_INT_DisableAllInterrupts
+                0x00003dfc       0x10 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00003dfc                USB_INT_DisableAllInterrupts
+ .text.USB_INT_ClearAllInterrupts
+                0x00003e0c        0xa obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00003e0c                USB_INT_ClearAllInterrupts
+ .text.__vector_11
+                0x00003e16       0x78 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00003e16                __vector_11
+ .text.__vector_10
+                0x00003e8e      0x1a4 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x00003e8e                __vector_10
+ .text.USB_Device_ProcessControlRequest
+                0x00004032      0x2e0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x00004032                USB_Device_ProcessControlRequest
+ .text.USB_Event_Stub
+                0x00004312        0x2 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+                0x00004312                USB_Event_Stub
+                0x00004312                EVENT_USB_Device_StartOfFrame
+ .text.avr-libc.fplib
+                0x00004314        0xa d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x00004314                __fixsfsi
+ .text.avr-libc.fplib
+                0x0000431e       0x58 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x0000431e                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00004376       0x7a d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x0000437a                __floatsisf
+                0x00004376                __floatunsisf
+ .text.avr-libc.fplib
+                0x000043f0       0x44 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x000043f0                __fp_split3
+                0x00004400                __fp_splitA
+ .text.avr-libc.fplib
+                0x00004434        0xe d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00004434                __fp_zero
+                0x00004436                __fp_szero
+ .text.avr-libc.fplib
+                0x00004442        0x4 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00004442                __mulsf3
+ .text.avr-libc.fplib
+                0x00004446       0xc2 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x0000445e                __mulsf3_pse
+                0x0000445a                __mulsf3x
+ .text.avr-libc.fplib
+                0x00004508        0xc d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00004508                __fp_inf
+ .text.avr-libc.fplib
+                0x00004514        0x6 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00004514                __fp_nan
+ .text.avr-libc.fplib
+                0x0000451a        0xe d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x0000451a                __fp_pscA
+ .text.avr-libc.fplib
+                0x00004528        0xe d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00004528                __fp_pscB
+ .text.avr-libc.fplib
+                0x00004536       0x22 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00004536                __fp_round
+ .text.libgcc   0x00004558       0x28 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x00004558                __udivmodhi4
+ .text.libgcc   0x00004580       0x26 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                0x00004580                __divmodhi4
+                0x00004580                _div
+ .text.avr-libc
+                0x000045a6        0xc d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+                0x000045a6                __eerd_dword_m32u4
+                0x000045a6                __eerd_float_m32u4
+ .text.avr-libc
+                0x000045b2        0xc d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+                0x000045b2                __eerd_word_m32u4
+ .text.avr-libc
+                0x000045be       0x1c d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+                0x000045c0                __eewr_r18_m32u4
+                0x000045be                __eewr_byte_m32u4
+ .text.avr-libc
+                0x000045da       0x10 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+                0x000045da                __eewr_dword_m32u4
+                0x000045da                __eewr_float_m32u4
+ .text.avr-libc
+                0x000045ea        0xa d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+                0x000045ea                __eewr_word_m32u4
+ .text.avr-libc
+                0x000045f4       0x20 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+                0x000045f8                __eerd_blraw_m32u4
+                0x000045f4                __eerd_block_m32u4
+                0x00004614                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00004614        0x0 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00004614                exit
+                0x00004614                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00004614        0x4 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00004618                _etext = .
+
+.data           0x00800100       0x16 load address 0x00004618
+                0x00800100                PROVIDE (__data_start, .)
+ *(.data)
+ *(.data*)
+ .data.debouncing
+                0x00800100        0x1 obj_c44/matrix.o
+ .data.isLeftHand
+                0x00800101        0x1 obj_c44/c44-util.o
+                0x00800101                isLeftHand
+ .data.increament.2005
+                0x00800102        0x1 obj_c44/rgblight.o
+ .data.keyboard_report
+                0x00800103        0x2 obj_c44/common/action_util.o
+                0x00800103                keyboard_report
+ .data.mk_delay
+                0x00800105        0x1 obj_c44/common/mousekey.o
+                0x00800105                mk_delay
+ .data.mk_interval
+                0x00800106        0x1 obj_c44/common/mousekey.o
+                0x00800106                mk_interval
+ .data.mk_max_speed
+                0x00800107        0x1 obj_c44/common/mousekey.o
+                0x00800107                mk_max_speed
+ .data.mk_time_to_max
+                0x00800108        0x1 obj_c44/common/mousekey.o
+                0x00800108                mk_time_to_max
+ .data.mk_wheel_max_speed
+                0x00800109        0x1 obj_c44/common/mousekey.o
+                0x00800109                mk_wheel_max_speed
+ .data.mk_wheel_time_to_max
+                0x0080010a        0x1 obj_c44/common/mousekey.o
+                0x0080010a                mk_wheel_time_to_max
+ .data.keyboard_protocol
+                0x0080010b        0x1 obj_c44/protocol/lufa/lufa.o
+                0x0080010b                keyboard_protocol
+ .data.lufa_driver
+                0x0080010c        0xa obj_c44/protocol/lufa/lufa.o
+                0x0080010c                lufa_driver
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800116                . = ALIGN (0x2)
+                0x00800116                _edata = .
+                0x00800116                PROVIDE (__data_end, .)
+
+.bss            0x00800116      0x113
+                0x00800116                PROVIDE (__bss_start, .)
+ *(.bss)
+ *(.bss*)
+ .bss.matrix    0x00800116        0xe obj_c44/matrix.o
+ .bss.matrix_debouncing
+                0x00800124        0xe obj_c44/matrix.o
+ .bss.hasSetRegister
+                0x00800132        0x1 obj_c44/i2c-slave.o
+ .bss.bufferPos
+                0x00800133        0x1 obj_c44/i2c-slave.o
+ .bss.serial_slave_buffer
+                0x00800134        0x7 obj_c44/serial.o
+                0x00800134                serial_slave_buffer
+ .bss.serial_master_buffer
+                0x0080013b        0x1 obj_c44/serial.o
+                0x0080013b                serial_master_buffer
+ .bss.rgblight_inited
+                0x0080013c        0x1 obj_c44/rgblight.o
+                0x0080013c                rgblight_inited
+ .bss.last_timer.1999
+                0x0080013d        0x2 obj_c44/rgblight.o
+ .bss.pos.1998  0x0080013f        0x1 obj_c44/rgblight.o
+ .bss.last_timer.1944
+                0x00800140        0x2 obj_c44/rgblight.o
+ .bss.pos.1943  0x00800142        0x1 obj_c44/rgblight.o
+ .bss.last_timer.1908
+                0x00800143        0x2 obj_c44/rgblight.o
+ .bss.current_hue.1907
+                0x00800145        0x2 obj_c44/rgblight.o
+ .bss.last_timer.1889
+                0x00800147        0x2 obj_c44/rgblight.o
+ .bss.current_hue.1888
+                0x00800149        0x2 obj_c44/rgblight.o
+ .bss.last_timer.1862
+                0x0080014b        0x2 obj_c44/rgblight.o
+ .bss.pos.1861  0x0080014d        0x1 obj_c44/rgblight.o
+ .bss.rgblight_timer_is_init.1816
+                0x0080014e        0x1 obj_c44/rgblight.o
+ .bss.last_consumer_report
+                0x0080014f        0x2 obj_c44/common/host.o
+ .bss.last_system_report
+                0x00800151        0x2 obj_c44/common/host.o
+ .bss.driver    0x00800153        0x2 obj_c44/common/host.o
+ .bss.led_status.1987
+                0x00800155        0x1 obj_c44/common/keyboard.o
+ .bss.matrix_prev.1986
+                0x00800156        0xe obj_c44/common/keyboard.o
+ .bss.tapping_key
+                0x00800164        0x6 obj_c44/common/action_tapping.o
+ .bss.waiting_buffer_head
+                0x0080016a        0x1 obj_c44/common/action_tapping.o
+ .bss.waiting_buffer_tail
+                0x0080016b        0x1 obj_c44/common/action_tapping.o
+ .bss.waiting_buffer
+                0x0080016c       0x30 obj_c44/common/action_tapping.o
+ .bss.default_layer_state
+                0x0080019c        0x4 obj_c44/common/action_layer.o
+                0x0080019c                default_layer_state
+ .bss.layer_state
+                0x008001a0        0x4 obj_c44/common/action_layer.o
+                0x008001a0                layer_state
+ .bss.__compound_literal.0
+                0x008001a4        0x8 obj_c44/common/action_util.o
+ .bss.real_mods
+                0x008001ac        0x1 obj_c44/common/action_util.o
+ .bss.oneshot_mods
+                0x008001ad        0x1 obj_c44/common/action_util.o
+ .bss.weak_mods
+                0x008001ae        0x1 obj_c44/common/action_util.o
+ .bss.debug_config
+                0x008001af        0x1 obj_c44/common/debug.o
+                0x008001af                debug_config
+ .bss.wdt_timeout
+                0x008001b0        0x1 obj_c44/common/avr/suspend.o
+ .bss.timer_count
+                0x008001b1        0x4 obj_c44/common/avr/timer.o
+                0x008001b1                timer_count
+ .bss.mouse_report
+                0x008001b5        0x5 obj_c44/common/mousekey.o
+ .bss.mousekey_repeat
+                0x008001ba        0x1 obj_c44/common/mousekey.o
+ .bss.mousekey_accel
+                0x008001bb        0x1 obj_c44/common/mousekey.o
+ .bss.last_timer
+                0x008001bc        0x2 obj_c44/common/mousekey.o
+ .bss.keyboard_idle
+                0x008001be        0x1 obj_c44/protocol/lufa/lufa.o
+                0x008001be                keyboard_idle
+ .bss.keyboard_led_stats
+                0x008001bf        0x1 obj_c44/protocol/lufa/lufa.o
+ .bss.keyboard_report_sent
+                0x008001c0        0x8 obj_c44/protocol/lufa/lufa.o
+ *(COMMON)
+ COMMON         0x008001c8       0x10 obj_c44/i2c-slave.o
+                0x008001c8                slaveBuffer
+ COMMON         0x008001d8       0x44 obj_c44/rgblight.o
+                0x008001d8                rgblight_config
+                0x008001dc                inmem_config
+                0x008001e0                led
+ COMMON         0x0080021c        0x3 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x0080021c                USB_Device_ConfigurationNumber
+                0x0080021d                USB_Device_CurrentlySelfPowered
+                0x0080021e                USB_Device_RemoteWakeupEnabled
+ COMMON         0x0080021f        0xa obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                0x0080021f                USB_IsInitialized
+                0x00800220                USB_DeviceState
+                0x00800221                USB_ControlRequest
+                0x00800229                PROVIDE (__bss_end, .)
+                0x00004618                __data_load_start = LOADADDR (.data)
+                0x0000462e                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00800229        0x4
+                0x00800229                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+ .noinit        0x00800229        0x4 obj_c44/common/avr/bootloader.o
+                0x00800229                reset_key
+                0x0080022d                PROVIDE (__noinit_end, .)
+                0x0080022d                _end = .
+                0x0080022d                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000       0x24
+ *(.stab)
+ .stab          0x00000000       0x24 obj_c44/common/avr/xprintf.o
+                                0x8b8 (size before relaxing)
+
+.stabstr        0x00000000       0x7e
+ *(.stabstr)
+ .stabstr       0x00000000       0x7e obj_c44/common/avr/xprintf.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0xb38
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x28 obj_c44/keymap.o
+ .debug_aranges
+                0x00000028       0x38 obj_c44/keymap_common.o
+ .debug_aranges
+                0x00000060       0x78 obj_c44/matrix.o
+ .debug_aranges
+                0x000000d8       0x40 obj_c44/i2c-master.o
+ .debug_aranges
+                0x00000118       0x28 obj_c44/i2c-slave.o
+ .debug_aranges
+                0x00000140       0x58 obj_c44/serial.o
+ .debug_aranges
+                0x00000198       0x30 obj_c44/c44-util.o
+ .debug_aranges
+                0x000001c8       0x20 obj_c44/main.o
+ .debug_aranges
+                0x000001e8       0x20 obj_c44/led.o
+ .debug_aranges
+                0x00000208       0x40 obj_c44/light_ws2812.o
+ .debug_aranges
+                0x00000248      0x118 obj_c44/rgblight.o
+ .debug_aranges
+                0x00000360       0x60 obj_c44/common/host.o
+ .debug_aranges
+                0x000003c0       0x40 obj_c44/common/keyboard.o
+ .debug_aranges
+                0x00000400       0x78 obj_c44/common/action.o
+ .debug_aranges
+                0x00000478       0x40 obj_c44/common/action_tapping.o
+ .debug_aranges
+                0x000004b8       0x20 obj_c44/common/action_macro.o
+ .debug_aranges
+                0x000004d8       0xa0 obj_c44/common/action_layer.o
+ .debug_aranges
+                0x00000578       0xb0 obj_c44/common/action_util.o
+ .debug_aranges
+                0x00000628       0x28 obj_c44/common/keymap.o
+ .debug_aranges
+                0x00000650       0x60 obj_c44/common/util.o
+ .debug_aranges
+                0x000006b0       0x50 obj_c44/common/avr/suspend.o
+ .debug_aranges
+                0x00000700       0x50 obj_c44/common/avr/timer.o
+ .debug_aranges
+                0x00000750       0x28 obj_c44/common/avr/bootloader.o
+ .debug_aranges
+                0x00000778       0x50 obj_c44/common/mousekey.o
+ .debug_aranges
+                0x000007c8       0x68 obj_c44/common/avr/eeconfig.o
+ .debug_aranges
+                0x00000830       0x88 obj_c44/protocol/lufa/lufa.o
+ .debug_aranges
+                0x000008b8       0x20 obj_c44/protocol/lufa/descriptor.o
+ .debug_aranges
+                0x000008d8       0x38 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_aranges
+                0x00000910       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_aranges
+                0x00000930       0xc8 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_aranges
+                0x000009f8       0x40 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_aranges
+                0x00000a38       0x30 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_aranges
+                0x00000a68       0x38 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_aranges
+                0x00000aa0       0x38 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_aranges
+                0x00000ad8       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_aranges
+                0x00000af8       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_aranges
+                0x00000b18       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+.debug_pubnames
+                0x00000000     0x1a90
+ *(.debug_pubnames)
+ .debug_pubnames
+                0x00000000       0x56 obj_c44/keymap.o
+ .debug_pubnames
+                0x00000056       0x71 obj_c44/keymap_common.o
+ .debug_pubnames
+                0x000000c7       0xda obj_c44/matrix.o
+ .debug_pubnames
+                0x000001a1       0x78 obj_c44/i2c-master.o
+ .debug_pubnames
+                0x00000219       0x45 obj_c44/i2c-slave.o
+ .debug_pubnames
+                0x0000025e       0x96 obj_c44/serial.o
+ .debug_pubnames
+                0x000002f4       0x59 obj_c44/c44-util.o
+ .debug_pubnames
+                0x0000034d       0x1b obj_c44/main.o
+ .debug_pubnames
+                0x00000368       0x1e obj_c44/led.o
+ .debug_pubnames
+                0x00000386       0x83 obj_c44/light_ws2812.o
+ .debug_pubnames
+                0x00000409      0x419 obj_c44/rgblight.o
+ .debug_pubnames
+                0x00000822       0xe3 obj_c44/common/host.o
+ .debug_pubnames
+                0x00000905       0x70 obj_c44/common/keyboard.o
+ .debug_pubnames
+                0x00000975       0xf1 obj_c44/common/action.o
+ .debug_pubnames
+                0x00000a66       0x2d obj_c44/common/action_tapping.o
+ .debug_pubnames
+                0x00000a93       0x28 obj_c44/common/action_macro.o
+ .debug_pubnames
+                0x00000abb      0x149 obj_c44/common/action_layer.o
+ .debug_pubnames
+                0x00000c04      0x161 obj_c44/common/action_util.o
+ .debug_pubnames
+                0x00000d65       0x3b obj_c44/common/keymap.o
+ .debug_pubnames
+                0x00000da0       0x23 obj_c44/common/debug.o
+ .debug_pubnames
+                0x00000dc3       0x7e obj_c44/common/util.o
+ .debug_pubnames
+                0x00000e41       0xa9 obj_c44/common/avr/suspend.o
+ .debug_pubnames
+                0x00000eea       0x97 obj_c44/common/avr/timer.o
+ .debug_pubnames
+                0x00000f81       0x5d obj_c44/common/avr/bootloader.o
+ .debug_pubnames
+                0x00000fde       0xdb obj_c44/common/mousekey.o
+ .debug_pubnames
+                0x000010b9      0x10a obj_c44/common/avr/eeconfig.o
+ .debug_pubnames
+                0x000011c3      0x13f obj_c44/protocol/lufa/lufa.o
+ .debug_pubnames
+                0x00001302       0xd4 obj_c44/protocol/lufa/descriptor.o
+ .debug_pubnames
+                0x000013d6       0x7e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_pubnames
+                0x00001454       0x32 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_pubnames
+                0x00001486      0x2df obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_pubnames
+                0x00001765       0xaf obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_pubnames
+                0x00001814       0x46 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_pubnames
+                0x0000185a       0x72 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_pubnames
+                0x000018cc       0x9b obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_pubnames
+                0x00001967       0xa1 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_pubnames
+                0x00001a08       0x25 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_pubnames
+                0x00001a2d       0x63 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+.debug_info     0x00000000     0xd177
+ *(.debug_info)
+ .debug_info    0x00000000      0x755 obj_c44/keymap.o
+ .debug_info    0x00000755      0xca4 obj_c44/keymap_common.o
+ .debug_info    0x000013f9      0x594 obj_c44/matrix.o
+ .debug_info    0x0000198d      0x1e9 obj_c44/i2c-master.o
+ .debug_info    0x00001b76      0x10e obj_c44/i2c-slave.o
+ .debug_info    0x00001c84      0x65e obj_c44/serial.o
+ .debug_info    0x000022e2      0x2c2 obj_c44/c44-util.o
+ .debug_info    0x000025a4      0x308 obj_c44/main.o
+ .debug_info    0x000028ac       0x9f obj_c44/led.o
+ .debug_info    0x0000294b      0x3b6 obj_c44/light_ws2812.o
+ .debug_info    0x00002d01      0xbc6 obj_c44/rgblight.o
+ .debug_info    0x000038c7      0x3ef obj_c44/common/host.o
+ .debug_info    0x00003cb6      0x28c obj_c44/common/keyboard.o
+ .debug_info    0x00003f42      0xec6 obj_c44/common/action.o
+ .debug_info    0x00004e08      0xc55 obj_c44/common/action_tapping.o
+ .debug_info    0x00005a5d      0x735 obj_c44/common/action_macro.o
+ .debug_info    0x00006192      0x61f obj_c44/common/action_layer.o
+ .debug_info    0x000067b1      0x460 obj_c44/common/action_util.o
+ .debug_info    0x00006c11      0x22d obj_c44/common/keymap.o
+ .debug_info    0x00006e3e       0x5e obj_c44/common/print.o
+ .debug_info    0x00006e9c      0x104 obj_c44/common/debug.o
+ .debug_info    0x00006fa0      0x253 obj_c44/common/util.o
+ .debug_info    0x000071f3      0x1e5 obj_c44/common/avr/suspend.o
+ .debug_info    0x000073d8      0x1ea obj_c44/common/avr/timer.o
+ .debug_info    0x000075c2      0x182 obj_c44/common/avr/bootloader.o
+ .debug_info    0x00007744      0x50f obj_c44/common/mousekey.o
+ .debug_info    0x00007c53      0x188 obj_c44/common/avr/eeconfig.o
+ .debug_info    0x00007ddb      0xc86 obj_c44/protocol/lufa/lufa.o
+ .debug_info    0x00008a61      0x6e8 obj_c44/protocol/lufa/descriptor.o
+ .debug_info    0x00009149      0x6ee obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_info    0x00009837       0xc4 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_info    0x000098fb     0x15d4 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_info    0x0000aecf      0x5f2 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_info    0x0000b4c1       0x61 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_info    0x0000b522       0x61 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_info    0x0000b583       0x61 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_info    0x0000b5e4      0x4aa obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_info    0x0000ba8e      0x6a7 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_info    0x0000c135      0x34e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_info    0x0000c483      0x9b1 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_info    0x0000ce34       0x79 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_info    0x0000cead       0x61 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_info    0x0000cf0e      0x269 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev   0x00000000     0x3769
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000      0x11b obj_c44/keymap.o
+ .debug_abbrev  0x0000011b      0x1d8 obj_c44/keymap_common.o
+ .debug_abbrev  0x000002f3      0x29f obj_c44/matrix.o
+ .debug_abbrev  0x00000592      0x11b obj_c44/i2c-master.o
+ .debug_abbrev  0x000006ad       0xb0 obj_c44/i2c-slave.o
+ .debug_abbrev  0x0000075d      0x1f3 obj_c44/serial.o
+ .debug_abbrev  0x00000950      0x15f obj_c44/c44-util.o
+ .debug_abbrev  0x00000aaf      0x16b obj_c44/main.o
+ .debug_abbrev  0x00000c1a       0x6e obj_c44/led.o
+ .debug_abbrev  0x00000c88      0x133 obj_c44/light_ws2812.o
+ .debug_abbrev  0x00000dbb      0x2d9 obj_c44/rgblight.o
+ .debug_abbrev  0x00001094      0x143 obj_c44/common/host.o
+ .debug_abbrev  0x000011d7      0x14f obj_c44/common/keyboard.o
+ .debug_abbrev  0x00001326      0x241 obj_c44/common/action.o
+ .debug_abbrev  0x00001567      0x27a obj_c44/common/action_tapping.o
+ .debug_abbrev  0x000017e1      0x12e obj_c44/common/action_macro.o
+ .debug_abbrev  0x0000190f      0x16c obj_c44/common/action_layer.o
+ .debug_abbrev  0x00001a7b      0x1cb obj_c44/common/action_util.o
+ .debug_abbrev  0x00001c46       0xed obj_c44/common/keymap.o
+ .debug_abbrev  0x00001d33       0x2a obj_c44/common/print.o
+ .debug_abbrev  0x00001d5d       0x8b obj_c44/common/debug.o
+ .debug_abbrev  0x00001de8       0x96 obj_c44/common/util.o
+ .debug_abbrev  0x00001e7e      0x121 obj_c44/common/avr/suspend.o
+ .debug_abbrev  0x00001f9f       0xd2 obj_c44/common/avr/timer.o
+ .debug_abbrev  0x00002071       0xff obj_c44/common/avr/bootloader.o
+ .debug_abbrev  0x00002170      0x15c obj_c44/common/mousekey.o
+ .debug_abbrev  0x000022cc       0x8b obj_c44/common/avr/eeconfig.o
+ .debug_abbrev  0x00002357      0x30d obj_c44/protocol/lufa/lufa.o
+ .debug_abbrev  0x00002664      0x17d obj_c44/protocol/lufa/descriptor.o
+ .debug_abbrev  0x000027e1      0x201 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_abbrev  0x000029e2       0x79 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_abbrev  0x00002a5b      0x1bb obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_abbrev  0x00002c16      0x1fb obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_abbrev  0x00002e11       0x33 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_abbrev  0x00002e44       0x33 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_abbrev  0x00002e77       0x33 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_abbrev  0x00002eaa      0x134 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_abbrev  0x00002fde      0x1e8 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_abbrev  0x000031c6      0x15c obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_abbrev  0x00003322      0x256 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_abbrev  0x00003578       0x4a obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_abbrev  0x000035c2       0x33 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_abbrev  0x000035f5      0x174 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+.debug_line     0x00000000     0x92e1
+ *(.debug_line)
+ .debug_line    0x00000000      0x1a6 obj_c44/keymap.o
+ .debug_line    0x000001a6      0x1f9 obj_c44/keymap_common.o
+ .debug_line    0x0000039f      0x480 obj_c44/matrix.o
+ .debug_line    0x0000081f      0x1c2 obj_c44/i2c-master.o
+ .debug_line    0x000009e1      0x12a obj_c44/i2c-slave.o
+ .debug_line    0x00000b0b      0x3c1 obj_c44/serial.o
+ .debug_line    0x00000ecc      0x29d obj_c44/c44-util.o
+ .debug_line    0x00001169      0x255 obj_c44/main.o
+ .debug_line    0x000013be       0x9a obj_c44/led.o
+ .debug_line    0x00001458      0x203 obj_c44/light_ws2812.o
+ .debug_line    0x0000165b      0xa85 obj_c44/rgblight.o
+ .debug_line    0x000020e0      0x201 obj_c44/common/host.o
+ .debug_line    0x000022e1      0x1ec obj_c44/common/keyboard.o
+ .debug_line    0x000024cd      0x6f3 obj_c44/common/action.o
+ .debug_line    0x00002bc0      0x550 obj_c44/common/action_tapping.o
+ .debug_line    0x00003110      0x1e2 obj_c44/common/action_macro.o
+ .debug_line    0x000032f2      0x330 obj_c44/common/action_layer.o
+ .debug_line    0x00003622      0x36b obj_c44/common/action_util.o
+ .debug_line    0x0000398d       0xf9 obj_c44/common/keymap.o
+ .debug_line    0x00003a86       0x3e obj_c44/common/print.o
+ .debug_line    0x00003ac4       0xa3 obj_c44/common/debug.o
+ .debug_line    0x00003b67      0x251 obj_c44/common/util.o
+ .debug_line    0x00003db8      0x2cc obj_c44/common/avr/suspend.o
+ .debug_line    0x00004084      0x22a obj_c44/common/avr/timer.o
+ .debug_line    0x000042ae      0x1de obj_c44/common/avr/bootloader.o
+ .debug_line    0x0000448c      0x3cd obj_c44/common/mousekey.o
+ .debug_line    0x00004859      0x1e3 obj_c44/common/avr/eeconfig.o
+ .debug_line    0x00004a3c      0x94c obj_c44/protocol/lufa/lufa.o
+ .debug_line    0x00005388      0x29d obj_c44/protocol/lufa/descriptor.o
+ .debug_line    0x00005625      0x5ba obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_line    0x00005bdf      0x167 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_line    0x00005d46     0x188d obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_line    0x000075d3      0x5d9 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_line    0x00007bac       0x3e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+ .debug_line    0x00007bea       0x3e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+ .debug_line    0x00007c28       0x3e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+ .debug_line    0x00007c66      0x46a obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_line    0x000080d0      0x6c0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_line    0x00008790      0x280 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_line    0x00008a10      0x5ec obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_line    0x00008ffc       0xa0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_line    0x0000909c       0x3e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+ .debug_line    0x000090da      0x207 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+.debug_frame    0x00000000     0x11d0
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x30 obj_c44/keymap.o
+ .debug_frame   0x00000030       0x50 obj_c44/keymap_common.o
+ .debug_frame   0x00000080       0xd0 obj_c44/matrix.o
+ .debug_frame   0x00000150       0x60 obj_c44/i2c-master.o
+ .debug_frame   0x000001b0       0x30 obj_c44/i2c-slave.o
+ .debug_frame   0x000001e0       0x90 obj_c44/serial.o
+ .debug_frame   0x00000270       0x40 obj_c44/c44-util.o
+ .debug_frame   0x000002b0       0x20 obj_c44/main.o
+ .debug_frame   0x000002d0       0x20 obj_c44/led.o
+ .debug_frame   0x000002f0       0x60 obj_c44/light_ws2812.o
+ .debug_frame   0x00000350      0x210 obj_c44/rgblight.o
+ .debug_frame   0x00000560       0xa0 obj_c44/common/host.o
+ .debug_frame   0x00000600       0x60 obj_c44/common/keyboard.o
+ .debug_frame   0x00000660       0xd0 obj_c44/common/action.o
+ .debug_frame   0x00000730       0x60 obj_c44/common/action_tapping.o
+ .debug_frame   0x00000790       0x20 obj_c44/common/action_macro.o
+ .debug_frame   0x000007b0      0x120 obj_c44/common/action_layer.o
+ .debug_frame   0x000008d0      0x140 obj_c44/common/action_util.o
+ .debug_frame   0x00000a10       0x30 obj_c44/common/keymap.o
+ .debug_frame   0x00000a40       0xa0 obj_c44/common/util.o
+ .debug_frame   0x00000ae0       0x80 obj_c44/common/avr/suspend.o
+ .debug_frame   0x00000b60       0x80 obj_c44/common/avr/timer.o
+ .debug_frame   0x00000be0       0x30 obj_c44/common/avr/bootloader.o
+ .debug_frame   0x00000c10       0x80 obj_c44/common/mousekey.o
+ .debug_frame   0x00000c90       0xb0 obj_c44/common/avr/eeconfig.o
+ .debug_frame   0x00000d40       0xf0 obj_c44/protocol/lufa/lufa.o
+ .debug_frame   0x00000e30       0x20 obj_c44/protocol/lufa/descriptor.o
+ .debug_frame   0x00000e50       0x50 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_frame   0x00000ea0       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_frame   0x00000ec0      0x170 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_frame   0x00001030       0x60 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_frame   0x00001090       0x40 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_frame   0x000010d0       0x50 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_frame   0x00001120       0x50 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_frame   0x00001170       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_frame   0x00001190       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_frame   0x000011b0       0x20 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+.debug_str      0x00000000     0x43a3
+ *(.debug_str)
+ .debug_str     0x00000000      0x76f obj_c44/keymap.o
+                                0x7bf (size before relaxing)
+ .debug_str     0x0000076f      0x552 obj_c44/keymap_common.o
+                                0xc37 (size before relaxing)
+ .debug_str     0x00000cc1      0x1ba obj_c44/matrix.o
+                                0x29d (size before relaxing)
+ .debug_str     0x00000e7b       0x76 obj_c44/i2c-master.o
+                                0x11b (size before relaxing)
+ .debug_str     0x00000ef1       0x4c obj_c44/i2c-slave.o
+                                 0xf0 (size before relaxing)
+ .debug_str     0x00000f3d       0xe7 obj_c44/serial.o
+                                0x201 (size before relaxing)
+ .debug_str     0x00001024      0x157 obj_c44/c44-util.o
+                                0x269 (size before relaxing)
+ .debug_str     0x0000117b      0x11e obj_c44/main.o
+                                0x248 (size before relaxing)
+ .debug_str     0x00001299       0x16 obj_c44/led.o
+                                 0xb8 (size before relaxing)
+ .debug_str     0x000012af       0xaf obj_c44/light_ws2812.o
+                                0x1bb (size before relaxing)
+ .debug_str     0x0000135e      0x3c6 obj_c44/rgblight.o
+                                0x527 (size before relaxing)
+ .debug_str     0x00001724       0xdd obj_c44/common/host.o
+                                0x276 (size before relaxing)
+ .debug_str     0x00001801       0xab obj_c44/common/keyboard.o
+                                0x1c0 (size before relaxing)
+ .debug_str     0x000018ac      0x1b6 obj_c44/common/action.o
+                                0xdd2 (size before relaxing)
+ .debug_str     0x00001a62      0x103 obj_c44/common/action_tapping.o
+                                0x9b1 (size before relaxing)
+ .debug_str     0x00001b65       0x6e obj_c44/common/action_macro.o
+                                0x738 (size before relaxing)
+ .debug_str     0x00001bd3      0x102 obj_c44/common/action_layer.o
+                                0x301 (size before relaxing)
+ .debug_str     0x00001cd5      0x13d obj_c44/common/action_util.o
+                                0x237 (size before relaxing)
+ .debug_str     0x00001e12       0x1f obj_c44/common/keymap.o
+                                0x163 (size before relaxing)
+ .debug_str     0x00001e31       0x1e obj_c44/common/print.o
+                                 0xb2 (size before relaxing)
+ .debug_str     0x00001e4f       0x1e obj_c44/common/debug.o
+                                0x102 (size before relaxing)
+ .debug_str     0x00001e6d       0x65 obj_c44/common/util.o
+                                0x118 (size before relaxing)
+ .debug_str     0x00001ed2       0xbc obj_c44/common/avr/suspend.o
+                                0x228 (size before relaxing)
+ .debug_str     0x00001f8e       0x75 obj_c44/common/avr/timer.o
+                                0x13f (size before relaxing)
+ .debug_str     0x00002003       0x66 obj_c44/common/avr/bootloader.o
+                                0x169 (size before relaxing)
+ .debug_str     0x00002069      0x10e obj_c44/common/mousekey.o
+                                0x572 (size before relaxing)
+ .debug_str     0x00002177       0xf5 obj_c44/common/avr/eeconfig.o
+                                0x197 (size before relaxing)
+ .debug_str     0x0000226c      0x37b obj_c44/protocol/lufa/lufa.o
+                                0x72a (size before relaxing)
+ .debug_str     0x000025e7      0x568 obj_c44/protocol/lufa/descriptor.o
+                                0x68f (size before relaxing)
+ .debug_str     0x00002b4f      0x49b obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+                                0x5d6 (size before relaxing)
+ .debug_str     0x00002fea       0x97 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+                                0x131 (size before relaxing)
+ .debug_str     0x00003081      0x4f4 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                0x75f (size before relaxing)
+ .debug_str     0x00003575      0x2c2 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                0x55b (size before relaxing)
+ .debug_str     0x00003837       0x4d obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Host_AVR8.o
+                                 0xe1 (size before relaxing)
+ .debug_str     0x00003884       0x53 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/PipeStream_AVR8.o
+                                 0xe7 (size before relaxing)
+ .debug_str     0x000038d7       0x4d obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Pipe_AVR8.o
+                                 0xe1 (size before relaxing)
+ .debug_str     0x00003924      0x1ba obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                0x443 (size before relaxing)
+ .debug_str     0x00003ade      0x15c obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                0x43e (size before relaxing)
+ .debug_str     0x00003c3a      0x23d obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+                                0x2ff (size before relaxing)
+ .debug_str     0x00003e77      0x41c obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                0x82f (size before relaxing)
+ .debug_str     0x00004293       0x54 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+                                 0xe8 (size before relaxing)
+ .debug_str     0x000042e7       0x4e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/HostStandardReq.o
+                                 0xe2 (size before relaxing)
+ .debug_str     0x00004335       0x6e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                0x29f (size before relaxing)
+
+.debug_loc      0x00000000     0x4b3c
+ *(.debug_loc)
+ .debug_loc     0x00000000      0x218 obj_c44/keymap.o
+ .debug_loc     0x00000218      0x136 obj_c44/keymap_common.o
+ .debug_loc     0x0000034e      0x13a obj_c44/matrix.o
+ .debug_loc     0x00000488       0x87 obj_c44/i2c-master.o
+ .debug_loc     0x0000050f       0x3c obj_c44/i2c-slave.o
+ .debug_loc     0x0000054b       0xee obj_c44/serial.o
+ .debug_loc     0x00000639       0x13 obj_c44/c44-util.o
+ .debug_loc     0x0000064c       0x3b obj_c44/main.o
+ .debug_loc     0x00000687      0x129 obj_c44/light_ws2812.o
+ .debug_loc     0x000007b0      0x6dc obj_c44/rgblight.o
+ .debug_loc     0x00000e8c       0xc0 obj_c44/common/host.o
+ .debug_loc     0x00000f4c       0xec obj_c44/common/keyboard.o
+ .debug_loc     0x00001038      0x45c obj_c44/common/action.o
+ .debug_loc     0x00001494      0x1f5 obj_c44/common/action_tapping.o
+ .debug_loc     0x00001689      0x2f0 obj_c44/common/action_macro.o
+ .debug_loc     0x00001979      0x24c obj_c44/common/action_layer.o
+ .debug_loc     0x00001bc5       0xa1 obj_c44/common/action_util.o
+ .debug_loc     0x00001c66       0x18 obj_c44/common/keymap.o
+ .debug_loc     0x00001c7e      0x245 obj_c44/common/util.o
+ .debug_loc     0x00001ec3       0x26 obj_c44/common/avr/suspend.o
+ .debug_loc     0x00001ee9      0x1af obj_c44/common/avr/timer.o
+ .debug_loc     0x00002098       0x18 obj_c44/common/avr/bootloader.o
+ .debug_loc     0x000020b0      0x246 obj_c44/common/mousekey.o
+ .debug_loc     0x000022f6       0x5a obj_c44/common/avr/eeconfig.o
+ .debug_loc     0x00002350      0x1e1 obj_c44/protocol/lufa/lufa.o
+ .debug_loc     0x00002531      0x200 obj_c44/protocol/lufa/descriptor.o
+ .debug_loc     0x00002731      0x584 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_loc     0x00002cb5     0x1886 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_loc     0x0000453b      0x11c obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_loc     0x00004657      0x2c7 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_loc     0x0000491e      0x21e obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(c44.elf elf32-avr)
+LOAD linker stubs
+
+.debug_ranges   0x00000000      0xd08
+ .debug_ranges  0x00000000       0x20 obj_c44/keymap.o
+ .debug_ranges  0x00000020       0x30 obj_c44/keymap_common.o
+ .debug_ranges  0x00000050       0xd0 obj_c44/matrix.o
+ .debug_ranges  0x00000120       0x38 obj_c44/i2c-master.o
+ .debug_ranges  0x00000158       0x20 obj_c44/i2c-slave.o
+ .debug_ranges  0x00000178      0x158 obj_c44/serial.o
+ .debug_ranges  0x000002d0       0x28 obj_c44/c44-util.o
+ .debug_ranges  0x000002f8       0x18 obj_c44/main.o
+ .debug_ranges  0x00000310       0x18 obj_c44/led.o
+ .debug_ranges  0x00000328       0x38 obj_c44/light_ws2812.o
+ .debug_ranges  0x00000360      0x110 obj_c44/rgblight.o
+ .debug_ranges  0x00000470       0x58 obj_c44/common/host.o
+ .debug_ranges  0x000004c8       0x38 obj_c44/common/keyboard.o
+ .debug_ranges  0x00000500       0x70 obj_c44/common/action.o
+ .debug_ranges  0x00000570       0x68 obj_c44/common/action_tapping.o
+ .debug_ranges  0x000005d8       0x90 obj_c44/common/action_macro.o
+ .debug_ranges  0x00000668       0x98 obj_c44/common/action_layer.o
+ .debug_ranges  0x00000700       0xa8 obj_c44/common/action_util.o
+ .debug_ranges  0x000007a8       0x20 obj_c44/common/keymap.o
+ .debug_ranges  0x000007c8       0x58 obj_c44/common/util.o
+ .debug_ranges  0x00000820       0x48 obj_c44/common/avr/suspend.o
+ .debug_ranges  0x00000868       0x48 obj_c44/common/avr/timer.o
+ .debug_ranges  0x000008b0       0x20 obj_c44/common/avr/bootloader.o
+ .debug_ranges  0x000008d0       0x48 obj_c44/common/mousekey.o
+ .debug_ranges  0x00000918       0x60 obj_c44/common/avr/eeconfig.o
+ .debug_ranges  0x00000978       0x80 obj_c44/protocol/lufa/lufa.o
+ .debug_ranges  0x000009f8       0x18 obj_c44/protocol/lufa/descriptor.o
+ .debug_ranges  0x00000a10       0xa0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+ .debug_ranges  0x00000ab0       0x18 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+ .debug_ranges  0x00000ac8       0xc0 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_ranges  0x00000b88       0x50 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_ranges  0x00000bd8       0x28 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_ranges  0x00000c00       0x30 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_ranges  0x00000c30       0x30 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+ .debug_ranges  0x00000c60       0x78 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_ranges  0x00000cd8       0x18 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+ .debug_ranges  0x00000cf0       0x18 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+
+Cross Reference Table
+
+Symbol                                            File
+CALLBACK_HIDParser_FilterHIDReportItem            obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+CALLBACK_USB_GetDescriptor                        obj_c44/protocol/lufa/descriptor.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ConfigurationDescriptor                           obj_c44/protocol/lufa/descriptor.o
+DIM_CURVE                                         obj_c44/rgblight.o
+DeviceDescriptor                                  obj_c44/protocol/lufa/descriptor.o
+EVENT_USB_Device_ConfigurationChanged             obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+EVENT_USB_Device_Connect                          obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_ControlRequest                   obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+EVENT_USB_Device_Disconnect                       obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_Reset                            obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_StartOfFrame                     obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_Suspend                          obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+EVENT_USB_Device_WakeUp                           obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+Endpoint_ClearEndpoints                           obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+Endpoint_ClearStatusStage                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/lufa.o
+Endpoint_ConfigureEndpointTable                   obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+Endpoint_ConfigureEndpoint_Prv                    obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+Endpoint_Discard_Stream                           obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Null_Stream                              obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_EStream_BE                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_EStream_LE                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_Stream_BE                   obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Control_Stream_LE                   obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_EStream_BE                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_EStream_LE                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Stream_BE                           obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Read_Stream_LE                           obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_WaitUntilReady                           obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_EStream_BE                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_EStream_LE                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_PStream_BE                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_PStream_LE                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+Endpoint_Write_Control_Stream_BE                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Control_Stream_LE                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/lufa.o
+Endpoint_Write_EStream_BE                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_EStream_LE                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_PStream_BE                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_PStream_LE                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Stream_BE                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+Endpoint_Write_Stream_LE                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+ExtrakeyReport                                    obj_c44/protocol/lufa/descriptor.o
+KeyboardReport                                    obj_c44/protocol/lufa/descriptor.o
+LanguageString                                    obj_c44/protocol/lufa/descriptor.o
+ManufacturerString                                obj_c44/protocol/lufa/descriptor.o
+MouseReport                                       obj_c44/protocol/lufa/descriptor.o
+ProductString                                     obj_c44/protocol/lufa/descriptor.o
+RGBLED_BREATHING_INTERVALS                        obj_c44/rgblight.o
+RGBLED_BREATHING_TABLE                            obj_c44/rgblight.o
+RGBLED_KNIGHT_INTERVALS                           obj_c44/rgblight.o
+RGBLED_RAINBOW_MOOD_INTERVALS                     obj_c44/rgblight.o
+RGBLED_RAINBOW_SWIRL_INTERVALS                    obj_c44/rgblight.o
+RGBLED_SNAKE_INTERVALS                            obj_c44/rgblight.o
+USB_ControlRequest                                obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+USB_DeviceState                                   obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/common/avr/suspend.o
+                                                  obj_c44/main.o
+USB_Device_ConfigurationNumber                    obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_CurrentlySelfPowered                   obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Device_ProcessControlRequest                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+USB_Device_RemoteWakeupEnabled                    obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+USB_Device_SendRemoteWakeup                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/Device_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+USB_Disable                                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/common/avr/bootloader.o
+                                                  obj_c44/c44-util.o
+USB_Event_Stub                                    obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/Events.o
+USB_GetHIDReportItemInfo                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_GetHIDReportSize                              obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_GetNextDescriptorComp                         obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfType                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfTypeAfter                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_GetNextDescriptorOfTypeBefore                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/ConfigDescriptors.o
+USB_INT_ClearAllInterrupts                        obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_INT_DisableAllInterrupts                      obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_Init                                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/c44-util.o
+USB_IsInitialized                                 obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                                                  obj_c44/protocol/lufa/lufa.o
+USB_ProcessHIDReport                              obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_ResetInterface                                obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+USB_SetHIDReportItemInfo                          obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Class/Common/HIDParser.o
+USB_USBTask                                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+__bad_interrupt                                   d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__bss_end                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__bss_start                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+__data_end                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_load_start                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__data_start                                      d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+__divmodhi4                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  obj_c44/common/mousekey.o
+                                                  obj_c44/rgblight.o
+__do_clear_bss                                    d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/USBTask.o
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/common/mousekey.o
+                                                  obj_c44/common/avr/timer.o
+                                                  obj_c44/common/avr/suspend.o
+                                                  obj_c44/common/debug.o
+                                                  obj_c44/common/action_util.o
+                                                  obj_c44/common/action_layer.o
+                                                  obj_c44/common/action_tapping.o
+                                                  obj_c44/common/keyboard.o
+                                                  obj_c44/common/host.o
+                                                  obj_c44/rgblight.o
+                                                  obj_c44/serial.o
+                                                  obj_c44/i2c-slave.o
+                                                  obj_c44/matrix.o
+__do_copy_data                                    d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/common/mousekey.o
+                                                  obj_c44/common/action_util.o
+                                                  obj_c44/rgblight.o
+                                                  obj_c44/c44-util.o
+                                                  obj_c44/matrix.o
+__eerd_block_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+__eerd_blraw_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_block_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+__eerd_byte_m32u4                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_byte_atmega32u4.o)
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                                                  obj_c44/common/avr/eeconfig.o
+__eerd_dword_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+                                                  obj_c44/rgblight.o
+__eerd_float_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_dword_atmega32u4.o)
+__eerd_word_m32u4                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eerd_word_atmega32u4.o)
+                                                  obj_c44/common/avr/eeconfig.o
+__eeupd_byte_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+                                                  obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+__eeupd_r18_m32u4                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eeupd_byte_atmega32u4.o)
+__eewr_byte_m32u4                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+                                                  obj_c44/common/avr/eeconfig.o
+__eewr_dword_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+                                                  obj_c44/rgblight.o
+__eewr_float_m32u4                                d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+__eewr_r18_m32u4                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_byte_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+__eewr_word_m32u4                                 d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_word_atmega32u4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a(eewr_dword_atmega32u4.o)
+                                                  obj_c44/common/avr/eeconfig.o
+__fixsfsi                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                                                  obj_c44/common/mousekey.o
+__fixunssfsi                                      d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+__floatsisf                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                                                  obj_c44/common/mousekey.o
+__floatunsisf                                     d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+__fp_inf                                          d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_nan                                          d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_pscA                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_pscB                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_round                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+__fp_split3                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__fp_splitA                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+__fp_szero                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+__fp_zero                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+__heap_end                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__init                                            d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__mulsf3                                          d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                                                  obj_c44/common/mousekey.o
+__mulsf3_pse                                      d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+__mulsf3x                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+__stack                                           d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__udivmodhi4                                      d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+                                                  obj_c44/rgblight.o
+__vector_1                                        obj_c44/serial.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_10                                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_11                                       obj_c44/protocol/lufa/LUFA-git/LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_12                                       obj_c44/common/avr/suspend.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_13                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_14                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_15                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_16                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_17                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_18                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_19                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_2                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_20                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_21                                       obj_c44/common/avr/timer.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_22                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_23                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_24                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_25                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_26                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_27                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_28                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_29                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_3                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_30                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_31                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_32                                       obj_c44/rgblight.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_33                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_34                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_35                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_36                                       obj_c44/i2c-slave.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_37                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_38                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_39                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_4                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_40                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_41                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_42                                       d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_5                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_6                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_7                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_8                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_9                                        d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vector_default                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__vectors                                         d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+__xprintf                                         obj_c44/common/avr/xprintf.o
+_div                                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_divmodhi4.o)
+_exit                                             d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+_matrix_scan                                      obj_c44/matrix.o
+action_exec                                       obj_c44/common/action.o
+                                                  obj_c44/common/keyboard.o
+action_for_key                                    obj_c44/keymap_common.o
+                                                  obj_c44/common/action_layer.o
+action_function                                   obj_c44/keymap.o
+                                                  obj_c44/common/action.o
+action_get_macro                                  obj_c44/keymap.o
+                                                  obj_c44/common/action.o
+action_macro_play                                 obj_c44/common/action_macro.o
+                                                  obj_c44/common/action.o
+action_tapping_process                            obj_c44/common/action_tapping.o
+                                                  obj_c44/common/action.o
+add_key                                           obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+add_mods                                          obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+add_weak_mods                                     obj_c44/common/action_util.o
+                                                  obj_c44/common/action_macro.o
+                                                  obj_c44/common/action.o
+biton                                             obj_c44/common/util.o
+biton16                                           obj_c44/common/util.o
+biton32                                           obj_c44/common/util.o
+bitpop                                            obj_c44/common/util.o
+                                                  obj_c44/common/action_util.o
+bitpop16                                          obj_c44/common/util.o
+                                                  obj_c44/matrix.o
+bitpop32                                          obj_c44/common/util.o
+bitrev                                            obj_c44/common/util.o
+bitrev16                                          obj_c44/common/util.o
+bitrev32                                          obj_c44/common/util.o
+bootloader_jump                                   obj_c44/common/avr/bootloader.o
+bootloader_jump_after_watchdog_reset              obj_c44/common/avr/bootloader.o
+clear_keyboard                                    obj_c44/common/action.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/common/avr/suspend.o
+                                                  obj_c44/common/action_tapping.o
+clear_keyboard_but_mods                           obj_c44/common/action.o
+                                                  obj_c44/common/action_layer.o
+clear_keys                                        obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+clear_mods                                        obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+clear_oneshot_mods                                obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+clear_weak_mods                                   obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+debug_action                                      obj_c44/common/action.o
+debug_config                                      obj_c44/common/debug.o
+                                                  obj_c44/common/keyboard.o
+                                                  obj_c44/rgblight.o
+                                                  obj_c44/matrix.o
+debug_event                                       obj_c44/common/action.o
+                                                  obj_c44/common/action_tapping.o
+debug_record                                      obj_c44/common/action.o
+                                                  obj_c44/common/action_tapping.o
+default_layer_and                                 obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+default_layer_debug                               obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+default_layer_or                                  obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+default_layer_set                                 obj_c44/common/action_layer.o
+default_layer_state                               obj_c44/common/action_layer.o
+default_layer_xor                                 obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+del_key                                           obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+del_mods                                          obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+del_weak_mods                                     obj_c44/common/action_util.o
+                                                  obj_c44/common/action_macro.o
+                                                  obj_c44/common/action.o
+eeconfig_debug_rgblight                           obj_c44/rgblight.o
+eeconfig_disable                                  obj_c44/common/avr/eeconfig.o
+eeconfig_enable                                   obj_c44/common/avr/eeconfig.o
+eeconfig_init                                     obj_c44/common/avr/eeconfig.o
+                                                  obj_c44/rgblight.o
+eeconfig_is_enabled                               obj_c44/common/avr/eeconfig.o
+                                                  obj_c44/rgblight.o
+eeconfig_read_debug                               obj_c44/common/avr/eeconfig.o
+eeconfig_read_default_layer                       obj_c44/common/avr/eeconfig.o
+eeconfig_read_keymap                              obj_c44/common/avr/eeconfig.o
+eeconfig_read_rgblight                            obj_c44/rgblight.o
+eeconfig_write_debug                              obj_c44/common/avr/eeconfig.o
+eeconfig_write_default_layer                      obj_c44/common/avr/eeconfig.o
+eeconfig_write_keymap                             obj_c44/common/avr/eeconfig.o
+eeconfig_write_rgblight                           obj_c44/rgblight.o
+eeconfig_write_rgblight_default                   obj_c44/rgblight.o
+exit                                              d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+fn_actions                                        obj_c44/keymap.o
+                                                  obj_c44/keymap_common.o
+get_first_key                                     obj_c44/common/action_util.o
+get_mods                                          obj_c44/common/action_util.o
+get_weak_mods                                     obj_c44/common/action_util.o
+has_anykey                                        obj_c44/common/action_util.o
+has_anymod                                        obj_c44/common/action_util.o
+has_usb                                           obj_c44/c44-util.o
+                                                  obj_c44/main.o
+host_consumer_send                                obj_c44/common/host.o
+                                                  obj_c44/common/action.o
+host_get_driver                                   obj_c44/common/host.o
+host_keyboard_leds                                obj_c44/common/host.o
+                                                  obj_c44/common/action.o
+                                                  obj_c44/common/keyboard.o
+host_keyboard_send                                obj_c44/common/host.o
+                                                  obj_c44/common/action_util.o
+host_last_consumer_report                         obj_c44/common/host.o
+host_last_sysytem_report                          obj_c44/common/host.o
+host_mouse_send                                   obj_c44/common/host.o
+                                                  obj_c44/common/mousekey.o
+host_set_driver                                   obj_c44/common/host.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/main.o
+host_system_send                                  obj_c44/common/host.o
+                                                  obj_c44/common/action.o
+i2c_master_init                                   obj_c44/i2c-master.o
+i2c_master_read                                   obj_c44/i2c-master.o
+i2c_master_start                                  obj_c44/i2c-master.o
+i2c_master_stop                                   obj_c44/i2c-master.o
+i2c_master_write                                  obj_c44/i2c-master.o
+i2c_slave_init                                    obj_c44/i2c-slave.o
+inmem_config                                      obj_c44/rgblight.o
+isLeftHand                                        obj_c44/c44-util.o
+                                                  obj_c44/matrix.o
+is_tap_key                                        obj_c44/common/action.o
+                                                  obj_c44/common/action_tapping.o
+keyboard_idle                                     obj_c44/protocol/lufa/lufa.o
+keyboard_init                                     obj_c44/common/keyboard.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/main.o
+keyboard_protocol                                 obj_c44/protocol/lufa/lufa.o
+keyboard_report                                   obj_c44/common/action_util.o
+keyboard_set_leds                                 obj_c44/common/keyboard.o
+keyboard_setup                                    obj_c44/common/keyboard.o
+                                                  obj_c44/protocol/lufa/lufa.o
+keyboard_task                                     obj_c44/common/keyboard.o
+                                                  obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/main.o
+keymap_fn_to_action                               obj_c44/keymap_common.o
+keymap_func_to_action                             obj_c44/keymap_common.o
+keymap_key_to_keycode                             obj_c44/keymap_common.o
+keymaps                                           obj_c44/keymap.o
+                                                  obj_c44/keymap_common.o
+layer_and                                         obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_clear                                       obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_debug                                       obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_invert                                      obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_move                                        obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_off                                         obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_on                                          obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_or                                          obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+layer_state                                       obj_c44/common/action_layer.o
+layer_switch_get_action                           obj_c44/common/action_layer.o
+                                                  obj_c44/common/action_tapping.o
+                                                  obj_c44/common/action.o
+layer_xor                                         obj_c44/common/action_layer.o
+                                                  obj_c44/common/action.o
+led                                               obj_c44/rgblight.o
+led_set                                           obj_c44/led.o
+                                                  obj_c44/common/keyboard.o
+lufa_driver                                       obj_c44/protocol/lufa/lufa.o
+                                                  obj_c44/main.o
+main                                              obj_c44/main.o
+                                                  d:/programs/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32u4.o
+matrix_cols                                       obj_c44/matrix.o
+matrix_get_row                                    obj_c44/matrix.o
+                                                  obj_c44/common/avr/suspend.o
+                                                  obj_c44/common/keyboard.o
+matrix_init                                       obj_c44/matrix.o
+                                                  obj_c44/common/keyboard.o
+                                                  obj_c44/main.o
+matrix_is_modified                                obj_c44/matrix.o
+matrix_is_on                                      obj_c44/matrix.o
+matrix_key_count                                  obj_c44/matrix.o
+matrix_power_down                                 obj_c44/common/avr/suspend.o
+matrix_power_up                                   obj_c44/common/avr/suspend.o
+matrix_print                                      obj_c44/matrix.o
+                                                  obj_c44/common/keyboard.o
+matrix_rows                                       obj_c44/matrix.o
+matrix_scan                                       obj_c44/matrix.o
+                                                  obj_c44/common/avr/suspend.o
+                                                  obj_c44/common/keyboard.o
+matrix_setup                                      obj_c44/common/keyboard.o
+matrix_slave_scan                                 obj_c44/matrix.o
+                                                  obj_c44/main.o
+mk_delay                                          obj_c44/common/mousekey.o
+mk_interval                                       obj_c44/common/mousekey.o
+mk_max_speed                                      obj_c44/common/mousekey.o
+mk_time_to_max                                    obj_c44/common/mousekey.o
+mk_wheel_max_speed                                obj_c44/common/mousekey.o
+mk_wheel_time_to_max                              obj_c44/common/mousekey.o
+mousekey_clear                                    obj_c44/common/mousekey.o
+                                                  obj_c44/common/action.o
+mousekey_off                                      obj_c44/common/mousekey.o
+                                                  obj_c44/common/action.o
+mousekey_on                                       obj_c44/common/mousekey.o
+                                                  obj_c44/common/action.o
+mousekey_send                                     obj_c44/common/mousekey.o
+                                                  obj_c44/common/action.o
+mousekey_task                                     obj_c44/common/mousekey.o
+                                                  obj_c44/common/keyboard.o
+process_action                                    obj_c44/common/action.o
+                                                  obj_c44/common/action_tapping.o
+register_code                                     obj_c44/common/action.o
+                                                  obj_c44/common/action_macro.o
+                                                  obj_c44/keymap.o
+register_mods                                     obj_c44/common/action.o
+reset_key                                         obj_c44/common/avr/bootloader.o
+rgblight_config                                   obj_c44/rgblight.o
+rgblight_decrease                                 obj_c44/rgblight.o
+rgblight_decrease_hue                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_decrease_sat                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_decrease_val                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_effect_breathing                         obj_c44/rgblight.o
+rgblight_effect_knight                            obj_c44/rgblight.o
+rgblight_effect_rainbow_mood                      obj_c44/rgblight.o
+rgblight_effect_rainbow_swirl                     obj_c44/rgblight.o
+rgblight_effect_snake                             obj_c44/rgblight.o
+rgblight_increase                                 obj_c44/rgblight.o
+rgblight_increase_hue                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_increase_sat                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_increase_val                             obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_init                                     obj_c44/rgblight.o
+                                                  obj_c44/main.o
+rgblight_inited                                   obj_c44/rgblight.o
+rgblight_mode                                     obj_c44/rgblight.o
+rgblight_set                                      obj_c44/rgblight.o
+rgblight_sethsv                                   obj_c44/rgblight.o
+rgblight_sethsv_noeeprom                          obj_c44/rgblight.o
+rgblight_setrgb                                   obj_c44/rgblight.o
+rgblight_step                                     obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+rgblight_timer_disable                            obj_c44/rgblight.o
+rgblight_timer_enable                             obj_c44/rgblight.o
+rgblight_timer_init                               obj_c44/rgblight.o
+rgblight_timer_toggle                             obj_c44/rgblight.o
+rgblight_toggle                                   obj_c44/rgblight.o
+                                                  obj_c44/keymap.o
+send_keyboard_report                              obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+sendchar                                          obj_c44/protocol/lufa/lufa.o
+serial_master_buffer                              obj_c44/serial.o
+serial_master_init                                obj_c44/serial.o
+                                                  obj_c44/matrix.o
+serial_slave_buffer                               obj_c44/serial.o
+                                                  obj_c44/matrix.o
+serial_slave_init                                 obj_c44/serial.o
+                                                  obj_c44/main.o
+serial_transaction                                obj_c44/serial.o
+                                                  obj_c44/matrix.o
+set_mods                                          obj_c44/common/action_util.o
+set_oneshot_mods                                  obj_c44/common/action_util.o
+                                                  obj_c44/common/action.o
+set_weak_mods                                     obj_c44/common/action_util.o
+sethsv                                            obj_c44/rgblight.o
+setrgb                                            obj_c44/rgblight.o
+setup_hardware                                    obj_c44/c44-util.o
+                                                  obj_c44/main.o
+setup_set_handedness                              obj_c44/c44-util.o
+                                                  obj_c44/main.o
+slaveBuffer                                       obj_c44/i2c-slave.o
+suspend_idle                                      obj_c44/common/avr/suspend.o
+suspend_power_down                                obj_c44/common/avr/suspend.o
+                                                  obj_c44/protocol/lufa/lufa.o
+suspend_wakeup_condition                          obj_c44/common/avr/suspend.o
+                                                  obj_c44/protocol/lufa/lufa.o
+suspend_wakeup_init                               obj_c44/common/avr/suspend.o
+                                                  obj_c44/protocol/lufa/lufa.o
+timer_clear                                       obj_c44/common/avr/timer.o
+timer_count                                       obj_c44/common/avr/timer.o
+                                                  obj_c44/common/avr/suspend.o
+timer_elapsed                                     obj_c44/common/avr/timer.o
+                                                  obj_c44/common/mousekey.o
+                                                  obj_c44/rgblight.o
+timer_elapsed32                                   obj_c44/common/avr/timer.o
+timer_init                                        obj_c44/common/avr/timer.o
+                                                  obj_c44/common/keyboard.o
+timer_read                                        obj_c44/common/avr/timer.o
+                                                  obj_c44/common/mousekey.o
+                                                  obj_c44/common/keyboard.o
+                                                  obj_c44/rgblight.o
+timer_read32                                      obj_c44/common/avr/timer.o
+unregister_code                                   obj_c44/common/action.o
+                                                  obj_c44/common/action_macro.o
+                                                  obj_c44/keymap.o
+unregister_mods                                   obj_c44/common/action.o
+ws2812_sendarray                                  obj_c44/light_ws2812.o
+ws2812_sendarray_mask                             obj_c44/light_ws2812.o
+ws2812_setleds                                    obj_c44/light_ws2812.o
+                                                  obj_c44/rgblight.o
+ws2812_setleds_pin                                obj_c44/light_ws2812.o
+ws2812_setleds_rgbw                               obj_c44/light_ws2812.o
+xfunc_out                                         obj_c44/common/avr/xprintf.o
+xitoa                                             obj_c44/common/avr/xprintf.o
+xputc                                             obj_c44/common/avr/xprintf.o
+xputs                                             obj_c44/common/avr/xprintf.o

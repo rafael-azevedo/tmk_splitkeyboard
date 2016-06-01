@@ -1,0 +1,1295 @@
+   1               		.file	"action_tapping.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.debug_waiting_buffer,"ax",@progbits
+  18               	debug_waiting_buffer:
+  19               	.LFB13:
+  20               	.LSM0:
+  21 0000 0F93      		push r16
+  22 0002 1F93      		push r17
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LBB38:
+  26               	.LSM1:
+  27 0004 0091 0000 		lds r16,waiting_buffer_tail
+  28               	.LVL0:
+  29 0008 00C0      		rjmp .L2
+  30               	.L3:
+  31               	.LSM2:
+  32 000a 10E0      		ldi r17,lo8(0)
+  33 000c F801      		movw r30,r16
+  34               	.LVL1:
+  35 000e EE0F      		lsl r30
+  36 0010 FF1F      		rol r31
+  37 0012 E00F      		add r30,r16
+  38 0014 F11F      		adc r31,r17
+  39 0016 EE0F      		lsl r30
+  40 0018 FF1F      		rol r31
+  41 001a E050      		subi r30,lo8(-(waiting_buffer))
+  42 001c F040      		sbci r31,hi8(-(waiting_buffer))
+  43 001e 4081      		ld r20,Z
+  44 0020 5181      		ldd r21,Z+1
+  45 0022 6281      		ldd r22,Z+2
+  46 0024 7381      		ldd r23,Z+3
+  47 0026 8481      		ldd r24,Z+4
+  48 0028 9581      		ldd r25,Z+5
+  49 002a 0E94 0000 		call debug_record
+  50               	.LSM3:
+  51 002e 0F5F      		subi r16,lo8(-(1))
+  52 0030 1F4F      		sbci r17,hi8(-(1))
+  53 0032 0770      		andi r16,lo8(7)
+  54               	.LVL2:
+  55               	.L2:
+  56 0034 8091 0000 		lds r24,waiting_buffer_head
+  57 0038 0817      		cp r16,r24
+  58 003a 01F4      		brne .L3
+  59               	/* epilogue start */
+  60               	.LBE38:
+  61               	.LSM4:
+  62 003c 1F91      		pop r17
+  63 003e 0F91      		pop r16
+  64               	.LVL3:
+  65 0040 0895      		ret
+  66               	.LFE13:
+  68               		.section	.text.debug_tapping_key,"ax",@progbits
+  70               	debug_tapping_key:
+  71               	.LFB12:
+  72               	.LSM5:
+  73               	/* prologue: function */
+  74               	/* frame size = 0 */
+  75               	.LSM6:
+  76 0000 4091 0000 		lds r20,tapping_key
+  77 0004 5091 0000 		lds r21,tapping_key+1
+  78 0008 6091 0000 		lds r22,tapping_key+2
+  79 000c 7091 0000 		lds r23,tapping_key+3
+  80 0010 8091 0000 		lds r24,tapping_key+4
+  81 0014 9091 0000 		lds r25,tapping_key+5
+  82 0018 0E94 0000 		call debug_record
+  83               	/* epilogue start */
+  84               	.LSM7:
+  85 001c 0895      		ret
+  86               	.LFE12:
+  88               		.section	.text.waiting_buffer_scan_tap,"ax",@progbits
+  90               	waiting_buffer_scan_tap:
+  91               	.LFB11:
+  92               	.LSM8:
+  93 0000 0F93      		push r16
+  94 0002 1F93      		push r17
+  95 0004 CF93      		push r28
+  96 0006 DF93      		push r29
+  97               	/* prologue: function */
+  98               	/* frame size = 0 */
+  99               	.LSM9:
+ 100 0008 8091 0000 		lds r24,tapping_key+5
+ 101 000c 8295      		swap r24
+ 102 000e 8F70      		andi r24,lo8(15)
+ 103 0010 01F0      		breq .+2
+ 104 0012 00C0      		rjmp .L20
+ 105               	.LSM10:
+ 106 0014 8091 0000 		lds r24,tapping_key+2
+ 107 0018 8823      		tst r24
+ 108 001a 01F4      		brne .+2
+ 109 001c 00C0      		rjmp .L20
+ 110               	.LBB39:
+ 111               	.LSM11:
+ 112 001e 6091 0000 		lds r22,waiting_buffer_tail
+ 113               	.LVL4:
+ 114 0022 0091 0000 		lds r16,waiting_buffer_head
+ 115               	.LSM12:
+ 116 0026 4091 0000 		lds r20,tapping_key+3
+ 117 002a 5091 0000 		lds r21,(tapping_key+3)+1
+ 118 002e 1091 0000 		lds r17,tapping_key+1
+ 119 0032 7091 0000 		lds r23,tapping_key
+ 120 0036 EA01      		movw r28,r20
+ 121 0038 C095      		com r28
+ 122 003a D095      		com r29
+ 123 003c 00C0      		rjmp .L9
+ 124               	.L19:
+ 125               	.LBB40:
+ 126               	.LBB41:
+ 127               	.LSM13:
+ 128 003e 4115      		cp r20,__zero_reg__
+ 129 0040 5105      		cpc r21,__zero_reg__
+ 130 0042 01F4      		brne .+2
+ 131 0044 00C0      		rjmp .L14
+ 132 0046 1F3F      		cpi r17,lo8(-1)
+ 133 0048 01F4      		brne .L21
+ 134 004a 80E0      		ldi r24,lo8(0)
+ 135 004c 90E0      		ldi r25,hi8(0)
+ 136 004e 7F3F      		cpi r23,lo8(-1)
+ 137 0050 01F4      		brne .L13
+ 138 0052 81E0      		ldi r24,lo8(1)
+ 139 0054 90E0      		ldi r25,hi8(1)
+ 140               	.L13:
+ 141               	.LBE41:
+ 142               	.LBE40:
+ 143               	.LSM14:
+ 144 0056 8823      		tst r24
+ 145 0058 01F0      		breq .+2
+ 146 005a 00C0      		rjmp .L14
+ 147               	.L21:
+ 148 005c 262F      		mov r18,r22
+ 149 005e 30E0      		ldi r19,lo8(0)
+ 150 0060 F901      		movw r30,r18
+ 151 0062 EE0F      		lsl r30
+ 152 0064 FF1F      		rol r31
+ 153 0066 E20F      		add r30,r18
+ 154 0068 F31F      		adc r31,r19
+ 155 006a DF01      		movw r26,r30
+ 156 006c AA0F      		lsl r26
+ 157 006e BB1F      		rol r27
+ 158 0070 A050      		subi r26,lo8(-(waiting_buffer))
+ 159 0072 B040      		sbci r27,hi8(-(waiting_buffer))
+ 160 0074 1196      		adiw r26,1
+ 161 0076 8C91      		ld r24,X
+ 162 0078 1197      		sbiw r26,1
+ 163 007a 1817      		cp r17,r24
+ 164 007c 01F4      		brne .L14
+ 165 007e 8C91      		ld r24,X
+ 166 0080 7817      		cp r23,r24
+ 167 0082 01F4      		brne .L14
+ 168 0084 EE0F      		lsl r30
+ 169 0086 FF1F      		rol r31
+ 170 0088 E050      		subi r30,lo8(-(waiting_buffer+2))
+ 171 008a F040      		sbci r31,hi8(-(waiting_buffer+2))
+ 172 008c 8081      		ld r24,Z
+ 173 008e 8823      		tst r24
+ 174 0090 01F4      		brne .L14
+ 175 0092 1396      		adiw r26,3
+ 176 0094 8D91      		ld r24,X+
+ 177 0096 9C91      		ld r25,X
+ 178 0098 1497      		sbiw r26,3+1
+ 179 009a 8417      		cp r24,r20
+ 180 009c 9507      		cpc r25,r21
+ 181 009e 00F0      		brlo .L15
+ 182 00a0 841B      		sub r24,r20
+ 183 00a2 950B      		sbc r25,r21
+ 184 00a4 00C0      		rjmp .L24
+ 185               	.L15:
+ 186 00a6 8C0F      		add r24,r28
+ 187 00a8 9D1F      		adc r25,r29
+ 188               	.L24:
+ 189 00aa 883C      		cpi r24,200
+ 190 00ac 9105      		cpc r25,__zero_reg__
+ 191 00ae 00F4      		brsh .L14
+ 192               	.LSM15:
+ 193 00b0 8091 0000 		lds r24,tapping_key+5
+ 194 00b4 8F70      		andi r24,lo8(15)
+ 195 00b6 8061      		ori r24,lo8(16)
+ 196 00b8 8093 0000 		sts tapping_key+5,r24
+ 197               	.LSM16:
+ 198 00bc F901      		movw r30,r18
+ 199 00be EE0F      		lsl r30
+ 200 00c0 FF1F      		rol r31
+ 201 00c2 E20F      		add r30,r18
+ 202 00c4 F31F      		adc r31,r19
+ 203 00c6 EE0F      		lsl r30
+ 204 00c8 FF1F      		rol r31
+ 205 00ca E050      		subi r30,lo8(-(waiting_buffer+5))
+ 206 00cc F040      		sbci r31,hi8(-(waiting_buffer+5))
+ 207 00ce 8081      		ld r24,Z
+ 208 00d0 8F70      		andi r24,lo8(15)
+ 209 00d2 8061      		ori r24,lo8(16)
+ 210 00d4 8083      		st Z,r24
+ 211               	.LSM17:
+ 212 00d6 80E0      		ldi r24,lo8(tapping_key)
+ 213 00d8 90E0      		ldi r25,hi8(tapping_key)
+ 214 00da 0E94 0000 		call process_action
+ 215               	.LVL5:
+ 216               	.LSM18:
+ 217 00de 0E94 0000 		call debug_waiting_buffer
+ 218 00e2 00C0      		rjmp .L20
+ 219               	.LVL6:
+ 220               	.L14:
+ 221               	.LSM19:
+ 222 00e4 6F5F      		subi r22,lo8(-(1))
+ 223 00e6 6770      		andi r22,lo8(7)
+ 224               	.L9:
+ 225 00e8 6017      		cp r22,r16
+ 226 00ea 01F0      		breq .+2
+ 227 00ec 00C0      		rjmp .L19
+ 228               	.L20:
+ 229               	/* epilogue start */
+ 230               	.LBE39:
+ 231               	.LSM20:
+ 232 00ee DF91      		pop r29
+ 233 00f0 CF91      		pop r28
+ 234 00f2 1F91      		pop r17
+ 235 00f4 0F91      		pop r16
+ 236 00f6 0895      		ret
+ 237               	.LFE11:
+ 239               		.section	.text.process_tapping,"ax",@progbits
+ 241               	process_tapping:
+ 242               	.LFB6:
+ 243               	.LSM21:
+ 244               	.LVL7:
+ 245 0000 DF92      		push r13
+ 246 0002 EF92      		push r14
+ 247 0004 FF92      		push r15
+ 248 0006 0F93      		push r16
+ 249 0008 1F93      		push r17
+ 250 000a DF93      		push r29
+ 251 000c CF93      		push r28
+ 252 000e CDB7      		in r28,__SP_L__
+ 253 0010 DEB7      		in r29,__SP_H__
+ 254 0012 6B97      		sbiw r28,27
+ 255 0014 0FB6      		in __tmp_reg__,__SREG__
+ 256 0016 F894      		cli
+ 257 0018 DEBF      		out __SP_H__,r29
+ 258 001a 0FBE      		out __SREG__,__tmp_reg__
+ 259 001c CDBF      		out __SP_L__,r28
+ 260               	/* prologue: function */
+ 261               	/* frame size = 27 */
+ 262 001e 8C01      		movw r16,r24
+ 263               	.LSM22:
+ 264 0020 DC01      		movw r26,r24
+ 265 0022 1296      		adiw r26,2
+ 266 0024 DC90      		ld r13,X
+ 267 0026 1297      		sbiw r26,2
+ 268 0028 4C91      		ld r20,X
+ 269 002a 1196      		adiw r26,1
+ 270 002c 5C91      		ld r21,X
+ 271 002e 1197      		sbiw r26,1
+ 272 0030 1396      		adiw r26,3
+ 273 0032 ED90      		ld r14,X+
+ 274 0034 FC90      		ld r15,X
+ 275 0036 1497      		sbiw r26,3+1
+ 276               	.LSM23:
+ 277 0038 2091 0000 		lds r18,tapping_key+3
+ 278 003c 3091 0000 		lds r19,(tapping_key+3)+1
+ 279 0040 6091 0000 		lds r22,tapping_key+1
+ 280 0044 7091 0000 		lds r23,tapping_key
+ 281               	.LBB65:
+ 282               	.LBB66:
+ 283               	.LSM24:
+ 284 0048 2115      		cp r18,__zero_reg__
+ 285 004a 3105      		cpc r19,__zero_reg__
+ 286 004c 01F4      		brne .+2
+ 287 004e 00C0      		rjmp .L26
+ 288 0050 6F3F      		cpi r22,lo8(-1)
+ 289 0052 01F0      		breq .+2
+ 290 0054 00C0      		rjmp .L27
+ 291 0056 7F3F      		cpi r23,lo8(-1)
+ 292 0058 01F0      		breq .+2
+ 293 005a 00C0      		rjmp .L27
+ 294 005c 00C0      		rjmp .L26
+ 295               	.LVL8:
+ 296               	.L118:
+ 297               	.LBE66:
+ 298               	.LBE65:
+ 299               	.LSM25:
+ 300 005e E216      		cp r14,r18
+ 301 0060 F306      		cpc r15,r19
+ 302 0062 00F0      		brlo .L28
+ 303 0064 C701      		movw r24,r14
+ 304 0066 821B      		sub r24,r18
+ 305 0068 930B      		sbc r25,r19
+ 306 006a 883C      		cpi r24,200
+ 307 006c 9105      		cpc r25,__zero_reg__
+ 308 006e 00F0      		brlo .+2
+ 309 0070 00C0      		rjmp .L32
+ 310 0072 00C0      		rjmp .L101
+ 311               	.L28:
+ 312 0074 2095      		com r18
+ 313 0076 3095      		com r19
+ 314 0078 2E0D      		add r18,r14
+ 315 007a 3F1D      		adc r19,r15
+ 316 007c 283C      		cpi r18,200
+ 317 007e 3105      		cpc r19,__zero_reg__
+ 318 0080 00F0      		brlo .+2
+ 319 0082 00C0      		rjmp .L32
+ 320               	.L101:
+ 321               	.LSM26:
+ 322 0084 8091 0000 		lds r24,tapping_key+5
+ 323 0088 807F      		andi r24,lo8(-16)
+ 324 008a 01F0      		breq .+2
+ 325 008c 00C0      		rjmp .L33
+ 326               	.LBB67:
+ 327               	.LBB68:
+ 328               	.LSM27:
+ 329 008e 6F3F      		cpi r22,lo8(-1)
+ 330 0090 01F0      		breq .+2
+ 331 0092 00C0      		rjmp .L34
+ 332 0094 7F3F      		cpi r23,lo8(-1)
+ 333 0096 01F0      		breq .+2
+ 334 0098 00C0      		rjmp .L34
+ 335 009a 00C0      		rjmp .L35
+ 336               	.L119:
+ 337               	.LBE68:
+ 338               	.LBE67:
+ 339               	.LSM28:
+ 340 009c 7417      		cp r23,r20
+ 341 009e 01F4      		brne .L35
+ 342 00a0 DD20      		tst r13
+ 343 00a2 01F4      		brne .L35
+ 344               	.LSM29:
+ 345 00a4 8091 0000 		lds r24,tapping_key+5
+ 346 00a8 8F70      		andi r24,lo8(15)
+ 347 00aa 8061      		ori r24,lo8(16)
+ 348 00ac 8093 0000 		sts tapping_key+5,r24
+ 349               	.LSM30:
+ 350 00b0 0E94 0000 		call debug_tapping_key
+ 351               	.LSM31:
+ 352 00b4 80E0      		ldi r24,lo8(tapping_key)
+ 353 00b6 90E0      		ldi r25,hi8(tapping_key)
+ 354 00b8 0E94 0000 		call process_action
+ 355               	.LSM32:
+ 356 00bc 8091 0000 		lds r24,tapping_key+5
+ 357 00c0 F801      		movw r30,r16
+ 358 00c2 8583      		std Z+5,r24
+ 359 00c4 00C0      		rjmp .L49
+ 360               	.L35:
+ 361               	.LSM33:
+ 362 00c6 FD82      		std Y+5,r15
+ 363 00c8 EC82      		std Y+4,r14
+ 364 00ca 5A83      		std Y+2,r21
+ 365 00cc 4983      		std Y+1,r20
+ 366 00ce DB82      		std Y+3,r13
+ 367 00d0 DE01      		movw r26,r28
+ 368 00d2 1696      		adiw r26,6
+ 369 00d4 FE01      		movw r30,r28
+ 370 00d6 3196      		adiw r30,1
+ 371 00d8 85E0      		ldi r24,lo8(5)
+ 372               	.L37:
+ 373 00da 0190      		ld r0,Z+
+ 374 00dc 0D92      		st X+,r0
+ 375 00de 8150      		subi r24,lo8(-(-1))
+ 376 00e0 01F4      		brne .L37
+ 377 00e2 6885      		ldd r22,Y+8
+ 378               	.LBB69:
+ 379               	.LSM34:
+ 380 00e4 DE01      		movw r26,r28
+ 381 00e6 1B96      		adiw r26,11
+ 382 00e8 FE01      		movw r30,r28
+ 383 00ea 3696      		adiw r30,6
+ 384 00ec 85E0      		ldi r24,lo8(5)
+ 385               	.L38:
+ 386 00ee 0190      		ld r0,Z+
+ 387 00f0 0D92      		st X+,r0
+ 388 00f2 8150      		subi r24,lo8(-(-1))
+ 389 00f4 01F4      		brne .L38
+ 390 00f6 2C85      		ldd r18,Y+12
+ 391 00f8 3B85      		ldd r19,Y+11
+ 392               	.LBB70:
+ 393               	.LBB71:
+ 394               	.LBB72:
+ 395               	.LSM35:
+ 396 00fa 8E85      		ldd r24,Y+14
+ 397 00fc 9F85      		ldd r25,Y+15
+ 398 00fe 892B      		or r24,r25
+ 399 0100 01F4      		brne .+2
+ 400 0102 00C0      		rjmp .L41
+ 401 0104 2F3F      		cpi r18,lo8(-1)
+ 402 0106 01F0      		breq .+2
+ 403 0108 00C0      		rjmp .L40
+ 404 010a 3F3F      		cpi r19,lo8(-1)
+ 405 010c 01F0      		breq .+2
+ 406 010e 00C0      		rjmp .L40
+ 407 0110 00C0      		rjmp .L41
+ 408               	.L120:
+ 409               	.LBE72:
+ 410               	.LBE71:
+ 411               	.LBE70:
+ 412               	.LBE69:
+ 413               	.LSM36:
+ 414 0112 FD82      		std Y+5,r15
+ 415 0114 EC82      		std Y+4,r14
+ 416 0116 5A83      		std Y+2,r21
+ 417 0118 4983      		std Y+1,r20
+ 418 011a DB82      		std Y+3,r13
+ 419 011c DE01      		movw r26,r28
+ 420 011e 1B96      		adiw r26,11
+ 421 0120 FE01      		movw r30,r28
+ 422 0122 3196      		adiw r30,1
+ 423 0124 85E0      		ldi r24,lo8(5)
+ 424               	.L42:
+ 425 0126 0190      		ld r0,Z+
+ 426 0128 0D92      		st X+,r0
+ 427 012a 8150      		subi r24,lo8(-(-1))
+ 428 012c 01F4      		brne .L42
+ 429 012e FC84      		ldd r15,Y+12
+ 430 0130 7B85      		ldd r23,Y+11
+ 431 0132 6D85      		ldd r22,Y+13
+ 432               	.LBB73:
+ 433               	.LBB74:
+ 434               	.LBB75:
+ 435               	.LSM37:
+ 436 0134 8091 0000 		lds r24,waiting_buffer_tail
+ 437               	.LVL9:
+ 438 0138 9091 0000 		lds r25,waiting_buffer_head
+ 439 013c 00C0      		rjmp .L43
+ 440               	.L45:
+ 441               	.LSM38:
+ 442 013e 282F      		mov r18,r24
+ 443 0140 30E0      		ldi r19,lo8(0)
+ 444 0142 F901      		movw r30,r18
+ 445 0144 EE0F      		lsl r30
+ 446 0146 FF1F      		rol r31
+ 447 0148 E20F      		add r30,r18
+ 448 014a F31F      		adc r31,r19
+ 449 014c DF01      		movw r26,r30
+ 450 014e AA0F      		lsl r26
+ 451 0150 BB1F      		rol r27
+ 452               	.LVL10:
+ 453 0152 A050      		subi r26,lo8(-(waiting_buffer))
+ 454 0154 B040      		sbci r27,hi8(-(waiting_buffer))
+ 455 0156 1196      		adiw r26,1
+ 456 0158 8C91      		ld r24,X
+ 457 015a 1197      		sbiw r26,1
+ 458 015c F816      		cp r15,r24
+ 459 015e 01F4      		brne .L44
+ 460 0160 8C91      		ld r24,X
+ 461 0162 7817      		cp r23,r24
+ 462 0164 01F4      		brne .L44
+ 463 0166 EE0F      		lsl r30
+ 464 0168 FF1F      		rol r31
+ 465 016a E050      		subi r30,lo8(-(waiting_buffer+2))
+ 466 016c F040      		sbci r31,hi8(-(waiting_buffer+2))
+ 467 016e 8081      		ld r24,Z
+ 468 0170 6817      		cp r22,r24
+ 469 0172 01F4      		brne .L41
+ 470               	.L44:
+ 471               	.LSM39:
+ 472 0174 2F5F      		subi r18,lo8(-(1))
+ 473 0176 3F4F      		sbci r19,hi8(-(1))
+ 474 0178 822F      		mov r24,r18
+ 475               	.LVL11:
+ 476 017a 8770      		andi r24,lo8(7)
+ 477               	.L43:
+ 478 017c 8917      		cp r24,r25
+ 479 017e 01F4      		brne .L45
+ 480 0180 00C0      		rjmp .L117
+ 481               	.LVL12:
+ 482               	.L47:
+ 483               	.LBE75:
+ 484               	.LBE74:
+ 485               	.LBE73:
+ 486               	.LBB76:
+ 487               	.LSM40:
+ 488 0182 9F70      		andi r25,lo8(15)
+ 489 0184 01F0      		breq .L52
+ 490 0186 4423      		tst r20
+ 491 0188 01F4      		brne .L52
+ 492 018a 00C0      		rjmp .L49
+ 493               	.L125:
+ 494               	.LSM41:
+ 495 018c 9F70      		andi r25,lo8(15)
+ 496 018e 01F0      		breq .L52
+ 497 0190 D801      		movw r26,r16
+ 498 0192 1596      		adiw r26,5
+ 499 0194 8C91      		ld r24,X
+ 500 0196 807F      		andi r24,lo8(-16)
+ 501 0198 01F4      		brne .+2
+ 502 019a 00C0      		rjmp .L49
+ 503               	.L52:
+ 504               	.LSM42:
+ 505 019c 405E      		subi r20,lo8(-(32))
+ 506 019e 4830      		cpi r20,lo8(8)
+ 507 01a0 00F4      		brsh .+2
+ 508 01a2 00C0      		rjmp .L49
+ 509 01a4 00C0      		rjmp .L80
+ 510               	.LVL13:
+ 511               	.L41:
+ 512               	.LBE76:
+ 513               	.LSM43:
+ 514 01a6 DD20      		tst r13
+ 515 01a8 01F4      		brne .+2
+ 516 01aa 00C0      		rjmp .L49
+ 517               	.LSM44:
+ 518 01ac 8091 0000 		lds r24,tapping_key+5
+ 519 01b0 8160      		ori r24,lo8(1)
+ 520 01b2 8093 0000 		sts tapping_key+5,r24
+ 521 01b6 00C0      		rjmp .L49
+ 522               	.L33:
+ 523               	.LBB77:
+ 524               	.LBB78:
+ 525               	.LSM45:
+ 526 01b8 6F3F      		cpi r22,lo8(-1)
+ 527 01ba 01F0      		breq .+2
+ 528 01bc 00C0      		rjmp .L53
+ 529 01be 7F3F      		cpi r23,lo8(-1)
+ 530 01c0 01F0      		breq .+2
+ 531 01c2 00C0      		rjmp .L53
+ 532 01c4 00C0      		rjmp .L54
+ 533               	.L121:
+ 534               	.LBE78:
+ 535               	.LBE77:
+ 536               	.LSM46:
+ 537 01c6 7417      		cp r23,r20
+ 538 01c8 01F4      		brne .L54
+ 539 01ca DD20      		tst r13
+ 540 01cc 01F4      		brne .L54
+ 541               	.LSM47:
+ 542 01ce 8091 0000 		lds r24,tapping_key+5
+ 543 01d2 F801      		movw r30,r16
+ 544 01d4 8583      		std Z+5,r24
+ 545               	.LSM48:
+ 546 01d6 C801      		movw r24,r16
+ 547 01d8 0E94 0000 		call process_action
+ 548               	.LSM49:
+ 549 01dc A0E0      		ldi r26,lo8(tapping_key)
+ 550 01de B0E0      		ldi r27,hi8(tapping_key)
+ 551 01e0 F801      		movw r30,r16
+ 552 01e2 86E0      		ldi r24,lo8(6)
+ 553               	.LVL14:
+ 554               	.L55:
+ 555 01e4 0190      		ld r0,Z+
+ 556 01e6 0D92      		st X+,r0
+ 557 01e8 8150      		subi r24,lo8(-(-1))
+ 558 01ea 01F4      		brne .L55
+ 559 01ec 00C0      		rjmp .L115
+ 560               	.LVL15:
+ 561               	.L54:
+ 562               	.LSM50:
+ 563 01ee 5A83      		std Y+2,r21
+ 564 01f0 4983      		std Y+1,r20
+ 565 01f2 8981      		ldd r24,Y+1
+ 566 01f4 9A81      		ldd r25,Y+2
+ 567 01f6 0E94 0000 		call is_tap_key
+ 568 01fa 8823      		tst r24
+ 569 01fc 01F4      		brne .+2
+ 570 01fe 00C0      		rjmp .L80
+ 571 0200 DD20      		tst r13
+ 572 0202 01F4      		brne .+2
+ 573 0204 00C0      		rjmp .L80
+ 574               	.LSM51:
+ 575 0206 3091 0000 		lds r19,tapping_key+5
+ 576 020a 832F      		mov r24,r19
+ 577 020c 8295      		swap r24
+ 578 020e 8F70      		andi r24,lo8(15)
+ 579 0210 90E0      		ldi r25,lo8(0)
+ 580 0212 0297      		sbiw r24,2
+ 581 0214 04F0      		brlt .L57
+ 582               	.LSM52:
+ 583 0216 9091 0000 		lds r25,tapping_key+1
+ 584 021a 2091 0000 		lds r18,tapping_key
+ 585 021e FE01      		movw r30,r28
+ 586 0220 7096      		adiw r30,16
+ 587 0222 86E0      		ldi r24,lo8(6)
+ 588 0224 DF01      		movw r26,r30
+ 589 0226 1D92      		st X+,__zero_reg__
+ 590 0228 8A95      	        dec r24
+ 591 022a 01F4      		brne .-6
+ 592 022c 998B      		std Y+17,r25
+ 593 022e 288B      		std Y+16,r18
+ 594 0230 FC8A      		std Y+20,r15
+ 595 0232 EB8A      		std Y+19,r14
+ 596 0234 3D8B      		std Y+21,r19
+ 597               	.LSM53:
+ 598 0236 CF01      		movw r24,r30
+ 599 0238 0E94 0000 		call process_action
+ 600               	.L57:
+ 601               	.LSM54:
+ 602 023c A0E0      		ldi r26,lo8(tapping_key)
+ 603 023e B0E0      		ldi r27,hi8(tapping_key)
+ 604 0240 F801      		movw r30,r16
+ 605 0242 86E0      		ldi r24,lo8(6)
+ 606               	.LVL16:
+ 607               	.L58:
+ 608 0244 0190      		ld r0,Z+
+ 609 0246 0D92      		st X+,r0
+ 610 0248 8150      		subi r24,lo8(-(-1))
+ 611 024a 01F4      		brne .L58
+ 612 024c 00C0      		rjmp .L114
+ 613               	.LVL17:
+ 614               	.L32:
+ 615               	.LSM55:
+ 616 024e 8091 0000 		lds r24,tapping_key+5
+ 617 0252 807F      		andi r24,lo8(-16)
+ 618 0254 01F4      		brne .L59
+ 619               	.LSM56:
+ 620 0256 7E2D      		mov r23,r14
+ 621 0258 FD82      		std Y+5,r15
+ 622 025a EC82      		std Y+4,r14
+ 623 025c 5A83      		std Y+2,r21
+ 624 025e 4983      		std Y+1,r20
+ 625 0260 DB82      		std Y+3,r13
+ 626 0262 6D2D      		mov r22,r13
+ 627 0264 8D81      		ldd r24,Y+5
+ 628 0266 0E94 0000 		call debug_event
+ 629               	.LSM57:
+ 630 026a 00E0      		ldi r16,lo8(tapping_key)
+ 631 026c 10E0      		ldi r17,hi8(tapping_key)
+ 632               	.LVL18:
+ 633 026e C801      		movw r24,r16
+ 634 0270 0E94 0000 		call process_action
+ 635               	.LSM58:
+ 636 0274 86E0      		ldi r24,lo8(6)
+ 637 0276 F801      		movw r30,r16
+ 638 0278 1192      		st Z+,__zero_reg__
+ 639 027a 8A95      	        dec r24
+ 640 027c 01F4      		brne .-6
+ 641 027e 00C0      		rjmp .L116
+ 642               	.LVL19:
+ 643               	.L59:
+ 644               	.LBB79:
+ 645               	.LBB80:
+ 646               	.LSM59:
+ 647 0280 6F3F      		cpi r22,lo8(-1)
+ 648 0282 01F0      		breq .+2
+ 649 0284 00C0      		rjmp .L60
+ 650 0286 7F3F      		cpi r23,lo8(-1)
+ 651 0288 01F0      		breq .+2
+ 652 028a 00C0      		rjmp .L60
+ 653 028c 00C0      		rjmp .L61
+ 654               	.L122:
+ 655               	.LBE80:
+ 656               	.LBE79:
+ 657               	.LSM60:
+ 658 028e 7417      		cp r23,r20
+ 659 0290 01F4      		brne .L61
+ 660 0292 DD20      		tst r13
+ 661 0294 01F4      		brne .L61
+ 662               	.LSM61:
+ 663 0296 8091 0000 		lds r24,tapping_key+5
+ 664 029a D801      		movw r26,r16
+ 665 029c 1596      		adiw r26,5
+ 666 029e 8C93      		st X,r24
+ 667               	.LSM62:
+ 668 02a0 C801      		movw r24,r16
+ 669 02a2 0E94 0000 		call process_action
+ 670               	.LSM63:
+ 671 02a6 E0E0      		ldi r30,lo8(tapping_key)
+ 672 02a8 F0E0      		ldi r31,hi8(tapping_key)
+ 673 02aa 86E0      		ldi r24,lo8(6)
+ 674 02ac DF01      		movw r26,r30
+ 675 02ae 1D92      		st X+,__zero_reg__
+ 676 02b0 8A95      	        dec r24
+ 677 02b2 01F4      		brne .-6
+ 678 02b4 00C0      		rjmp .L113
+ 679               	.L61:
+ 680               	.LSM64:
+ 681 02b6 5A83      		std Y+2,r21
+ 682 02b8 4983      		std Y+1,r20
+ 683 02ba 8981      		ldd r24,Y+1
+ 684 02bc 9A81      		ldd r25,Y+2
+ 685 02be 0E94 0000 		call is_tap_key
+ 686 02c2 8823      		tst r24
+ 687 02c4 01F4      		brne .+2
+ 688 02c6 00C0      		rjmp .L80
+ 689 02c8 DD20      		tst r13
+ 690 02ca 01F4      		brne .+2
+ 691 02cc 00C0      		rjmp .L80
+ 692               	.LSM65:
+ 693 02ce 3091 0000 		lds r19,tapping_key+5
+ 694 02d2 832F      		mov r24,r19
+ 695 02d4 8295      		swap r24
+ 696 02d6 8F70      		andi r24,lo8(15)
+ 697 02d8 90E0      		ldi r25,lo8(0)
+ 698 02da 0297      		sbiw r24,2
+ 699 02dc 04F0      		brlt .L63
+ 700               	.LSM66:
+ 701 02de 9091 0000 		lds r25,tapping_key+1
+ 702 02e2 2091 0000 		lds r18,tapping_key
+ 703 02e6 FE01      		movw r30,r28
+ 704 02e8 7696      		adiw r30,22
+ 705 02ea 86E0      		ldi r24,lo8(6)
+ 706 02ec DF01      		movw r26,r30
+ 707 02ee 1D92      		st X+,__zero_reg__
+ 708 02f0 8A95      	        dec r24
+ 709 02f2 01F4      		brne .-6
+ 710 02f4 9F8B      		std Y+23,r25
+ 711 02f6 2E8B      		std Y+22,r18
+ 712 02f8 FA8E      		std Y+26,r15
+ 713 02fa E98E      		std Y+25,r14
+ 714 02fc 3B8F      		std Y+27,r19
+ 715               	.LSM67:
+ 716 02fe CF01      		movw r24,r30
+ 717 0300 0E94 0000 		call process_action
+ 718               	.L63:
+ 719               	.LSM68:
+ 720 0304 A0E0      		ldi r26,lo8(tapping_key)
+ 721 0306 B0E0      		ldi r27,hi8(tapping_key)
+ 722 0308 F801      		movw r30,r16
+ 723 030a 86E0      		ldi r24,lo8(6)
+ 724               	.LVL20:
+ 725               	.L64:
+ 726 030c 0190      		ld r0,Z+
+ 727 030e 0D92      		st X+,r0
+ 728 0310 8150      		subi r24,lo8(-(-1))
+ 729 0312 01F4      		brne .L64
+ 730 0314 00C0      		rjmp .L114
+ 731               	.LVL21:
+ 732               	.L82:
+ 733               	.LBB81:
+ 734               	.LBB82:
+ 735               	.LSM69:
+ 736 0316 6F3F      		cpi r22,lo8(-1)
+ 737 0318 01F0      		breq .+2
+ 738 031a 00C0      		rjmp .L65
+ 739 031c 7F3F      		cpi r23,lo8(-1)
+ 740 031e 01F0      		breq .+2
+ 741 0320 00C0      		rjmp .L65
+ 742 0322 00C0      		rjmp .L26
+ 743               	.L123:
+ 744               	.LBE82:
+ 745               	.LBE81:
+ 746               	.LSM70:
+ 747 0324 E216      		cp r14,r18
+ 748 0326 F306      		cpc r15,r19
+ 749 0328 00F0      		brlo .L66
+ 750 032a C701      		movw r24,r14
+ 751 032c 821B      		sub r24,r18
+ 752 032e 930B      		sbc r25,r19
+ 753 0330 883C      		cpi r24,200
+ 754 0332 9105      		cpc r25,__zero_reg__
+ 755 0334 00F0      		brlo .+2
+ 756 0336 00C0      		rjmp .L70
+ 757 0338 00C0      		rjmp .L103
+ 758               	.L66:
+ 759 033a 2095      		com r18
+ 760 033c 3095      		com r19
+ 761 033e 2E0D      		add r18,r14
+ 762 0340 3F1D      		adc r19,r15
+ 763 0342 283C      		cpi r18,200
+ 764 0344 3105      		cpc r19,__zero_reg__
+ 765 0346 00F0      		brlo .+2
+ 766 0348 00C0      		rjmp .L70
+ 767               	.L103:
+ 768               	.LSM71:
+ 769 034a DD20      		tst r13
+ 770 034c 01F4      		brne .+2
+ 771 034e 00C0      		rjmp .L80
+ 772               	.LBB83:
+ 773               	.LBB84:
+ 774               	.LSM72:
+ 775 0350 6F3F      		cpi r22,lo8(-1)
+ 776 0352 01F0      		breq .+2
+ 777 0354 00C0      		rjmp .L72
+ 778 0356 7F3F      		cpi r23,lo8(-1)
+ 779 0358 01F0      		breq .+2
+ 780 035a 00C0      		rjmp .L72
+ 781 035c 00C0      		rjmp .L73
+ 782               	.L124:
+ 783               	.LBE84:
+ 784               	.LBE83:
+ 785               	.LSM73:
+ 786 035e 7417      		cp r23,r20
+ 787 0360 01F4      		brne .L73
+ 788               	.LSM74:
+ 789 0362 9091 0000 		lds r25,tapping_key+5
+ 790 0366 90FD      		sbrc r25,0
+ 791 0368 00C0      		rjmp .L74
+ 792 036a 892F      		mov r24,r25
+ 793 036c 8295      		swap r24
+ 794 036e 8F70      		andi r24,lo8(15)
+ 795 0370 01F0      		breq .L74
+ 796               	.LSM75:
+ 797 0372 F801      		movw r30,r16
+ 798 0374 9583      		std Z+5,r25
+ 799               	.LSM76:
+ 800 0376 8F30      		cpi r24,lo8(15)
+ 801 0378 01F0      		breq .L75
+ 802 037a 8F5F      		subi r24,lo8(-(1))
+ 803 037c 8295      		swap r24
+ 804 037e 807F      		andi r24,lo8(-16)
+ 805 0380 9F70      		andi r25,lo8(15)
+ 806 0382 982B      		or r25,r24
+ 807 0384 9583      		std Z+5,r25
+ 808               	.L75:
+ 809               	.LSM77:
+ 810 0386 C801      		movw r24,r16
+ 811 0388 0E94 0000 		call process_action
+ 812               	.LSM78:
+ 813 038c A0E0      		ldi r26,lo8(tapping_key)
+ 814 038e B0E0      		ldi r27,hi8(tapping_key)
+ 815 0390 F801      		movw r30,r16
+ 816 0392 86E0      		ldi r24,lo8(6)
+ 817               	.LVL22:
+ 818               	.L76:
+ 819 0394 0190      		ld r0,Z+
+ 820 0396 0D92      		st X+,r0
+ 821 0398 8150      		subi r24,lo8(-(-1))
+ 822 039a 01F4      		brne .L76
+ 823 039c 00C0      		rjmp .L115
+ 824               	.LVL23:
+ 825               	.L74:
+ 826               	.LSM79:
+ 827 039e A0E0      		ldi r26,lo8(tapping_key)
+ 828 03a0 B0E0      		ldi r27,hi8(tapping_key)
+ 829 03a2 F801      		movw r30,r16
+ 830 03a4 86E0      		ldi r24,lo8(6)
+ 831               	.LVL24:
+ 832               	.L77:
+ 833 03a6 0190      		ld r0,Z+
+ 834 03a8 0D92      		st X+,r0
+ 835 03aa 8150      		subi r24,lo8(-(-1))
+ 836 03ac 01F4      		brne .L77
+ 837 03ae 00C0      		rjmp .L113
+ 838               	.LVL25:
+ 839               	.L73:
+ 840               	.LSM80:
+ 841 03b0 5A83      		std Y+2,r21
+ 842 03b2 4983      		std Y+1,r20
+ 843 03b4 8981      		ldd r24,Y+1
+ 844 03b6 9A81      		ldd r25,Y+2
+ 845 03b8 0E94 0000 		call is_tap_key
+ 846 03bc 8823      		tst r24
+ 847 03be 01F0      		breq .L78
+ 848               	.LSM81:
+ 849 03c0 A0E0      		ldi r26,lo8(tapping_key)
+ 850 03c2 B0E0      		ldi r27,hi8(tapping_key)
+ 851 03c4 F801      		movw r30,r16
+ 852 03c6 86E0      		ldi r24,lo8(6)
+ 853               	.LVL26:
+ 854               	.L79:
+ 855 03c8 0190      		ld r0,Z+
+ 856 03ca 0D92      		st X+,r0
+ 857 03cc 8150      		subi r24,lo8(-(-1))
+ 858 03ce 01F4      		brne .L79
+ 859 03d0 00C0      		rjmp .L114
+ 860               	.LVL27:
+ 861               	.L78:
+ 862               	.LSM82:
+ 863 03d2 8091 0000 		lds r24,tapping_key+5
+ 864 03d6 8160      		ori r24,lo8(1)
+ 865 03d8 8093 0000 		sts tapping_key+5,r24
+ 866 03dc 00C0      		rjmp .L80
+ 867               	.L70:
+ 868               	.LSM83:
+ 869 03de 7E2D      		mov r23,r14
+ 870 03e0 FD82      		std Y+5,r15
+ 871 03e2 EC82      		std Y+4,r14
+ 872 03e4 5A83      		std Y+2,r21
+ 873 03e6 4983      		std Y+1,r20
+ 874 03e8 DB82      		std Y+3,r13
+ 875 03ea 6D2D      		mov r22,r13
+ 876 03ec 8D81      		ldd r24,Y+5
+ 877 03ee 0E94 0000 		call debug_event
+ 878               	.LSM84:
+ 879 03f2 E0E0      		ldi r30,lo8(tapping_key)
+ 880 03f4 F0E0      		ldi r31,hi8(tapping_key)
+ 881 03f6 86E0      		ldi r24,lo8(6)
+ 882 03f8 DF01      		movw r26,r30
+ 883 03fa 1D92      		st X+,__zero_reg__
+ 884 03fc 8A95      	        dec r24
+ 885 03fe 01F4      		brne .-6
+ 886               	.L116:
+ 887               	.LSM85:
+ 888 0400 0E94 0000 		call debug_tapping_key
+ 889 0404 00C0      		rjmp .L49
+ 890               	.LVL28:
+ 891               	.L26:
+ 892               	.LSM86:
+ 893 0406 DD20      		tst r13
+ 894 0408 01F0      		breq .L80
+ 895 040a 5A83      		std Y+2,r21
+ 896 040c 4983      		std Y+1,r20
+ 897 040e 8981      		ldd r24,Y+1
+ 898 0410 9A81      		ldd r25,Y+2
+ 899 0412 0E94 0000 		call is_tap_key
+ 900 0416 8823      		tst r24
+ 901 0418 01F0      		breq .L80
+ 902               	.LSM87:
+ 903 041a A0E0      		ldi r26,lo8(tapping_key)
+ 904 041c B0E0      		ldi r27,hi8(tapping_key)
+ 905 041e F801      		movw r30,r16
+ 906 0420 86E0      		ldi r24,lo8(6)
+ 907               	.LVL29:
+ 908               	.L81:
+ 909 0422 0190      		ld r0,Z+
+ 910 0424 0D92      		st X+,r0
+ 911 0426 8150      		subi r24,lo8(-(-1))
+ 912 0428 01F4      		brne .L81
+ 913               	.L114:
+ 914               	.LSM88:
+ 915 042a 0E94 0000 		call waiting_buffer_scan_tap
+ 916               	.LVL30:
+ 917               	.L115:
+ 918               	.LSM89:
+ 919 042e 0E94 0000 		call debug_tapping_key
+ 920               	.LVL31:
+ 921               	.L113:
+ 922 0432 81E0      		ldi r24,lo8(1)
+ 923 0434 00C0      		rjmp .L36
+ 924               	.LVL32:
+ 925               	.L80:
+ 926               	.LSM90:
+ 927 0436 C801      		movw r24,r16
+ 928 0438 0E94 0000 		call process_action
+ 929               	.LVL33:
+ 930 043c 00C0      		rjmp .L113
+ 931               	.LVL34:
+ 932               	.L49:
+ 933               	.LSM91:
+ 934 043e 80E0      		ldi r24,lo8(0)
+ 935               	.LVL35:
+ 936               	.L36:
+ 937               	/* epilogue start */
+ 938               	.LSM92:
+ 939 0440 6B96      		adiw r28,27
+ 940 0442 0FB6      		in __tmp_reg__,__SREG__
+ 941 0444 F894      		cli
+ 942 0446 DEBF      		out __SP_H__,r29
+ 943 0448 0FBE      		out __SREG__,__tmp_reg__
+ 944 044a CDBF      		out __SP_L__,r28
+ 945 044c CF91      		pop r28
+ 946 044e DF91      		pop r29
+ 947 0450 1F91      		pop r17
+ 948 0452 0F91      		pop r16
+ 949               	.LVL36:
+ 950 0454 FF90      		pop r15
+ 951 0456 EF90      		pop r14
+ 952 0458 DF90      		pop r13
+ 953 045a 0895      		ret
+ 954               	.LVL37:
+ 955               	.L27:
+ 956               	.LSM93:
+ 957 045c 8091 0000 		lds r24,tapping_key+2
+ 958               	.LVL38:
+ 959 0460 8823      		tst r24
+ 960 0462 01F4      		brne .+2
+ 961 0464 00C0      		rjmp .L82
+ 962 0466 00C0      		rjmp .L118
+ 963               	.L34:
+ 964               	.LSM94:
+ 965 0468 6517      		cp r22,r21
+ 966 046a 01F0      		breq .+2
+ 967 046c 00C0      		rjmp .L35
+ 968 046e 00C0      		rjmp .L119
+ 969               	.L40:
+ 970               	.LSM95:
+ 971 0470 6130      		cpi r22,lo8(1)
+ 972 0472 01F4      		brne .+2
+ 973 0474 00C0      		rjmp .L41
+ 974 0476 00C0      		rjmp .L120
+ 975               	.L53:
+ 976               	.LSM96:
+ 977 0478 6517      		cp r22,r21
+ 978 047a 01F0      		breq .+2
+ 979 047c 00C0      		rjmp .L54
+ 980 047e 00C0      		rjmp .L121
+ 981               	.L60:
+ 982               	.LSM97:
+ 983 0480 6517      		cp r22,r21
+ 984 0482 01F0      		breq .+2
+ 985 0484 00C0      		rjmp .L61
+ 986 0486 00C0      		rjmp .L122
+ 987               	.L65:
+ 988               	.LSM98:
+ 989 0488 8091 0000 		lds r24,tapping_key+2
+ 990 048c 8823      		tst r24
+ 991 048e 01F0      		breq .+2
+ 992 0490 00C0      		rjmp .L26
+ 993 0492 00C0      		rjmp .L123
+ 994               	.L72:
+ 995               	.LSM99:
+ 996 0494 6517      		cp r22,r21
+ 997 0496 01F0      		breq .+2
+ 998 0498 00C0      		rjmp .L73
+ 999 049a 00C0      		rjmp .L124
+ 1000               	.LVL39:
+ 1001               	.L117:
+ 1002               	.LSM100:
+ 1003 049c 5A83      		std Y+2,r21
+ 1004 049e 4983      		std Y+1,r20
+ 1005               	.LBB85:
+ 1006 04a0 8981      		ldd r24,Y+1
+ 1007 04a2 9A81      		ldd r25,Y+2
+ 1008               	.LVL40:
+ 1009 04a4 0E94 0000 		call layer_switch_get_action
+ 1010 04a8 482F      		mov r20,r24
+ 1011               	.LVL41:
+ 1012               	.LSM101:
+ 1013 04aa 892F      		mov r24,r25
+ 1014               	.LVL42:
+ 1015 04ac 8295      		swap r24
+ 1016 04ae 8F70      		andi r24,lo8(15)
+ 1017 04b0 282F      		mov r18,r24
+ 1018 04b2 30E0      		ldi r19,lo8(0)
+ 1019 04b4 2230      		cpi r18,2
+ 1020 04b6 3105      		cpc r19,__zero_reg__
+ 1021 04b8 04F4      		brge .+2
+ 1022 04ba 00C0      		rjmp .L47
+ 1023 04bc 2430      		cpi r18,4
+ 1024 04be 3105      		cpc r19,__zero_reg__
+ 1025 04c0 04F0      		brlt .+2
+ 1026 04c2 00C0      		rjmp .L80
+ 1027 04c4 00C0      		rjmp .L125
+ 1028               	.LBE85:
+ 1029               	.LFE6:
+ 1031               		.section	.text.action_tapping_process,"ax",@progbits
+ 1032               	.global	action_tapping_process
+ 1034               	action_tapping_process:
+ 1035               	.LFB5:
+ 1036               	.LSM102:
+ 1037 0000 0F93      		push r16
+ 1038 0002 1F93      		push r17
+ 1039 0004 DF93      		push r29
+ 1040 0006 CF93      		push r28
+ 1041 0008 CDB7      		in r28,__SP_L__
+ 1042 000a DEB7      		in r29,__SP_H__
+ 1043 000c 2C97      		sbiw r28,12
+ 1044 000e 0FB6      		in __tmp_reg__,__SREG__
+ 1045 0010 F894      		cli
+ 1046 0012 DEBF      		out __SP_H__,r29
+ 1047 0014 0FBE      		out __SREG__,__tmp_reg__
+ 1048 0016 CDBF      		out __SP_L__,r28
+ 1049               	/* prologue: function */
+ 1050               	/* frame size = 12 */
+ 1051 0018 4F83      		std Y+7,r20
+ 1052 001a 5887      		std Y+8,r21
+ 1053 001c 6987      		std Y+9,r22
+ 1054 001e 7A87      		std Y+10,r23
+ 1055 0020 8B87      		std Y+11,r24
+ 1056 0022 9C87      		std Y+12,r25
+ 1057               	.LSM103:
+ 1058 0024 8E01      		movw r16,r28
+ 1059 0026 095F      		subi r16,lo8(-(7))
+ 1060 0028 1F4F      		sbci r17,hi8(-(7))
+ 1061 002a C801      		movw r24,r16
+ 1062 002c 0E94 0000 		call process_tapping
+ 1063 0030 8823      		tst r24
+ 1064 0032 01F0      		breq .L127
+ 1065               	.LSM104:
+ 1066 0034 2885      		ldd r18,Y+8
+ 1067 0036 3F81      		ldd r19,Y+7
+ 1068               	.LBB97:
+ 1069               	.LBB98:
+ 1070               	.LSM105:
+ 1071 0038 8A85      		ldd r24,Y+10
+ 1072 003a 9B85      		ldd r25,Y+11
+ 1073 003c 892B      		or r24,r25
+ 1074 003e 01F4      		brne .+2
+ 1075 0040 00C0      		rjmp .L132
+ 1076 0042 2F3F      		cpi r18,lo8(-1)
+ 1077 0044 01F4      		brne .L142
+ 1078 0046 80E0      		ldi r24,lo8(0)
+ 1079 0048 90E0      		ldi r25,hi8(0)
+ 1080 004a 3F3F      		cpi r19,lo8(-1)
+ 1081 004c 01F4      		brne .L131
+ 1082 004e 81E0      		ldi r24,lo8(1)
+ 1083 0050 90E0      		ldi r25,hi8(1)
+ 1084               	.L131:
+ 1085               	.LBE98:
+ 1086               	.LBE97:
+ 1087               	.LSM106:
+ 1088 0052 8823      		tst r24
+ 1089 0054 01F0      		breq .+2
+ 1090 0056 00C0      		rjmp .L132
+ 1091               	.L142:
+ 1092               	.LSM107:
+ 1093 0058 4F81      		ldd r20,Y+7
+ 1094 005a 5885      		ldd r21,Y+8
+ 1095 005c 6985      		ldd r22,Y+9
+ 1096 005e 7A85      		ldd r23,Y+10
+ 1097 0060 8B85      		ldd r24,Y+11
+ 1098 0062 9C85      		ldd r25,Y+12
+ 1099 0064 0E94 0000 		call debug_record
+ 1100 0068 00C0      		rjmp .L132
+ 1101               	.L127:
+ 1102               	.LSM108:
+ 1103 006a DE01      		movw r26,r28
+ 1104 006c 1196      		adiw r26,1
+ 1105 006e F801      		movw r30,r16
+ 1106 0070 86E0      		ldi r24,lo8(6)
+ 1107               	.L133:
+ 1108 0072 0190      		ld r0,Z+
+ 1109 0074 0D92      		st X+,r0
+ 1110 0076 8150      		subi r24,lo8(-(-1))
+ 1111 0078 01F4      		brne .L133
+ 1112 007a F981      		ldd r31,Y+1
+ 1113 007c EA81      		ldd r30,Y+2
+ 1114 007e 4C81      		ldd r20,Y+4
+ 1115 0080 5D81      		ldd r21,Y+5
+ 1116               	.LBB99:
+ 1117               	.LBB100:
+ 1118               	.LBB101:
+ 1119               	.LBB102:
+ 1120               	.LSM109:
+ 1121 0082 4115      		cp r20,__zero_reg__
+ 1122 0084 5105      		cpc r21,__zero_reg__
+ 1123 0086 01F4      		brne .+2
+ 1124 0088 00C0      		rjmp .L132
+ 1125 008a EF3F      		cpi r30,lo8(-1)
+ 1126 008c 01F0      		breq .+2
+ 1127 008e 00C0      		rjmp .L134
+ 1128 0090 FF3F      		cpi r31,lo8(-1)
+ 1129 0092 01F0      		breq .+2
+ 1130 0094 00C0      		rjmp .L134
+ 1131 0096 00C0      		rjmp .L132
+ 1132               	.L138:
+ 1133               	.LSM110:
+ 1134 0098 F983      		std Y+1,r31
+ 1135 009a EA83      		std Y+2,r30
+ 1136 009c 5D83      		std Y+5,r21
+ 1137 009e 4C83      		std Y+4,r20
+ 1138               	.LBE102:
+ 1139               	.LBE101:
+ 1140 00a0 F901      		movw r30,r18
+ 1141 00a2 EE0F      		lsl r30
+ 1142 00a4 FF1F      		rol r31
+ 1143 00a6 E20F      		add r30,r18
+ 1144 00a8 F31F      		adc r31,r19
+ 1145 00aa EE0F      		lsl r30
+ 1146 00ac FF1F      		rol r31
+ 1147 00ae E050      		subi r30,lo8(-(waiting_buffer))
+ 1148 00b0 F040      		sbci r31,hi8(-(waiting_buffer))
+ 1149 00b2 DE01      		movw r26,r28
+ 1150 00b4 1196      		adiw r26,1
+ 1151 00b6 86E0      		ldi r24,lo8(6)
+ 1152               	.L135:
+ 1153 00b8 0D90      		ld r0,X+
+ 1154 00ba 0192      		st Z+,r0
+ 1155 00bc 8150      		subi r24,lo8(-(-1))
+ 1156 00be 01F4      		brne .L135
+ 1157               	.LSM111:
+ 1158 00c0 6093 0000 		sts waiting_buffer_head,r22
+ 1159               	.LSM112:
+ 1160 00c4 0E94 0000 		call debug_waiting_buffer
+ 1161 00c8 00C0      		rjmp .L132
+ 1162               	.L137:
+ 1163               	.LBE100:
+ 1164               	.LBE99:
+ 1165               	.LSM113:
+ 1166 00ca 919F      		mul r25,r17
+ 1167 00cc C001      		movw r24,r0
+ 1168 00ce 1124      		clr r1
+ 1169 00d0 8050      		subi r24,lo8(-(waiting_buffer))
+ 1170 00d2 9040      		sbci r25,hi8(-(waiting_buffer))
+ 1171 00d4 0E94 0000 		call process_tapping
+ 1172 00d8 8823      		tst r24
+ 1173 00da 01F4      		brne .+2
+ 1174 00dc 00C0      		rjmp .L139
+ 1175               	.LSM114:
+ 1176 00de 8091 0000 		lds r24,waiting_buffer_tail
+ 1177 00e2 90E0      		ldi r25,lo8(0)
+ 1178 00e4 FC01      		movw r30,r24
+ 1179 00e6 EE0F      		lsl r30
+ 1180 00e8 FF1F      		rol r31
+ 1181 00ea E80F      		add r30,r24
+ 1182 00ec F91F      		adc r31,r25
+ 1183 00ee EE0F      		lsl r30
+ 1184 00f0 FF1F      		rol r31
+ 1185 00f2 E050      		subi r30,lo8(-(waiting_buffer))
+ 1186 00f4 F040      		sbci r31,hi8(-(waiting_buffer))
+ 1187 00f6 4081      		ld r20,Z
+ 1188 00f8 5181      		ldd r21,Z+1
+ 1189 00fa 6281      		ldd r22,Z+2
+ 1190 00fc 7381      		ldd r23,Z+3
+ 1191 00fe 8481      		ldd r24,Z+4
+ 1192 0100 9581      		ldd r25,Z+5
+ 1193 0102 0E94 0000 		call debug_record
+ 1194               	.LSM115:
+ 1195 0106 8091 0000 		lds r24,waiting_buffer_tail
+ 1196 010a 90E0      		ldi r25,lo8(0)
+ 1197 010c 0196      		adiw r24,1
+ 1198 010e 8770      		andi r24,lo8(7)
+ 1199 0110 9070      		andi r25,hi8(7)
+ 1200 0112 8093 0000 		sts waiting_buffer_tail,r24
+ 1201 0116 00C0      		rjmp .L143
+ 1202               	.L132:
+ 1203               	.LSM116:
+ 1204 0118 16E0      		ldi r17,lo8(6)
+ 1205               	.L143:
+ 1206               	.LSM117:
+ 1207 011a 9091 0000 		lds r25,waiting_buffer_tail
+ 1208 011e 8091 0000 		lds r24,waiting_buffer_head
+ 1209 0122 9817      		cp r25,r24
+ 1210 0124 01F4      		brne .L137
+ 1211 0126 00C0      		rjmp .L139
+ 1212               	.L134:
+ 1213               	.LBB104:
+ 1214               	.LBB103:
+ 1215               	.LSM118:
+ 1216 0128 8091 0000 		lds r24,waiting_buffer_head
+ 1217 012c 282F      		mov r18,r24
+ 1218 012e 30E0      		ldi r19,lo8(0)
+ 1219 0130 2F5F      		subi r18,lo8(-(1))
+ 1220 0132 3F4F      		sbci r19,hi8(-(1))
+ 1221 0134 B901      		movw r22,r18
+ 1222 0136 6770      		andi r22,lo8(7)
+ 1223 0138 7070      		andi r23,hi8(7)
+ 1224 013a 2150      		subi r18,lo8(-(-1))
+ 1225 013c 3040      		sbci r19,hi8(-(-1))
+ 1226 013e 8091 0000 		lds r24,waiting_buffer_tail
+ 1227 0142 90E0      		ldi r25,lo8(0)
+ 1228 0144 6817      		cp r22,r24
+ 1229 0146 7907      		cpc r23,r25
+ 1230 0148 01F0      		breq .+2
+ 1231 014a 00C0      		rjmp .L138
+ 1232               	.LBE103:
+ 1233               	.LBE104:
+ 1234               	.LSM119:
+ 1235 014c 0E94 0000 		call clear_keyboard
+ 1236               	.LBB105:
+ 1237               	.LBB106:
+ 1238               	.LSM120:
+ 1239 0150 1092 0000 		sts waiting_buffer_head,__zero_reg__
+ 1240               	.LSM121:
+ 1241 0154 1092 0000 		sts waiting_buffer_tail,__zero_reg__
+ 1242               	.LBE106:
+ 1243               	.LBE105:
+ 1244               	.LSM122:
+ 1245 0158 E0E0      		ldi r30,lo8(tapping_key)
+ 1246 015a F0E0      		ldi r31,hi8(tapping_key)
+ 1247 015c 86E0      		ldi r24,lo8(6)
+ 1248 015e DF01      		movw r26,r30
+ 1249 0160 1D92      		st X+,__zero_reg__
+ 1250 0162 8A95      	        dec r24
+ 1251 0164 01F4      		brne .-6
+ 1252 0166 00C0      		rjmp .L132
+ 1253               	.L139:
+ 1254               	/* epilogue start */
+ 1255               	.LSM123:
+ 1256 0168 2C96      		adiw r28,12
+ 1257 016a 0FB6      		in __tmp_reg__,__SREG__
+ 1258 016c F894      		cli
+ 1259 016e DEBF      		out __SP_H__,r29
+ 1260 0170 0FBE      		out __SREG__,__tmp_reg__
+ 1261 0172 CDBF      		out __SP_L__,r28
+ 1262 0174 CF91      		pop r28
+ 1263 0176 DF91      		pop r29
+ 1264 0178 1F91      		pop r17
+ 1265 017a 0F91      		pop r16
+ 1266 017c 0895      		ret
+ 1267               	.LFE5:
+ 1269               		.section	.bss.tapping_key,"aw",@nobits
+ 1272               	tapping_key:
+ 1273 0000 0000 0000 		.skip 6,0
+ 1273      0000 
+ 1274               		.section	.bss.waiting_buffer_head,"aw",@nobits
+ 1277               	waiting_buffer_head:
+ 1278 0000 00        		.skip 1,0
+ 1279               		.section	.bss.waiting_buffer_tail,"aw",@nobits
+ 1282               	waiting_buffer_tail:
+ 1283 0000 00        		.skip 1,0
+ 1284               		.section	.bss.waiting_buffer,"aw",@nobits
+ 1287               	waiting_buffer:
+ 1288 0000 0000 0000 		.skip 48,0
+ 1288      0000 0000 
+ 1288      0000 0000 
+ 1288      0000 0000 
+ 1288      0000 0000 
+ 1345               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 action_tapping.c
+C:\cygwin64\tmp/ccU4Vqh5.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccU4Vqh5.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccU4Vqh5.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccU4Vqh5.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccU4Vqh5.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccU4Vqh5.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccU4Vqh5.s:18     .text.debug_waiting_buffer:00000000 debug_waiting_buffer
+C:\cygwin64\tmp/ccU4Vqh5.s:1282   .bss.waiting_buffer_tail:00000000 waiting_buffer_tail
+C:\cygwin64\tmp/ccU4Vqh5.s:1287   .bss.waiting_buffer:00000000 waiting_buffer
+C:\cygwin64\tmp/ccU4Vqh5.s:1277   .bss.waiting_buffer_head:00000000 waiting_buffer_head
+C:\cygwin64\tmp/ccU4Vqh5.s:70     .text.debug_tapping_key:00000000 debug_tapping_key
+C:\cygwin64\tmp/ccU4Vqh5.s:1272   .bss.tapping_key:00000000 tapping_key
+C:\cygwin64\tmp/ccU4Vqh5.s:90     .text.waiting_buffer_scan_tap:00000000 waiting_buffer_scan_tap
+C:\cygwin64\tmp/ccU4Vqh5.s:241    .text.process_tapping:00000000 process_tapping
+C:\cygwin64\tmp/ccU4Vqh5.s:1034   .text.action_tapping_process:00000000 action_tapping_process
+
+UNDEFINED SYMBOLS
+debug_record
+process_action
+is_tap_key
+debug_event
+layer_switch_get_action
+clear_keyboard
+__do_clear_bss

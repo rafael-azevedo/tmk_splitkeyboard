@@ -1,0 +1,110 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.main,"ax",@progbits
+  17               		.weak	main
+  19               	main:
+  20               	.LFB104:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LSM1:
+  25 0000 0E94 0000 		call setup_hardware
+  26               	.LSM2:
+  27 0004 0E94 0000 		call setup_set_handedness
+  28               	.LSM3:
+  29               	/* #APP */
+  30               	 ;  14 "main.c" 1
+  31 0008 7894      		sei
+  32               	 ;  0 "" 2
+  33               	/* #NOAPP */
+  34 000a 28EC      		ldi r18,lo8(-56)
+  35               	.LVL0:
+  36               	.LBB12:
+  37               	.LBB13:
+  38               	.LBB14:
+  39               	.LBB15:
+  40               	.LSM4:
+  41 000c 40E2      		ldi r20,lo8(20000)
+  42 000e 5EE4      		ldi r21,hi8(20000)
+  43 0010 00C0      		rjmp .L2
+  44               	.L4:
+  45 0012 CA01      		movw r24,r20
+  46               	.LVL1:
+  47               	/* #APP */
+  48               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  49 0014 0197      		1: sbiw r24,1
+  50 0016 01F4      		brne 1b
+  51               	 ;  0 "" 2
+  52               	/* #NOAPP */
+  53               	.L2:
+  54               	.LBE15:
+  55               	.LBE14:
+  56               	.LBE13:
+  57               	.LBE12:
+  58               	.LSM5:
+  59 0018 2150      		subi r18,lo8(-(-1))
+  60 001a 2F3F      		cpi r18,lo8(-1)
+  61 001c 01F0      		breq .L3
+  62 001e 8091 0000 		lds r24,USB_DeviceState
+  63               	.LVL2:
+  64 0022 8430      		cpi r24,lo8(4)
+  65 0024 01F4      		brne .L4
+  66               	.LVL3:
+  67               	.L3:
+  68               	.LSM6:
+  69 0026 0E94 0000 		call has_usb
+  70               	.LVL4:
+  71 002a 8823      		tst r24
+  72 002c 01F4      		brne .L5
+  73               	.LSM7:
+  74 002e 0E94 0000 		call matrix_init
+  75               	.LSM8:
+  76 0032 0E94 0000 		call serial_slave_init
+  77               	.L6:
+  78               	.LSM9:
+  79 0036 0E94 0000 		call matrix_slave_scan
+  80 003a 00C0      		rjmp .L6
+  81               	.L5:
+  82               	.LSM10:
+  83 003c 0E94 0000 		call keyboard_init
+  84               	.LSM11:
+  85 0040 80E0      		ldi r24,lo8(lufa_driver)
+  86 0042 90E0      		ldi r25,hi8(lufa_driver)
+  87 0044 0E94 0000 		call host_set_driver
+  88               	.LSM12:
+  89 0048 0E94 0000 		call rgblight_init
+  90               	.L7:
+  91               	.LSM13:
+  92 004c 0E94 0000 		call keyboard_task
+  93 0050 00C0      		rjmp .L7
+  94               	.LFE104:
+ 120               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\cygwin64\tmp/ccgo26ua.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccgo26ua.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccgo26ua.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccgo26ua.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccgo26ua.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccgo26ua.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccgo26ua.s:19     .text.main:00000000 main
+
+UNDEFINED SYMBOLS
+setup_hardware
+setup_set_handedness
+USB_DeviceState
+has_usb
+matrix_init
+serial_slave_init
+matrix_slave_scan
+keyboard_init
+lufa_driver
+host_set_driver
+rgblight_init
+keyboard_task

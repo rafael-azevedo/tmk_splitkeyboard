@@ -1,0 +1,2745 @@
+   1               		.file	"rgblight.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.setrgb,"ax",@progbits
+  17               	.global	setrgb
+  19               	setrgb:
+  20               	.LFB7:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25 0000 F901      		movw r30,r18
+  26               	.LSM1:
+  27 0002 8183      		std Z+1,r24
+  28               	.LSM2:
+  29 0004 6083      		st Z,r22
+  30               	.LSM3:
+  31 0006 4283      		std Z+2,r20
+  32               	/* epilogue start */
+  33               	.LSM4:
+  34 0008 0895      		ret
+  35               	.LFE7:
+  37               		.section	.text.sethsv,"ax",@progbits
+  38               	.global	sethsv
+  40               	sethsv:
+  41               	.LFB6:
+  42               	.LSM5:
+  43               	.LVL1:
+  44 0000 CF92      		push r12
+  45 0002 DF92      		push r13
+  46 0004 EF92      		push r14
+  47 0006 FF92      		push r15
+  48 0008 0F93      		push r16
+  49 000a 1F93      		push r17
+  50 000c CF93      		push r28
+  51 000e DF93      		push r29
+  52               	/* prologue: function */
+  53               	/* frame size = 0 */
+  54 0010 EC01      		movw r28,r24
+  55 0012 E42F      		mov r30,r20
+  56 0014 6901      		movw r12,r18
+  57               	.LBB12:
+  58               	.LSM6:
+  59 0016 F0E0      		ldi r31,lo8(0)
+  60               	.LVL2:
+  61 0018 E050      		subi r30,lo8(-(DIM_CURVE))
+  62 001a F040      		sbci r31,hi8(-(DIM_CURVE))
+  63               	.LVL3:
+  64               	/* #APP */
+  65               	 ;  47 "rgblight.c" 1
+  66 001c E490      		lpm r14, Z
+  67               		
+  68               	 ;  0 "" 2
+  69               	.LVL4:
+  70               	/* #NOAPP */
+  71               	.LBE12:
+  72               	.LBB13:
+  73               	.LSM7:
+  74 001e 4FEF      		ldi r20,lo8(255)
+  75 0020 50E0      		ldi r21,hi8(255)
+  76 0022 FA01      		movw r30,r20
+  77               	.LVL5:
+  78 0024 E61B      		sub r30,r22
+  79 0026 F109      		sbc r31,__zero_reg__
+  80 0028 E050      		subi r30,lo8(-(DIM_CURVE))
+  81 002a F040      		sbci r31,hi8(-(DIM_CURVE))
+  82               	/* #APP */
+  83               	 ;  48 "rgblight.c" 1
+  84 002c 8491      		lpm r24, Z
+  85               		
+  86               	 ;  0 "" 2
+  87               	.LVL6:
+  88               	/* #NOAPP */
+  89               	.LBE13:
+  90 002e 8095      		com r24
+  91               	.LSM8:
+  92 0030 01F4      		brne .L4
+  93               	.LVL7:
+  94 0032 6E2D      		mov r22,r14
+  95               	.LVL8:
+  96 0034 9E2D      		mov r25,r14
+  97               	.LVL9:
+  98 0036 4E2D      		mov r20,r14
+  99               	.LVL10:
+ 100 0038 00C0      		rjmp .L5
+ 101               	.LVL11:
+ 102               	.L4:
+ 103               	.LSM9:
+ 104 003a EE2D      		mov r30,r14
+ 105 003c F0E0      		ldi r31,lo8(0)
+ 106               	.LVL12:
+ 107 003e 481B      		sub r20,r24
+ 108 0040 5109      		sbc r21,__zero_reg__
+ 109 0042 4E9F      		mul r20,r30
+ 110 0044 C001      		movw r24,r0
+ 111 0046 4F9F      		mul r20,r31
+ 112 0048 900D      		add r25,r0
+ 113 004a 5E9F      		mul r21,r30
+ 114 004c 900D      		add r25,r0
+ 115 004e 1124      		clr r1
+ 116               	.LVL13:
+ 117 0050 092F      		mov r16,r25
+ 118 0052 1127      		clr r17
+ 119 0054 07FD      		sbrc r16,7
+ 120 0056 1A95      		dec r17
+ 121               	.LSM10:
+ 122 0058 2CE3      		ldi r18,lo8(60)
+ 123 005a 30E0      		ldi r19,hi8(60)
+ 124 005c CE01      		movw r24,r28
+ 125 005e 6CE3      		ldi r22,lo8(60)
+ 126 0060 70E0      		ldi r23,hi8(60)
+ 127 0062 0E94 0000 		call __udivmodhi4
+ 128 0066 6230      		cpi r22,2
+ 129 0068 7105      		cpc r23,__zero_reg__
+ 130 006a 01F4      		brne .+2
+ 131 006c 00C0      		rjmp .L8
+ 132 006e 6330      		cpi r22,3
+ 133 0070 7105      		cpc r23,__zero_reg__
+ 134 0072 00F4      		brsh .L12
+ 135 0074 6115      		cp r22,__zero_reg__
+ 136 0076 7105      		cpc r23,__zero_reg__
+ 137 0078 01F0      		breq .L6
+ 138 007a 6130      		cpi r22,1
+ 139 007c 7105      		cpc r23,__zero_reg__
+ 140 007e 01F0      		breq .+2
+ 141 0080 00C0      		rjmp .L5
+ 142 0082 00C0      		rjmp .L16
+ 143               	.L12:
+ 144 0084 6430      		cpi r22,4
+ 145 0086 7105      		cpc r23,__zero_reg__
+ 146 0088 01F4      		brne .+2
+ 147 008a 00C0      		rjmp .L10
+ 148 008c 6430      		cpi r22,4
+ 149 008e 7105      		cpc r23,__zero_reg__
+ 150 0090 00F4      		brsh .+2
+ 151 0092 00C0      		rjmp .L9
+ 152 0094 6530      		cpi r22,5
+ 153 0096 7105      		cpc r23,__zero_reg__
+ 154 0098 01F0      		breq .+2
+ 155 009a 00C0      		rjmp .L5
+ 156 009c 00C0      		rjmp .L17
+ 157               	.L6:
+ 158               	.LSM11:
+ 159 009e E01B      		sub r30,r16
+ 160 00a0 F109      		sbc r31,__zero_reg__
+ 161               	.LVL14:
+ 162 00a2 EC9F      		mul r30,r28
+ 163 00a4 C001      		movw r24,r0
+ 164 00a6 ED9F      		mul r30,r29
+ 165 00a8 900D      		add r25,r0
+ 166 00aa FC9F      		mul r31,r28
+ 167 00ac 900D      		add r25,r0
+ 168 00ae 1124      		clr r1
+ 169 00b0 6CE3      		ldi r22,lo8(60)
+ 170 00b2 70E0      		ldi r23,hi8(60)
+ 171 00b4 0E94 0000 		call __udivmodhi4
+ 172 00b8 962F      		mov r25,r22
+ 173               	.LVL15:
+ 174 00ba 900F      		add r25,r16
+ 175 00bc 6E2D      		mov r22,r14
+ 176               	.LVL16:
+ 177 00be 00C0      		rjmp .L14
+ 178               	.LVL17:
+ 179               	.L16:
+ 180               	.LSM12:
+ 181 00c0 E01B      		sub r30,r16
+ 182 00c2 F109      		sbc r31,__zero_reg__
+ 183               	.LVL18:
+ 184 00c4 CE01      		movw r24,r28
+ 185 00c6 6CE3      		ldi r22,lo8(60)
+ 186 00c8 70E0      		ldi r23,hi8(60)
+ 187 00ca 0E94 0000 		call __udivmodhi4
+ 188 00ce 281B      		sub r18,r24
+ 189 00d0 390B      		sbc r19,r25
+ 190 00d2 E29F      		mul r30,r18
+ 191 00d4 C001      		movw r24,r0
+ 192 00d6 E39F      		mul r30,r19
+ 193 00d8 900D      		add r25,r0
+ 194 00da F29F      		mul r31,r18
+ 195 00dc 900D      		add r25,r0
+ 196 00de 1124      		clr r1
+ 197 00e0 6CE3      		ldi r22,lo8(60)
+ 198 00e2 70E0      		ldi r23,hi8(60)
+ 199 00e4 0E94 0000 		call __udivmodhi4
+ 200 00e8 600F      		add r22,r16
+ 201               	.LVL19:
+ 202 00ea 9E2D      		mov r25,r14
+ 203               	.LVL20:
+ 204               	.L14:
+ 205 00ec 402F      		mov r20,r16
+ 206               	.LVL21:
+ 207 00ee 00C0      		rjmp .L5
+ 208               	.LVL22:
+ 209               	.L8:
+ 210               	.LSM13:
+ 211 00f0 E01B      		sub r30,r16
+ 212 00f2 F109      		sbc r31,__zero_reg__
+ 213               	.LVL23:
+ 214 00f4 CE01      		movw r24,r28
+ 215 00f6 6CE3      		ldi r22,lo8(60)
+ 216 00f8 70E0      		ldi r23,hi8(60)
+ 217 00fa 0E94 0000 		call __udivmodhi4
+ 218 00fe 9C01      		movw r18,r24
+ 219 0100 E29F      		mul r30,r18
+ 220 0102 C001      		movw r24,r0
+ 221 0104 E39F      		mul r30,r19
+ 222 0106 900D      		add r25,r0
+ 223 0108 F29F      		mul r31,r18
+ 224 010a 900D      		add r25,r0
+ 225 010c 1124      		clr r1
+ 226 010e 6CE3      		ldi r22,lo8(60)
+ 227 0110 70E0      		ldi r23,hi8(60)
+ 228 0112 0E94 0000 		call __udivmodhi4
+ 229 0116 462F      		mov r20,r22
+ 230               	.LVL24:
+ 231 0118 400F      		add r20,r16
+ 232 011a 602F      		mov r22,r16
+ 233               	.LVL25:
+ 234 011c 9E2D      		mov r25,r14
+ 235               	.LVL26:
+ 236 011e 00C0      		rjmp .L5
+ 237               	.LVL27:
+ 238               	.L9:
+ 239               	.LSM14:
+ 240 0120 E01B      		sub r30,r16
+ 241 0122 F109      		sbc r31,__zero_reg__
+ 242               	.LVL28:
+ 243 0124 CE01      		movw r24,r28
+ 244 0126 6CE3      		ldi r22,lo8(60)
+ 245 0128 70E0      		ldi r23,hi8(60)
+ 246 012a 0E94 0000 		call __udivmodhi4
+ 247 012e 281B      		sub r18,r24
+ 248 0130 390B      		sbc r19,r25
+ 249 0132 E29F      		mul r30,r18
+ 250 0134 C001      		movw r24,r0
+ 251 0136 E39F      		mul r30,r19
+ 252 0138 900D      		add r25,r0
+ 253 013a F29F      		mul r31,r18
+ 254 013c 900D      		add r25,r0
+ 255 013e 1124      		clr r1
+ 256 0140 6CE3      		ldi r22,lo8(60)
+ 257 0142 70E0      		ldi r23,hi8(60)
+ 258 0144 0E94 0000 		call __udivmodhi4
+ 259 0148 962F      		mov r25,r22
+ 260               	.LVL29:
+ 261 014a 900F      		add r25,r16
+ 262 014c 602F      		mov r22,r16
+ 263               	.LVL30:
+ 264 014e 00C0      		rjmp .L15
+ 265               	.LVL31:
+ 266               	.L10:
+ 267               	.LSM15:
+ 268 0150 E01B      		sub r30,r16
+ 269 0152 F109      		sbc r31,__zero_reg__
+ 270               	.LVL32:
+ 271 0154 CE01      		movw r24,r28
+ 272 0156 6CE3      		ldi r22,lo8(60)
+ 273 0158 70E0      		ldi r23,hi8(60)
+ 274 015a 0E94 0000 		call __udivmodhi4
+ 275 015e 9C01      		movw r18,r24
+ 276 0160 E29F      		mul r30,r18
+ 277 0162 C001      		movw r24,r0
+ 278 0164 E39F      		mul r30,r19
+ 279 0166 900D      		add r25,r0
+ 280 0168 F29F      		mul r31,r18
+ 281 016a 900D      		add r25,r0
+ 282 016c 1124      		clr r1
+ 283 016e 6CE3      		ldi r22,lo8(60)
+ 284 0170 70E0      		ldi r23,hi8(60)
+ 285 0172 0E94 0000 		call __udivmodhi4
+ 286 0176 600F      		add r22,r16
+ 287               	.LVL33:
+ 288 0178 902F      		mov r25,r16
+ 289               	.LVL34:
+ 290               	.L15:
+ 291 017a 4E2D      		mov r20,r14
+ 292               	.LVL35:
+ 293 017c 00C0      		rjmp .L5
+ 294               	.LVL36:
+ 295               	.L17:
+ 296               	.LSM16:
+ 297 017e E01B      		sub r30,r16
+ 298 0180 F109      		sbc r31,__zero_reg__
+ 299               	.LVL37:
+ 300 0182 CE01      		movw r24,r28
+ 301 0184 6CE3      		ldi r22,lo8(60)
+ 302 0186 70E0      		ldi r23,hi8(60)
+ 303 0188 0E94 0000 		call __udivmodhi4
+ 304 018c 281B      		sub r18,r24
+ 305 018e 390B      		sbc r19,r25
+ 306 0190 E29F      		mul r30,r18
+ 307 0192 C001      		movw r24,r0
+ 308 0194 E39F      		mul r30,r19
+ 309 0196 900D      		add r25,r0
+ 310 0198 F29F      		mul r31,r18
+ 311 019a 900D      		add r25,r0
+ 312 019c 1124      		clr r1
+ 313 019e 6CE3      		ldi r22,lo8(60)
+ 314 01a0 70E0      		ldi r23,hi8(60)
+ 315 01a2 0E94 0000 		call __udivmodhi4
+ 316 01a6 462F      		mov r20,r22
+ 317               	.LVL38:
+ 318 01a8 400F      		add r20,r16
+ 319 01aa 6E2D      		mov r22,r14
+ 320               	.LVL39:
+ 321 01ac 902F      		mov r25,r16
+ 322               	.LVL40:
+ 323               	.L5:
+ 324               	.LSM17:
+ 325 01ae 862F      		mov r24,r22
+ 326               	.LVL41:
+ 327 01b0 692F      		mov r22,r25
+ 328               	.LVL42:
+ 329 01b2 9601      		movw r18,r12
+ 330 01b4 0E94 0000 		call setrgb
+ 331               	.LVL43:
+ 332               	/* epilogue start */
+ 333               	.LSM18:
+ 334 01b8 DF91      		pop r29
+ 335 01ba CF91      		pop r28
+ 336               	.LVL44:
+ 337 01bc 1F91      		pop r17
+ 338 01be 0F91      		pop r16
+ 339 01c0 FF90      		pop r15
+ 340 01c2 EF90      		pop r14
+ 341               	.LVL45:
+ 342 01c4 DF90      		pop r13
+ 343 01c6 CF90      		pop r12
+ 344               	.LVL46:
+ 345 01c8 0895      		ret
+ 346               	.LFE6:
+ 348               		.section	.text.eeconfig_debug_rgblight,"ax",@progbits
+ 349               	.global	eeconfig_debug_rgblight
+ 351               	eeconfig_debug_rgblight:
+ 352               	.LFB11:
+ 353               	.LSM19:
+ 354               	/* prologue: function */
+ 355               	/* frame size = 0 */
+ 356               	/* epilogue start */
+ 357               	.LSM20:
+ 358 0000 0895      		ret
+ 359               	.LFE11:
+ 361               		.section	.text.rgblight_timer_init,"ax",@progbits
+ 362               	.global	rgblight_timer_init
+ 364               	rgblight_timer_init:
+ 365               	.LFB28:
+ 366               	.LSM21:
+ 367               	/* prologue: function */
+ 368               	/* frame size = 0 */
+ 369               	.LSM22:
+ 370 0000 8091 0000 		lds r24,rgblight_timer_is_init.1816
+ 371 0004 8823      		tst r24
+ 372 0006 01F4      		brne .L22
+ 373               	.LSM23:
+ 374 0008 81E0      		ldi r24,lo8(1)
+ 375 000a 8093 0000 		sts rgblight_timer_is_init.1816,r24
+ 376               	.LSM24:
+ 377 000e 89E0      		ldi r24,lo8(9)
+ 378 0010 8093 9100 		sts 145,r24
+ 379               	.LSM25:
+ 380 0014 9FB7      		in r25,__SREG__
+ 381               	.LVL47:
+ 382               	.LSM26:
+ 383               	/* #APP */
+ 384               	 ;  343 "rgblight.c" 1
+ 385 0016 F894      		cli
+ 386               	 ;  0 "" 2
+ 387               	.LSM27:
+ 388               	/* #NOAPP */
+ 389 0018 83E0      		ldi r24,lo8(3)
+ 390 001a 8093 9900 		sts 153,r24
+ 391               	.LSM28:
+ 392 001e 80ED      		ldi r24,lo8(-48)
+ 393 0020 8093 9800 		sts 152,r24
+ 394               	.LSM29:
+ 395 0024 9FBF      		out __SREG__,r25
+ 396               	.L22:
+ 397 0026 0895      		ret
+ 398               	.LFE28:
+ 400               		.section	.text.rgblight_timer_enable,"ax",@progbits
+ 401               	.global	rgblight_timer_enable
+ 403               	rgblight_timer_enable:
+ 404               	.LFB29:
+ 405               	.LSM30:
+ 406               	/* prologue: function */
+ 407               	/* frame size = 0 */
+ 408               	.LSM31:
+ 409 0000 E1E7      		ldi r30,lo8(113)
+ 410 0002 F0E0      		ldi r31,hi8(113)
+ 411 0004 8081      		ld r24,Z
+ 412 0006 8260      		ori r24,lo8(2)
+ 413 0008 8083      		st Z,r24
+ 414               	/* epilogue start */
+ 415               	.LSM32:
+ 416 000a 0895      		ret
+ 417               	.LFE29:
+ 419               		.section	.text.rgblight_timer_disable,"ax",@progbits
+ 420               	.global	rgblight_timer_disable
+ 422               	rgblight_timer_disable:
+ 423               	.LFB30:
+ 424               	.LSM33:
+ 425               	/* prologue: function */
+ 426               	/* frame size = 0 */
+ 427               	.LSM34:
+ 428 0000 E1E7      		ldi r30,lo8(113)
+ 429 0002 F0E0      		ldi r31,hi8(113)
+ 430 0004 8081      		ld r24,Z
+ 431 0006 8D7F      		andi r24,lo8(-3)
+ 432 0008 8083      		st Z,r24
+ 433               	/* epilogue start */
+ 434               	.LSM35:
+ 435 000a 0895      		ret
+ 436               	.LFE30:
+ 438               		.section	.text.rgblight_timer_toggle,"ax",@progbits
+ 439               	.global	rgblight_timer_toggle
+ 441               	rgblight_timer_toggle:
+ 442               	.LFB31:
+ 443               	.LSM36:
+ 444               	/* prologue: function */
+ 445               	/* frame size = 0 */
+ 446               	.LSM37:
+ 447 0000 E1E7      		ldi r30,lo8(113)
+ 448 0002 F0E0      		ldi r31,hi8(113)
+ 449 0004 8081      		ld r24,Z
+ 450 0006 92E0      		ldi r25,lo8(2)
+ 451 0008 8927      		eor r24,r25
+ 452 000a 8083      		st Z,r24
+ 453               	/* epilogue start */
+ 454               	.LSM38:
+ 455 000c 0895      		ret
+ 456               	.LFE31:
+ 458               		.section	.text.rgblight_set,"ax",@progbits
+ 459               	.global	rgblight_set
+ 461               	rgblight_set:
+ 462               	.LFB27:
+ 463               	.LSM39:
+ 464               	/* prologue: function */
+ 465               	/* frame size = 0 */
+ 466               	.LSM40:
+ 467 0000 8091 0000 		lds r24,rgblight_config
+ 468 0004 80FF      		sbrs r24,0
+ 469 0006 00C0      		rjmp .L30
+ 470               	.LSM41:
+ 471 0008 80E0      		ldi r24,lo8(led)
+ 472 000a 90E0      		ldi r25,hi8(led)
+ 473 000c 00C0      		rjmp .L35
+ 474               	.L30:
+ 475 000e E0E0      		ldi r30,lo8(led)
+ 476 0010 F0E0      		ldi r31,hi8(led)
+ 477               	.L32:
+ 478               	.LBB14:
+ 479               	.LSM42:
+ 480 0012 1182      		std Z+1,__zero_reg__
+ 481               	.LSM43:
+ 482 0014 1082      		st Z,__zero_reg__
+ 483               	.LSM44:
+ 484 0016 1282      		std Z+2,__zero_reg__
+ 485 0018 3396      		adiw r30,3
+ 486               	.LSM45:
+ 487 001a 80E0      		ldi r24,hi8(led+60)
+ 488 001c E030      		cpi r30,lo8(led+60)
+ 489 001e F807      		cpc r31,r24
+ 490 0020 01F4      		brne .L32
+ 491               	.LBE14:
+ 492               	.LSM46:
+ 493 0022 CF01      		movw r24,r30
+ 494 0024 CC97      		sbiw r24,60
+ 495               	.L35:
+ 496 0026 64E1      		ldi r22,lo8(20)
+ 497 0028 70E0      		ldi r23,hi8(20)
+ 498 002a 0E94 0000 		call ws2812_setleds
+ 499 002e 0895      		ret
+ 500               	.LFE27:
+ 502               		.section	.text.rgblight_effect_knight,"ax",@progbits
+ 503               	.global	rgblight_effect_knight
+ 505               	rgblight_effect_knight:
+ 506               	.LFB37:
+ 507               	.LSM47:
+ 508               	.LVL48:
+ 509 0000 7F92      		push r7
+ 510 0002 8F92      		push r8
+ 511 0004 9F92      		push r9
+ 512 0006 AF92      		push r10
+ 513 0008 BF92      		push r11
+ 514 000a CF92      		push r12
+ 515 000c DF92      		push r13
+ 516 000e EF92      		push r14
+ 517 0010 FF92      		push r15
+ 518 0012 0F93      		push r16
+ 519 0014 1F93      		push r17
+ 520 0016 DF93      		push r29
+ 521 0018 CF93      		push r28
+ 522 001a CDB7      		in r28,__SP_L__
+ 523 001c DEB7      		in r29,__SP_H__
+ 524 001e EC97      		sbiw r28,60
+ 525 0020 0FB6      		in __tmp_reg__,__SREG__
+ 526 0022 F894      		cli
+ 527 0024 DEBF      		out __SP_H__,r29
+ 528 0026 0FBE      		out __SREG__,__tmp_reg__
+ 529 0028 CDBF      		out __SP_L__,r28
+ 530               	/* prologue: function */
+ 531               	/* frame size = 60 */
+ 532 002a 182F      		mov r17,r24
+ 533               	.LSM48:
+ 534 002c 8091 0000 		lds r24,last_timer.1999
+ 535 0030 9091 0000 		lds r25,(last_timer.1999)+1
+ 536               	.LVL49:
+ 537 0034 0E94 0000 		call timer_elapsed
+ 538               	.LBB15:
+ 539 0038 E12F      		mov r30,r17
+ 540 003a F0E0      		ldi r31,lo8(0)
+ 541               	.LVL50:
+ 542 003c E050      		subi r30,lo8(-(RGBLED_KNIGHT_INTERVALS))
+ 543 003e F040      		sbci r31,hi8(-(RGBLED_KNIGHT_INTERVALS))
+ 544               	.LVL51:
+ 545               	/* #APP */
+ 546               	 ;  465 "rgblight.c" 1
+ 547 0040 2491      		lpm r18, Z
+ 548               		
+ 549               	 ;  0 "" 2
+ 550               	.LVL52:
+ 551               	/* #NOAPP */
+ 552               	.LBE15:
+ 553 0042 30E0      		ldi r19,lo8(0)
+ 554               	.LVL53:
+ 555 0044 8217      		cp r24,r18
+ 556 0046 9307      		cpc r25,r19
+ 557 0048 00F4      		brsh .+2
+ 558 004a 00C0      		rjmp .L47
+ 559               	.LSM49:
+ 560 004c 0E94 0000 		call timer_read
+ 561               	.LVL54:
+ 562 0050 9093 0000 		sts (last_timer.1999)+1,r25
+ 563 0054 8093 0000 		sts last_timer.1999,r24
+ 564               	.LSM50:
+ 565 0058 7090 0000 		lds r7,pos.1998
+ 566 005c 8091 0000 		lds r24,increament.2005
+ 567 0060 A82E      		mov r10,r24
+ 568 0062 BB24      		clr r11
+ 569 0064 A7FC      		sbrc r10,7
+ 570 0066 B094      		com r11
+ 571 0068 8E01      		movw r16,r28
+ 572 006a 0F5F      		subi r16,lo8(-(1))
+ 573 006c 1F4F      		sbci r17,hi8(-(1))
+ 574 006e EE24      		clr r14
+ 575 0070 FF24      		clr r15
+ 576               	.LVL55:
+ 577               	.L42:
+ 578               	.LSM51:
+ 579 0072 D801      		movw r26,r16
+ 580 0074 1196      		adiw r26,1
+ 581 0076 1C92      		st X,__zero_reg__
+ 582 0078 1197      		sbiw r26,1
+ 583               	.LSM52:
+ 584 007a 1C92      		st X,__zero_reg__
+ 585               	.LSM53:
+ 586 007c 1296      		adiw r26,2
+ 587 007e 1C92      		st X,__zero_reg__
+ 588 0080 4801      		movw r8,r16
+ 589 0082 CC24      		clr r12
+ 590 0084 57E0      		ldi r21,lo8(7)
+ 591 0086 D52E      		mov r13,r21
+ 592               	.L41:
+ 593               	.LSM54:
+ 594 0088 CA9C      		mul r12,r10
+ 595 008a 802D      		mov r24,r0
+ 596 008c 1124      		clr r1
+ 597               	.LVL56:
+ 598 008e 870D      		add r24,r7
+ 599               	.LSM55:
+ 600 0090 87FF      		sbrs r24,7
+ 601 0092 00C0      		rjmp .L38
+ 602 0094 80E0      		ldi r24,lo8(0)
+ 603 0096 00C0      		rjmp .L39
+ 604               	.L38:
+ 605               	.LSM56:
+ 606 0098 8431      		cpi r24,lo8(20)
+ 607 009a 04F0      		brlt .L39
+ 608 009c 83E1      		ldi r24,lo8(19)
+ 609               	.L39:
+ 610               	.LSM57:
+ 611 009e 9927      		clr r25
+ 612 00a0 87FD      		sbrc r24,7
+ 613 00a2 9095      		com r25
+ 614               	.LVL57:
+ 615 00a4 E816      		cp r14,r24
+ 616 00a6 F906      		cpc r15,r25
+ 617 00a8 01F4      		brne .L40
+ 618               	.LSM58:
+ 619 00aa 2091 0000 		lds r18,rgblight_config
+ 620 00ae 221F      		rol r18
+ 621 00b0 2227      		clr r18
+ 622 00b2 221F      		rol r18
+ 623 00b4 9091 0000 		lds r25,rgblight_config+1
+ 624 00b8 892F      		mov r24,r25
+ 625               	.LVL58:
+ 626 00ba 880F      		lsl r24
+ 627 00bc 822B      		or r24,r18
+ 628 00be 991F      		rol r25
+ 629 00c0 9927      		clr r25
+ 630 00c2 991F      		rol r25
+ 631 00c4 6091 0000 		lds r22,rgblight_config+2
+ 632 00c8 4091 0000 		lds r20,rgblight_config+3
+ 633 00cc 9401      		movw r18,r8
+ 634 00ce 0E94 0000 		call sethsv
+ 635               	.LVL59:
+ 636               	.L40:
+ 637               	.LSM59:
+ 638 00d2 C394      		inc r12
+ 639 00d4 DA94      		dec r13
+ 640 00d6 01F4      		brne .L41
+ 641 00d8 0894      		sec
+ 642 00da E11C      		adc r14,__zero_reg__
+ 643 00dc F11C      		adc r15,__zero_reg__
+ 644 00de 0D5F      		subi r16,lo8(-(3))
+ 645 00e0 1F4F      		sbci r17,hi8(-(3))
+ 646               	.LSM60:
+ 647 00e2 B4E1      		ldi r27,lo8(20)
+ 648 00e4 EB16      		cp r14,r27
+ 649 00e6 F104      		cpc r15,__zero_reg__
+ 650 00e8 01F4      		brne .L42
+ 651 00ea 20E0      		ldi r18,lo8(led)
+ 652 00ec 30E0      		ldi r19,hi8(led)
+ 653 00ee 0BE0      		ldi r16,lo8(11)
+ 654 00f0 10E0      		ldi r17,hi8(11)
+ 655               	.LSM61:
+ 656 00f2 7E01      		movw r14,r28
+ 657 00f4 0894      		sec
+ 658 00f6 E11C      		adc r14,__zero_reg__
+ 659 00f8 F11C      		adc r15,__zero_reg__
+ 660               	.L43:
+ 661 00fa C801      		movw r24,r16
+ 662               	.LVL60:
+ 663 00fc 64E1      		ldi r22,lo8(20)
+ 664 00fe 70E0      		ldi r23,hi8(20)
+ 665 0100 0E94 0000 		call __divmodhi4
+ 666 0104 90E0      		ldi r25,lo8(0)
+ 667 0106 FC01      		movw r30,r24
+ 668 0108 EE0F      		lsl r30
+ 669 010a FF1F      		rol r31
+ 670 010c E80F      		add r30,r24
+ 671 010e F91F      		adc r31,r25
+ 672 0110 EE0D      		add r30,r14
+ 673 0112 FF1D      		adc r31,r15
+ 674 0114 8181      		ldd r24,Z+1
+ 675 0116 D901      		movw r26,r18
+ 676 0118 1196      		adiw r26,1
+ 677 011a 8C93      		st X,r24
+ 678 011c 1197      		sbiw r26,1
+ 679               	.LSM62:
+ 680 011e 8081      		ld r24,Z
+ 681 0120 8C93      		st X,r24
+ 682               	.LSM63:
+ 683 0122 8281      		ldd r24,Z+2
+ 684 0124 1296      		adiw r26,2
+ 685 0126 8C93      		st X,r24
+ 686 0128 0F5F      		subi r16,lo8(-(1))
+ 687 012a 1F4F      		sbci r17,hi8(-(1))
+ 688 012c 2D5F      		subi r18,lo8(-(3))
+ 689 012e 3F4F      		sbci r19,hi8(-(3))
+ 690               	.LSM64:
+ 691 0130 0F31      		cpi r16,31
+ 692 0132 1105      		cpc r17,__zero_reg__
+ 693 0134 01F4      		brne .L43
+ 694               	.LSM65:
+ 695 0136 0E94 0000 		call rgblight_set
+ 696               	.LSM66:
+ 697 013a 8091 0000 		lds r24,increament.2005
+ 698 013e 9091 0000 		lds r25,pos.1998
+ 699 0142 8130      		cpi r24,lo8(1)
+ 700 0144 01F4      		brne .L44
+ 701               	.LSM67:
+ 702 0146 9A3F      		cpi r25,lo8(-6)
+ 703 0148 04F4      		brge .L45
+ 704               	.LSM68:
+ 705 014a 89EF      		ldi r24,lo8(-7)
+ 706 014c 8093 0000 		sts pos.1998,r24
+ 707               	.LSM69:
+ 708 0150 8FEF      		ldi r24,lo8(-1)
+ 709 0152 00C0      		rjmp .L52
+ 710               	.L45:
+ 711               	.LSM70:
+ 712 0154 9150      		subi r25,lo8(-(-1))
+ 713 0156 00C0      		rjmp .L51
+ 714               	.L44:
+ 715               	.LSM71:
+ 716 0158 9B31      		cpi r25,lo8(27)
+ 717 015a 04F0      		brlt .L46
+ 718               	.LSM72:
+ 719 015c 8AE1      		ldi r24,lo8(26)
+ 720 015e 8093 0000 		sts pos.1998,r24
+ 721               	.LSM73:
+ 722 0162 81E0      		ldi r24,lo8(1)
+ 723               	.L52:
+ 724 0164 8093 0000 		sts increament.2005,r24
+ 725 0168 00C0      		rjmp .L47
+ 726               	.L46:
+ 727               	.LSM74:
+ 728 016a 9F5F      		subi r25,lo8(-(1))
+ 729               	.L51:
+ 730 016c 9093 0000 		sts pos.1998,r25
+ 731               	.LVL61:
+ 732               	.L47:
+ 733               	/* epilogue start */
+ 734               	.LSM75:
+ 735 0170 EC96      		adiw r28,60
+ 736 0172 0FB6      		in __tmp_reg__,__SREG__
+ 737 0174 F894      		cli
+ 738 0176 DEBF      		out __SP_H__,r29
+ 739 0178 0FBE      		out __SREG__,__tmp_reg__
+ 740 017a CDBF      		out __SP_L__,r28
+ 741 017c CF91      		pop r28
+ 742 017e DF91      		pop r29
+ 743 0180 1F91      		pop r17
+ 744 0182 0F91      		pop r16
+ 745 0184 FF90      		pop r15
+ 746 0186 EF90      		pop r14
+ 747 0188 DF90      		pop r13
+ 748 018a CF90      		pop r12
+ 749               	.LVL62:
+ 750 018c BF90      		pop r11
+ 751 018e AF90      		pop r10
+ 752 0190 9F90      		pop r9
+ 753 0192 8F90      		pop r8
+ 754 0194 7F90      		pop r7
+ 755 0196 0895      		ret
+ 756               	.LFE37:
+ 758               		.section	.text.rgblight_effect_snake,"ax",@progbits
+ 759               	.global	rgblight_effect_snake
+ 761               	rgblight_effect_snake:
+ 762               	.LFB36:
+ 763               	.LSM76:
+ 764               	.LVL63:
+ 765 0000 9F92      		push r9
+ 766 0002 AF92      		push r10
+ 767 0004 BF92      		push r11
+ 768 0006 CF92      		push r12
+ 769 0008 DF92      		push r13
+ 770 000a EF92      		push r14
+ 771 000c FF92      		push r15
+ 772 000e 0F93      		push r16
+ 773 0010 1F93      		push r17
+ 774 0012 CF93      		push r28
+ 775 0014 DF93      		push r29
+ 776               	/* prologue: function */
+ 777               	/* frame size = 0 */
+ 778 0016 182F      		mov r17,r24
+ 779               	.LSM77:
+ 780 0018 80FD      		sbrc r24,0
+ 781 001a 00C0      		rjmp .L54
+ 782 001c CC24      		clr r12
+ 783 001e C394      		inc r12
+ 784               	.LVL64:
+ 785 0020 00C0      		rjmp .L55
+ 786               	.LVL65:
+ 787               	.L54:
+ 788 0022 CC24      		clr r12
+ 789 0024 CA94      		dec r12
+ 790               	.LVL66:
+ 791               	.L55:
+ 792               	.LSM78:
+ 793 0026 8091 0000 		lds r24,last_timer.1944
+ 794 002a 9091 0000 		lds r25,(last_timer.1944)+1
+ 795               	.LVL67:
+ 796 002e 0E94 0000 		call timer_elapsed
+ 797               	.LBB16:
+ 798 0032 1695      		lsr r17
+ 799 0034 E12F      		mov r30,r17
+ 800 0036 F0E0      		ldi r31,lo8(0)
+ 801 0038 E050      		subi r30,lo8(-(RGBLED_SNAKE_INTERVALS))
+ 802 003a F040      		sbci r31,hi8(-(RGBLED_SNAKE_INTERVALS))
+ 803               	/* #APP */
+ 804               	 ;  431 "rgblight.c" 1
+ 805 003c E491      		lpm r30, Z
+ 806               		
+ 807               	 ;  0 "" 2
+ 808               	.LVL68:
+ 809               	/* #NOAPP */
+ 810               	.LBE16:
+ 811 003e 2E2F      		mov r18,r30
+ 812 0040 30E0      		ldi r19,lo8(0)
+ 813               	.LVL69:
+ 814 0042 8217      		cp r24,r18
+ 815 0044 9307      		cpc r25,r19
+ 816 0046 00F4      		brsh .+2
+ 817 0048 00C0      		rjmp .L63
+ 818               	.LVL70:
+ 819               	.LSM79:
+ 820 004a 0E94 0000 		call timer_read
+ 821               	.LVL71:
+ 822 004e 9093 0000 		sts (last_timer.1944)+1,r25
+ 823 0052 8093 0000 		sts last_timer.1944,r24
+ 824               	.LSM80:
+ 825 0056 9090 0000 		lds r9,pos.1943
+ 826 005a C0E0      		ldi r28,lo8(led)
+ 827 005c D0E0      		ldi r29,hi8(led)
+ 828 005e EE24      		clr r14
+ 829 0060 FF24      		clr r15
+ 830               	.LVL72:
+ 831               	.L60:
+ 832               	.LSM81:
+ 833 0062 1982      		std Y+1,__zero_reg__
+ 834               	.LSM82:
+ 835 0064 1882      		st Y,__zero_reg__
+ 836               	.LSM83:
+ 837 0066 1A82      		std Y+2,__zero_reg__
+ 838 0068 5E01      		movw r10,r28
+ 839 006a D92C      		mov r13,r9
+ 840 006c 07E0      		ldi r16,lo8(7)
+ 841 006e 10E0      		ldi r17,hi8(7)
+ 842               	.L59:
+ 843 0070 8D2D      		mov r24,r13
+ 844               	.LVL73:
+ 845               	.LSM84:
+ 846 0072 D7FC      		sbrc r13,7
+ 847 0074 8C5E      		subi r24,lo8(-(20))
+ 848               	.L57:
+ 849               	.LSM85:
+ 850 0076 9927      		clr r25
+ 851 0078 87FD      		sbrc r24,7
+ 852 007a 9095      		com r25
+ 853               	.LVL74:
+ 854 007c E816      		cp r14,r24
+ 855 007e F906      		cpc r15,r25
+ 856 0080 01F4      		brne .L58
+ 857               	.LSM86:
+ 858 0082 2091 0000 		lds r18,rgblight_config
+ 859 0086 221F      		rol r18
+ 860 0088 2227      		clr r18
+ 861 008a 221F      		rol r18
+ 862 008c 3091 0000 		lds r19,rgblight_config+1
+ 863 0090 E32F      		mov r30,r19
+ 864 0092 EE0F      		lsl r30
+ 865 0094 8091 0000 		lds r24,rgblight_config+3
+ 866               	.LVL75:
+ 867 0098 90E0      		ldi r25,lo8(0)
+ 868 009a AC01      		movw r20,r24
+ 869 009c 049F      		mul r16,r20
+ 870 009e C001      		movw r24,r0
+ 871 00a0 059F      		mul r16,r21
+ 872 00a2 900D      		add r25,r0
+ 873 00a4 149F      		mul r17,r20
+ 874 00a6 900D      		add r25,r0
+ 875 00a8 1124      		clr r1
+ 876 00aa 67E0      		ldi r22,lo8(7)
+ 877 00ac 70E0      		ldi r23,hi8(7)
+ 878 00ae 0E94 0000 		call __divmodhi4
+ 879 00b2 462F      		mov r20,r22
+ 880 00b4 8E2F      		mov r24,r30
+ 881 00b6 822B      		or r24,r18
+ 882 00b8 932F      		mov r25,r19
+ 883 00ba 991F      		rol r25
+ 884 00bc 9927      		clr r25
+ 885 00be 991F      		rol r25
+ 886 00c0 6091 0000 		lds r22,rgblight_config+2
+ 887 00c4 9501      		movw r18,r10
+ 888 00c6 0E94 0000 		call sethsv
+ 889               	.LVL76:
+ 890               	.L58:
+ 891 00ca DC0C      		add r13,r12
+ 892 00cc 0150      		subi r16,lo8(-(-1))
+ 893 00ce 1040      		sbci r17,hi8(-(-1))
+ 894               	.LSM87:
+ 895 00d0 0023      		tst r16
+ 896 00d2 01F4      		brne .L59
+ 897 00d4 0894      		sec
+ 898 00d6 E11C      		adc r14,__zero_reg__
+ 899 00d8 F11C      		adc r15,__zero_reg__
+ 900 00da 2396      		adiw r28,3
+ 901               	.LSM88:
+ 902 00dc 54E1      		ldi r21,lo8(20)
+ 903 00de E516      		cp r14,r21
+ 904 00e0 F104      		cpc r15,__zero_reg__
+ 905 00e2 01F0      		breq .+2
+ 906 00e4 00C0      		rjmp .L60
+ 907               	.LSM89:
+ 908 00e6 0E94 0000 		call rgblight_set
+ 909               	.LVL77:
+ 910 00ea 8091 0000 		lds r24,pos.1943
+ 911               	.LSM90:
+ 912 00ee 91E0      		ldi r25,lo8(1)
+ 913 00f0 C916      		cp r12,r25
+ 914 00f2 01F4      		brne .L61
+ 915               	.LSM91:
+ 916 00f4 8823      		tst r24
+ 917 00f6 01F4      		brne .L62
+ 918               	.LSM92:
+ 919 00f8 8DE0      		ldi r24,lo8(13)
+ 920 00fa 00C0      		rjmp .L66
+ 921               	.L62:
+ 922               	.LSM93:
+ 923 00fc 8150      		subi r24,lo8(-(-1))
+ 924 00fe 00C0      		rjmp .L66
+ 925               	.L61:
+ 926               	.LSM94:
+ 927 0100 90E0      		ldi r25,lo8(0)
+ 928 0102 0196      		adiw r24,1
+ 929 0104 64E1      		ldi r22,lo8(20)
+ 930 0106 70E0      		ldi r23,hi8(20)
+ 931 0108 0E94 0000 		call __divmodhi4
+ 932               	.L66:
+ 933 010c 8093 0000 		sts pos.1943,r24
+ 934               	.LVL78:
+ 935               	.L63:
+ 936               	/* epilogue start */
+ 937               	.LSM95:
+ 938 0110 DF91      		pop r29
+ 939 0112 CF91      		pop r28
+ 940 0114 1F91      		pop r17
+ 941               	.LVL79:
+ 942 0116 0F91      		pop r16
+ 943 0118 FF90      		pop r15
+ 944 011a EF90      		pop r14
+ 945 011c DF90      		pop r13
+ 946 011e CF90      		pop r12
+ 947               	.LVL80:
+ 948 0120 BF90      		pop r11
+ 949 0122 AF90      		pop r10
+ 950 0124 9F90      		pop r9
+ 951 0126 0895      		ret
+ 952               	.LFE36:
+ 954               		.section	.text.rgblight_effect_rainbow_swirl,"ax",@progbits
+ 955               	.global	rgblight_effect_rainbow_swirl
+ 957               	rgblight_effect_rainbow_swirl:
+ 958               	.LFB35:
+ 959               	.LSM96:
+ 960               	.LVL81:
+ 961 0000 FF92      		push r15
+ 962 0002 0F93      		push r16
+ 963 0004 1F93      		push r17
+ 964 0006 CF93      		push r28
+ 965 0008 DF93      		push r29
+ 966               	/* prologue: function */
+ 967               	/* frame size = 0 */
+ 968 000a F82E      		mov r15,r24
+ 969               	.LSM97:
+ 970 000c 8091 0000 		lds r24,last_timer.1908
+ 971 0010 9091 0000 		lds r25,(last_timer.1908)+1
+ 972               	.LVL82:
+ 973 0014 0E94 0000 		call timer_elapsed
+ 974               	.LBB17:
+ 975 0018 EF2D      		mov r30,r15
+ 976 001a E695      		lsr r30
+ 977 001c F0E0      		ldi r31,lo8(0)
+ 978 001e E050      		subi r30,lo8(-(RGBLED_RAINBOW_MOOD_INTERVALS))
+ 979 0020 F040      		sbci r31,hi8(-(RGBLED_RAINBOW_MOOD_INTERVALS))
+ 980               	/* #APP */
+ 981               	 ;  405 "rgblight.c" 1
+ 982 0022 E491      		lpm r30, Z
+ 983               		
+ 984               	 ;  0 "" 2
+ 985               	.LVL83:
+ 986               	/* #NOAPP */
+ 987               	.LBE17:
+ 988 0024 2E2F      		mov r18,r30
+ 989 0026 30E0      		ldi r19,lo8(0)
+ 990               	.LVL84:
+ 991 0028 8217      		cp r24,r18
+ 992 002a 9307      		cpc r25,r19
+ 993 002c 00F0      		brlo .L71
+ 994               	.LVL85:
+ 995               	.LSM98:
+ 996 002e 0E94 0000 		call timer_read
+ 997               	.LVL86:
+ 998 0032 9093 0000 		sts (last_timer.1908)+1,r25
+ 999 0036 8093 0000 		sts last_timer.1908,r24
+ 1000               	.LSM99:
+ 1001 003a 0091 0000 		lds r16,current_hue.1907
+ 1002 003e 1091 0000 		lds r17,(current_hue.1907)+1
+ 1003 0042 C0E0      		ldi r28,lo8(led)
+ 1004 0044 D0E0      		ldi r29,hi8(led)
+ 1005               	.L69:
+ 1006               	.LSM100:
+ 1007 0046 C801      		movw r24,r16
+ 1008 0048 68E6      		ldi r22,lo8(360)
+ 1009 004a 71E0      		ldi r23,hi8(360)
+ 1010 004c 0E94 0000 		call __udivmodhi4
+ 1011 0050 6091 0000 		lds r22,rgblight_config+2
+ 1012 0054 4091 0000 		lds r20,rgblight_config+3
+ 1013 0058 9E01      		movw r18,r28
+ 1014 005a 0E94 0000 		call sethsv
+ 1015 005e 0E5E      		subi r16,lo8(-(18))
+ 1016 0060 1F4F      		sbci r17,hi8(-(18))
+ 1017 0062 2396      		adiw r28,3
+ 1018               	.LSM101:
+ 1019 0064 80E0      		ldi r24,hi8(led+60)
+ 1020 0066 C030      		cpi r28,lo8(led+60)
+ 1021 0068 D807      		cpc r29,r24
+ 1022 006a 01F4      		brne .L69
+ 1023               	.LSM102:
+ 1024 006c 0E94 0000 		call rgblight_set
+ 1025 0070 8091 0000 		lds r24,current_hue.1907
+ 1026 0074 9091 0000 		lds r25,(current_hue.1907)+1
+ 1027               	.LSM103:
+ 1028 0078 F0FE      		sbrs r15,0
+ 1029 007a 00C0      		rjmp .L70
+ 1030               	.LSM104:
+ 1031 007c 0196      		adiw r24,1
+ 1032 007e 68E6      		ldi r22,lo8(360)
+ 1033 0080 71E0      		ldi r23,hi8(360)
+ 1034 0082 0E94 0000 		call __udivmodhi4
+ 1035 0086 00C0      		rjmp .L73
+ 1036               	.L70:
+ 1037               	.LSM105:
+ 1038 0088 0197      		sbiw r24,1
+ 1039               	.L73:
+ 1040 008a 9093 0000 		sts (current_hue.1907)+1,r25
+ 1041 008e 8093 0000 		sts current_hue.1907,r24
+ 1042               	.LVL87:
+ 1043               	.L71:
+ 1044               	/* epilogue start */
+ 1045               	.LSM106:
+ 1046 0092 DF91      		pop r29
+ 1047 0094 CF91      		pop r28
+ 1048 0096 1F91      		pop r17
+ 1049 0098 0F91      		pop r16
+ 1050 009a FF90      		pop r15
+ 1051               	.LVL88:
+ 1052 009c 0895      		ret
+ 1053               	.LFE35:
+ 1055               		.section	.text.rgblight_setrgb,"ax",@progbits
+ 1056               	.global	rgblight_setrgb
+ 1058               	rgblight_setrgb:
+ 1059               	.LFB26:
+ 1060               	.LSM107:
+ 1061               	.LVL89:
+ 1062               	/* prologue: function */
+ 1063               	/* frame size = 0 */
+ 1064               	.LSM108:
+ 1065 0000 E0E0      		ldi r30,lo8(led)
+ 1066 0002 F0E0      		ldi r31,hi8(led)
+ 1067               	.L75:
+ 1068               	.LBB18:
+ 1069               	.LSM109:
+ 1070 0004 8183      		std Z+1,r24
+ 1071               	.LSM110:
+ 1072 0006 6083      		st Z,r22
+ 1073               	.LSM111:
+ 1074 0008 4283      		std Z+2,r20
+ 1075 000a 3396      		adiw r30,3
+ 1076               	.LSM112:
+ 1077 000c 90E0      		ldi r25,hi8(led+60)
+ 1078 000e E030      		cpi r30,lo8(led+60)
+ 1079 0010 F907      		cpc r31,r25
+ 1080 0012 01F4      		brne .L75
+ 1081               	.LBE18:
+ 1082               	.LSM113:
+ 1083 0014 0E94 0000 		call rgblight_set
+ 1084               	.LVL90:
+ 1085               	/* epilogue start */
+ 1086               	.LSM114:
+ 1087 0018 0895      		ret
+ 1088               	.LFE26:
+ 1090               		.section	.text.rgblight_sethsv_noeeprom,"ax",@progbits
+ 1091               	.global	rgblight_sethsv_noeeprom
+ 1093               	rgblight_sethsv_noeeprom:
+ 1094               	.LFB24:
+ 1095               	.LSM115:
+ 1096               	.LVL91:
+ 1097 0000 EF92      		push r14
+ 1098 0002 FF92      		push r15
+ 1099 0004 0F93      		push r16
+ 1100 0006 1F93      		push r17
+ 1101 0008 DF93      		push r29
+ 1102 000a CF93      		push r28
+ 1103 000c 00D0      		rcall .
+ 1104 000e 0F92      		push __tmp_reg__
+ 1105 0010 CDB7      		in r28,__SP_L__
+ 1106 0012 DEB7      		in r29,__SP_H__
+ 1107               	/* prologue: function */
+ 1108               	/* frame size = 3 */
+ 1109 0014 182F      		mov r17,r24
+ 1110 0016 092F      		mov r16,r25
+ 1111               	.LVL92:
+ 1112 0018 F62E      		mov r15,r22
+ 1113 001a E42E      		mov r14,r20
+ 1114               	.LSM116:
+ 1115 001c 8091 0000 		lds r24,rgblight_config
+ 1116 0020 9091 0000 		lds r25,(rgblight_config)+1
+ 1117 0024 A091 0000 		lds r26,(rgblight_config)+2
+ 1118 0028 B091 0000 		lds r27,(rgblight_config)+3
+ 1119               	.LVL93:
+ 1120 002c 8093 0000 		sts inmem_config,r24
+ 1121 0030 9093 0000 		sts (inmem_config)+1,r25
+ 1122 0034 A093 0000 		sts (inmem_config)+2,r26
+ 1123 0038 B093 0000 		sts (inmem_config)+3,r27
+ 1124               	.LSM117:
+ 1125 003c 8091 0000 		lds r24,rgblight_config
+ 1126 0040 80FF      		sbrs r24,0
+ 1127 0042 00C0      		rjmp .L80
+ 1128               	.LVL94:
+ 1129               	.LBB19:
+ 1130               	.LSM118:
+ 1131 0044 812F      		mov r24,r17
+ 1132 0046 902F      		mov r25,r16
+ 1133 0048 9E01      		movw r18,r28
+ 1134 004a 2F5F      		subi r18,lo8(-(1))
+ 1135 004c 3F4F      		sbci r19,hi8(-(1))
+ 1136 004e 0E94 0000 		call sethsv
+ 1137               	.LSM119:
+ 1138 0052 912F      		mov r25,r17
+ 1139 0054 9795      		ror r25
+ 1140 0056 9927      		clr r25
+ 1141 0058 9795      		ror r25
+ 1142 005a 8091 0000 		lds r24,inmem_config
+ 1143 005e 8F77      		andi r24,lo8(127)
+ 1144 0060 892B      		or r24,r25
+ 1145 0062 8093 0000 		sts inmem_config,r24
+ 1146 0066 0795      		ror r16
+ 1147 0068 0027      		clr r16
+ 1148 006a 0795      		ror r16
+ 1149 006c 1695      		lsr r17
+ 1150 006e 102B      		or r17,r16
+ 1151 0070 1093 0000 		sts inmem_config+1,r17
+ 1152               	.LSM120:
+ 1153 0074 F092 0000 		sts inmem_config+2,r15
+ 1154               	.LSM121:
+ 1155 0078 E092 0000 		sts inmem_config+3,r14
+ 1156               	.LSM122:
+ 1157 007c 8A81      		ldd r24,Y+2
+ 1158 007e 6981      		ldd r22,Y+1
+ 1159 0080 4B81      		ldd r20,Y+3
+ 1160 0082 0E94 0000 		call rgblight_setrgb
+ 1161               	.LVL95:
+ 1162               	.L80:
+ 1163               	/* epilogue start */
+ 1164               	.LBE19:
+ 1165               	.LSM123:
+ 1166 0086 0F90      		pop __tmp_reg__
+ 1167 0088 0F90      		pop __tmp_reg__
+ 1168 008a 0F90      		pop __tmp_reg__
+ 1169 008c CF91      		pop r28
+ 1170 008e DF91      		pop r29
+ 1171 0090 1F91      		pop r17
+ 1172               	.LVL96:
+ 1173 0092 0F91      		pop r16
+ 1174               	.LVL97:
+ 1175 0094 FF90      		pop r15
+ 1176               	.LVL98:
+ 1177 0096 EF90      		pop r14
+ 1178               	.LVL99:
+ 1179 0098 0895      		ret
+ 1180               	.LFE24:
+ 1182               		.section	.text.rgblight_effect_rainbow_mood,"ax",@progbits
+ 1183               	.global	rgblight_effect_rainbow_mood
+ 1185               	rgblight_effect_rainbow_mood:
+ 1186               	.LFB34:
+ 1187               	.LSM124:
+ 1188               	.LVL100:
+ 1189 0000 1F93      		push r17
+ 1190               	/* prologue: function */
+ 1191               	/* frame size = 0 */
+ 1192 0002 182F      		mov r17,r24
+ 1193               	.LSM125:
+ 1194 0004 8091 0000 		lds r24,last_timer.1889
+ 1195 0008 9091 0000 		lds r25,(last_timer.1889)+1
+ 1196               	.LVL101:
+ 1197 000c 0E94 0000 		call timer_elapsed
+ 1198               	.LBB20:
+ 1199 0010 E12F      		mov r30,r17
+ 1200 0012 F0E0      		ldi r31,lo8(0)
+ 1201               	.LVL102:
+ 1202 0014 E050      		subi r30,lo8(-(RGBLED_RAINBOW_MOOD_INTERVALS))
+ 1203 0016 F040      		sbci r31,hi8(-(RGBLED_RAINBOW_MOOD_INTERVALS))
+ 1204               	.LVL103:
+ 1205               	/* #APP */
+ 1206               	 ;  394 "rgblight.c" 1
+ 1207 0018 2491      		lpm r18, Z
+ 1208               		
+ 1209               	 ;  0 "" 2
+ 1210               	.LVL104:
+ 1211               	/* #NOAPP */
+ 1212               	.LBE20:
+ 1213 001a 30E0      		ldi r19,lo8(0)
+ 1214               	.LVL105:
+ 1215 001c 8217      		cp r24,r18
+ 1216 001e 9307      		cpc r25,r19
+ 1217 0020 00F0      		brlo .L83
+ 1218               	.LSM126:
+ 1219 0022 0E94 0000 		call timer_read
+ 1220               	.LVL106:
+ 1221 0026 9093 0000 		sts (last_timer.1889)+1,r25
+ 1222 002a 8093 0000 		sts last_timer.1889,r24
+ 1223               	.LSM127:
+ 1224 002e 8091 0000 		lds r24,current_hue.1888
+ 1225 0032 9091 0000 		lds r25,(current_hue.1888)+1
+ 1226 0036 6091 0000 		lds r22,rgblight_config+2
+ 1227 003a 4091 0000 		lds r20,rgblight_config+3
+ 1228 003e 0E94 0000 		call rgblight_sethsv_noeeprom
+ 1229               	.LSM128:
+ 1230 0042 8091 0000 		lds r24,current_hue.1888
+ 1231 0046 9091 0000 		lds r25,(current_hue.1888)+1
+ 1232 004a 0196      		adiw r24,1
+ 1233 004c 68E6      		ldi r22,lo8(360)
+ 1234 004e 71E0      		ldi r23,hi8(360)
+ 1235 0050 0E94 0000 		call __udivmodhi4
+ 1236 0054 9093 0000 		sts (current_hue.1888)+1,r25
+ 1237 0058 8093 0000 		sts current_hue.1888,r24
+ 1238               	.LVL107:
+ 1239               	.L83:
+ 1240               	/* epilogue start */
+ 1241               	.LSM129:
+ 1242 005c 1F91      		pop r17
+ 1243 005e 0895      		ret
+ 1244               	.LFE34:
+ 1246               		.section	.text.rgblight_effect_breathing,"ax",@progbits
+ 1247               	.global	rgblight_effect_breathing
+ 1249               	rgblight_effect_breathing:
+ 1250               	.LFB33:
+ 1251               	.LSM130:
+ 1252               	.LVL108:
+ 1253 0000 1F93      		push r17
+ 1254               	/* prologue: function */
+ 1255               	/* frame size = 0 */
+ 1256 0002 182F      		mov r17,r24
+ 1257               	.LSM131:
+ 1258 0004 8091 0000 		lds r24,last_timer.1862
+ 1259 0008 9091 0000 		lds r25,(last_timer.1862)+1
+ 1260               	.LVL109:
+ 1261 000c 0E94 0000 		call timer_elapsed
+ 1262               	.LBB21:
+ 1263 0010 E12F      		mov r30,r17
+ 1264 0012 F0E0      		ldi r31,lo8(0)
+ 1265               	.LVL110:
+ 1266 0014 E050      		subi r30,lo8(-(RGBLED_BREATHING_INTERVALS))
+ 1267 0016 F040      		sbci r31,hi8(-(RGBLED_BREATHING_INTERVALS))
+ 1268               	.LVL111:
+ 1269               	/* #APP */
+ 1270               	 ;  383 "rgblight.c" 1
+ 1271 0018 2491      		lpm r18, Z
+ 1272               		
+ 1273               	 ;  0 "" 2
+ 1274               	.LVL112:
+ 1275               	/* #NOAPP */
+ 1276               	.LBE21:
+ 1277 001a 30E0      		ldi r19,lo8(0)
+ 1278               	.LVL113:
+ 1279 001c 8217      		cp r24,r18
+ 1280 001e 9307      		cpc r25,r19
+ 1281 0020 00F0      		brlo .L86
+ 1282               	.LSM132:
+ 1283 0022 0E94 0000 		call timer_read
+ 1284               	.LVL114:
+ 1285 0026 9093 0000 		sts (last_timer.1862)+1,r25
+ 1286 002a 8093 0000 		sts last_timer.1862,r24
+ 1287               	.LBB22:
+ 1288               	.LSM133:
+ 1289 002e E091 0000 		lds r30,pos.1861
+ 1290 0032 F0E0      		ldi r31,lo8(0)
+ 1291 0034 E050      		subi r30,lo8(-(RGBLED_BREATHING_TABLE))
+ 1292 0036 F040      		sbci r31,hi8(-(RGBLED_BREATHING_TABLE))
+ 1293               	/* #APP */
+ 1294               	 ;  386 "rgblight.c" 1
+ 1295 0038 E491      		lpm r30, Z
+ 1296               		
+ 1297               	 ;  0 "" 2
+ 1298               	.LVL115:
+ 1299               	/* #NOAPP */
+ 1300               	.LBE22:
+ 1301 003a 2091 0000 		lds r18,rgblight_config
+ 1302 003e 221F      		rol r18
+ 1303 0040 2227      		clr r18
+ 1304 0042 221F      		rol r18
+ 1305 0044 9091 0000 		lds r25,rgblight_config+1
+ 1306 0048 892F      		mov r24,r25
+ 1307 004a 880F      		lsl r24
+ 1308 004c 822B      		or r24,r18
+ 1309 004e 991F      		rol r25
+ 1310 0050 9927      		clr r25
+ 1311 0052 991F      		rol r25
+ 1312 0054 6091 0000 		lds r22,rgblight_config+2
+ 1313 0058 4E2F      		mov r20,r30
+ 1314 005a 0E94 0000 		call rgblight_sethsv_noeeprom
+ 1315               	.LVL116:
+ 1316               	.LSM134:
+ 1317 005e 8091 0000 		lds r24,pos.1861
+ 1318 0062 8F5F      		subi r24,lo8(-(1))
+ 1319 0064 8093 0000 		sts pos.1861,r24
+ 1320               	.LVL117:
+ 1321               	.L86:
+ 1322               	/* epilogue start */
+ 1323               	.LSM135:
+ 1324 0068 1F91      		pop r17
+ 1325 006a 0895      		ret
+ 1326               	.LFE33:
+ 1328               		.section	.text.__vector_32,"ax",@progbits
+ 1329               	.global	__vector_32
+ 1331               	__vector_32:
+ 1332               	.LFB32:
+ 1333               	.LSM136:
+ 1334 0000 1F92      		push __zero_reg__
+ 1335 0002 0F92      		push r0
+ 1336 0004 0FB6      		in r0,__SREG__
+ 1337 0006 0F92      		push r0
+ 1338 0008 1124      		clr __zero_reg__
+ 1339 000a 2F93      		push r18
+ 1340 000c 3F93      		push r19
+ 1341 000e 4F93      		push r20
+ 1342 0010 5F93      		push r21
+ 1343 0012 6F93      		push r22
+ 1344 0014 7F93      		push r23
+ 1345 0016 8F93      		push r24
+ 1346 0018 9F93      		push r25
+ 1347 001a AF93      		push r26
+ 1348 001c BF93      		push r27
+ 1349 001e EF93      		push r30
+ 1350 0020 FF93      		push r31
+ 1351               	/* prologue: Signal */
+ 1352               	/* frame size = 0 */
+ 1353               	.LSM137:
+ 1354 0022 9091 0000 		lds r25,rgblight_config
+ 1355 0026 9695      		lsr r25
+ 1356 0028 9F73      		andi r25,lo8(63)
+ 1357 002a 892F      		mov r24,r25
+ 1358 002c 825C      		subi r24,lo8(-(62))
+ 1359 002e 8F73      		andi r24,lo8(63)
+ 1360 0030 8430      		cpi r24,lo8(4)
+ 1361 0032 00F4      		brsh .L88
+ 1362               	.LSM138:
+ 1363 0034 892F      		mov r24,r25
+ 1364 0036 8250      		subi r24,lo8(-(-2))
+ 1365 0038 0E94 0000 		call rgblight_effect_breathing
+ 1366 003c 00C0      		rjmp .L93
+ 1367               	.L88:
+ 1368               	.LSM139:
+ 1369 003e 892F      		mov r24,r25
+ 1370 0040 865C      		subi r24,lo8(-(58))
+ 1371 0042 8F73      		andi r24,lo8(63)
+ 1372 0044 8330      		cpi r24,lo8(3)
+ 1373 0046 00F4      		brsh .L90
+ 1374               	.LSM140:
+ 1375 0048 892F      		mov r24,r25
+ 1376 004a 8650      		subi r24,lo8(-(-6))
+ 1377 004c 0E94 0000 		call rgblight_effect_rainbow_mood
+ 1378 0050 00C0      		rjmp .L93
+ 1379               	.L90:
+ 1380               	.LSM141:
+ 1381 0052 892F      		mov r24,r25
+ 1382 0054 895C      		subi r24,lo8(-(55))
+ 1383 0056 8F73      		andi r24,lo8(63)
+ 1384 0058 8630      		cpi r24,lo8(6)
+ 1385 005a 00F4      		brsh .L91
+ 1386               	.LSM142:
+ 1387 005c 892F      		mov r24,r25
+ 1388 005e 8950      		subi r24,lo8(-(-9))
+ 1389 0060 0E94 0000 		call rgblight_effect_rainbow_swirl
+ 1390 0064 00C0      		rjmp .L93
+ 1391               	.L91:
+ 1392               	.LSM143:
+ 1393 0066 892F      		mov r24,r25
+ 1394 0068 8F5C      		subi r24,lo8(-(49))
+ 1395 006a 8F73      		andi r24,lo8(63)
+ 1396 006c 8630      		cpi r24,lo8(6)
+ 1397 006e 00F4      		brsh .L92
+ 1398               	.LSM144:
+ 1399 0070 892F      		mov r24,r25
+ 1400 0072 8F50      		subi r24,lo8(-(-15))
+ 1401 0074 0E94 0000 		call rgblight_effect_snake
+ 1402 0078 00C0      		rjmp .L93
+ 1403               	.L92:
+ 1404               	.LSM145:
+ 1405 007a 892F      		mov r24,r25
+ 1406 007c 855D      		subi r24,lo8(-(43))
+ 1407 007e 8F73      		andi r24,lo8(63)
+ 1408 0080 8330      		cpi r24,lo8(3)
+ 1409 0082 00F4      		brsh .L93
+ 1410               	.LSM146:
+ 1411 0084 892F      		mov r24,r25
+ 1412 0086 8551      		subi r24,lo8(-(-21))
+ 1413 0088 0E94 0000 		call rgblight_effect_knight
+ 1414               	.L93:
+ 1415               	/* epilogue start */
+ 1416               	.LSM147:
+ 1417 008c FF91      		pop r31
+ 1418 008e EF91      		pop r30
+ 1419 0090 BF91      		pop r27
+ 1420 0092 AF91      		pop r26
+ 1421 0094 9F91      		pop r25
+ 1422 0096 8F91      		pop r24
+ 1423 0098 7F91      		pop r23
+ 1424 009a 6F91      		pop r22
+ 1425 009c 5F91      		pop r21
+ 1426 009e 4F91      		pop r20
+ 1427 00a0 3F91      		pop r19
+ 1428 00a2 2F91      		pop r18
+ 1429 00a4 0F90      		pop r0
+ 1430 00a6 0FBE      		out __SREG__,r0
+ 1431 00a8 0F90      		pop r0
+ 1432 00aa 1F90      		pop __zero_reg__
+ 1433 00ac 1895      		reti
+ 1434               	.LFE32:
+ 1436               		.section	.text.eeconfig_write_rgblight,"ax",@progbits
+ 1437               	.global	eeconfig_write_rgblight
+ 1439               	eeconfig_write_rgblight:
+ 1440               	.LFB9:
+ 1441               	.LSM148:
+ 1442               	.LVL118:
+ 1443               	/* prologue: function */
+ 1444               	/* frame size = 0 */
+ 1445 0000 AB01      		movw r20,r22
+ 1446 0002 BC01      		movw r22,r24
+ 1447               	.LSM149:
+ 1448 0004 87E0      		ldi r24,lo8(7)
+ 1449 0006 90E0      		ldi r25,hi8(7)
+ 1450 0008 0E94 0000 		call __eewr_dword_m32u4
+ 1451               	.LVL119:
+ 1452               	/* epilogue start */
+ 1453               	.LSM150:
+ 1454 000c 0895      		ret
+ 1455               	.LFE9:
+ 1457               		.section	.text.rgblight_sethsv,"ax",@progbits
+ 1458               	.global	rgblight_sethsv
+ 1460               	rgblight_sethsv:
+ 1461               	.LFB25:
+ 1462               	.LSM151:
+ 1463               	.LVL120:
+ 1464 0000 EF92      		push r14
+ 1465 0002 FF92      		push r15
+ 1466 0004 0F93      		push r16
+ 1467 0006 1F93      		push r17
+ 1468               	/* prologue: function */
+ 1469               	/* frame size = 0 */
+ 1470 0008 182F      		mov r17,r24
+ 1471 000a 092F      		mov r16,r25
+ 1472               	.LVL121:
+ 1473 000c E62E      		mov r14,r22
+ 1474 000e F42E      		mov r15,r20
+ 1475               	.LSM152:
+ 1476 0010 2091 0000 		lds r18,rgblight_config
+ 1477 0014 20FF      		sbrs r18,0
+ 1478 0016 00C0      		rjmp .L101
+ 1479               	.LVL122:
+ 1480               	.LSM153:
+ 1481 0018 822F      		mov r24,r18
+ 1482 001a 8E77      		andi r24,lo8(126)
+ 1483 001c 8230      		cpi r24,lo8(2)
+ 1484 001e 01F4      		brne .L98
+ 1485               	.LSM154:
+ 1486 0020 812F      		mov r24,r17
+ 1487 0022 0E94 0000 		call rgblight_sethsv_noeeprom
+ 1488 0026 00C0      		rjmp .L99
+ 1489               	.LVL123:
+ 1490               	.L98:
+ 1491               	.LSM155:
+ 1492 0028 922F      		mov r25,r18
+ 1493 002a 9695      		lsr r25
+ 1494 002c 9F73      		andi r25,lo8(63)
+ 1495 002e 892F      		mov r24,r25
+ 1496 0030 825C      		subi r24,lo8(-(62))
+ 1497 0032 8F73      		andi r24,lo8(63)
+ 1498 0034 8430      		cpi r24,lo8(4)
+ 1499 0036 00F4      		brsh .L100
+ 1500               	.LSM156:
+ 1501 0038 F090 0000 		lds r15,rgblight_config+3
+ 1502 003c 00C0      		rjmp .L99
+ 1503               	.LVL124:
+ 1504               	.L100:
+ 1505               	.LSM157:
+ 1506 003e 965C      		subi r25,lo8(-(58))
+ 1507 0040 9F73      		andi r25,lo8(63)
+ 1508 0042 9930      		cpi r25,lo8(9)
+ 1509 0044 00F4      		brsh .L99
+ 1510               	.LSM158:
+ 1511 0046 221F      		rol r18
+ 1512 0048 2227      		clr r18
+ 1513 004a 221F      		rol r18
+ 1514 004c 8091 0000 		lds r24,rgblight_config+1
+ 1515 0050 182F      		mov r17,r24
+ 1516 0052 110F      		lsl r17
+ 1517 0054 122B      		or r17,r18
+ 1518 0056 082F      		mov r16,r24
+ 1519 0058 001F      		rol r16
+ 1520 005a 0027      		clr r16
+ 1521 005c 001F      		rol r16
+ 1522               	.L99:
+ 1523               	.LSM159:
+ 1524 005e 912F      		mov r25,r17
+ 1525 0060 9795      		ror r25
+ 1526 0062 9927      		clr r25
+ 1527 0064 9795      		ror r25
+ 1528 0066 8091 0000 		lds r24,rgblight_config
+ 1529 006a 8F77      		andi r24,lo8(127)
+ 1530 006c 892B      		or r24,r25
+ 1531 006e 8093 0000 		sts rgblight_config,r24
+ 1532 0072 0795      		ror r16
+ 1533 0074 0027      		clr r16
+ 1534 0076 0795      		ror r16
+ 1535 0078 1695      		lsr r17
+ 1536 007a 102B      		or r17,r16
+ 1537 007c 1093 0000 		sts rgblight_config+1,r17
+ 1538               	.LSM160:
+ 1539 0080 E092 0000 		sts rgblight_config+2,r14
+ 1540               	.LSM161:
+ 1541 0084 F092 0000 		sts rgblight_config+3,r15
+ 1542               	.LSM162:
+ 1543 0088 6091 0000 		lds r22,rgblight_config
+ 1544 008c 7091 0000 		lds r23,(rgblight_config)+1
+ 1545 0090 8091 0000 		lds r24,(rgblight_config)+2
+ 1546 0094 9091 0000 		lds r25,(rgblight_config)+3
+ 1547 0098 0E94 0000 		call eeconfig_write_rgblight
+ 1548               	.LVL125:
+ 1549               	.L101:
+ 1550               	/* epilogue start */
+ 1551               	.LSM163:
+ 1552 009c 1F91      		pop r17
+ 1553               	.LVL126:
+ 1554 009e 0F91      		pop r16
+ 1555               	.LVL127:
+ 1556 00a0 FF90      		pop r15
+ 1557               	.LVL128:
+ 1558 00a2 EF90      		pop r14
+ 1559               	.LVL129:
+ 1560 00a4 0895      		ret
+ 1561               	.LFE25:
+ 1563               		.section	.text.rgblight_decrease_val,"ax",@progbits
+ 1564               	.global	rgblight_decrease_val
+ 1566               	rgblight_decrease_val:
+ 1567               	.LFB23:
+ 1568               	.LSM164:
+ 1569               	/* prologue: function */
+ 1570               	/* frame size = 0 */
+ 1571               	.LSM165:
+ 1572 0000 4091 0000 		lds r20,rgblight_config+3
+ 1573 0004 842F      		mov r24,r20
+ 1574 0006 90E0      		ldi r25,lo8(0)
+ 1575 0008 4197      		sbiw r24,17
+ 1576 000a 04F4      		brge .L103
+ 1577 000c 40E0      		ldi r20,lo8(0)
+ 1578               	.LVL130:
+ 1579 000e 00C0      		rjmp .L104
+ 1580               	.LVL131:
+ 1581               	.L103:
+ 1582               	.LSM166:
+ 1583 0010 4151      		subi r20,lo8(-(-17))
+ 1584               	.LVL132:
+ 1585               	.L104:
+ 1586               	.LSM167:
+ 1587 0012 2091 0000 		lds r18,rgblight_config
+ 1588 0016 221F      		rol r18
+ 1589 0018 2227      		clr r18
+ 1590 001a 221F      		rol r18
+ 1591 001c 9091 0000 		lds r25,rgblight_config+1
+ 1592 0020 892F      		mov r24,r25
+ 1593 0022 880F      		lsl r24
+ 1594 0024 822B      		or r24,r18
+ 1595 0026 991F      		rol r25
+ 1596 0028 9927      		clr r25
+ 1597 002a 991F      		rol r25
+ 1598 002c 6091 0000 		lds r22,rgblight_config+2
+ 1599 0030 0E94 0000 		call rgblight_sethsv
+ 1600               	.LVL133:
+ 1601               	/* epilogue start */
+ 1602               	.LSM168:
+ 1603 0034 0895      		ret
+ 1604               	.LFE23:
+ 1606               		.section	.text.rgblight_increase_val,"ax",@progbits
+ 1607               	.global	rgblight_increase_val
+ 1609               	rgblight_increase_val:
+ 1610               	.LFB22:
+ 1611               	.LSM169:
+ 1612               	/* prologue: function */
+ 1613               	/* frame size = 0 */
+ 1614               	.LSM170:
+ 1615 0000 4091 0000 		lds r20,rgblight_config+3
+ 1616 0004 842F      		mov r24,r20
+ 1617 0006 90E0      		ldi r25,lo8(0)
+ 1618 0008 8F3E      		cpi r24,239
+ 1619 000a 9105      		cpc r25,__zero_reg__
+ 1620 000c 04F0      		brlt .L107
+ 1621 000e 4FEF      		ldi r20,lo8(-1)
+ 1622               	.LVL134:
+ 1623 0010 00C0      		rjmp .L108
+ 1624               	.LVL135:
+ 1625               	.L107:
+ 1626               	.LSM171:
+ 1627 0012 4F5E      		subi r20,lo8(-(17))
+ 1628               	.LVL136:
+ 1629               	.L108:
+ 1630               	.LSM172:
+ 1631 0014 2091 0000 		lds r18,rgblight_config
+ 1632 0018 221F      		rol r18
+ 1633 001a 2227      		clr r18
+ 1634 001c 221F      		rol r18
+ 1635 001e 9091 0000 		lds r25,rgblight_config+1
+ 1636 0022 892F      		mov r24,r25
+ 1637 0024 880F      		lsl r24
+ 1638 0026 822B      		or r24,r18
+ 1639 0028 991F      		rol r25
+ 1640 002a 9927      		clr r25
+ 1641 002c 991F      		rol r25
+ 1642 002e 6091 0000 		lds r22,rgblight_config+2
+ 1643 0032 0E94 0000 		call rgblight_sethsv
+ 1644               	.LVL137:
+ 1645               	/* epilogue start */
+ 1646               	.LSM173:
+ 1647 0036 0895      		ret
+ 1648               	.LFE22:
+ 1650               		.section	.text.rgblight_decrease_sat,"ax",@progbits
+ 1651               	.global	rgblight_decrease_sat
+ 1653               	rgblight_decrease_sat:
+ 1654               	.LFB21:
+ 1655               	.LSM174:
+ 1656               	/* prologue: function */
+ 1657               	/* frame size = 0 */
+ 1658               	.LSM175:
+ 1659 0000 6091 0000 		lds r22,rgblight_config+2
+ 1660 0004 862F      		mov r24,r22
+ 1661 0006 90E0      		ldi r25,lo8(0)
+ 1662 0008 4197      		sbiw r24,17
+ 1663 000a 04F4      		brge .L111
+ 1664 000c 60E0      		ldi r22,lo8(0)
+ 1665               	.LVL138:
+ 1666 000e 00C0      		rjmp .L112
+ 1667               	.LVL139:
+ 1668               	.L111:
+ 1669               	.LSM176:
+ 1670 0010 6151      		subi r22,lo8(-(-17))
+ 1671               	.LVL140:
+ 1672               	.L112:
+ 1673               	.LSM177:
+ 1674 0012 2091 0000 		lds r18,rgblight_config
+ 1675 0016 221F      		rol r18
+ 1676 0018 2227      		clr r18
+ 1677 001a 221F      		rol r18
+ 1678 001c 9091 0000 		lds r25,rgblight_config+1
+ 1679 0020 892F      		mov r24,r25
+ 1680 0022 880F      		lsl r24
+ 1681 0024 822B      		or r24,r18
+ 1682 0026 991F      		rol r25
+ 1683 0028 9927      		clr r25
+ 1684 002a 991F      		rol r25
+ 1685 002c 4091 0000 		lds r20,rgblight_config+3
+ 1686 0030 0E94 0000 		call rgblight_sethsv
+ 1687               	.LVL141:
+ 1688               	/* epilogue start */
+ 1689               	.LSM178:
+ 1690 0034 0895      		ret
+ 1691               	.LFE21:
+ 1693               		.section	.text.rgblight_increase_sat,"ax",@progbits
+ 1694               	.global	rgblight_increase_sat
+ 1696               	rgblight_increase_sat:
+ 1697               	.LFB20:
+ 1698               	.LSM179:
+ 1699               	/* prologue: function */
+ 1700               	/* frame size = 0 */
+ 1701               	.LSM180:
+ 1702 0000 6091 0000 		lds r22,rgblight_config+2
+ 1703 0004 862F      		mov r24,r22
+ 1704 0006 90E0      		ldi r25,lo8(0)
+ 1705 0008 8F3E      		cpi r24,239
+ 1706 000a 9105      		cpc r25,__zero_reg__
+ 1707 000c 04F0      		brlt .L115
+ 1708 000e 6FEF      		ldi r22,lo8(-1)
+ 1709               	.LVL142:
+ 1710 0010 00C0      		rjmp .L116
+ 1711               	.LVL143:
+ 1712               	.L115:
+ 1713               	.LSM181:
+ 1714 0012 6F5E      		subi r22,lo8(-(17))
+ 1715               	.LVL144:
+ 1716               	.L116:
+ 1717               	.LSM182:
+ 1718 0014 2091 0000 		lds r18,rgblight_config
+ 1719 0018 221F      		rol r18
+ 1720 001a 2227      		clr r18
+ 1721 001c 221F      		rol r18
+ 1722 001e 9091 0000 		lds r25,rgblight_config+1
+ 1723 0022 892F      		mov r24,r25
+ 1724 0024 880F      		lsl r24
+ 1725 0026 822B      		or r24,r18
+ 1726 0028 991F      		rol r25
+ 1727 002a 9927      		clr r25
+ 1728 002c 991F      		rol r25
+ 1729 002e 4091 0000 		lds r20,rgblight_config+3
+ 1730 0032 0E94 0000 		call rgblight_sethsv
+ 1731               	.LVL145:
+ 1732               	/* epilogue start */
+ 1733               	.LSM183:
+ 1734 0036 0895      		ret
+ 1735               	.LFE20:
+ 1737               		.section	.text.rgblight_decrease_hue,"ax",@progbits
+ 1738               	.global	rgblight_decrease_hue
+ 1740               	rgblight_decrease_hue:
+ 1741               	.LFB19:
+ 1742               	.LSM184:
+ 1743               	/* prologue: function */
+ 1744               	/* frame size = 0 */
+ 1745               	.LSM185:
+ 1746 0000 8091 0000 		lds r24,rgblight_config
+ 1747 0004 881F      		rol r24
+ 1748 0006 8827      		clr r24
+ 1749 0008 881F      		rol r24
+ 1750 000a 2091 0000 		lds r18,rgblight_config+1
+ 1751 000e 922F      		mov r25,r18
+ 1752 0010 990F      		lsl r25
+ 1753 0012 892B      		or r24,r25
+ 1754 0014 922F      		mov r25,r18
+ 1755 0016 991F      		rol r25
+ 1756 0018 9927      		clr r25
+ 1757 001a 991F      		rol r25
+ 1758 001c 8A30      		cpi r24,10
+ 1759 001e 9105      		cpc r25,__zero_reg__
+ 1760 0020 04F4      		brge .L119
+ 1761               	.LSM186:
+ 1762 0022 825A      		subi r24,lo8(-(350))
+ 1763 0024 9E4F      		sbci r25,hi8(-(350))
+ 1764 0026 00C0      		rjmp .L122
+ 1765               	.L119:
+ 1766               	.LSM187:
+ 1767 0028 0A97      		sbiw r24,10
+ 1768               	.L122:
+ 1769 002a 68E6      		ldi r22,lo8(360)
+ 1770 002c 71E0      		ldi r23,hi8(360)
+ 1771 002e 0E94 0000 		call __divmodhi4
+ 1772               	.LSM188:
+ 1773 0032 6091 0000 		lds r22,rgblight_config+2
+ 1774 0036 4091 0000 		lds r20,rgblight_config+3
+ 1775 003a 0E94 0000 		call rgblight_sethsv
+ 1776               	/* epilogue start */
+ 1777               	.LSM189:
+ 1778 003e 0895      		ret
+ 1779               	.LFE19:
+ 1781               		.section	.text.rgblight_increase_hue,"ax",@progbits
+ 1782               	.global	rgblight_increase_hue
+ 1784               	rgblight_increase_hue:
+ 1785               	.LFB18:
+ 1786               	.LSM190:
+ 1787               	/* prologue: function */
+ 1788               	/* frame size = 0 */
+ 1789               	.LSM191:
+ 1790 0000 2091 0000 		lds r18,rgblight_config
+ 1791 0004 221F      		rol r18
+ 1792 0006 2227      		clr r18
+ 1793 0008 221F      		rol r18
+ 1794 000a 4091 0000 		lds r20,rgblight_config+1
+ 1795 000e 342F      		mov r19,r20
+ 1796 0010 330F      		lsl r19
+ 1797 0012 832F      		mov r24,r19
+ 1798 0014 822B      		or r24,r18
+ 1799 0016 942F      		mov r25,r20
+ 1800 0018 991F      		rol r25
+ 1801 001a 9927      		clr r25
+ 1802 001c 991F      		rol r25
+ 1803 001e 0A96      		adiw r24,10
+ 1804 0020 68E6      		ldi r22,lo8(360)
+ 1805 0022 71E0      		ldi r23,hi8(360)
+ 1806 0024 0E94 0000 		call __divmodhi4
+ 1807 0028 6091 0000 		lds r22,rgblight_config+2
+ 1808 002c 4091 0000 		lds r20,rgblight_config+3
+ 1809 0030 0E94 0000 		call rgblight_sethsv
+ 1810               	/* epilogue start */
+ 1811               	.LSM192:
+ 1812 0034 0895      		ret
+ 1813               	.LFE18:
+ 1815               		.section	.text.rgblight_mode,"ax",@progbits
+ 1816               	.global	rgblight_mode
+ 1818               	rgblight_mode:
+ 1819               	.LFB16:
+ 1820               	.LSM193:
+ 1821               	.LVL146:
+ 1822               	/* prologue: function */
+ 1823               	/* frame size = 0 */
+ 1824               	.LSM194:
+ 1825 0000 9091 0000 		lds r25,rgblight_config
+ 1826 0004 90FF      		sbrs r25,0
+ 1827 0006 00C0      		rjmp .L132
+ 1828               	.LSM195:
+ 1829 0008 8823      		tst r24
+ 1830 000a 01F4      		brne .L127
+ 1831               	.LSM196:
+ 1832 000c 9178      		andi r25,lo8(-127)
+ 1833 000e 9260      		ori r25,lo8(2)
+ 1834 0010 00C0      		rjmp .L133
+ 1835               	.L127:
+ 1836 0012 9178      		andi r25,lo8(-127)
+ 1837               	.LSM197:
+ 1838 0014 8831      		cpi r24,lo8(24)
+ 1839 0016 00F0      		brlo .L129
+ 1840               	.LSM198:
+ 1841 0018 9E62      		ori r25,lo8(46)
+ 1842 001a 00C0      		rjmp .L133
+ 1843               	.L129:
+ 1844               	.LSM199:
+ 1845 001c 8F73      		andi r24,lo8(63)
+ 1846               	.LVL147:
+ 1847 001e 880F      		lsl r24
+ 1848 0020 982B      		or r25,r24
+ 1849               	.L133:
+ 1850 0022 9093 0000 		sts rgblight_config,r25
+ 1851               	.LSM200:
+ 1852 0026 6091 0000 		lds r22,rgblight_config
+ 1853 002a 7091 0000 		lds r23,(rgblight_config)+1
+ 1854 002e 8091 0000 		lds r24,(rgblight_config)+2
+ 1855 0032 9091 0000 		lds r25,(rgblight_config)+3
+ 1856 0036 0E94 0000 		call eeconfig_write_rgblight
+ 1857               	.LVL148:
+ 1858               	.LSM201:
+ 1859 003a 9091 0000 		lds r25,rgblight_config
+ 1860 003e 892F      		mov r24,r25
+ 1861 0040 8E77      		andi r24,lo8(126)
+ 1862 0042 8230      		cpi r24,lo8(2)
+ 1863 0044 01F4      		brne .L130
+ 1864               	.LSM202:
+ 1865 0046 0E94 0000 		call rgblight_timer_disable
+ 1866 004a 00C0      		rjmp .L131
+ 1867               	.L130:
+ 1868               	.LSM203:
+ 1869 004c 9695      		lsr r25
+ 1870 004e 925C      		subi r25,lo8(-(62))
+ 1871 0050 9F73      		andi r25,lo8(63)
+ 1872 0052 9631      		cpi r25,lo8(22)
+ 1873 0054 00F4      		brsh .L131
+ 1874               	.LSM204:
+ 1875 0056 0E94 0000 		call rgblight_timer_enable
+ 1876               	.L131:
+ 1877               	.LSM205:
+ 1878 005a 2091 0000 		lds r18,rgblight_config
+ 1879 005e 221F      		rol r18
+ 1880 0060 2227      		clr r18
+ 1881 0062 221F      		rol r18
+ 1882 0064 9091 0000 		lds r25,rgblight_config+1
+ 1883 0068 892F      		mov r24,r25
+ 1884 006a 880F      		lsl r24
+ 1885 006c 822B      		or r24,r18
+ 1886 006e 991F      		rol r25
+ 1887 0070 9927      		clr r25
+ 1888 0072 991F      		rol r25
+ 1889 0074 6091 0000 		lds r22,rgblight_config+2
+ 1890 0078 4091 0000 		lds r20,rgblight_config+3
+ 1891 007c 0E94 0000 		call rgblight_sethsv
+ 1892               	.LVL149:
+ 1893               	.L132:
+ 1894 0080 0895      		ret
+ 1895               	.LFE16:
+ 1897               		.section	.text.rgblight_step,"ax",@progbits
+ 1898               	.global	rgblight_step
+ 1900               	rgblight_step:
+ 1901               	.LFB15:
+ 1902               	.LSM206:
+ 1903               	/* prologue: function */
+ 1904               	/* frame size = 0 */
+ 1905               	.LSM207:
+ 1906 0000 8091 0000 		lds r24,rgblight_config
+ 1907               	.LVL150:
+ 1908 0004 8695      		lsr r24
+ 1909 0006 8F73      		andi r24,lo8(63)
+ 1910 0008 8F5F      		subi r24,lo8(-(1))
+ 1911               	.LSM208:
+ 1912 000a 8831      		cpi r24,lo8(24)
+ 1913 000c 00F0      		brlo .L135
+ 1914 000e 81E0      		ldi r24,lo8(1)
+ 1915               	.L135:
+ 1916               	.LSM209:
+ 1917 0010 0E94 0000 		call rgblight_mode
+ 1918               	.LVL151:
+ 1919               	/* epilogue start */
+ 1920               	.LSM210:
+ 1921 0014 0895      		ret
+ 1922               	.LFE15:
+ 1924               		.section	.text.rgblight_decrease,"ax",@progbits
+ 1925               	.global	rgblight_decrease
+ 1927               	rgblight_decrease:
+ 1928               	.LFB14:
+ 1929               	.LSM211:
+ 1930               	/* prologue: function */
+ 1931               	/* frame size = 0 */
+ 1932               	.LSM212:
+ 1933 0000 2091 0000 		lds r18,rgblight_config
+ 1934 0004 2695      		lsr r18
+ 1935 0006 2F73      		andi r18,lo8(63)
+ 1936 0008 822F      		mov r24,r18
+ 1937 000a 90E0      		ldi r25,lo8(0)
+ 1938 000c 8230      		cpi r24,2
+ 1939 000e 9105      		cpc r25,__zero_reg__
+ 1940 0010 04F0      		brlt .L138
+ 1941               	.LSM213:
+ 1942 0012 822F      		mov r24,r18
+ 1943               	.LVL152:
+ 1944 0014 8150      		subi r24,lo8(-(-1))
+ 1945               	.L138:
+ 1946               	.LSM214:
+ 1947 0016 0E94 0000 		call rgblight_mode
+ 1948               	.LVL153:
+ 1949               	/* epilogue start */
+ 1950               	.LSM215:
+ 1951 001a 0895      		ret
+ 1952               	.LFE14:
+ 1954               		.section	.text.rgblight_increase,"ax",@progbits
+ 1955               	.global	rgblight_increase
+ 1957               	rgblight_increase:
+ 1958               	.LFB13:
+ 1959               	.LSM216:
+ 1960               	/* prologue: function */
+ 1961               	/* frame size = 0 */
+ 1962               	.LSM217:
+ 1963 0000 2091 0000 		lds r18,rgblight_config
+ 1964 0004 2695      		lsr r18
+ 1965 0006 2F73      		andi r18,lo8(63)
+ 1966 0008 822F      		mov r24,r18
+ 1967 000a 90E0      		ldi r25,lo8(0)
+ 1968 000c 8731      		cpi r24,23
+ 1969 000e 9105      		cpc r25,__zero_reg__
+ 1970 0010 04F4      		brge .L141
+ 1971               	.LSM218:
+ 1972 0012 822F      		mov r24,r18
+ 1973               	.LVL154:
+ 1974 0014 8F5F      		subi r24,lo8(-(1))
+ 1975               	.L141:
+ 1976               	.LSM219:
+ 1977 0016 0E94 0000 		call rgblight_mode
+ 1978               	.LVL155:
+ 1979               	/* epilogue start */
+ 1980               	.LSM220:
+ 1981 001a 0895      		ret
+ 1982               	.LFE13:
+ 1984               		.section	.text.rgblight_toggle,"ax",@progbits
+ 1985               	.global	rgblight_toggle
+ 1987               	rgblight_toggle:
+ 1988               	.LFB17:
+ 1989               	.LSM221:
+ 1990               	/* prologue: function */
+ 1991               	/* frame size = 0 */
+ 1992               	.LSM222:
+ 1993 0000 8091 0000 		lds r24,rgblight_config
+ 1994 0004 982F      		mov r25,r24
+ 1995 0006 9095      		com r25
+ 1996 0008 9170      		andi r25,lo8(1)
+ 1997 000a 8E7F      		andi r24,lo8(-2)
+ 1998 000c 892B      		or r24,r25
+ 1999 000e 8093 0000 		sts rgblight_config,r24
+ 2000               	.LSM223:
+ 2001 0012 6091 0000 		lds r22,rgblight_config
+ 2002 0016 7091 0000 		lds r23,(rgblight_config)+1
+ 2003 001a 8091 0000 		lds r24,(rgblight_config)+2
+ 2004 001e 9091 0000 		lds r25,(rgblight_config)+3
+ 2005 0022 0E94 0000 		call eeconfig_write_rgblight
+ 2006               	.LSM224:
+ 2007 0026 8091 0000 		lds r24,rgblight_config
+ 2008 002a 80FF      		sbrs r24,0
+ 2009 002c 00C0      		rjmp .L144
+ 2010               	.LSM225:
+ 2011 002e 8695      		lsr r24
+ 2012 0030 8F73      		andi r24,lo8(63)
+ 2013 0032 0E94 0000 		call rgblight_mode
+ 2014 0036 0895      		ret
+ 2015               	.L144:
+ 2016               	.LSM226:
+ 2017 0038 0E94 0000 		call rgblight_timer_disable
+ 2018 003c 84EF      		ldi r24,lo8(500)
+ 2019 003e 91E0      		ldi r25,hi8(500)
+ 2020               	.LVL156:
+ 2021               	.LBB23:
+ 2022               	.LBB24:
+ 2023               	.LBB25:
+ 2024               	.LBB26:
+ 2025               	.LSM227:
+ 2026 0040 20E9      		ldi r18,lo8(400)
+ 2027 0042 31E0      		ldi r19,hi8(400)
+ 2028               	.L146:
+ 2029 0044 F901      		movw r30,r18
+ 2030               	.LVL157:
+ 2031               	/* #APP */
+ 2032               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 2033 0046 3197      		1: sbiw r30,1
+ 2034 0048 01F4      		brne 1b
+ 2035               	 ;  0 "" 2
+ 2036               	/* #NOAPP */
+ 2037               	.LBE26:
+ 2038               	.LBE25:
+ 2039               	.LSM228:
+ 2040 004a 0197      		sbiw r24,1
+ 2041               	.LSM229:
+ 2042 004c 01F4      		brne .L146
+ 2043               	.LBE24:
+ 2044               	.LBE23:
+ 2045               	.LSM230:
+ 2046 004e 0E94 0000 		call rgblight_set
+ 2047               	.LVL158:
+ 2048 0052 0895      		ret
+ 2049               	.LFE17:
+ 2051               		.section	.text.eeconfig_write_rgblight_default,"ax",@progbits
+ 2052               	.global	eeconfig_write_rgblight_default
+ 2054               	eeconfig_write_rgblight_default:
+ 2055               	.LFB10:
+ 2056               	.LSM231:
+ 2057               	/* prologue: function */
+ 2058               	/* frame size = 0 */
+ 2059               	.LSM232:
+ 2060 0000 83E0      		ldi r24,lo8(3)
+ 2061 0002 8093 0000 		sts rgblight_config,r24
+ 2062 0006 84E6      		ldi r24,lo8(100)
+ 2063 0008 8093 0000 		sts rgblight_config+1,r24
+ 2064               	.LSM233:
+ 2065 000c 8CEC      		ldi r24,lo8(-52)
+ 2066 000e 8093 0000 		sts rgblight_config+2,r24
+ 2067               	.LSM234:
+ 2068 0012 8093 0000 		sts rgblight_config+3,r24
+ 2069               	.LSM235:
+ 2070 0016 6091 0000 		lds r22,rgblight_config
+ 2071 001a 7091 0000 		lds r23,(rgblight_config)+1
+ 2072 001e 8091 0000 		lds r24,(rgblight_config)+2
+ 2073 0022 9091 0000 		lds r25,(rgblight_config)+3
+ 2074 0026 0E94 0000 		call eeconfig_write_rgblight
+ 2075               	/* epilogue start */
+ 2076               	.LSM236:
+ 2077 002a 0895      		ret
+ 2078               	.LFE10:
+ 2080               		.section	.text.eeconfig_read_rgblight,"ax",@progbits
+ 2081               	.global	eeconfig_read_rgblight
+ 2083               	eeconfig_read_rgblight:
+ 2084               	.LFB8:
+ 2085               	.LSM237:
+ 2086               	/* prologue: function */
+ 2087               	/* frame size = 0 */
+ 2088               	.LSM238:
+ 2089 0000 87E0      		ldi r24,lo8(7)
+ 2090 0002 90E0      		ldi r25,hi8(7)
+ 2091 0004 0E94 0000 		call __eerd_dword_m32u4
+ 2092               	/* epilogue start */
+ 2093               	.LSM239:
+ 2094 0008 0895      		ret
+ 2095               	.LFE8:
+ 2097               		.section	.text.rgblight_init,"ax",@progbits
+ 2098               	.global	rgblight_init
+ 2100               	rgblight_init:
+ 2101               	.LFB12:
+ 2102               	.LSM240:
+ 2103               	/* prologue: function */
+ 2104               	/* frame size = 0 */
+ 2105               	.LSM241:
+ 2106 0000 8091 0000 		lds r24,debug_config
+ 2107 0004 8160      		ori r24,lo8(1)
+ 2108 0006 8093 0000 		sts debug_config,r24
+ 2109               	.LSM242:
+ 2110 000a 81E0      		ldi r24,lo8(1)
+ 2111 000c 8093 0000 		sts rgblight_inited,r24
+ 2112               	.LSM243:
+ 2113 0010 0E94 0000 		call eeconfig_is_enabled
+ 2114 0014 8823      		tst r24
+ 2115 0016 01F4      		brne .L154
+ 2116               	.LSM244:
+ 2117 0018 0E94 0000 		call eeconfig_init
+ 2118               	.LSM245:
+ 2119 001c 0E94 0000 		call eeconfig_write_rgblight_default
+ 2120               	.L154:
+ 2121               	.LSM246:
+ 2122 0020 0E94 0000 		call eeconfig_read_rgblight
+ 2123 0024 6093 0000 		sts rgblight_config,r22
+ 2124 0028 7093 0000 		sts rgblight_config+1,r23
+ 2125 002c 8093 0000 		sts rgblight_config+2,r24
+ 2126 0030 9093 0000 		sts rgblight_config+3,r25
+ 2127               	.LSM247:
+ 2128 0034 6E77      		andi r22,lo8(126)
+ 2129 0036 01F4      		brne .L155
+ 2130               	.LSM248:
+ 2131 0038 0E94 0000 		call eeconfig_write_rgblight_default
+ 2132               	.LSM249:
+ 2133 003c 0E94 0000 		call eeconfig_read_rgblight
+ 2134 0040 6093 0000 		sts rgblight_config,r22
+ 2135 0044 7093 0000 		sts (rgblight_config)+1,r23
+ 2136 0048 8093 0000 		sts (rgblight_config)+2,r24
+ 2137 004c 9093 0000 		sts (rgblight_config)+3,r25
+ 2138               	.L155:
+ 2139               	.LSM250:
+ 2140 0050 0E94 0000 		call rgblight_timer_init
+ 2141               	.LSM251:
+ 2142 0054 8091 0000 		lds r24,rgblight_config
+ 2143 0058 80FF      		sbrs r24,0
+ 2144 005a 00C0      		rjmp .L157
+ 2145               	.LSM252:
+ 2146 005c 8695      		lsr r24
+ 2147 005e 8F73      		andi r24,lo8(63)
+ 2148 0060 0E94 0000 		call rgblight_mode
+ 2149               	.L157:
+ 2150 0064 0895      		ret
+ 2151               	.LFE12:
+ 2153               	.global	DIM_CURVE
+ 2154               		.section	.progmem.data,"a",@progbits
+ 2157               	DIM_CURVE:
+ 2158 0000 00        		.byte	0
+ 2159 0001 01        		.byte	1
+ 2160 0002 01        		.byte	1
+ 2161 0003 02        		.byte	2
+ 2162 0004 02        		.byte	2
+ 2163 0005 02        		.byte	2
+ 2164 0006 02        		.byte	2
+ 2165 0007 02        		.byte	2
+ 2166 0008 02        		.byte	2
+ 2167 0009 03        		.byte	3
+ 2168 000a 03        		.byte	3
+ 2169 000b 03        		.byte	3
+ 2170 000c 03        		.byte	3
+ 2171 000d 03        		.byte	3
+ 2172 000e 03        		.byte	3
+ 2173 000f 03        		.byte	3
+ 2174 0010 03        		.byte	3
+ 2175 0011 03        		.byte	3
+ 2176 0012 03        		.byte	3
+ 2177 0013 03        		.byte	3
+ 2178 0014 03        		.byte	3
+ 2179 0015 03        		.byte	3
+ 2180 0016 03        		.byte	3
+ 2181 0017 04        		.byte	4
+ 2182 0018 04        		.byte	4
+ 2183 0019 04        		.byte	4
+ 2184 001a 04        		.byte	4
+ 2185 001b 04        		.byte	4
+ 2186 001c 04        		.byte	4
+ 2187 001d 04        		.byte	4
+ 2188 001e 04        		.byte	4
+ 2189 001f 04        		.byte	4
+ 2190 0020 04        		.byte	4
+ 2191 0021 04        		.byte	4
+ 2192 0022 04        		.byte	4
+ 2193 0023 05        		.byte	5
+ 2194 0024 05        		.byte	5
+ 2195 0025 05        		.byte	5
+ 2196 0026 05        		.byte	5
+ 2197 0027 05        		.byte	5
+ 2198 0028 05        		.byte	5
+ 2199 0029 05        		.byte	5
+ 2200 002a 05        		.byte	5
+ 2201 002b 05        		.byte	5
+ 2202 002c 05        		.byte	5
+ 2203 002d 06        		.byte	6
+ 2204 002e 06        		.byte	6
+ 2205 002f 06        		.byte	6
+ 2206 0030 06        		.byte	6
+ 2207 0031 06        		.byte	6
+ 2208 0032 06        		.byte	6
+ 2209 0033 06        		.byte	6
+ 2210 0034 06        		.byte	6
+ 2211 0035 07        		.byte	7
+ 2212 0036 07        		.byte	7
+ 2213 0037 07        		.byte	7
+ 2214 0038 07        		.byte	7
+ 2215 0039 07        		.byte	7
+ 2216 003a 07        		.byte	7
+ 2217 003b 07        		.byte	7
+ 2218 003c 08        		.byte	8
+ 2219 003d 08        		.byte	8
+ 2220 003e 08        		.byte	8
+ 2221 003f 08        		.byte	8
+ 2222 0040 08        		.byte	8
+ 2223 0041 08        		.byte	8
+ 2224 0042 09        		.byte	9
+ 2225 0043 09        		.byte	9
+ 2226 0044 09        		.byte	9
+ 2227 0045 09        		.byte	9
+ 2228 0046 09        		.byte	9
+ 2229 0047 09        		.byte	9
+ 2230 0048 0A        		.byte	10
+ 2231 0049 0A        		.byte	10
+ 2232 004a 0A        		.byte	10
+ 2233 004b 0A        		.byte	10
+ 2234 004c 0A        		.byte	10
+ 2235 004d 0B        		.byte	11
+ 2236 004e 0B        		.byte	11
+ 2237 004f 0B        		.byte	11
+ 2238 0050 0B        		.byte	11
+ 2239 0051 0B        		.byte	11
+ 2240 0052 0C        		.byte	12
+ 2241 0053 0C        		.byte	12
+ 2242 0054 0C        		.byte	12
+ 2243 0055 0C        		.byte	12
+ 2244 0056 0C        		.byte	12
+ 2245 0057 0D        		.byte	13
+ 2246 0058 0D        		.byte	13
+ 2247 0059 0D        		.byte	13
+ 2248 005a 0D        		.byte	13
+ 2249 005b 0E        		.byte	14
+ 2250 005c 0E        		.byte	14
+ 2251 005d 0E        		.byte	14
+ 2252 005e 0E        		.byte	14
+ 2253 005f 0F        		.byte	15
+ 2254 0060 0F        		.byte	15
+ 2255 0061 0F        		.byte	15
+ 2256 0062 10        		.byte	16
+ 2257 0063 10        		.byte	16
+ 2258 0064 10        		.byte	16
+ 2259 0065 10        		.byte	16
+ 2260 0066 11        		.byte	17
+ 2261 0067 11        		.byte	17
+ 2262 0068 11        		.byte	17
+ 2263 0069 12        		.byte	18
+ 2264 006a 12        		.byte	18
+ 2265 006b 12        		.byte	18
+ 2266 006c 13        		.byte	19
+ 2267 006d 13        		.byte	19
+ 2268 006e 13        		.byte	19
+ 2269 006f 14        		.byte	20
+ 2270 0070 14        		.byte	20
+ 2271 0071 14        		.byte	20
+ 2272 0072 15        		.byte	21
+ 2273 0073 15        		.byte	21
+ 2274 0074 16        		.byte	22
+ 2275 0075 16        		.byte	22
+ 2276 0076 16        		.byte	22
+ 2277 0077 17        		.byte	23
+ 2278 0078 17        		.byte	23
+ 2279 0079 18        		.byte	24
+ 2280 007a 18        		.byte	24
+ 2281 007b 19        		.byte	25
+ 2282 007c 19        		.byte	25
+ 2283 007d 19        		.byte	25
+ 2284 007e 1A        		.byte	26
+ 2285 007f 1A        		.byte	26
+ 2286 0080 1B        		.byte	27
+ 2287 0081 1B        		.byte	27
+ 2288 0082 1C        		.byte	28
+ 2289 0083 1C        		.byte	28
+ 2290 0084 1D        		.byte	29
+ 2291 0085 1D        		.byte	29
+ 2292 0086 1E        		.byte	30
+ 2293 0087 1E        		.byte	30
+ 2294 0088 1F        		.byte	31
+ 2295 0089 20        		.byte	32
+ 2296 008a 20        		.byte	32
+ 2297 008b 21        		.byte	33
+ 2298 008c 21        		.byte	33
+ 2299 008d 22        		.byte	34
+ 2300 008e 23        		.byte	35
+ 2301 008f 23        		.byte	35
+ 2302 0090 24        		.byte	36
+ 2303 0091 24        		.byte	36
+ 2304 0092 25        		.byte	37
+ 2305 0093 26        		.byte	38
+ 2306 0094 26        		.byte	38
+ 2307 0095 27        		.byte	39
+ 2308 0096 28        		.byte	40
+ 2309 0097 28        		.byte	40
+ 2310 0098 29        		.byte	41
+ 2311 0099 2A        		.byte	42
+ 2312 009a 2B        		.byte	43
+ 2313 009b 2B        		.byte	43
+ 2314 009c 2C        		.byte	44
+ 2315 009d 2D        		.byte	45
+ 2316 009e 2E        		.byte	46
+ 2317 009f 2F        		.byte	47
+ 2318 00a0 30        		.byte	48
+ 2319 00a1 30        		.byte	48
+ 2320 00a2 31        		.byte	49
+ 2321 00a3 32        		.byte	50
+ 2322 00a4 33        		.byte	51
+ 2323 00a5 34        		.byte	52
+ 2324 00a6 35        		.byte	53
+ 2325 00a7 36        		.byte	54
+ 2326 00a8 37        		.byte	55
+ 2327 00a9 38        		.byte	56
+ 2328 00aa 39        		.byte	57
+ 2329 00ab 3A        		.byte	58
+ 2330 00ac 3B        		.byte	59
+ 2331 00ad 3C        		.byte	60
+ 2332 00ae 3D        		.byte	61
+ 2333 00af 3E        		.byte	62
+ 2334 00b0 3F        		.byte	63
+ 2335 00b1 40        		.byte	64
+ 2336 00b2 41        		.byte	65
+ 2337 00b3 42        		.byte	66
+ 2338 00b4 44        		.byte	68
+ 2339 00b5 45        		.byte	69
+ 2340 00b6 46        		.byte	70
+ 2341 00b7 47        		.byte	71
+ 2342 00b8 49        		.byte	73
+ 2343 00b9 4A        		.byte	74
+ 2344 00ba 4B        		.byte	75
+ 2345 00bb 4C        		.byte	76
+ 2346 00bc 4E        		.byte	78
+ 2347 00bd 4F        		.byte	79
+ 2348 00be 51        		.byte	81
+ 2349 00bf 52        		.byte	82
+ 2350 00c0 53        		.byte	83
+ 2351 00c1 55        		.byte	85
+ 2352 00c2 56        		.byte	86
+ 2353 00c3 58        		.byte	88
+ 2354 00c4 5A        		.byte	90
+ 2355 00c5 5B        		.byte	91
+ 2356 00c6 5D        		.byte	93
+ 2357 00c7 5E        		.byte	94
+ 2358 00c8 60        		.byte	96
+ 2359 00c9 62        		.byte	98
+ 2360 00ca 63        		.byte	99
+ 2361 00cb 65        		.byte	101
+ 2362 00cc 67        		.byte	103
+ 2363 00cd 69        		.byte	105
+ 2364 00ce 6B        		.byte	107
+ 2365 00cf 6D        		.byte	109
+ 2366 00d0 6E        		.byte	110
+ 2367 00d1 70        		.byte	112
+ 2368 00d2 72        		.byte	114
+ 2369 00d3 74        		.byte	116
+ 2370 00d4 76        		.byte	118
+ 2371 00d5 79        		.byte	121
+ 2372 00d6 7B        		.byte	123
+ 2373 00d7 7D        		.byte	125
+ 2374 00d8 7F        		.byte	127
+ 2375 00d9 81        		.byte	-127
+ 2376 00da 84        		.byte	-124
+ 2377 00db 86        		.byte	-122
+ 2378 00dc 88        		.byte	-120
+ 2379 00dd 8B        		.byte	-117
+ 2380 00de 8D        		.byte	-115
+ 2381 00df 90        		.byte	-112
+ 2382 00e0 92        		.byte	-110
+ 2383 00e1 95        		.byte	-107
+ 2384 00e2 97        		.byte	-105
+ 2385 00e3 9A        		.byte	-102
+ 2386 00e4 9D        		.byte	-99
+ 2387 00e5 9F        		.byte	-97
+ 2388 00e6 A2        		.byte	-94
+ 2389 00e7 A5        		.byte	-91
+ 2390 00e8 A8        		.byte	-88
+ 2391 00e9 AB        		.byte	-85
+ 2392 00ea AE        		.byte	-82
+ 2393 00eb B1        		.byte	-79
+ 2394 00ec B4        		.byte	-76
+ 2395 00ed B7        		.byte	-73
+ 2396 00ee BA        		.byte	-70
+ 2397 00ef BE        		.byte	-66
+ 2398 00f0 C1        		.byte	-63
+ 2399 00f1 C4        		.byte	-60
+ 2400 00f2 C8        		.byte	-56
+ 2401 00f3 CB        		.byte	-53
+ 2402 00f4 CF        		.byte	-49
+ 2403 00f5 D3        		.byte	-45
+ 2404 00f6 D6        		.byte	-42
+ 2405 00f7 DA        		.byte	-38
+ 2406 00f8 DE        		.byte	-34
+ 2407 00f9 E2        		.byte	-30
+ 2408 00fa E6        		.byte	-26
+ 2409 00fb EA        		.byte	-22
+ 2410 00fc EE        		.byte	-18
+ 2411 00fd F2        		.byte	-14
+ 2412 00fe F8        		.byte	-8
+ 2413 00ff FF        		.byte	-1
+ 2414               	.global	RGBLED_BREATHING_TABLE
+ 2417               	RGBLED_BREATHING_TABLE:
+ 2418 0100 00        		.byte	0
+ 2419 0101 00        		.byte	0
+ 2420 0102 00        		.byte	0
+ 2421 0103 00        		.byte	0
+ 2422 0104 01        		.byte	1
+ 2423 0105 01        		.byte	1
+ 2424 0106 01        		.byte	1
+ 2425 0107 02        		.byte	2
+ 2426 0108 02        		.byte	2
+ 2427 0109 03        		.byte	3
+ 2428 010a 04        		.byte	4
+ 2429 010b 05        		.byte	5
+ 2430 010c 05        		.byte	5
+ 2431 010d 06        		.byte	6
+ 2432 010e 07        		.byte	7
+ 2433 010f 09        		.byte	9
+ 2434 0110 0A        		.byte	10
+ 2435 0111 0B        		.byte	11
+ 2436 0112 0C        		.byte	12
+ 2437 0113 0E        		.byte	14
+ 2438 0114 0F        		.byte	15
+ 2439 0115 11        		.byte	17
+ 2440 0116 12        		.byte	18
+ 2441 0117 14        		.byte	20
+ 2442 0118 15        		.byte	21
+ 2443 0119 17        		.byte	23
+ 2444 011a 19        		.byte	25
+ 2445 011b 1B        		.byte	27
+ 2446 011c 1D        		.byte	29
+ 2447 011d 1F        		.byte	31
+ 2448 011e 21        		.byte	33
+ 2449 011f 23        		.byte	35
+ 2450 0120 25        		.byte	37
+ 2451 0121 28        		.byte	40
+ 2452 0122 2A        		.byte	42
+ 2453 0123 2C        		.byte	44
+ 2454 0124 2F        		.byte	47
+ 2455 0125 31        		.byte	49
+ 2456 0126 34        		.byte	52
+ 2457 0127 36        		.byte	54
+ 2458 0128 39        		.byte	57
+ 2459 0129 3B        		.byte	59
+ 2460 012a 3E        		.byte	62
+ 2461 012b 41        		.byte	65
+ 2462 012c 43        		.byte	67
+ 2463 012d 46        		.byte	70
+ 2464 012e 49        		.byte	73
+ 2465 012f 4C        		.byte	76
+ 2466 0130 4F        		.byte	79
+ 2467 0131 52        		.byte	82
+ 2468 0132 55        		.byte	85
+ 2469 0133 58        		.byte	88
+ 2470 0134 5A        		.byte	90
+ 2471 0135 5D        		.byte	93
+ 2472 0136 61        		.byte	97
+ 2473 0137 64        		.byte	100
+ 2474 0138 67        		.byte	103
+ 2475 0139 6A        		.byte	106
+ 2476 013a 6D        		.byte	109
+ 2477 013b 70        		.byte	112
+ 2478 013c 73        		.byte	115
+ 2479 013d 76        		.byte	118
+ 2480 013e 79        		.byte	121
+ 2481 013f 7C        		.byte	124
+ 2482 0140 7F        		.byte	127
+ 2483 0141 83        		.byte	-125
+ 2484 0142 86        		.byte	-122
+ 2485 0143 89        		.byte	-119
+ 2486 0144 8C        		.byte	-116
+ 2487 0145 8F        		.byte	-113
+ 2488 0146 92        		.byte	-110
+ 2489 0147 95        		.byte	-107
+ 2490 0148 98        		.byte	-104
+ 2491 0149 9B        		.byte	-101
+ 2492 014a 9E        		.byte	-98
+ 2493 014b A2        		.byte	-94
+ 2494 014c A5        		.byte	-91
+ 2495 014d A7        		.byte	-89
+ 2496 014e AA        		.byte	-86
+ 2497 014f AD        		.byte	-83
+ 2498 0150 B0        		.byte	-80
+ 2499 0151 B3        		.byte	-77
+ 2500 0152 B6        		.byte	-74
+ 2501 0153 B9        		.byte	-71
+ 2502 0154 BC        		.byte	-68
+ 2503 0155 BE        		.byte	-66
+ 2504 0156 C1        		.byte	-63
+ 2505 0157 C4        		.byte	-60
+ 2506 0158 C6        		.byte	-58
+ 2507 0159 C9        		.byte	-55
+ 2508 015a CB        		.byte	-53
+ 2509 015b CE        		.byte	-50
+ 2510 015c D0        		.byte	-48
+ 2511 015d D3        		.byte	-45
+ 2512 015e D5        		.byte	-43
+ 2513 015f D7        		.byte	-41
+ 2514 0160 DA        		.byte	-38
+ 2515 0161 DC        		.byte	-36
+ 2516 0162 DE        		.byte	-34
+ 2517 0163 E0        		.byte	-32
+ 2518 0164 E2        		.byte	-30
+ 2519 0165 E4        		.byte	-28
+ 2520 0166 E6        		.byte	-26
+ 2521 0167 E8        		.byte	-24
+ 2522 0168 EA        		.byte	-22
+ 2523 0169 EB        		.byte	-21
+ 2524 016a ED        		.byte	-19
+ 2525 016b EE        		.byte	-18
+ 2526 016c F0        		.byte	-16
+ 2527 016d F1        		.byte	-15
+ 2528 016e F3        		.byte	-13
+ 2529 016f F4        		.byte	-12
+ 2530 0170 F5        		.byte	-11
+ 2531 0171 F6        		.byte	-10
+ 2532 0172 F8        		.byte	-8
+ 2533 0173 F9        		.byte	-7
+ 2534 0174 FA        		.byte	-6
+ 2535 0175 FA        		.byte	-6
+ 2536 0176 FB        		.byte	-5
+ 2537 0177 FC        		.byte	-4
+ 2538 0178 FD        		.byte	-3
+ 2539 0179 FD        		.byte	-3
+ 2540 017a FE        		.byte	-2
+ 2541 017b FE        		.byte	-2
+ 2542 017c FE        		.byte	-2
+ 2543 017d FF        		.byte	-1
+ 2544 017e FF        		.byte	-1
+ 2545 017f FF        		.byte	-1
+ 2546 0180 FF        		.byte	-1
+ 2547 0181 FF        		.byte	-1
+ 2548 0182 FF        		.byte	-1
+ 2549 0183 FF        		.byte	-1
+ 2550 0184 FE        		.byte	-2
+ 2551 0185 FE        		.byte	-2
+ 2552 0186 FE        		.byte	-2
+ 2553 0187 FD        		.byte	-3
+ 2554 0188 FD        		.byte	-3
+ 2555 0189 FC        		.byte	-4
+ 2556 018a FB        		.byte	-5
+ 2557 018b FA        		.byte	-6
+ 2558 018c FA        		.byte	-6
+ 2559 018d F9        		.byte	-7
+ 2560 018e F8        		.byte	-8
+ 2561 018f F6        		.byte	-10
+ 2562 0190 F5        		.byte	-11
+ 2563 0191 F4        		.byte	-12
+ 2564 0192 F3        		.byte	-13
+ 2565 0193 F1        		.byte	-15
+ 2566 0194 F0        		.byte	-16
+ 2567 0195 EE        		.byte	-18
+ 2568 0196 ED        		.byte	-19
+ 2569 0197 EB        		.byte	-21
+ 2570 0198 EA        		.byte	-22
+ 2571 0199 E8        		.byte	-24
+ 2572 019a E6        		.byte	-26
+ 2573 019b E4        		.byte	-28
+ 2574 019c E2        		.byte	-30
+ 2575 019d E0        		.byte	-32
+ 2576 019e DE        		.byte	-34
+ 2577 019f DC        		.byte	-36
+ 2578 01a0 DA        		.byte	-38
+ 2579 01a1 D7        		.byte	-41
+ 2580 01a2 D5        		.byte	-43
+ 2581 01a3 D3        		.byte	-45
+ 2582 01a4 D0        		.byte	-48
+ 2583 01a5 CE        		.byte	-50
+ 2584 01a6 CB        		.byte	-53
+ 2585 01a7 C9        		.byte	-55
+ 2586 01a8 C6        		.byte	-58
+ 2587 01a9 C4        		.byte	-60
+ 2588 01aa C1        		.byte	-63
+ 2589 01ab BE        		.byte	-66
+ 2590 01ac BC        		.byte	-68
+ 2591 01ad B9        		.byte	-71
+ 2592 01ae B6        		.byte	-74
+ 2593 01af B3        		.byte	-77
+ 2594 01b0 B0        		.byte	-80
+ 2595 01b1 AD        		.byte	-83
+ 2596 01b2 AA        		.byte	-86
+ 2597 01b3 A7        		.byte	-89
+ 2598 01b4 A5        		.byte	-91
+ 2599 01b5 A2        		.byte	-94
+ 2600 01b6 9E        		.byte	-98
+ 2601 01b7 9B        		.byte	-101
+ 2602 01b8 98        		.byte	-104
+ 2603 01b9 95        		.byte	-107
+ 2604 01ba 92        		.byte	-110
+ 2605 01bb 8F        		.byte	-113
+ 2606 01bc 8C        		.byte	-116
+ 2607 01bd 89        		.byte	-119
+ 2608 01be 86        		.byte	-122
+ 2609 01bf 83        		.byte	-125
+ 2610 01c0 80        		.byte	-128
+ 2611 01c1 7C        		.byte	124
+ 2612 01c2 79        		.byte	121
+ 2613 01c3 76        		.byte	118
+ 2614 01c4 73        		.byte	115
+ 2615 01c5 70        		.byte	112
+ 2616 01c6 6D        		.byte	109
+ 2617 01c7 6A        		.byte	106
+ 2618 01c8 67        		.byte	103
+ 2619 01c9 64        		.byte	100
+ 2620 01ca 61        		.byte	97
+ 2621 01cb 5D        		.byte	93
+ 2622 01cc 5A        		.byte	90
+ 2623 01cd 58        		.byte	88
+ 2624 01ce 55        		.byte	85
+ 2625 01cf 52        		.byte	82
+ 2626 01d0 4F        		.byte	79
+ 2627 01d1 4C        		.byte	76
+ 2628 01d2 49        		.byte	73
+ 2629 01d3 46        		.byte	70
+ 2630 01d4 43        		.byte	67
+ 2631 01d5 41        		.byte	65
+ 2632 01d6 3E        		.byte	62
+ 2633 01d7 3B        		.byte	59
+ 2634 01d8 39        		.byte	57
+ 2635 01d9 36        		.byte	54
+ 2636 01da 34        		.byte	52
+ 2637 01db 31        		.byte	49
+ 2638 01dc 2F        		.byte	47
+ 2639 01dd 2C        		.byte	44
+ 2640 01de 2A        		.byte	42
+ 2641 01df 28        		.byte	40
+ 2642 01e0 25        		.byte	37
+ 2643 01e1 23        		.byte	35
+ 2644 01e2 21        		.byte	33
+ 2645 01e3 1F        		.byte	31
+ 2646 01e4 1D        		.byte	29
+ 2647 01e5 1B        		.byte	27
+ 2648 01e6 19        		.byte	25
+ 2649 01e7 17        		.byte	23
+ 2650 01e8 15        		.byte	21
+ 2651 01e9 14        		.byte	20
+ 2652 01ea 12        		.byte	18
+ 2653 01eb 11        		.byte	17
+ 2654 01ec 0F        		.byte	15
+ 2655 01ed 0E        		.byte	14
+ 2656 01ee 0C        		.byte	12
+ 2657 01ef 0B        		.byte	11
+ 2658 01f0 0A        		.byte	10
+ 2659 01f1 09        		.byte	9
+ 2660 01f2 07        		.byte	7
+ 2661 01f3 06        		.byte	6
+ 2662 01f4 05        		.byte	5
+ 2663 01f5 05        		.byte	5
+ 2664 01f6 04        		.byte	4
+ 2665 01f7 03        		.byte	3
+ 2666 01f8 02        		.byte	2
+ 2667 01f9 02        		.byte	2
+ 2668 01fa 01        		.byte	1
+ 2669 01fb 01        		.byte	1
+ 2670 01fc 01        		.byte	1
+ 2671 01fd 00        		.byte	0
+ 2672 01fe 00        		.byte	0
+ 2673 01ff 00        		.byte	0
+ 2674               	.global	RGBLED_BREATHING_INTERVALS
+ 2677               	RGBLED_BREATHING_INTERVALS:
+ 2678 0200 1E        		.byte	30
+ 2679 0201 14        		.byte	20
+ 2680 0202 0A        		.byte	10
+ 2681 0203 05        		.byte	5
+ 2682               	.global	RGBLED_RAINBOW_MOOD_INTERVALS
+ 2685               	RGBLED_RAINBOW_MOOD_INTERVALS:
+ 2686 0204 78        		.byte	120
+ 2687 0205 3C        		.byte	60
+ 2688 0206 1E        		.byte	30
+ 2689               	.global	RGBLED_RAINBOW_SWIRL_INTERVALS
+ 2692               	RGBLED_RAINBOW_SWIRL_INTERVALS:
+ 2693 0207 64        		.byte	100
+ 2694 0208 32        		.byte	50
+ 2695 0209 14        		.byte	20
+ 2696               	.global	RGBLED_SNAKE_INTERVALS
+ 2699               	RGBLED_SNAKE_INTERVALS:
+ 2700 020a 64        		.byte	100
+ 2701 020b 32        		.byte	50
+ 2702 020c 14        		.byte	20
+ 2703               	.global	RGBLED_KNIGHT_INTERVALS
+ 2706               	RGBLED_KNIGHT_INTERVALS:
+ 2707 020d 64        		.byte	100
+ 2708 020e 32        		.byte	50
+ 2709 020f 14        		.byte	20
+ 2710               	.global	rgblight_inited
+ 2711               		.section	.bss.rgblight_inited,"aw",@nobits
+ 2714               	rgblight_inited:
+ 2715 0000 00        		.skip 1,0
+ 2716               		.section	.data.increament.2005,"aw",@progbits
+ 2719               	increament.2005:
+ 2720 0000 FF        		.byte	-1
+ 2721               		.section	.bss.last_timer.1999,"aw",@nobits
+ 2724               	last_timer.1999:
+ 2725 0000 0000      		.skip 2,0
+ 2726               		.section	.bss.pos.1998,"aw",@nobits
+ 2729               	pos.1998:
+ 2730 0000 00        		.skip 1,0
+ 2731               		.section	.bss.last_timer.1944,"aw",@nobits
+ 2734               	last_timer.1944:
+ 2735 0000 0000      		.skip 2,0
+ 2736               		.section	.bss.pos.1943,"aw",@nobits
+ 2739               	pos.1943:
+ 2740 0000 00        		.skip 1,0
+ 2741               		.section	.bss.last_timer.1908,"aw",@nobits
+ 2744               	last_timer.1908:
+ 2745 0000 0000      		.skip 2,0
+ 2746               		.section	.bss.current_hue.1907,"aw",@nobits
+ 2749               	current_hue.1907:
+ 2750 0000 0000      		.skip 2,0
+ 2751               		.section	.bss.last_timer.1889,"aw",@nobits
+ 2754               	last_timer.1889:
+ 2755 0000 0000      		.skip 2,0
+ 2756               		.section	.bss.current_hue.1888,"aw",@nobits
+ 2759               	current_hue.1888:
+ 2760 0000 0000      		.skip 2,0
+ 2761               		.section	.bss.last_timer.1862,"aw",@nobits
+ 2764               	last_timer.1862:
+ 2765 0000 0000      		.skip 2,0
+ 2766               		.section	.bss.pos.1861,"aw",@nobits
+ 2769               	pos.1861:
+ 2770 0000 00        		.skip 1,0
+ 2771               		.section	.bss.rgblight_timer_is_init.1816,"aw",@nobits
+ 2774               	rgblight_timer_is_init.1816:
+ 2775 0000 00        		.skip 1,0
+ 2776               		.comm rgblight_config,4,1
+ 2777               		.comm inmem_config,4,1
+ 2778               		.comm led,60,1
+ 3051               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 rgblight.c
+C:\cygwin64\tmp/cc9a4rxi.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc9a4rxi.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc9a4rxi.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc9a4rxi.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc9a4rxi.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc9a4rxi.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc9a4rxi.s:19     .text.setrgb:00000000 setrgb
+C:\cygwin64\tmp/cc9a4rxi.s:40     .text.sethsv:00000000 sethsv
+C:\cygwin64\tmp/cc9a4rxi.s:2157   .progmem.data:00000000 DIM_CURVE
+C:\cygwin64\tmp/cc9a4rxi.s:351    .text.eeconfig_debug_rgblight:00000000 eeconfig_debug_rgblight
+C:\cygwin64\tmp/cc9a4rxi.s:364    .text.rgblight_timer_init:00000000 rgblight_timer_init
+C:\cygwin64\tmp/cc9a4rxi.s:2774   .bss.rgblight_timer_is_init.1816:00000000 rgblight_timer_is_init.1816
+C:\cygwin64\tmp/cc9a4rxi.s:403    .text.rgblight_timer_enable:00000000 rgblight_timer_enable
+C:\cygwin64\tmp/cc9a4rxi.s:422    .text.rgblight_timer_disable:00000000 rgblight_timer_disable
+C:\cygwin64\tmp/cc9a4rxi.s:441    .text.rgblight_timer_toggle:00000000 rgblight_timer_toggle
+C:\cygwin64\tmp/cc9a4rxi.s:461    .text.rgblight_set:00000000 rgblight_set
+                            *COM*:00000004 rgblight_config
+                            *COM*:0000003c led
+C:\cygwin64\tmp/cc9a4rxi.s:505    .text.rgblight_effect_knight:00000000 rgblight_effect_knight
+C:\cygwin64\tmp/cc9a4rxi.s:2724   .bss.last_timer.1999:00000000 last_timer.1999
+C:\cygwin64\tmp/cc9a4rxi.s:2706   .progmem.data:0000020d RGBLED_KNIGHT_INTERVALS
+C:\cygwin64\tmp/cc9a4rxi.s:2729   .bss.pos.1998:00000000 pos.1998
+C:\cygwin64\tmp/cc9a4rxi.s:2719   .data.increament.2005:00000000 increament.2005
+C:\cygwin64\tmp/cc9a4rxi.s:761    .text.rgblight_effect_snake:00000000 rgblight_effect_snake
+C:\cygwin64\tmp/cc9a4rxi.s:2734   .bss.last_timer.1944:00000000 last_timer.1944
+C:\cygwin64\tmp/cc9a4rxi.s:2699   .progmem.data:0000020a RGBLED_SNAKE_INTERVALS
+C:\cygwin64\tmp/cc9a4rxi.s:2739   .bss.pos.1943:00000000 pos.1943
+C:\cygwin64\tmp/cc9a4rxi.s:957    .text.rgblight_effect_rainbow_swirl:00000000 rgblight_effect_rainbow_swirl
+C:\cygwin64\tmp/cc9a4rxi.s:2744   .bss.last_timer.1908:00000000 last_timer.1908
+C:\cygwin64\tmp/cc9a4rxi.s:2685   .progmem.data:00000204 RGBLED_RAINBOW_MOOD_INTERVALS
+C:\cygwin64\tmp/cc9a4rxi.s:2749   .bss.current_hue.1907:00000000 current_hue.1907
+C:\cygwin64\tmp/cc9a4rxi.s:1058   .text.rgblight_setrgb:00000000 rgblight_setrgb
+C:\cygwin64\tmp/cc9a4rxi.s:1093   .text.rgblight_sethsv_noeeprom:00000000 rgblight_sethsv_noeeprom
+                            *COM*:00000004 inmem_config
+C:\cygwin64\tmp/cc9a4rxi.s:1185   .text.rgblight_effect_rainbow_mood:00000000 rgblight_effect_rainbow_mood
+C:\cygwin64\tmp/cc9a4rxi.s:2754   .bss.last_timer.1889:00000000 last_timer.1889
+C:\cygwin64\tmp/cc9a4rxi.s:2759   .bss.current_hue.1888:00000000 current_hue.1888
+C:\cygwin64\tmp/cc9a4rxi.s:1249   .text.rgblight_effect_breathing:00000000 rgblight_effect_breathing
+C:\cygwin64\tmp/cc9a4rxi.s:2764   .bss.last_timer.1862:00000000 last_timer.1862
+C:\cygwin64\tmp/cc9a4rxi.s:2677   .progmem.data:00000200 RGBLED_BREATHING_INTERVALS
+C:\cygwin64\tmp/cc9a4rxi.s:2769   .bss.pos.1861:00000000 pos.1861
+C:\cygwin64\tmp/cc9a4rxi.s:2417   .progmem.data:00000100 RGBLED_BREATHING_TABLE
+C:\cygwin64\tmp/cc9a4rxi.s:1331   .text.__vector_32:00000000 __vector_32
+C:\cygwin64\tmp/cc9a4rxi.s:1439   .text.eeconfig_write_rgblight:00000000 eeconfig_write_rgblight
+C:\cygwin64\tmp/cc9a4rxi.s:1460   .text.rgblight_sethsv:00000000 rgblight_sethsv
+C:\cygwin64\tmp/cc9a4rxi.s:1566   .text.rgblight_decrease_val:00000000 rgblight_decrease_val
+C:\cygwin64\tmp/cc9a4rxi.s:1609   .text.rgblight_increase_val:00000000 rgblight_increase_val
+C:\cygwin64\tmp/cc9a4rxi.s:1653   .text.rgblight_decrease_sat:00000000 rgblight_decrease_sat
+C:\cygwin64\tmp/cc9a4rxi.s:1696   .text.rgblight_increase_sat:00000000 rgblight_increase_sat
+C:\cygwin64\tmp/cc9a4rxi.s:1740   .text.rgblight_decrease_hue:00000000 rgblight_decrease_hue
+C:\cygwin64\tmp/cc9a4rxi.s:1784   .text.rgblight_increase_hue:00000000 rgblight_increase_hue
+C:\cygwin64\tmp/cc9a4rxi.s:1818   .text.rgblight_mode:00000000 rgblight_mode
+C:\cygwin64\tmp/cc9a4rxi.s:1900   .text.rgblight_step:00000000 rgblight_step
+C:\cygwin64\tmp/cc9a4rxi.s:1927   .text.rgblight_decrease:00000000 rgblight_decrease
+C:\cygwin64\tmp/cc9a4rxi.s:1957   .text.rgblight_increase:00000000 rgblight_increase
+C:\cygwin64\tmp/cc9a4rxi.s:1987   .text.rgblight_toggle:00000000 rgblight_toggle
+C:\cygwin64\tmp/cc9a4rxi.s:2054   .text.eeconfig_write_rgblight_default:00000000 eeconfig_write_rgblight_default
+C:\cygwin64\tmp/cc9a4rxi.s:2083   .text.eeconfig_read_rgblight:00000000 eeconfig_read_rgblight
+C:\cygwin64\tmp/cc9a4rxi.s:2100   .text.rgblight_init:00000000 rgblight_init
+C:\cygwin64\tmp/cc9a4rxi.s:2714   .bss.rgblight_inited:00000000 rgblight_inited
+C:\cygwin64\tmp/cc9a4rxi.s:2692   .progmem.data:00000207 RGBLED_RAINBOW_SWIRL_INTERVALS
+
+UNDEFINED SYMBOLS
+__udivmodhi4
+ws2812_setleds
+timer_elapsed
+timer_read
+__divmodhi4
+__eewr_dword_m32u4
+__eerd_dword_m32u4
+debug_config
+eeconfig_is_enabled
+eeconfig_init
+__do_copy_data
+__do_clear_bss

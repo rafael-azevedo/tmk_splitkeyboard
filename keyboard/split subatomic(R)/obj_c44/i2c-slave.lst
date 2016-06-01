@@ -1,0 +1,177 @@
+   1               		.file	"i2c-slave.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.i2c_slave_init,"ax",@progbits
+  17               	.global	i2c_slave_init
+  19               	i2c_slave_init:
+  20               	.LFB2:
+  21               	.LSM0:
+  22               	.LVL0:
+  23               	/* prologue: function */
+  24               	/* frame size = 0 */
+  25               	.LSM1:
+  26 0000 8093 BA00 		sts 186,r24
+  27               	.LSM2:
+  28 0004 85EC      		ldi r24,lo8(-59)
+  29               	.LVL1:
+  30 0006 8093 BC00 		sts 188,r24
+  31               	/* epilogue start */
+  32               	.LSM3:
+  33 000a 0895      		ret
+  34               	.LFE2:
+  36               		.section	.text.__vector_36,"ax",@progbits
+  37               	.global	__vector_36
+  39               	__vector_36:
+  40               	.LFB3:
+  41               	.LSM4:
+  42 0000 1F92      		push __zero_reg__
+  43 0002 0F92      		push r0
+  44 0004 0FB6      		in r0,__SREG__
+  45 0006 0F92      		push r0
+  46 0008 1124      		clr __zero_reg__
+  47 000a 8F93      		push r24
+  48 000c 9F93      		push r25
+  49 000e EF93      		push r30
+  50 0010 FF93      		push r31
+  51               	/* prologue: Signal */
+  52               	/* frame size = 0 */
+  53               	.LSM5:
+  54 0012 8091 B900 		lds r24,185
+  55 0016 90E0      		ldi r25,lo8(0)
+  56 0018 887F      		andi r24,lo8(248)
+  57 001a 9070      		andi r25,hi8(248)
+  58 001c 8038      		cpi r24,128
+  59 001e 9105      		cpc r25,__zero_reg__
+  60 0020 01F0      		breq .L7
+  61 0022 8138      		cpi r24,129
+  62 0024 9105      		cpc r25,__zero_reg__
+  63 0026 04F4      		brge .L9
+  64 0028 0097      		sbiw r24,0
+  65 002a 01F0      		breq .L5
+  66 002c 8036      		cpi r24,96
+  67 002e 9105      		cpc r25,__zero_reg__
+  68 0030 01F4      		brne .L15
+  69 0032 00C0      		rjmp .L17
+  70               	.L9:
+  71 0034 883A      		cpi r24,168
+  72 0036 9105      		cpc r25,__zero_reg__
+  73 0038 01F0      		breq .L8
+  74 003a 883B      		cpi r24,184
+  75 003c 9105      		cpc r25,__zero_reg__
+  76 003e 01F4      		brne .L15
+  77 0040 00C0      		rjmp .L8
+  78               	.L17:
+  79               	.LSM6:
+  80 0042 1092 0000 		sts hasSetRegister,__zero_reg__
+  81 0046 00C0      		rjmp .L15
+  82               	.L7:
+  83               	.LSM7:
+  84 0048 8091 0000 		lds r24,hasSetRegister
+  85 004c 8823      		tst r24
+  86 004e 01F4      		brne .L11
+  87               	.LSM8:
+  88 0050 8091 BB00 		lds r24,187
+  89 0054 8093 0000 		sts bufferPos,r24
+  90               	.LSM9:
+  91 0058 8091 0000 		lds r24,bufferPos
+  92 005c 8031      		cpi r24,lo8(16)
+  93 005e 00F4      		brsh .L12
+  94 0060 91E0      		ldi r25,lo8(1)
+  95               	.LVL2:
+  96 0062 00C0      		rjmp .L13
+  97               	.LVL3:
+  98               	.L12:
+  99               	.LSM10:
+ 100 0064 1092 0000 		sts bufferPos,__zero_reg__
+ 101 0068 90E0      		ldi r25,lo8(0)
+ 102               	.LVL4:
+ 103               	.L13:
+ 104               	.LSM11:
+ 105 006a 81E0      		ldi r24,lo8(1)
+ 106 006c 8093 0000 		sts hasSetRegister,r24
+ 107 0070 00C0      		rjmp .L10
+ 108               	.LVL5:
+ 109               	.L11:
+ 110               	.LSM12:
+ 111 0072 E091 0000 		lds r30,bufferPos
+ 112 0076 F0E0      		ldi r31,lo8(0)
+ 113 0078 8091 BB00 		lds r24,187
+ 114 007c E050      		subi r30,lo8(-(slaveBuffer))
+ 115 007e F040      		sbci r31,hi8(-(slaveBuffer))
+ 116 0080 8083      		st Z,r24
+ 117 0082 00C0      		rjmp .L16
+ 118               	.L8:
+ 119               	.LSM13:
+ 120 0084 E091 0000 		lds r30,bufferPos
+ 121 0088 F0E0      		ldi r31,lo8(0)
+ 122 008a E050      		subi r30,lo8(-(slaveBuffer))
+ 123 008c F040      		sbci r31,hi8(-(slaveBuffer))
+ 124 008e 8081      		ld r24,Z
+ 125 0090 8093 BB00 		sts 187,r24
+ 126               	.L16:
+ 127               	.LSM14:
+ 128 0094 8091 0000 		lds r24,bufferPos
+ 129 0098 90E0      		ldi r25,lo8(0)
+ 130 009a 0196      		adiw r24,1
+ 131 009c 8F70      		andi r24,lo8(15)
+ 132 009e 9070      		andi r25,hi8(15)
+ 133 00a0 8093 0000 		sts bufferPos,r24
+ 134 00a4 00C0      		rjmp .L15
+ 135               	.L5:
+ 136               	.LSM15:
+ 137 00a6 1092 BC00 		sts 188,__zero_reg__
+ 138               	.L15:
+ 139 00aa 91E0      		ldi r25,lo8(1)
+ 140               	.LVL6:
+ 141               	.L10:
+ 142               	.LSM16:
+ 143 00ac 8091 BC00 		lds r24,188
+ 144 00b0 8568      		ori r24,lo8(-123)
+ 145 00b2 9295      		swap r25
+ 146 00b4 990F      		lsl r25
+ 147 00b6 990F      		lsl r25
+ 148 00b8 907C      		andi r25,lo8(-64)
+ 149 00ba 982B      		or r25,r24
+ 150 00bc 9093 BC00 		sts 188,r25
+ 151               	/* epilogue start */
+ 152               	.LSM17:
+ 153 00c0 FF91      		pop r31
+ 154 00c2 EF91      		pop r30
+ 155 00c4 9F91      		pop r25
+ 156               	.LVL7:
+ 157 00c6 8F91      		pop r24
+ 158 00c8 0F90      		pop r0
+ 159 00ca 0FBE      		out __SREG__,r0
+ 160 00cc 0F90      		pop r0
+ 161 00ce 1F90      		pop __zero_reg__
+ 162 00d0 1895      		reti
+ 163               	.LFE3:
+ 165               		.section	.bss.hasSetRegister,"aw",@nobits
+ 168               	hasSetRegister:
+ 169 0000 00        		.skip 1,0
+ 170               		.section	.bss.bufferPos,"aw",@nobits
+ 173               	bufferPos:
+ 174 0000 00        		.skip 1,0
+ 175               		.comm slaveBuffer,16,1
+ 208               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 i2c-slave.c
+C:\cygwin64\tmp/ccOqt95M.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccOqt95M.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccOqt95M.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccOqt95M.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccOqt95M.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccOqt95M.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccOqt95M.s:19     .text.i2c_slave_init:00000000 i2c_slave_init
+C:\cygwin64\tmp/ccOqt95M.s:39     .text.__vector_36:00000000 __vector_36
+C:\cygwin64\tmp/ccOqt95M.s:168    .bss.hasSetRegister:00000000 hasSetRegister
+C:\cygwin64\tmp/ccOqt95M.s:173    .bss.bufferPos:00000000 bufferPos
+                            *COM*:00000010 slaveBuffer
+
+UNDEFINED SYMBOLS
+__do_clear_bss

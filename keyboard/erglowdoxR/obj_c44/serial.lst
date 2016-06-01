@@ -1,0 +1,644 @@
+   1               		.file	"serial.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               		.section	.text.serial_master_init,"ax",@progbits
+  17               	.global	serial_master_init
+  19               	serial_master_init:
+  20               	.LFB12:
+  21               	.LSM0:
+  22               	/* prologue: function */
+  23               	/* frame size = 0 */
+  24               	.LBB161:
+  25               	.LBB162:
+  26               	.LSM1:
+  27 0000 509A      		sbi 42-32,0
+  28               	.LBE162:
+  29               	.LBE161:
+  30               	.LBB163:
+  31               	.LBB164:
+  32               	.LSM2:
+  33 0002 589A      		sbi 43-32,0
+  34               	/* epilogue start */
+  35               	.LBE164:
+  36               	.LBE163:
+  37               	.LSM3:
+  38 0004 0895      		ret
+  39               	.LFE12:
+  41               		.section	.text.serial_slave_init,"ax",@progbits
+  42               	.global	serial_slave_init
+  44               	serial_slave_init:
+  45               	.LFB13:
+  46               	.LSM4:
+  47               	/* prologue: function */
+  48               	/* frame size = 0 */
+  49               	.LBB165:
+  50               	.LBB166:
+  51               	.LSM5:
+  52 0000 5098      		cbi 42-32,0
+  53               	.LSM6:
+  54 0002 589A      		sbi 43-32,0
+  55               	.LBE166:
+  56               	.LBE165:
+  57               	.LSM7:
+  58 0004 E89A      		sbi 61-32,0
+  59               	.LSM8:
+  60 0006 E9E6      		ldi r30,lo8(105)
+  61 0008 F0E0      		ldi r31,hi8(105)
+  62 000a 8081      		ld r24,Z
+  63 000c 8C7F      		andi r24,lo8(-4)
+  64 000e 8083      		st Z,r24
+  65               	/* epilogue start */
+  66               	.LSM9:
+  67 0010 0895      		ret
+  68               	.LFE13:
+  70               		.section	.text.sync_recv,"ax",@progbits
+  72               	sync_recv:
+  73               	.LFB14:
+  74               	.LSM10:
+  75               	/* prologue: function */
+  76               	/* frame size = 0 */
+  77               	.LBB167:
+  78               	.LBB168:
+  79               	.LSM11:
+  80 0000 5098      		cbi 42-32,0
+  81               	.LSM12:
+  82 0002 589A      		sbi 43-32,0
+  83               	.L6:
+  84               	.LBE168:
+  85               	.LBE167:
+  86               	.LSM13:
+  87 0004 489B      		sbis 41-32,0
+  88 0006 00C0      		rjmp .L6
+  89               	.LBB169:
+  90               	.LBB170:
+  91               	.LBB171:
+  92               	.LBB172:
+  93               	.LBB173:
+  94               	.LBB174:
+  95               	.LSM14:
+  96 0008 80E8      		ldi r24,lo8(-128)
+  97               	.LVL0:
+  98               	/* #APP */
+  99               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 100 000a 8A95      		1: dec r24
+ 101 000c 01F4      		brne 1b
+ 102               	 ;  0 "" 2
+ 103               	/* epilogue start */
+ 104               	/* #NOAPP */
+ 105               	.LBE174:
+ 106               	.LBE173:
+ 107               	.LBE172:
+ 108               	.LBE171:
+ 109               	.LBE170:
+ 110               	.LBE169:
+ 111               	.LSM15:
+ 112 000e 0895      		ret
+ 113               	.LFE14:
+ 115               		.section	.text.sync_send,"ax",@progbits
+ 117               	sync_send:
+ 118               	.LFB15:
+ 119               	.LSM16:
+ 120               	/* prologue: function */
+ 121               	/* frame size = 0 */
+ 122               	.LBB175:
+ 123               	.LBB176:
+ 124               	.LSM17:
+ 125 0000 509A      		sbi 42-32,0
+ 126               	.LBE176:
+ 127               	.LBE175:
+ 128               	.LBB177:
+ 129               	.LBB178:
+ 130               	.LSM18:
+ 131 0002 5898      		cbi 43-32,0
+ 132               	.LBE178:
+ 133               	.LBE177:
+ 134               	.LBB179:
+ 135               	.LBB180:
+ 136               	.LBB181:
+ 137               	.LBB182:
+ 138               	.LBB183:
+ 139               	.LBB184:
+ 140               	.LSM19:
+ 141 0004 80E8      		ldi r24,lo8(-128)
+ 142               	.LVL1:
+ 143               	/* #APP */
+ 144               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 145 0006 8A95      		1: dec r24
+ 146 0008 01F4      		brne 1b
+ 147               	 ;  0 "" 2
+ 148               	/* #NOAPP */
+ 149               	.LBE184:
+ 150               	.LBE183:
+ 151               	.LBE182:
+ 152               	.LBE181:
+ 153               	.LBE180:
+ 154               	.LBE179:
+ 155               	.LBB185:
+ 156               	.LBB186:
+ 157               	.LSM20:
+ 158 000a 589A      		sbi 43-32,0
+ 159               	/* epilogue start */
+ 160               	.LBE186:
+ 161               	.LBE185:
+ 162               	.LSM21:
+ 163 000c 0895      		ret
+ 164               	.LFE15:
+ 166               		.section	.text.serial_read_byte,"ax",@progbits
+ 168               	serial_read_byte:
+ 169               	.LFB16:
+ 170               	.LSM22:
+ 171               	/* prologue: function */
+ 172               	/* frame size = 0 */
+ 173               	.LBB187:
+ 174               	.LBB188:
+ 175               	.LSM23:
+ 176 0000 5098      		cbi 42-32,0
+ 177               	.LSM24:
+ 178 0002 589A      		sbi 43-32,0
+ 179 0004 90E0      		ldi r25,lo8(0)
+ 180               	.LVL2:
+ 181 0006 20E0      		ldi r18,lo8(0)
+ 182               	.LVL3:
+ 183               	.LBE188:
+ 184               	.LBE187:
+ 185               	.LBB189:
+ 186               	.LBB190:
+ 187               	.LBB191:
+ 188               	.LBB192:
+ 189               	.LBB193:
+ 190               	.LBB194:
+ 191               	.LBB195:
+ 192               	.LSM25:
+ 193 0008 40E8      		ldi r20,lo8(-128)
+ 194               	.LBE195:
+ 195               	.LBE194:
+ 196               	.LBE193:
+ 197               	.LBE192:
+ 198               	.LBE191:
+ 199               	.LBE190:
+ 200               	.LBB201:
+ 201               	.LBB202:
+ 202               	.LBB203:
+ 203               	.LBB204:
+ 204 000a 35E0      		ldi r19,lo8(5)
+ 205               	.L12:
+ 206               	.LBE204:
+ 207               	.LBE203:
+ 208               	.LBE202:
+ 209               	.LBE201:
+ 210               	.LBB208:
+ 211               	.LBB209:
+ 212               	.LSM26:
+ 213 000c 89B1      		in r24,41-32
+ 214               	.LBE209:
+ 215               	.LBE208:
+ 216               	.LSM27:
+ 217 000e 990F      		lsl r25
+ 218 0010 8170      		andi r24,lo8(1)
+ 219 0012 982B      		or r25,r24
+ 220               	.LBB210:
+ 221               	.LBB200:
+ 222               	.LBB199:
+ 223               	.LBB198:
+ 224               	.LBB197:
+ 225               	.LBB196:
+ 226               	.LSM28:
+ 227 0014 842F      		mov r24,r20
+ 228               	.LVL4:
+ 229               	/* #APP */
+ 230               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 231 0016 8A95      		1: dec r24
+ 232 0018 01F4      		brne 1b
+ 233               	 ;  0 "" 2
+ 234               	/* #NOAPP */
+ 235               	.LBE196:
+ 236               	.LBE197:
+ 237               	.LBE198:
+ 238               	.LBE199:
+ 239               	.LBE200:
+ 240               	.LBE210:
+ 241               	.LBB211:
+ 242               	.LBB207:
+ 243               	.LBB206:
+ 244               	.LBB205:
+ 245 001a 832F      		mov r24,r19
+ 246               	.LVL5:
+ 247               	/* #APP */
+ 248               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 249 001c 8A95      		1: dec r24
+ 250 001e 01F4      		brne 1b
+ 251               	 ;  0 "" 2
+ 252               	/* #NOAPP */
+ 253               	.LBE205:
+ 254               	.LBE206:
+ 255               	.LBE207:
+ 256               	.LBE211:
+ 257               	.LSM29:
+ 258 0020 2F5F      		subi r18,lo8(-(1))
+ 259 0022 2830      		cpi r18,lo8(8)
+ 260 0024 01F4      		brne .L12
+ 261               	.LBE189:
+ 262               	.LSM30:
+ 263 0026 892F      		mov r24,r25
+ 264               	.LVL6:
+ 265               	/* epilogue start */
+ 266 0028 0895      		ret
+ 267               	.LFE16:
+ 269               		.section	.text.serial_write_byte,"ax",@progbits
+ 271               	serial_write_byte:
+ 272               	.LFB17:
+ 273               	.LSM31:
+ 274               	.LVL7:
+ 275               	/* prologue: function */
+ 276               	/* frame size = 0 */
+ 277               	.LBB212:
+ 278               	.LBB213:
+ 279               	.LSM32:
+ 280 0000 509A      		sbi 42-32,0
+ 281 0002 28E0      		ldi r18,lo8(8)
+ 282               	.LVL8:
+ 283               	.LBE213:
+ 284               	.LBE212:
+ 285               	.LSM33:
+ 286 0004 482F      		mov r20,r24
+ 287 0006 50E0      		ldi r21,lo8(0)
+ 288               	.LVL9:
+ 289               	.LBB214:
+ 290               	.LBB215:
+ 291               	.LBB216:
+ 292               	.LBB217:
+ 293               	.LBB218:
+ 294               	.LBB219:
+ 295               	.LSM34:
+ 296 0008 30E8      		ldi r19,lo8(-128)
+ 297               	.LVL10:
+ 298               	.L18:
+ 299               	.LBE219:
+ 300               	.LBE218:
+ 301               	.LBE217:
+ 302               	.LBE216:
+ 303               	.LBE215:
+ 304               	.LBE214:
+ 305               	.LSM35:
+ 306 000a 2150      		subi r18,lo8(-(-1))
+ 307               	.LSM36:
+ 308 000c CA01      		movw r24,r20
+ 309               	.LVL11:
+ 310 000e 022E      		mov r0,r18
+ 311 0010 00C0      		rjmp 2f
+ 312 0012 9595      	1:	asr r25
+ 313 0014 8795      		ror r24
+ 314 0016 0A94      	2:	dec r0
+ 315 0018 02F4      		brpl 1b
+ 316 001a 80FF      		sbrs r24,0
+ 317 001c 00C0      		rjmp .L16
+ 318               	.LBB225:
+ 319               	.LBB226:
+ 320               	.LSM37:
+ 321 001e 589A      		sbi 43-32,0
+ 322 0020 00C0      		rjmp .L17
+ 323               	.L16:
+ 324               	.LBE226:
+ 325               	.LBE225:
+ 326               	.LBB227:
+ 327               	.LBB228:
+ 328               	.LSM38:
+ 329 0022 5898      		cbi 43-32,0
+ 330               	.L17:
+ 331               	.LBE228:
+ 332               	.LBE227:
+ 333               	.LBB229:
+ 334               	.LBB224:
+ 335               	.LBB223:
+ 336               	.LBB222:
+ 337               	.LBB221:
+ 338               	.LBB220:
+ 339               	.LSM39:
+ 340 0024 832F      		mov r24,r19
+ 341               	.LVL12:
+ 342               	/* #APP */
+ 343               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 344 0026 8A95      		1: dec r24
+ 345 0028 01F4      		brne 1b
+ 346               	 ;  0 "" 2
+ 347               	/* #NOAPP */
+ 348               	.LBE220:
+ 349               	.LBE221:
+ 350               	.LBE222:
+ 351               	.LBE223:
+ 352               	.LBE224:
+ 353               	.LBE229:
+ 354               	.LSM40:
+ 355 002a 2223      		tst r18
+ 356 002c 01F4      		brne .L18
+ 357               	/* epilogue start */
+ 358               	.LSM41:
+ 359 002e 0895      		ret
+ 360               	.LFE17:
+ 362               		.section	.text.__vector_1,"ax",@progbits
+ 363               	.global	__vector_1
+ 365               	__vector_1:
+ 366               	.LFB18:
+ 367               	.LSM42:
+ 368 0000 1F92      		push __zero_reg__
+ 369 0002 0F92      		push r0
+ 370 0004 0FB6      		in r0,__SREG__
+ 371 0006 0F92      		push r0
+ 372 0008 1124      		clr __zero_reg__
+ 373 000a 2F93      		push r18
+ 374 000c 3F93      		push r19
+ 375 000e 4F93      		push r20
+ 376 0010 5F93      		push r21
+ 377 0012 6F93      		push r22
+ 378 0014 7F93      		push r23
+ 379 0016 8F93      		push r24
+ 380 0018 9F93      		push r25
+ 381 001a AF93      		push r26
+ 382 001c BF93      		push r27
+ 383 001e CF93      		push r28
+ 384 0020 DF93      		push r29
+ 385 0022 EF93      		push r30
+ 386 0024 FF93      		push r31
+ 387               	/* prologue: Signal */
+ 388               	/* frame size = 0 */
+ 389               	.LSM43:
+ 390 0026 0E94 0000 		call sync_send
+ 391 002a C0E0      		ldi r28,lo8(0)
+ 392 002c D0E0      		ldi r29,hi8(0)
+ 393               	.LVL13:
+ 394               	.L22:
+ 395               	.LBB230:
+ 396               	.LSM44:
+ 397 002e FE01      		movw r30,r28
+ 398 0030 E050      		subi r30,lo8(-(serial_slave_buffer))
+ 399 0032 F040      		sbci r31,hi8(-(serial_slave_buffer))
+ 400 0034 8081      		ld r24,Z
+ 401 0036 0E94 0000 		call serial_write_byte
+ 402               	.LSM45:
+ 403 003a 0E94 0000 		call sync_send
+ 404               	.LSM46:
+ 405 003e 2196      		adiw r28,1
+ 406 0040 C730      		cpi r28,7
+ 407 0042 D105      		cpc r29,__zero_reg__
+ 408 0044 01F4      		brne .L22
+ 409               	.LBE230:
+ 410               	.LBB231:
+ 411               	.LBB232:
+ 412               	.LBB233:
+ 413               	.LBB234:
+ 414               	.LBB235:
+ 415               	.LBB236:
+ 416               	.LSM47:
+ 417 0046 80E8      		ldi r24,lo8(-128)
+ 418               	.LVL14:
+ 419               	/* #APP */
+ 420               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 421 0048 8A95      		1: dec r24
+ 422 004a 01F4      		brne 1b
+ 423               	 ;  0 "" 2
+ 424               	/* #NOAPP */
+ 425               	.LBE236:
+ 426               	.LBE235:
+ 427               	.LBE234:
+ 428               	.LBE233:
+ 429               	.LBE232:
+ 430               	.LBE231:
+ 431               	.LBB237:
+ 432               	.LBB238:
+ 433               	.LBB239:
+ 434               	.LBB240:
+ 435 004c 80E4      		ldi r24,lo8(64)
+ 436               	.LVL15:
+ 437               	/* #APP */
+ 438               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 439 004e 8A95      		1: dec r24
+ 440 0050 01F4      		brne 1b
+ 441               	 ;  0 "" 2
+ 442               	/* #NOAPP */
+ 443               	.LBE240:
+ 444               	.LBE239:
+ 445               	.LBE238:
+ 446               	.LBE237:
+ 447               	.LBB241:
+ 448               	.LSM48:
+ 449 0052 0E94 0000 		call serial_read_byte
+ 450               	.LVL16:
+ 451 0056 8093 0000 		sts serial_master_buffer,r24
+ 452               	.LSM49:
+ 453 005a 0E94 0000 		call sync_send
+ 454               	.LBE241:
+ 455               	.LBB242:
+ 456               	.LBB243:
+ 457               	.LSM50:
+ 458 005e 5098      		cbi 42-32,0
+ 459               	.LSM51:
+ 460 0060 589A      		sbi 43-32,0
+ 461               	/* epilogue start */
+ 462               	.LBE243:
+ 463               	.LBE242:
+ 464               	.LSM52:
+ 465 0062 FF91      		pop r31
+ 466 0064 EF91      		pop r30
+ 467 0066 DF91      		pop r29
+ 468 0068 CF91      		pop r28
+ 469               	.LVL17:
+ 470 006a BF91      		pop r27
+ 471 006c AF91      		pop r26
+ 472 006e 9F91      		pop r25
+ 473 0070 8F91      		pop r24
+ 474 0072 7F91      		pop r23
+ 475 0074 6F91      		pop r22
+ 476 0076 5F91      		pop r21
+ 477 0078 4F91      		pop r20
+ 478 007a 3F91      		pop r19
+ 479 007c 2F91      		pop r18
+ 480 007e 0F90      		pop r0
+ 481 0080 0FBE      		out __SREG__,r0
+ 482 0082 0F90      		pop r0
+ 483 0084 1F90      		pop __zero_reg__
+ 484 0086 1895      		reti
+ 485               	.LFE18:
+ 487               		.section	.text.serial_transaction,"ax",@progbits
+ 488               	.global	serial_transaction
+ 490               	serial_transaction:
+ 491               	.LFB19:
+ 492               	.LSM53:
+ 493 0000 CF93      		push r28
+ 494 0002 DF93      		push r29
+ 495               	/* prologue: function */
+ 496               	/* frame size = 0 */
+ 497               	.LSM54:
+ 498               	/* #APP */
+ 499               	 ;  147 "serial.c" 1
+ 500 0004 F894      		cli
+ 501               	 ;  0 "" 2
+ 502               	/* #NOAPP */
+ 503               	.LBB244:
+ 504               	.LBB245:
+ 505               	.LSM55:
+ 506 0006 509A      		sbi 42-32,0
+ 507               	.LBE245:
+ 508               	.LBE244:
+ 509               	.LBB246:
+ 510               	.LBB247:
+ 511               	.LSM56:
+ 512 0008 5898      		cbi 43-32,0
+ 513               	.LBE247:
+ 514               	.LBE246:
+ 515               	.LBB248:
+ 516               	.LBB249:
+ 517               	.LBB250:
+ 518               	.LBB251:
+ 519               	.LSM57:
+ 520 000a 85E0      		ldi r24,lo8(5)
+ 521               	.LVL18:
+ 522               	/* #APP */
+ 523               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 524 000c 8A95      		1: dec r24
+ 525 000e 01F4      		brne 1b
+ 526               	 ;  0 "" 2
+ 527               	/* #NOAPP */
+ 528               	.LBE251:
+ 529               	.LBE250:
+ 530               	.LBE249:
+ 531               	.LBE248:
+ 532               	.LBB252:
+ 533               	.LBB253:
+ 534               	.LSM58:
+ 535 0010 5098      		cbi 42-32,0
+ 536               	.LSM59:
+ 537 0012 589A      		sbi 43-32,0
+ 538               	.LBE253:
+ 539               	.LBE252:
+ 540               	.LBB254:
+ 541               	.LBB255:
+ 542               	.LSM60:
+ 543 0014 589A      		sbi 43-32,0
+ 544               	.LBE255:
+ 545               	.LBE254:
+ 546               	.LBB256:
+ 547               	.LBB257:
+ 548               	.LBB258:
+ 549               	.LBB259:
+ 550               	.LSM61:
+ 551 0016 80E8      		ldi r24,lo8(-128)
+ 552               	.LVL19:
+ 553               	/* #APP */
+ 554               	 ;  83 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 555 0018 8A95      		1: dec r24
+ 556 001a 01F4      		brne 1b
+ 557               	 ;  0 "" 2
+ 558               	/* #NOAPP */
+ 559               	.LBE259:
+ 560               	.LBE258:
+ 561               	.LBE257:
+ 562               	.LBE256:
+ 563               	.LSM62:
+ 564 001c 489B      		sbis 41-32,0
+ 565 001e 00C0      		rjmp .L26
+ 566               	.LSM63:
+ 567               	/* #APP */
+ 568               	 ;  162 "serial.c" 1
+ 569 0020 7894      		sei
+ 570               	 ;  0 "" 2
+ 571               	/* #NOAPP */
+ 572 0022 21E0      		ldi r18,lo8(1)
+ 573 0024 30E0      		ldi r19,hi8(1)
+ 574 0026 00C0      		rjmp .L27
+ 575               	.L26:
+ 576               	.LSM64:
+ 577 0028 0E94 0000 		call sync_recv
+ 578               	.LVL20:
+ 579 002c C0E0      		ldi r28,lo8(0)
+ 580 002e D0E0      		ldi r29,hi8(0)
+ 581               	.LVL21:
+ 582               	.L28:
+ 583               	.LBB260:
+ 584               	.LSM65:
+ 585 0030 0E94 0000 		call serial_read_byte
+ 586 0034 FE01      		movw r30,r28
+ 587 0036 E050      		subi r30,lo8(-(serial_slave_buffer))
+ 588 0038 F040      		sbci r31,hi8(-(serial_slave_buffer))
+ 589 003a 8083      		st Z,r24
+ 590               	.LSM66:
+ 591 003c 0E94 0000 		call sync_recv
+ 592               	.LSM67:
+ 593 0040 2196      		adiw r28,1
+ 594 0042 C730      		cpi r28,7
+ 595 0044 D105      		cpc r29,__zero_reg__
+ 596 0046 01F4      		brne .L28
+ 597               	.LBE260:
+ 598               	.LBB261:
+ 599               	.LSM68:
+ 600 0048 8091 0000 		lds r24,serial_master_buffer
+ 601 004c 0E94 0000 		call serial_write_byte
+ 602               	.LSM69:
+ 603 0050 0E94 0000 		call sync_recv
+ 604               	.LBE261:
+ 605               	.LBB262:
+ 606               	.LBB263:
+ 607               	.LSM70:
+ 608 0054 509A      		sbi 42-32,0
+ 609               	.LBE263:
+ 610               	.LBE262:
+ 611               	.LBB264:
+ 612               	.LBB265:
+ 613               	.LSM71:
+ 614 0056 589A      		sbi 43-32,0
+ 615               	.LBE265:
+ 616               	.LBE264:
+ 617               	.LSM72:
+ 618               	/* #APP */
+ 619               	 ;  185 "serial.c" 1
+ 620 0058 7894      		sei
+ 621               	 ;  0 "" 2
+ 622               	/* #NOAPP */
+ 623 005a 20E0      		ldi r18,lo8(0)
+ 624 005c 30E0      		ldi r19,hi8(0)
+ 625               	.LVL22:
+ 626               	.L27:
+ 627               	.LSM73:
+ 628 005e C901      		movw r24,r18
+ 629               	.LVL23:
+ 630               	/* epilogue start */
+ 631 0060 DF91      		pop r29
+ 632 0062 CF91      		pop r28
+ 633               	.LVL24:
+ 634 0064 0895      		ret
+ 635               	.LFE19:
+ 637               	.global	serial_slave_buffer
+ 638               		.section	.bss.serial_slave_buffer,"aw",@nobits
+ 641               	serial_slave_buffer:
+ 642 0000 0000 0000 		.skip 7,0
+ 642      0000 00
+ 643               	.global	serial_master_buffer
+ 644               		.section	.bss.serial_master_buffer,"aw",@nobits
+ 647               	serial_master_buffer:
+ 648 0000 00        		.skip 1,0
+ 729               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 serial.c
+C:\cygwin64\tmp/ccqyxMN7.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccqyxMN7.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccqyxMN7.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccqyxMN7.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccqyxMN7.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccqyxMN7.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccqyxMN7.s:19     .text.serial_master_init:00000000 serial_master_init
+C:\cygwin64\tmp/ccqyxMN7.s:44     .text.serial_slave_init:00000000 serial_slave_init
+C:\cygwin64\tmp/ccqyxMN7.s:72     .text.sync_recv:00000000 sync_recv
+C:\cygwin64\tmp/ccqyxMN7.s:117    .text.sync_send:00000000 sync_send
+C:\cygwin64\tmp/ccqyxMN7.s:168    .text.serial_read_byte:00000000 serial_read_byte
+C:\cygwin64\tmp/ccqyxMN7.s:271    .text.serial_write_byte:00000000 serial_write_byte
+C:\cygwin64\tmp/ccqyxMN7.s:365    .text.__vector_1:00000000 __vector_1
+C:\cygwin64\tmp/ccqyxMN7.s:641    .bss.serial_slave_buffer:00000000 serial_slave_buffer
+C:\cygwin64\tmp/ccqyxMN7.s:647    .bss.serial_master_buffer:00000000 serial_master_buffer
+C:\cygwin64\tmp/ccqyxMN7.s:490    .text.serial_transaction:00000000 serial_transaction
+
+UNDEFINED SYMBOLS
+__do_clear_bss
