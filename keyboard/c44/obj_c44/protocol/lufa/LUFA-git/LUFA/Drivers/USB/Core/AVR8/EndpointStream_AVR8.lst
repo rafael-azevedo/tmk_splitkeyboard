@@ -3742,34 +3742,34 @@
  3985               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 EndpointStream_AVR8.c
-C:\cygwin64\tmp/ccgTr6Fc.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccgTr6Fc.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccgTr6Fc.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccgTr6Fc.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccgTr6Fc.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccgTr6Fc.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccgTr6Fc.s:19     .text.Endpoint_Write_Control_Stream_LE:00000000 Endpoint_Write_Control_Stream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:227    .text.Endpoint_Write_Control_Stream_BE:00000000 Endpoint_Write_Control_Stream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:442    .text.Endpoint_Read_Control_Stream_LE:00000000 Endpoint_Read_Control_Stream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:593    .text.Endpoint_Read_Control_Stream_BE:00000000 Endpoint_Read_Control_Stream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:757    .text.Endpoint_Write_Control_PStream_LE:00000000 Endpoint_Write_Control_PStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:975    .text.Endpoint_Write_Control_PStream_BE:00000000 Endpoint_Write_Control_PStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:1199   .text.Endpoint_Read_Control_EStream_BE:00000000 Endpoint_Read_Control_EStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:1385   .text.Endpoint_Read_Control_EStream_LE:00000000 Endpoint_Read_Control_EStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:1557   .text.Endpoint_Write_Control_EStream_BE:00000000 Endpoint_Write_Control_EStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:1799   .text.Endpoint_Write_Control_EStream_LE:00000000 Endpoint_Write_Control_EStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:2032   .text.Endpoint_Read_EStream_BE:00000000 Endpoint_Read_EStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:2177   .text.Endpoint_Read_EStream_LE:00000000 Endpoint_Read_EStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:2332   .text.Endpoint_Write_EStream_BE:00000000 Endpoint_Write_EStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:2477   .text.Endpoint_Write_EStream_LE:00000000 Endpoint_Write_EStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:2632   .text.Endpoint_Write_PStream_BE:00000000 Endpoint_Write_PStream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:2788   .text.Endpoint_Write_PStream_LE:00000000 Endpoint_Write_PStream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:2952   .text.Endpoint_Read_Stream_BE:00000000 Endpoint_Read_Stream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:3097   .text.Endpoint_Read_Stream_LE:00000000 Endpoint_Read_Stream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:3248   .text.Endpoint_Write_Stream_BE:00000000 Endpoint_Write_Stream_BE
-C:\cygwin64\tmp/ccgTr6Fc.s:3393   .text.Endpoint_Write_Stream_LE:00000000 Endpoint_Write_Stream_LE
-C:\cygwin64\tmp/ccgTr6Fc.s:3544   .text.Endpoint_Null_Stream:00000000 Endpoint_Null_Stream
-C:\cygwin64\tmp/ccgTr6Fc.s:3668   .text.Endpoint_Discard_Stream:00000000 Endpoint_Discard_Stream
+C:\cygwin64\tmp/ccsvynhk.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccsvynhk.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccsvynhk.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccsvynhk.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccsvynhk.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccsvynhk.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccsvynhk.s:19     .text.Endpoint_Write_Control_Stream_LE:00000000 Endpoint_Write_Control_Stream_LE
+C:\cygwin64\tmp/ccsvynhk.s:227    .text.Endpoint_Write_Control_Stream_BE:00000000 Endpoint_Write_Control_Stream_BE
+C:\cygwin64\tmp/ccsvynhk.s:442    .text.Endpoint_Read_Control_Stream_LE:00000000 Endpoint_Read_Control_Stream_LE
+C:\cygwin64\tmp/ccsvynhk.s:593    .text.Endpoint_Read_Control_Stream_BE:00000000 Endpoint_Read_Control_Stream_BE
+C:\cygwin64\tmp/ccsvynhk.s:757    .text.Endpoint_Write_Control_PStream_LE:00000000 Endpoint_Write_Control_PStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:975    .text.Endpoint_Write_Control_PStream_BE:00000000 Endpoint_Write_Control_PStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:1199   .text.Endpoint_Read_Control_EStream_BE:00000000 Endpoint_Read_Control_EStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:1385   .text.Endpoint_Read_Control_EStream_LE:00000000 Endpoint_Read_Control_EStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:1557   .text.Endpoint_Write_Control_EStream_BE:00000000 Endpoint_Write_Control_EStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:1799   .text.Endpoint_Write_Control_EStream_LE:00000000 Endpoint_Write_Control_EStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:2032   .text.Endpoint_Read_EStream_BE:00000000 Endpoint_Read_EStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:2177   .text.Endpoint_Read_EStream_LE:00000000 Endpoint_Read_EStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:2332   .text.Endpoint_Write_EStream_BE:00000000 Endpoint_Write_EStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:2477   .text.Endpoint_Write_EStream_LE:00000000 Endpoint_Write_EStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:2632   .text.Endpoint_Write_PStream_BE:00000000 Endpoint_Write_PStream_BE
+C:\cygwin64\tmp/ccsvynhk.s:2788   .text.Endpoint_Write_PStream_LE:00000000 Endpoint_Write_PStream_LE
+C:\cygwin64\tmp/ccsvynhk.s:2952   .text.Endpoint_Read_Stream_BE:00000000 Endpoint_Read_Stream_BE
+C:\cygwin64\tmp/ccsvynhk.s:3097   .text.Endpoint_Read_Stream_LE:00000000 Endpoint_Read_Stream_LE
+C:\cygwin64\tmp/ccsvynhk.s:3248   .text.Endpoint_Write_Stream_BE:00000000 Endpoint_Write_Stream_BE
+C:\cygwin64\tmp/ccsvynhk.s:3393   .text.Endpoint_Write_Stream_LE:00000000 Endpoint_Write_Stream_LE
+C:\cygwin64\tmp/ccsvynhk.s:3544   .text.Endpoint_Null_Stream:00000000 Endpoint_Null_Stream
+C:\cygwin64\tmp/ccsvynhk.s:3668   .text.Endpoint_Discard_Stream:00000000 Endpoint_Discard_Stream
 
 UNDEFINED SYMBOLS
 USB_ControlRequest

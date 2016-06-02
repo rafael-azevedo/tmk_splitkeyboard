@@ -36,13 +36,13 @@
   79               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 keymap.c
-C:\cygwin64\tmp/ccDmuDJD.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccDmuDJD.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccDmuDJD.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccDmuDJD.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccDmuDJD.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccDmuDJD.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccDmuDJD.s:19     .text.action_get_macro:00000000 action_get_macro
-C:\cygwin64\tmp/ccDmuDJD.s:36     .text.action_function:00000000 action_function
+C:\cygwin64\tmp/cc5mqjJj.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc5mqjJj.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc5mqjJj.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc5mqjJj.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc5mqjJj.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc5mqjJj.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc5mqjJj.s:19     .text.action_get_macro:00000000 action_get_macro
+C:\cygwin64\tmp/cc5mqjJj.s:36     .text.action_function:00000000 action_function
 
 NO UNDEFINED SYMBOLS

@@ -198,22 +198,22 @@
  321               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 eeconfig.c
-C:\cygwin64\tmp/ccvnmJLN.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccvnmJLN.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccvnmJLN.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccvnmJLN.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccvnmJLN.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccvnmJLN.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccvnmJLN.s:19     .text.eeconfig_write_keymap:00000000 eeconfig_write_keymap
-C:\cygwin64\tmp/ccvnmJLN.s:39     .text.eeconfig_write_default_layer:00000000 eeconfig_write_default_layer
-C:\cygwin64\tmp/ccvnmJLN.s:59     .text.eeconfig_write_debug:00000000 eeconfig_write_debug
-C:\cygwin64\tmp/ccvnmJLN.s:79     .text.eeconfig_read_keymap:00000000 eeconfig_read_keymap
-C:\cygwin64\tmp/ccvnmJLN.s:95     .text.eeconfig_read_default_layer:00000000 eeconfig_read_default_layer
-C:\cygwin64\tmp/ccvnmJLN.s:111    .text.eeconfig_read_debug:00000000 eeconfig_read_debug
-C:\cygwin64\tmp/ccvnmJLN.s:127    .text.eeconfig_is_enabled:00000000 eeconfig_is_enabled
-C:\cygwin64\tmp/ccvnmJLN.s:151    .text.eeconfig_disable:00000000 eeconfig_disable
-C:\cygwin64\tmp/ccvnmJLN.s:170    .text.eeconfig_enable:00000000 eeconfig_enable
-C:\cygwin64\tmp/ccvnmJLN.s:189    .text.eeconfig_init:00000000 eeconfig_init
+C:\cygwin64\tmp/cc7iZKCT.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc7iZKCT.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc7iZKCT.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc7iZKCT.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc7iZKCT.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc7iZKCT.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc7iZKCT.s:19     .text.eeconfig_write_keymap:00000000 eeconfig_write_keymap
+C:\cygwin64\tmp/cc7iZKCT.s:39     .text.eeconfig_write_default_layer:00000000 eeconfig_write_default_layer
+C:\cygwin64\tmp/cc7iZKCT.s:59     .text.eeconfig_write_debug:00000000 eeconfig_write_debug
+C:\cygwin64\tmp/cc7iZKCT.s:79     .text.eeconfig_read_keymap:00000000 eeconfig_read_keymap
+C:\cygwin64\tmp/cc7iZKCT.s:95     .text.eeconfig_read_default_layer:00000000 eeconfig_read_default_layer
+C:\cygwin64\tmp/cc7iZKCT.s:111    .text.eeconfig_read_debug:00000000 eeconfig_read_debug
+C:\cygwin64\tmp/cc7iZKCT.s:127    .text.eeconfig_is_enabled:00000000 eeconfig_is_enabled
+C:\cygwin64\tmp/cc7iZKCT.s:151    .text.eeconfig_disable:00000000 eeconfig_disable
+C:\cygwin64\tmp/cc7iZKCT.s:170    .text.eeconfig_enable:00000000 eeconfig_enable
+C:\cygwin64\tmp/cc7iZKCT.s:189    .text.eeconfig_init:00000000 eeconfig_init
 
 UNDEFINED SYMBOLS
 __eewr_byte_m32u4

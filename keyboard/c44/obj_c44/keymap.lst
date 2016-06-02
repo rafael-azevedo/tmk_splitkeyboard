@@ -315,16 +315,16 @@
  362               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 keymap.c
-C:\cygwin64\tmp/ccIx7V2U.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccIx7V2U.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccIx7V2U.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccIx7V2U.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccIx7V2U.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccIx7V2U.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccIx7V2U.s:19     .text.action_function:00000000 action_function
-C:\cygwin64\tmp/ccIx7V2U.s:133    .text.action_get_macro:00000000 action_get_macro
-C:\cygwin64\tmp/ccIx7V2U.s:171    .progmem.data:00000000 keymaps
-C:\cygwin64\tmp/ccIx7V2U.s:319    .progmem.data:00000120 fn_actions
+C:\cygwin64\tmp/ccwwP8Nw.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccwwP8Nw.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccwwP8Nw.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccwwP8Nw.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccwwP8Nw.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccwwP8Nw.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccwwP8Nw.s:19     .text.action_function:00000000 action_function
+C:\cygwin64\tmp/ccwwP8Nw.s:133    .text.action_get_macro:00000000 action_get_macro
+C:\cygwin64\tmp/ccwwP8Nw.s:171    .progmem.data:00000000 keymaps
+C:\cygwin64\tmp/ccwwP8Nw.s:319    .progmem.data:00000120 fn_actions
 
 UNDEFINED SYMBOLS
 rgblight_toggle

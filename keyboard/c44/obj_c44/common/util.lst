@@ -475,20 +475,20 @@
  588               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 util.c
-C:\cygwin64\tmp/ccaJOGlf.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccaJOGlf.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccaJOGlf.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccaJOGlf.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccaJOGlf.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccaJOGlf.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccaJOGlf.s:19     .text.bitpop:00000000 bitpop
-C:\cygwin64\tmp/ccaJOGlf.s:51     .text.bitpop16:00000000 bitpop16
-C:\cygwin64\tmp/ccaJOGlf.s:85     .text.bitpop32:00000000 bitpop32
-C:\cygwin64\tmp/ccaJOGlf.s:125    .text.biton:00000000 biton
-C:\cygwin64\tmp/ccaJOGlf.s:172    .text.biton16:00000000 biton16
-C:\cygwin64\tmp/ccaJOGlf.s:246    .text.biton32:00000000 biton32
-C:\cygwin64\tmp/ccaJOGlf.s:359    .text.bitrev:00000000 bitrev
-C:\cygwin64\tmp/ccaJOGlf.s:413    .text.bitrev16:00000000 bitrev16
-C:\cygwin64\tmp/ccaJOGlf.s:447    .text.bitrev32:00000000 bitrev32
+C:\cygwin64\tmp/ccU69qCH.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccU69qCH.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccU69qCH.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccU69qCH.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccU69qCH.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccU69qCH.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccU69qCH.s:19     .text.bitpop:00000000 bitpop
+C:\cygwin64\tmp/ccU69qCH.s:51     .text.bitpop16:00000000 bitpop16
+C:\cygwin64\tmp/ccU69qCH.s:85     .text.bitpop32:00000000 bitpop32
+C:\cygwin64\tmp/ccU69qCH.s:125    .text.biton:00000000 biton
+C:\cygwin64\tmp/ccU69qCH.s:172    .text.biton16:00000000 biton16
+C:\cygwin64\tmp/ccU69qCH.s:246    .text.biton32:00000000 biton32
+C:\cygwin64\tmp/ccU69qCH.s:359    .text.bitrev:00000000 bitrev
+C:\cygwin64\tmp/ccU69qCH.s:413    .text.bitrev16:00000000 bitrev16
+C:\cygwin64\tmp/ccU69qCH.s:447    .text.bitrev32:00000000 bitrev32
 
 NO UNDEFINED SYMBOLS

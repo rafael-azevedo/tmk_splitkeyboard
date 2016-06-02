@@ -281,13 +281,13 @@
  314               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 action_macro.c
-C:\cygwin64\tmp/cc84PspT.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc84PspT.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc84PspT.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc84PspT.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc84PspT.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc84PspT.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc84PspT.s:19     .text.action_macro_play:00000000 action_macro_play
+C:\cygwin64\tmp/cc58Lz4D.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc58Lz4D.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc58Lz4D.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc58Lz4D.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc58Lz4D.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc58Lz4D.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc58Lz4D.s:19     .text.action_macro_play:00000000 action_macro_play
 
 UNDEFINED SYMBOLS
 add_weak_mods

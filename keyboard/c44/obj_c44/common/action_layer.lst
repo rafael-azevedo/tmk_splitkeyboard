@@ -499,31 +499,31 @@
  696               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 action_layer.c
-C:\cygwin64\tmp/ccsr3n68.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccsr3n68.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccsr3n68.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccsr3n68.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccsr3n68.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccsr3n68.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccsr3n68.s:19     .text.default_layer_debug:00000000 default_layer_debug
-C:\cygwin64\tmp/ccsr3n68.s:32     .text.layer_debug:00000000 layer_debug
-C:\cygwin64\tmp/ccsr3n68.s:45     .text.layer_switch_get_action:00000000 layer_switch_get_action
-C:\cygwin64\tmp/ccsr3n68.s:536    .bss.default_layer_state:00000000 default_layer_state
-C:\cygwin64\tmp/ccsr3n68.s:542    .bss.layer_state:00000000 layer_state
-C:\cygwin64\tmp/ccsr3n68.s:140    .text.layer_state_set:00000000 layer_state_set
-C:\cygwin64\tmp/ccsr3n68.s:162    .text.layer_xor:00000000 layer_xor
-C:\cygwin64\tmp/ccsr3n68.s:190    .text.layer_and:00000000 layer_and
-C:\cygwin64\tmp/ccsr3n68.s:218    .text.layer_or:00000000 layer_or
-C:\cygwin64\tmp/ccsr3n68.s:246    .text.layer_invert:00000000 layer_invert
-C:\cygwin64\tmp/ccsr3n68.s:284    .text.layer_off:00000000 layer_off
-C:\cygwin64\tmp/ccsr3n68.s:326    .text.layer_on:00000000 layer_on
-C:\cygwin64\tmp/ccsr3n68.s:364    .text.layer_move:00000000 layer_move
-C:\cygwin64\tmp/ccsr3n68.s:394    .text.layer_clear:00000000 layer_clear
-C:\cygwin64\tmp/ccsr3n68.s:412    .text.default_layer_state_set:00000000 default_layer_state_set
-C:\cygwin64\tmp/ccsr3n68.s:434    .text.default_layer_xor:00000000 default_layer_xor
-C:\cygwin64\tmp/ccsr3n68.s:462    .text.default_layer_and:00000000 default_layer_and
-C:\cygwin64\tmp/ccsr3n68.s:490    .text.default_layer_or:00000000 default_layer_or
-C:\cygwin64\tmp/ccsr3n68.s:518    .text.default_layer_set:00000000 default_layer_set
+C:\cygwin64\tmp/ccdR8YxS.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccdR8YxS.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccdR8YxS.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccdR8YxS.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccdR8YxS.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccdR8YxS.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccdR8YxS.s:19     .text.default_layer_debug:00000000 default_layer_debug
+C:\cygwin64\tmp/ccdR8YxS.s:32     .text.layer_debug:00000000 layer_debug
+C:\cygwin64\tmp/ccdR8YxS.s:45     .text.layer_switch_get_action:00000000 layer_switch_get_action
+C:\cygwin64\tmp/ccdR8YxS.s:536    .bss.default_layer_state:00000000 default_layer_state
+C:\cygwin64\tmp/ccdR8YxS.s:542    .bss.layer_state:00000000 layer_state
+C:\cygwin64\tmp/ccdR8YxS.s:140    .text.layer_state_set:00000000 layer_state_set
+C:\cygwin64\tmp/ccdR8YxS.s:162    .text.layer_xor:00000000 layer_xor
+C:\cygwin64\tmp/ccdR8YxS.s:190    .text.layer_and:00000000 layer_and
+C:\cygwin64\tmp/ccdR8YxS.s:218    .text.layer_or:00000000 layer_or
+C:\cygwin64\tmp/ccdR8YxS.s:246    .text.layer_invert:00000000 layer_invert
+C:\cygwin64\tmp/ccdR8YxS.s:284    .text.layer_off:00000000 layer_off
+C:\cygwin64\tmp/ccdR8YxS.s:326    .text.layer_on:00000000 layer_on
+C:\cygwin64\tmp/ccdR8YxS.s:364    .text.layer_move:00000000 layer_move
+C:\cygwin64\tmp/ccdR8YxS.s:394    .text.layer_clear:00000000 layer_clear
+C:\cygwin64\tmp/ccdR8YxS.s:412    .text.default_layer_state_set:00000000 default_layer_state_set
+C:\cygwin64\tmp/ccdR8YxS.s:434    .text.default_layer_xor:00000000 default_layer_xor
+C:\cygwin64\tmp/ccdR8YxS.s:462    .text.default_layer_and:00000000 default_layer_and
+C:\cygwin64\tmp/ccdR8YxS.s:490    .text.default_layer_or:00000000 default_layer_or
+C:\cygwin64\tmp/ccdR8YxS.s:518    .text.default_layer_set:00000000 default_layer_set
 
 UNDEFINED SYMBOLS
 action_for_key

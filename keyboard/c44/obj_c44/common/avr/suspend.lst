@@ -244,20 +244,20 @@
  339               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 suspend.c
-C:\cygwin64\tmp/ccC9LA5x.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccC9LA5x.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccC9LA5x.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccC9LA5x.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccC9LA5x.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccC9LA5x.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccC9LA5x.s:19     .text.suspend_idle:00000000 suspend_idle
-C:\cygwin64\tmp/ccC9LA5x.s:63     .text.suspend_power_down:00000000 suspend_power_down
-C:\cygwin64\tmp/ccC9LA5x.s:265    .bss.wdt_timeout:00000000 wdt_timeout
-C:\cygwin64\tmp/ccC9LA5x.s:136    .text.matrix_power_up:00000000 matrix_power_up
-C:\cygwin64\tmp/ccC9LA5x.s:149    .text.matrix_power_down:00000000 matrix_power_down
-C:\cygwin64\tmp/ccC9LA5x.s:162    .text.__vector_12:00000000 __vector_12
-C:\cygwin64\tmp/ccC9LA5x.s:209    .text.suspend_wakeup_init:00000000 suspend_wakeup_init
-C:\cygwin64\tmp/ccC9LA5x.s:224    .text.suspend_wakeup_condition:00000000 suspend_wakeup_condition
+C:\cygwin64\tmp/ccoAy9YY.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccoAy9YY.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccoAy9YY.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccoAy9YY.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccoAy9YY.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccoAy9YY.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccoAy9YY.s:19     .text.suspend_idle:00000000 suspend_idle
+C:\cygwin64\tmp/ccoAy9YY.s:63     .text.suspend_power_down:00000000 suspend_power_down
+C:\cygwin64\tmp/ccoAy9YY.s:265    .bss.wdt_timeout:00000000 wdt_timeout
+C:\cygwin64\tmp/ccoAy9YY.s:136    .text.matrix_power_up:00000000 matrix_power_up
+C:\cygwin64\tmp/ccoAy9YY.s:149    .text.matrix_power_down:00000000 matrix_power_down
+C:\cygwin64\tmp/ccoAy9YY.s:162    .text.__vector_12:00000000 __vector_12
+C:\cygwin64\tmp/ccoAy9YY.s:209    .text.suspend_wakeup_init:00000000 suspend_wakeup_init
+C:\cygwin64\tmp/ccoAy9YY.s:224    .text.suspend_wakeup_condition:00000000 suspend_wakeup_condition
 
 UNDEFINED SYMBOLS
 USB_DeviceState

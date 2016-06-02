@@ -432,16 +432,16 @@
  495               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 keymap_common.c
-C:\cygwin64\tmp/ccbwp9mz.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccbwp9mz.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccbwp9mz.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccbwp9mz.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccbwp9mz.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccbwp9mz.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccbwp9mz.s:19     .text.keymap_key_to_keycode:00000000 keymap_key_to_keycode
-C:\cygwin64\tmp/ccbwp9mz.s:69     .text.keymap_fn_to_action:00000000 keymap_fn_to_action
-C:\cygwin64\tmp/ccbwp9mz.s:102    .text.keymap_func_to_action:00000000 keymap_func_to_action
-C:\cygwin64\tmp/ccbwp9mz.s:135    .text.action_for_key:00000000 action_for_key
+C:\cygwin64\tmp/ccKBJ85H.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccKBJ85H.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccKBJ85H.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccKBJ85H.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccKBJ85H.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccKBJ85H.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccKBJ85H.s:19     .text.keymap_key_to_keycode:00000000 keymap_key_to_keycode
+C:\cygwin64\tmp/ccKBJ85H.s:69     .text.keymap_fn_to_action:00000000 keymap_fn_to_action
+C:\cygwin64\tmp/ccKBJ85H.s:102    .text.keymap_func_to_action:00000000 keymap_func_to_action
+C:\cygwin64\tmp/ccKBJ85H.s:135    .text.action_for_key:00000000 action_for_key
 
 UNDEFINED SYMBOLS
 keymaps

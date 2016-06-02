@@ -9,11 +9,11 @@
   16               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 Pipe_AVR8.c
-C:\cygwin64\tmp/ccpn4rMh.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccpn4rMh.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccpn4rMh.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccpn4rMh.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccpn4rMh.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccpn4rMh.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccDiA79b.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccDiA79b.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccDiA79b.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccDiA79b.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccDiA79b.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccDiA79b.s:7      *ABS*:00000001 __zero_reg__
 
 NO UNDEFINED SYMBOLS

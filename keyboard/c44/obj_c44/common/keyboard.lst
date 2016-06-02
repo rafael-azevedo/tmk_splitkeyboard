@@ -264,19 +264,19 @@
  340               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 keyboard.c
-C:\cygwin64\tmp/ccrl3n7f.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccrl3n7f.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccrl3n7f.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccrl3n7f.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccrl3n7f.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccrl3n7f.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccrl3n7f.s:19     .text.matrix_setup:00000000 matrix_setup
-C:\cygwin64\tmp/ccrl3n7f.s:32     .text.keyboard_setup:00000000 keyboard_setup
-C:\cygwin64\tmp/ccrl3n7f.s:47     .text.keyboard_set_leds:00000000 keyboard_set_leds
-C:\cygwin64\tmp/ccrl3n7f.s:64     .text.keyboard_task:00000000 keyboard_task
-C:\cygwin64\tmp/ccrl3n7f.s:282    .bss.matrix_prev.1986:00000000 matrix_prev.1986
-C:\cygwin64\tmp/ccrl3n7f.s:277    .bss.led_status.1987:00000000 led_status.1987
-C:\cygwin64\tmp/ccrl3n7f.s:260    .text.keyboard_init:00000000 keyboard_init
+C:\cygwin64\tmp/ccWyT0eY.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccWyT0eY.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccWyT0eY.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccWyT0eY.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccWyT0eY.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccWyT0eY.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccWyT0eY.s:19     .text.matrix_setup:00000000 matrix_setup
+C:\cygwin64\tmp/ccWyT0eY.s:32     .text.keyboard_setup:00000000 keyboard_setup
+C:\cygwin64\tmp/ccWyT0eY.s:47     .text.keyboard_set_leds:00000000 keyboard_set_leds
+C:\cygwin64\tmp/ccWyT0eY.s:64     .text.keyboard_task:00000000 keyboard_task
+C:\cygwin64\tmp/ccWyT0eY.s:282    .bss.matrix_prev.1986:00000000 matrix_prev.1986
+C:\cygwin64\tmp/ccWyT0eY.s:277    .bss.led_status.1987:00000000 led_status.1987
+C:\cygwin64\tmp/ccWyT0eY.s:260    .text.keyboard_init:00000000 keyboard_init
 
 UNDEFINED SYMBOLS
 led_set

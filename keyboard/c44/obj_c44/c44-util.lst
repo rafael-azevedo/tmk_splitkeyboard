@@ -134,17 +134,17 @@
  191               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 c44-util.c
-C:\cygwin64\tmp/cco8errF.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cco8errF.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cco8errF.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cco8errF.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cco8errF.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cco8errF.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cco8errF.s:19     .text.has_usb:00000000 has_usb
-C:\cygwin64\tmp/cco8errF.s:59     .text.setup_set_handedness:00000000 setup_set_handedness
-C:\cygwin64\tmp/cco8errF.s:143    .eeprom:00000000 EEMEM_isLeftHand
-C:\cygwin64\tmp/cco8errF.s:149    .data.isLeftHand:00000000 isLeftHand
-C:\cygwin64\tmp/cco8errF.s:80     .text.setup_hardware:00000000 setup_hardware
+C:\cygwin64\tmp/ccJaEstG.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccJaEstG.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccJaEstG.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccJaEstG.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccJaEstG.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccJaEstG.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccJaEstG.s:19     .text.has_usb:00000000 has_usb
+C:\cygwin64\tmp/ccJaEstG.s:59     .text.setup_set_handedness:00000000 setup_set_handedness
+C:\cygwin64\tmp/ccJaEstG.s:143    .eeprom:00000000 EEMEM_isLeftHand
+C:\cygwin64\tmp/ccJaEstG.s:149    .data.isLeftHand:00000000 isLeftHand
+C:\cygwin64\tmp/ccJaEstG.s:80     .text.setup_hardware:00000000 setup_hardware
 
 UNDEFINED SYMBOLS
 __eerd_byte_m32u4

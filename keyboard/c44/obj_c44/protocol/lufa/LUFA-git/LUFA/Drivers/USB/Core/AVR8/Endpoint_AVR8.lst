@@ -442,17 +442,17 @@
  515               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 Endpoint_AVR8.c
-C:\cygwin64\tmp/cc795Jlu.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc795Jlu.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc795Jlu.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc795Jlu.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc795Jlu.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc795Jlu.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc795Jlu.s:19     .text.Endpoint_ConfigureEndpoint_Prv:00000000 Endpoint_ConfigureEndpoint_Prv
-C:\cygwin64\tmp/cc795Jlu.s:121    .text.Endpoint_ConfigureEndpointTable:00000000 Endpoint_ConfigureEndpointTable
-C:\cygwin64\tmp/cc795Jlu.s:237    .text.Endpoint_ClearEndpoints:00000000 Endpoint_ClearEndpoints
-C:\cygwin64\tmp/cc795Jlu.s:283    .text.Endpoint_ClearStatusStage:00000000 Endpoint_ClearStatusStage
-C:\cygwin64\tmp/cc795Jlu.s:347    .text.Endpoint_WaitUntilReady:00000000 Endpoint_WaitUntilReady
+C:\cygwin64\tmp/ccxpMchy.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccxpMchy.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccxpMchy.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccxpMchy.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccxpMchy.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccxpMchy.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccxpMchy.s:19     .text.Endpoint_ConfigureEndpoint_Prv:00000000 Endpoint_ConfigureEndpoint_Prv
+C:\cygwin64\tmp/ccxpMchy.s:121    .text.Endpoint_ConfigureEndpointTable:00000000 Endpoint_ConfigureEndpointTable
+C:\cygwin64\tmp/ccxpMchy.s:237    .text.Endpoint_ClearEndpoints:00000000 Endpoint_ClearEndpoints
+C:\cygwin64\tmp/ccxpMchy.s:283    .text.Endpoint_ClearStatusStage:00000000 Endpoint_ClearStatusStage
+C:\cygwin64\tmp/ccxpMchy.s:347    .text.Endpoint_WaitUntilReady:00000000 Endpoint_WaitUntilReady
 
 UNDEFINED SYMBOLS
 USB_ControlRequest

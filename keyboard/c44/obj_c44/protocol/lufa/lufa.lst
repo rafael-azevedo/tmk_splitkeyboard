@@ -964,31 +964,31 @@
  1136               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 lufa.c
-C:\cygwin64\tmp/ccLJZUU5.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccLJZUU5.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccLJZUU5.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccLJZUU5.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccLJZUU5.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccLJZUU5.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccLJZUU5.s:19     .text.EVENT_USB_Device_Disconnect:00000000 EVENT_USB_Device_Disconnect
-C:\cygwin64\tmp/ccLJZUU5.s:34     .text.EVENT_USB_Device_Reset:00000000 EVENT_USB_Device_Reset
-C:\cygwin64\tmp/ccLJZUU5.s:47     .text.EVENT_USB_Device_Suspend:00000000 EVENT_USB_Device_Suspend
-C:\cygwin64\tmp/ccLJZUU5.s:59     .text.keyboard_leds:00000000 keyboard_leds
-C:\cygwin64\tmp/ccLJZUU5.s:1001   .bss.keyboard_led_stats:00000000 keyboard_led_stats
-C:\cygwin64\tmp/ccLJZUU5.s:73     .text.sendchar:00000000 sendchar
-C:\cygwin64\tmp/ccLJZUU5.s:88     .text.send_consumer:00000000 send_consumer
-C:\cygwin64\tmp/ccLJZUU5.s:197    .text.send_system:00000000 send_system
-C:\cygwin64\tmp/ccLJZUU5.s:306    .text.send_mouse:00000000 send_mouse
-C:\cygwin64\tmp/ccLJZUU5.s:396    .text.send_keyboard:00000000 send_keyboard
-C:\cygwin64\tmp/ccLJZUU5.s:1006   .bss.keyboard_report_sent:00000000 keyboard_report_sent
-C:\cygwin64\tmp/ccLJZUU5.s:512    .text.main:00000000 main
-C:\cygwin64\tmp/ccLJZUU5.s:992    .data.lufa_driver:00000000 lufa_driver
-C:\cygwin64\tmp/ccLJZUU5.s:617    .text.EVENT_USB_Device_Connect:00000000 EVENT_USB_Device_Connect
-C:\cygwin64\tmp/ccLJZUU5.s:649    .text.EVENT_USB_Device_ControlRequest:00000000 EVENT_USB_Device_ControlRequest
-C:\cygwin64\tmp/ccLJZUU5.s:986    .data.keyboard_protocol:00000000 keyboard_protocol
-C:\cygwin64\tmp/ccLJZUU5.s:980    .bss.keyboard_idle:00000000 keyboard_idle
-C:\cygwin64\tmp/ccLJZUU5.s:926    .text.EVENT_USB_Device_ConfigurationChanged:00000000 EVENT_USB_Device_ConfigurationChanged
-C:\cygwin64\tmp/ccLJZUU5.s:964    .text.EVENT_USB_Device_WakeUp:00000000 EVENT_USB_Device_WakeUp
+C:\cygwin64\tmp/ccLHWEa8.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccLHWEa8.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccLHWEa8.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccLHWEa8.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccLHWEa8.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccLHWEa8.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccLHWEa8.s:19     .text.EVENT_USB_Device_Disconnect:00000000 EVENT_USB_Device_Disconnect
+C:\cygwin64\tmp/ccLHWEa8.s:34     .text.EVENT_USB_Device_Reset:00000000 EVENT_USB_Device_Reset
+C:\cygwin64\tmp/ccLHWEa8.s:47     .text.EVENT_USB_Device_Suspend:00000000 EVENT_USB_Device_Suspend
+C:\cygwin64\tmp/ccLHWEa8.s:59     .text.keyboard_leds:00000000 keyboard_leds
+C:\cygwin64\tmp/ccLHWEa8.s:1001   .bss.keyboard_led_stats:00000000 keyboard_led_stats
+C:\cygwin64\tmp/ccLHWEa8.s:73     .text.sendchar:00000000 sendchar
+C:\cygwin64\tmp/ccLHWEa8.s:88     .text.send_consumer:00000000 send_consumer
+C:\cygwin64\tmp/ccLHWEa8.s:197    .text.send_system:00000000 send_system
+C:\cygwin64\tmp/ccLHWEa8.s:306    .text.send_mouse:00000000 send_mouse
+C:\cygwin64\tmp/ccLHWEa8.s:396    .text.send_keyboard:00000000 send_keyboard
+C:\cygwin64\tmp/ccLHWEa8.s:1006   .bss.keyboard_report_sent:00000000 keyboard_report_sent
+C:\cygwin64\tmp/ccLHWEa8.s:512    .text.main:00000000 main
+C:\cygwin64\tmp/ccLHWEa8.s:992    .data.lufa_driver:00000000 lufa_driver
+C:\cygwin64\tmp/ccLHWEa8.s:617    .text.EVENT_USB_Device_Connect:00000000 EVENT_USB_Device_Connect
+C:\cygwin64\tmp/ccLHWEa8.s:649    .text.EVENT_USB_Device_ControlRequest:00000000 EVENT_USB_Device_ControlRequest
+C:\cygwin64\tmp/ccLHWEa8.s:986    .data.keyboard_protocol:00000000 keyboard_protocol
+C:\cygwin64\tmp/ccLHWEa8.s:980    .bss.keyboard_idle:00000000 keyboard_idle
+C:\cygwin64\tmp/ccLHWEa8.s:926    .text.EVENT_USB_Device_ConfigurationChanged:00000000 EVENT_USB_Device_ConfigurationChanged
+C:\cygwin64\tmp/ccLHWEa8.s:964    .text.EVENT_USB_Device_WakeUp:00000000 EVENT_USB_Device_WakeUp
 
 UNDEFINED SYMBOLS
 USB_IsInitialized

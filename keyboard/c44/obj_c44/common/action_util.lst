@@ -422,36 +422,36 @@
  644               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 action_util.c
-C:\cygwin64\tmp/cc1GwLpf.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc1GwLpf.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc1GwLpf.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc1GwLpf.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc1GwLpf.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc1GwLpf.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc1GwLpf.s:19     .text.add_key:00000000 add_key
-C:\cygwin64\tmp/cc1GwLpf.s:454    .data.keyboard_report:00000000 keyboard_report
-C:\cygwin64\tmp/cc1GwLpf.s:77     .text.del_key:00000000 del_key
-C:\cygwin64\tmp/cc1GwLpf.s:120    .text.clear_keys:00000000 clear_keys
-C:\cygwin64\tmp/cc1GwLpf.s:150    .text.get_mods:00000000 get_mods
-C:\cygwin64\tmp/cc1GwLpf.s:464    .bss.real_mods:00000000 real_mods
-C:\cygwin64\tmp/cc1GwLpf.s:164    .text.add_mods:00000000 add_mods
-C:\cygwin64\tmp/cc1GwLpf.s:181    .text.del_mods:00000000 del_mods
-C:\cygwin64\tmp/cc1GwLpf.s:200    .text.set_mods:00000000 set_mods
-C:\cygwin64\tmp/cc1GwLpf.s:215    .text.clear_mods:00000000 clear_mods
-C:\cygwin64\tmp/cc1GwLpf.s:229    .text.get_weak_mods:00000000 get_weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:474    .bss.weak_mods:00000000 weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:243    .text.add_weak_mods:00000000 add_weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:260    .text.del_weak_mods:00000000 del_weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:279    .text.set_weak_mods:00000000 set_weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:294    .text.clear_weak_mods:00000000 clear_weak_mods
-C:\cygwin64\tmp/cc1GwLpf.s:308    .text.set_oneshot_mods:00000000 set_oneshot_mods
-C:\cygwin64\tmp/cc1GwLpf.s:469    .bss.oneshot_mods:00000000 oneshot_mods
-C:\cygwin64\tmp/cc1GwLpf.s:324    .text.clear_oneshot_mods:00000000 clear_oneshot_mods
-C:\cygwin64\tmp/cc1GwLpf.s:339    .text.has_anykey:00000000 has_anykey
-C:\cygwin64\tmp/cc1GwLpf.s:374    .text.get_first_key:00000000 get_first_key
-C:\cygwin64\tmp/cc1GwLpf.s:391    .text.has_anymod:00000000 has_anymod
-C:\cygwin64\tmp/cc1GwLpf.s:407    .text.send_keyboard_report:00000000 send_keyboard_report
-C:\cygwin64\tmp/cc1GwLpf.s:459    .bss.__compound_literal.0:00000000 __compound_literal.0
+C:\cygwin64\tmp/ccxzXCQ2.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccxzXCQ2.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccxzXCQ2.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccxzXCQ2.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccxzXCQ2.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccxzXCQ2.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccxzXCQ2.s:19     .text.add_key:00000000 add_key
+C:\cygwin64\tmp/ccxzXCQ2.s:454    .data.keyboard_report:00000000 keyboard_report
+C:\cygwin64\tmp/ccxzXCQ2.s:77     .text.del_key:00000000 del_key
+C:\cygwin64\tmp/ccxzXCQ2.s:120    .text.clear_keys:00000000 clear_keys
+C:\cygwin64\tmp/ccxzXCQ2.s:150    .text.get_mods:00000000 get_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:464    .bss.real_mods:00000000 real_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:164    .text.add_mods:00000000 add_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:181    .text.del_mods:00000000 del_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:200    .text.set_mods:00000000 set_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:215    .text.clear_mods:00000000 clear_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:229    .text.get_weak_mods:00000000 get_weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:474    .bss.weak_mods:00000000 weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:243    .text.add_weak_mods:00000000 add_weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:260    .text.del_weak_mods:00000000 del_weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:279    .text.set_weak_mods:00000000 set_weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:294    .text.clear_weak_mods:00000000 clear_weak_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:308    .text.set_oneshot_mods:00000000 set_oneshot_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:469    .bss.oneshot_mods:00000000 oneshot_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:324    .text.clear_oneshot_mods:00000000 clear_oneshot_mods
+C:\cygwin64\tmp/ccxzXCQ2.s:339    .text.has_anykey:00000000 has_anykey
+C:\cygwin64\tmp/ccxzXCQ2.s:374    .text.get_first_key:00000000 get_first_key
+C:\cygwin64\tmp/ccxzXCQ2.s:391    .text.has_anymod:00000000 has_anymod
+C:\cygwin64\tmp/ccxzXCQ2.s:407    .text.send_keyboard_report:00000000 send_keyboard_report
+C:\cygwin64\tmp/ccxzXCQ2.s:459    .bss.__compound_literal.0:00000000 __compound_literal.0
 
 UNDEFINED SYMBOLS
 bitpop

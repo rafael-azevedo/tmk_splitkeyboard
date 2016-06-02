@@ -674,13 +674,13 @@
  707               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 DeviceStandardReq.c
-C:\cygwin64\tmp/ccSFJbo2.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccSFJbo2.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccSFJbo2.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccSFJbo2.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccSFJbo2.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccSFJbo2.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccSFJbo2.s:19     .text.USB_Device_ProcessControlRequest:00000000 USB_Device_ProcessControlRequest
+C:\cygwin64\tmp/ccC7mR3V.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccC7mR3V.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccC7mR3V.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccC7mR3V.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccC7mR3V.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccC7mR3V.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccC7mR3V.s:19     .text.USB_Device_ProcessControlRequest:00000000 USB_Device_ProcessControlRequest
                             *COM*:00000001 USB_Device_CurrentlySelfPowered
                             *COM*:00000001 USB_Device_RemoteWakeupEnabled
                             *COM*:00000001 USB_Device_ConfigurationNumber

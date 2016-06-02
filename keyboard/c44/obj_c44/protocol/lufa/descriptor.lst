@@ -531,20 +531,20 @@
  580               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 descriptor.c
-C:\cygwin64\tmp/ccuQBM2e.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccuQBM2e.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccuQBM2e.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccuQBM2e.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccuQBM2e.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccuQBM2e.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccuQBM2e.s:19     .text.CALLBACK_USB_GetDescriptor:00000000 CALLBACK_USB_GetDescriptor
-C:\cygwin64\tmp/ccuQBM2e.s:421    .progmem.data:000000c2 DeviceDescriptor
-C:\cygwin64\tmp/ccuQBM2e.s:439    .progmem.data:000000d4 ConfigurationDescriptor
-C:\cygwin64\tmp/ccuQBM2e.s:517    .progmem.data:00000128 LanguageString
-C:\cygwin64\tmp/ccuQBM2e.s:524    .progmem.data:0000012c ManufacturerString
-C:\cygwin64\tmp/ccuQBM2e.s:535    .progmem.data:00000136 ProductString
-C:\cygwin64\tmp/ccuQBM2e.s:215    .progmem.data:00000000 KeyboardReport
-C:\cygwin64\tmp/ccuQBM2e.s:282    .progmem.data:0000003f MouseReport
-C:\cygwin64\tmp/ccuQBM2e.s:363    .progmem.data:0000008c ExtrakeyReport
+C:\cygwin64\tmp/ccQHyYKg.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccQHyYKg.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccQHyYKg.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccQHyYKg.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccQHyYKg.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccQHyYKg.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccQHyYKg.s:19     .text.CALLBACK_USB_GetDescriptor:00000000 CALLBACK_USB_GetDescriptor
+C:\cygwin64\tmp/ccQHyYKg.s:421    .progmem.data:000000c2 DeviceDescriptor
+C:\cygwin64\tmp/ccQHyYKg.s:439    .progmem.data:000000d4 ConfigurationDescriptor
+C:\cygwin64\tmp/ccQHyYKg.s:517    .progmem.data:00000128 LanguageString
+C:\cygwin64\tmp/ccQHyYKg.s:524    .progmem.data:0000012c ManufacturerString
+C:\cygwin64\tmp/ccQHyYKg.s:535    .progmem.data:00000136 ProductString
+C:\cygwin64\tmp/ccQHyYKg.s:215    .progmem.data:00000000 KeyboardReport
+C:\cygwin64\tmp/ccQHyYKg.s:282    .progmem.data:0000003f MouseReport
+C:\cygwin64\tmp/ccQHyYKg.s:363    .progmem.data:0000008c ExtrakeyReport
 
 NO UNDEFINED SYMBOLS

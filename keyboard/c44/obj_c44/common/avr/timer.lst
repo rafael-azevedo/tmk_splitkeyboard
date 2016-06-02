@@ -308,20 +308,20 @@
  403               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 timer.c
-C:\cygwin64\tmp/cc0TIMYa.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc0TIMYa.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc0TIMYa.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc0TIMYa.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc0TIMYa.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc0TIMYa.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc0TIMYa.s:19     .text.timer_init:00000000 timer_init
-C:\cygwin64\tmp/cc0TIMYa.s:43     .text.timer_clear:00000000 timer_clear
-C:\cygwin64\tmp/cc0TIMYa.s:329    .bss.timer_count:00000000 timer_count
-C:\cygwin64\tmp/cc0TIMYa.s:72     .text.timer_read:00000000 timer_read
-C:\cygwin64\tmp/cc0TIMYa.s:104    .text.timer_read32:00000000 timer_read32
-C:\cygwin64\tmp/cc0TIMYa.s:138    .text.timer_elapsed:00000000 timer_elapsed
-C:\cygwin64\tmp/cc0TIMYa.s:210    .text.timer_elapsed32:00000000 timer_elapsed32
-C:\cygwin64\tmp/cc0TIMYa.s:286    .text.__vector_21:00000000 __vector_21
+C:\cygwin64\tmp/ccXB6ZFd.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccXB6ZFd.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccXB6ZFd.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccXB6ZFd.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccXB6ZFd.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccXB6ZFd.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccXB6ZFd.s:19     .text.timer_init:00000000 timer_init
+C:\cygwin64\tmp/ccXB6ZFd.s:43     .text.timer_clear:00000000 timer_clear
+C:\cygwin64\tmp/ccXB6ZFd.s:329    .bss.timer_count:00000000 timer_count
+C:\cygwin64\tmp/ccXB6ZFd.s:72     .text.timer_read:00000000 timer_read
+C:\cygwin64\tmp/ccXB6ZFd.s:104    .text.timer_read32:00000000 timer_read32
+C:\cygwin64\tmp/ccXB6ZFd.s:138    .text.timer_elapsed:00000000 timer_elapsed
+C:\cygwin64\tmp/ccXB6ZFd.s:210    .text.timer_elapsed32:00000000 timer_elapsed32
+C:\cygwin64\tmp/ccXB6ZFd.s:286    .text.__vector_21:00000000 __vector_21
 
 UNDEFINED SYMBOLS
 __do_clear_bss

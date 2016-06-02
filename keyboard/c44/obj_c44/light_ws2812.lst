@@ -202,17 +202,17 @@
  275               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 light_ws2812.c
-C:\cygwin64\tmp/ccThX3ls.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccThX3ls.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccThX3ls.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccThX3ls.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccThX3ls.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccThX3ls.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccThX3ls.s:19     .text.ws2812_sendarray_mask:00000000 ws2812_sendarray_mask
-C:\cygwin64\tmp/ccThX3ls.s:55     .text.ws2812_sendarray_mask:00000018 loop28
-C:\cygwin64\tmp/ccThX3ls.s:90     .text.ws2812_sendarray:00000000 ws2812_sendarray
-C:\cygwin64\tmp/ccThX3ls.s:108    .text.ws2812_setleds_rgbw:00000000 ws2812_setleds_rgbw
-C:\cygwin64\tmp/ccThX3ls.s:155    .text.ws2812_setleds_pin:00000000 ws2812_setleds_pin
-C:\cygwin64\tmp/ccThX3ls.s:204    .text.ws2812_setleds:00000000 ws2812_setleds
+C:\cygwin64\tmp/cc8CYDTa.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/cc8CYDTa.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/cc8CYDTa.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/cc8CYDTa.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/cc8CYDTa.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/cc8CYDTa.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/cc8CYDTa.s:19     .text.ws2812_sendarray_mask:00000000 ws2812_sendarray_mask
+C:\cygwin64\tmp/cc8CYDTa.s:55     .text.ws2812_sendarray_mask:00000018 loop28
+C:\cygwin64\tmp/cc8CYDTa.s:90     .text.ws2812_sendarray:00000000 ws2812_sendarray
+C:\cygwin64\tmp/cc8CYDTa.s:108    .text.ws2812_setleds_rgbw:00000000 ws2812_setleds_rgbw
+C:\cygwin64\tmp/cc8CYDTa.s:155    .text.ws2812_setleds_pin:00000000 ws2812_setleds_pin
+C:\cygwin64\tmp/cc8CYDTa.s:204    .text.ws2812_setleds:00000000 ws2812_setleds
 
 NO UNDEFINED SYMBOLS

@@ -246,429 +246,428 @@
  268               	.LBB68:
  269               	.LBB64:
  270               	.LSM33:
- 271 0076 83B1      		in r24,35-32
- 272               	.LVL9:
- 273 0078 1C99      		sbic 35-32,4
- 274 007a 00C0      		rjmp .L24
- 275 007c 62E0      		ldi r22,lo8(2)
- 276 007e 00C0      		rjmp .L25
- 277               	.L24:
- 278 0080 60E0      		ldi r22,lo8(0)
- 279               	.L25:
- 280 0082 6699      		sbic 44-32,6
- 281 0084 00C0      		rjmp .L26
- 282 0086 54E0      		ldi r21,lo8(4)
- 283 0088 00C0      		rjmp .L27
- 284               	.L26:
- 285 008a 50E0      		ldi r21,lo8(0)
- 286               	.L27:
- 287 008c 29B1      		in r18,41-32
- 288 008e 2095      		com r18
- 289 0090 221F      		rol r18
- 290 0092 2227      		clr r18
- 291 0094 221F      		rol r18
- 292 0096 220F      		lsl r18
- 293 0098 220F      		lsl r18
- 294 009a 220F      		lsl r18
- 295 009c 3699      		sbic 38-32,6
- 296 009e 00C0      		rjmp .L30
- 297 00a0 40E1      		ldi r20,lo8(16)
- 298 00a2 00C0      		rjmp .L31
- 299               	.L30:
- 300 00a4 40E0      		ldi r20,lo8(0)
- 301               	.L31:
- 302 00a6 4C99      		sbic 41-32,4
- 303 00a8 00C0      		rjmp .L32
- 304 00aa 30E2      		ldi r19,lo8(32)
- 305 00ac 00C0      		rjmp .L33
- 306               	.L32:
- 307 00ae 30E0      		ldi r19,lo8(0)
- 308               	.L33:
- 309 00b0 90E0      		ldi r25,lo8(0)
- 310 00b2 75E0      		ldi r23,5
- 311 00b4 9695      	1:	lsr r25
- 312 00b6 8795      		ror r24
- 313 00b8 7A95      		dec r23
- 314 00ba 01F4      		brne 1b
- 315 00bc 8A25      		eor r24,r10
- 316 00be 9B25      		eor r25,r11
- 317 00c0 982F      		mov r25,r24
- 318               	.LVL10:
- 319 00c2 9170      		andi r25,lo8(1)
- 320 00c4 962B      		or r25,r22
- 321 00c6 952B      		or r25,r21
+ 271 0076 1D99      		sbic 35-32,5
+ 272 0078 00C0      		rjmp .L24
+ 273 007a 60E2      		ldi r22,lo8(32)
+ 274 007c 00C0      		rjmp .L25
+ 275               	.L24:
+ 276 007e 60E0      		ldi r22,lo8(0)
+ 277               	.L25:
+ 278 0080 1C99      		sbic 35-32,4
+ 279 0082 00C0      		rjmp .L26
+ 280 0084 50E1      		ldi r21,lo8(16)
+ 281 0086 00C0      		rjmp .L27
+ 282               	.L26:
+ 283 0088 50E0      		ldi r21,lo8(0)
+ 284               	.L27:
+ 285 008a 6699      		sbic 44-32,6
+ 286 008c 00C0      		rjmp .L28
+ 287 008e 48E0      		ldi r20,lo8(8)
+ 288 0090 00C0      		rjmp .L29
+ 289               	.L28:
+ 290 0092 40E0      		ldi r20,lo8(0)
+ 291               	.L29:
+ 292 0094 29B1      		in r18,41-32
+ 293 0096 2095      		com r18
+ 294 0098 221F      		rol r18
+ 295 009a 2227      		clr r18
+ 296 009c 221F      		rol r18
+ 297 009e 220F      		lsl r18
+ 298 00a0 220F      		lsl r18
+ 299 00a2 3699      		sbic 38-32,6
+ 300 00a4 00C0      		rjmp .L32
+ 301 00a6 32E0      		ldi r19,lo8(2)
+ 302 00a8 00C0      		rjmp .L33
+ 303               	.L32:
+ 304 00aa 30E0      		ldi r19,lo8(0)
+ 305               	.L33:
+ 306 00ac 89B1      		in r24,41-32
+ 307               	.LVL9:
+ 308 00ae 90E0      		ldi r25,lo8(0)
+ 309 00b0 74E0      		ldi r23,4
+ 310 00b2 9695      	1:	lsr r25
+ 311 00b4 8795      		ror r24
+ 312 00b6 7A95      		dec r23
+ 313 00b8 01F4      		brne 1b
+ 314 00ba 8A25      		eor r24,r10
+ 315 00bc 9B25      		eor r25,r11
+ 316 00be 982F      		mov r25,r24
+ 317               	.LVL10:
+ 318 00c0 9170      		andi r25,lo8(1)
+ 319 00c2 962B      		or r25,r22
+ 320 00c4 952B      		or r25,r21
+ 321 00c6 942B      		or r25,r20
  322 00c8 922B      		or r25,r18
- 323 00ca 942B      		or r25,r20
- 324 00cc 932B      		or r25,r19
- 325               	.LBE64:
- 326               	.LBE68:
- 327               	.LSM34:
- 328 00ce 8881      		ld r24,Y
- 329 00d0 8917      		cp r24,r25
- 330 00d2 01F0      		breq .L34
- 331               	.LSM35:
- 332 00d4 9883      		st Y,r25
- 333 00d6 05E0      		ldi r16,lo8(5)
- 334               	.L34:
- 335               	.LSM36:
- 336 00d8 0E94 0000 		call unselect_rows
- 337               	.LVL11:
- 338               	.LBE54:
- 339               	.LSM37:
- 340 00dc 1F5F      		subi r17,lo8(-(1))
- 341 00de 2196      		adiw r28,1
- 342 00e0 1430      		cpi r17,lo8(4)
- 343 00e2 01F0      		breq .+2
- 344 00e4 00C0      		rjmp .L35
- 345 00e6 0093 0000 		sts debouncing,r16
- 346               	.LBE53:
- 347               	.LSM38:
- 348 00ea 0023      		tst r16
- 349 00ec 01F0      		breq .L36
- 350               	.LSM39:
- 351 00ee 802F      		mov r24,r16
- 352 00f0 8150      		subi r24,lo8(-(-1))
- 353 00f2 8093 0000 		sts debouncing,r24
- 354 00f6 8823      		tst r24
- 355 00f8 01F0      		breq .L37
- 356               	.LBB69:
- 357               	.LBB70:
- 358               	.LBB71:
- 359               	.LBB72:
- 360               	.LSM40:
- 361 00fa 80EA      		ldi r24,lo8(4000)
- 362 00fc 9FE0      		ldi r25,hi8(4000)
- 363               	.LVL12:
- 364               	/* #APP */
- 365               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
- 366 00fe 0197      		1: sbiw r24,1
- 367 0100 01F4      		brne 1b
- 368               	 ;  0 "" 2
- 369               	/* #NOAPP */
- 370 0102 00C0      		rjmp .L36
- 371               	.LVL13:
- 372               	.L37:
- 373 0104 F701      		movw r30,r14
- 374 0106 E050      		subi r30,lo8(-(matrix))
- 375 0108 F040      		sbci r31,hi8(-(matrix))
- 376 010a 90E0      		ldi r25,lo8(0)
- 377               	.LVL14:
- 378               	.L38:
- 379               	.LBE72:
- 380               	.LBE71:
- 381               	.LBE70:
- 382               	.LBE69:
- 383               	.LBB73:
- 384               	.LSM41:
- 385 010c D601      		movw r26,r12
- 386 010e 8D91      		ld r24,X+
- 387 0110 6D01      		movw r12,r26
- 388 0112 8193      		st Z+,r24
- 389               	.LSM42:
- 390 0114 9F5F      		subi r25,lo8(-(1))
- 391 0116 9430      		cpi r25,lo8(4)
- 392 0118 01F4      		brne .L38
- 393               	.LVL15:
- 394               	.L36:
- 395               	.LBE73:
- 396               	.LSM43:
- 397 011a 81E0      		ldi r24,lo8(1)
- 398               	.LVL16:
- 399               	/* epilogue start */
- 400 011c DF91      		pop r29
- 401 011e CF91      		pop r28
- 402 0120 1F91      		pop r17
- 403               	.LVL17:
- 404 0122 0F91      		pop r16
- 405 0124 FF90      		pop r15
- 406 0126 EF90      		pop r14
- 407               	.LVL18:
- 408 0128 DF90      		pop r13
- 409 012a CF90      		pop r12
- 410 012c BF90      		pop r11
- 411 012e AF90      		pop r10
- 412 0130 9F90      		pop r9
- 413 0132 0895      		ret
- 414               	.LFE9:
- 416               		.section	.text.matrix_slave_scan,"ax",@progbits
- 417               	.global	matrix_slave_scan
- 419               	matrix_slave_scan:
- 420               	.LFB11:
- 421               	.LSM44:
- 422               	/* prologue: function */
- 423               	/* frame size = 0 */
- 424               	.LSM45:
- 425 0000 0E94 0000 		call _matrix_scan
- 426               	.LSM46:
- 427 0004 8091 0000 		lds r24,isLeftHand
- 428 0008 8823      		tst r24
- 429 000a 01F4      		brne .L44
- 430 000c 84E0      		ldi r24,lo8(4)
- 431 000e 90E0      		ldi r25,hi8(4)
- 432               	.LVL19:
- 433 0010 00C0      		rjmp .L45
- 434               	.LVL20:
- 435               	.L44:
- 436 0012 80E0      		ldi r24,lo8(0)
- 437 0014 90E0      		ldi r25,hi8(0)
- 438               	.LVL21:
- 439               	.L45:
- 440 0016 DC01      		movw r26,r24
- 441 0018 A050      		subi r26,lo8(-(matrix))
- 442 001a B040      		sbci r27,hi8(-(matrix))
- 443 001c 20E0      		ldi r18,lo8(0)
- 444 001e 30E0      		ldi r19,hi8(0)
- 445               	.LVL22:
- 446               	.L46:
- 447               	.LBB74:
- 448               	.LSM47:
- 449 0020 8D91      		ld r24,X+
- 450               	.LVL23:
- 451 0022 F901      		movw r30,r18
- 452 0024 E050      		subi r30,lo8(-(serial_slave_buffer))
- 453 0026 F040      		sbci r31,hi8(-(serial_slave_buffer))
- 454 0028 8083      		st Z,r24
- 455               	.LSM48:
- 456 002a 2F5F      		subi r18,lo8(-(1))
- 457 002c 3F4F      		sbci r19,hi8(-(1))
- 458 002e 2430      		cpi r18,4
- 459 0030 3105      		cpc r19,__zero_reg__
- 460 0032 01F4      		brne .L46
- 461               	/* epilogue start */
- 462               	.LBE74:
- 463               	.LSM49:
- 464 0034 0895      		ret
- 465               	.LFE11:
- 467               		.section	.text.matrix_key_count,"ax",@progbits
- 468               	.global	matrix_key_count
- 470               	matrix_key_count:
- 471               	.LFB16:
- 472               	.LSM50:
- 473 0000 1F93      		push r17
- 474 0002 CF93      		push r28
- 475 0004 DF93      		push r29
- 476               	/* prologue: function */
- 477               	/* frame size = 0 */
- 478               	.LSM51:
- 479 0006 C0E0      		ldi r28,lo8(matrix)
- 480 0008 D0E0      		ldi r29,hi8(matrix)
- 481 000a 10E0      		ldi r17,lo8(0)
- 482               	.LVL24:
- 483               	.L50:
- 484               	.LBB75:
- 485               	.LSM52:
- 486 000c 8991      		ld r24,Y+
- 487 000e 90E0      		ldi r25,lo8(0)
- 488 0010 0E94 0000 		call bitpop16
- 489 0014 180F      		add r17,r24
- 490               	.LSM53:
- 491 0016 80E0      		ldi r24,hi8(matrix+8)
- 492 0018 C030      		cpi r28,lo8(matrix+8)
- 493 001a D807      		cpc r29,r24
- 494 001c 01F4      		brne .L50
- 495               	.LBE75:
- 496               	.LSM54:
- 497 001e 812F      		mov r24,r17
- 498               	/* epilogue start */
- 499 0020 DF91      		pop r29
- 500 0022 CF91      		pop r28
- 501 0024 1F91      		pop r17
- 502               	.LVL25:
- 503 0026 0895      		ret
- 504               	.LFE16:
- 506               		.section	.text.matrix_scan,"ax",@progbits
- 507               	.global	matrix_scan
- 509               	matrix_scan:
- 510               	.LFB10:
- 511               	.LSM55:
- 512 0000 1F93      		push r17
- 513 0002 CF93      		push r28
- 514 0004 DF93      		push r29
- 515               	/* prologue: function */
- 516               	/* frame size = 0 */
- 517               	.LSM56:
- 518 0006 0E94 0000 		call _matrix_scan
- 519 000a 182F      		mov r17,r24
- 520               	.LSM57:
- 521 000c 8091 0000 		lds r24,isLeftHand
- 522 0010 8823      		tst r24
- 523 0012 01F4      		brne .L54
- 524 0014 C0E0      		ldi r28,lo8(0)
- 525 0016 D0E0      		ldi r29,hi8(0)
- 526               	.LVL26:
- 527 0018 00C0      		rjmp .L55
- 528               	.LVL27:
- 529               	.L54:
- 530 001a C4E0      		ldi r28,lo8(4)
- 531 001c D0E0      		ldi r29,hi8(4)
- 532               	.LVL28:
- 533               	.L55:
- 534               	.LSM58:
- 535 001e 0E94 0000 		call serial_transaction
- 536 0022 9E01      		movw r18,r28
- 537 0024 2050      		subi r18,lo8(-(matrix))
- 538 0026 3040      		sbci r19,hi8(-(matrix))
- 539 0028 892B      		or r24,r25
- 540 002a 01F0      		breq .L56
- 541               	.LSM59:
- 542 002c 5D98      		cbi 43-32,5
- 543 002e F901      		movw r30,r18
- 544 0030 80E0      		ldi r24,lo8(0)
- 545 0032 90E0      		ldi r25,hi8(0)
- 546               	.LVL29:
- 547               	.L57:
- 548               	.LBB76:
- 549               	.LSM60:
- 550 0034 1192      		st Z+,__zero_reg__
- 551               	.LSM61:
- 552 0036 0196      		adiw r24,1
- 553 0038 8430      		cpi r24,4
- 554 003a 9105      		cpc r25,__zero_reg__
- 555 003c 01F4      		brne .L57
- 556 003e 00C0      		rjmp .L58
- 557               	.LVL30:
- 558               	.L56:
- 559               	.LBE76:
- 560               	.LSM62:
- 561 0040 5D9A      		sbi 43-32,5
- 562 0042 D901      		movw r26,r18
- 563 0044 20E0      		ldi r18,lo8(0)
- 564 0046 30E0      		ldi r19,hi8(0)
- 565               	.LVL31:
- 566               	.L59:
- 567               	.LBB77:
- 568               	.LSM63:
- 569 0048 F901      		movw r30,r18
- 570 004a E050      		subi r30,lo8(-(serial_slave_buffer))
- 571 004c F040      		sbci r31,hi8(-(serial_slave_buffer))
- 572 004e 8081      		ld r24,Z
- 573 0050 8D93      		st X+,r24
- 574               	.LSM64:
- 575 0052 2F5F      		subi r18,lo8(-(1))
- 576 0054 3F4F      		sbci r19,hi8(-(1))
- 577 0056 2430      		cpi r18,4
- 578 0058 3105      		cpc r19,__zero_reg__
- 579 005a 01F4      		brne .L59
- 580               	.LVL32:
- 581               	.L58:
- 582               	.LBE77:
- 583               	.LSM65:
- 584 005c 812F      		mov r24,r17
- 585               	.LVL33:
- 586               	/* epilogue start */
- 587 005e DF91      		pop r29
- 588 0060 CF91      		pop r28
- 589               	.LVL34:
- 590 0062 1F91      		pop r17
- 591 0064 0895      		ret
- 592               	.LFE10:
- 594               		.section	.text.matrix_init,"ax",@progbits
- 595               	.global	matrix_init
- 597               	matrix_init:
- 598               	.LFB8:
- 599               	.LSM66:
- 600               	/* prologue: function */
- 601               	/* frame size = 0 */
- 602               	.LSM67:
- 603 0000 8091 0000 		lds r24,debug_config
- 604               	.LSM68:
- 605 0004 8B60      		ori r24,lo8(11)
- 606 0006 8093 0000 		sts debug_config,r24
- 607               	.LSM69:
- 608 000a 0E94 0000 		call unselect_rows
- 609               	.LBB81:
- 610               	.LBB82:
- 611               	.LSM70:
- 612 000e 84B1      		in r24,36-32
- 613 0010 8F7C      		andi r24,lo8(-49)
- 614 0012 84B9      		out 36-32,r24
- 615               	.LSM71:
- 616 0014 85B1      		in r24,37-32
- 617 0016 8063      		ori r24,lo8(48)
- 618 0018 85B9      		out 37-32,r24
- 619               	.LSM72:
- 620 001a 6E98      		cbi 45-32,6
- 621               	.LSM73:
- 622 001c 769A      		sbi 46-32,6
- 623               	.LSM74:
- 624 001e 8AB1      		in r24,42-32
- 625 0020 8F76      		andi r24,lo8(111)
- 626 0022 8AB9      		out 42-32,r24
- 627               	.LSM75:
- 628 0024 8BB1      		in r24,43-32
- 629 0026 8069      		ori r24,lo8(-112)
- 630 0028 8BB9      		out 43-32,r24
- 631               	.LSM76:
- 632 002a 3E98      		cbi 39-32,6
- 633               	.LSM77:
- 634 002c 469A      		sbi 40-32,6
- 635               	.LBE82:
- 636               	.LBE81:
- 637               	.LSM78:
- 638 002e 0E94 0000 		call serial_master_init
- 639               	.LSM79:
- 640 0032 559A      		sbi 42-32,5
- 641               	.LSM80:
- 642 0034 5D9A      		sbi 43-32,5
- 643 0036 80E0      		ldi r24,lo8(0)
- 644 0038 90E0      		ldi r25,hi8(0)
- 645               	.L64:
- 646               	.LBB83:
- 647               	.LSM81:
- 648 003a FC01      		movw r30,r24
- 649 003c E050      		subi r30,lo8(-(matrix))
- 650 003e F040      		sbci r31,hi8(-(matrix))
- 651 0040 1082      		st Z,__zero_reg__
- 652               	.LSM82:
- 653 0042 FC01      		movw r30,r24
- 654 0044 E050      		subi r30,lo8(-(matrix_debouncing))
- 655 0046 F040      		sbci r31,hi8(-(matrix_debouncing))
- 656 0048 1082      		st Z,__zero_reg__
- 657 004a 0196      		adiw r24,1
- 658               	.LSM83:
- 659 004c 8830      		cpi r24,8
- 660 004e 9105      		cpc r25,__zero_reg__
- 661 0050 01F4      		brne .L64
- 662               	/* epilogue start */
- 663               	.LBE83:
- 664               	.LSM84:
- 665 0052 0895      		ret
- 666               	.LFE8:
- 668               		.section	.data.debouncing,"aw",@progbits
- 671               	debouncing:
- 672 0000 05        		.byte	5
- 673               		.section	.bss.matrix,"aw",@nobits
- 676               	matrix:
- 677 0000 0000 0000 		.skip 8,0
- 677      0000 0000 
- 678               		.section	.bss.matrix_debouncing,"aw",@nobits
- 681               	matrix_debouncing:
- 682 0000 0000 0000 		.skip 8,0
- 682      0000 0000 
- 795               	.Letext0:
+ 323 00ca 932B      		or r25,r19
+ 324               	.LBE64:
+ 325               	.LBE68:
+ 326               	.LSM34:
+ 327 00cc 8881      		ld r24,Y
+ 328 00ce 8917      		cp r24,r25
+ 329 00d0 01F0      		breq .L34
+ 330               	.LSM35:
+ 331 00d2 9883      		st Y,r25
+ 332 00d4 05E0      		ldi r16,lo8(5)
+ 333               	.L34:
+ 334               	.LSM36:
+ 335 00d6 0E94 0000 		call unselect_rows
+ 336               	.LVL11:
+ 337               	.LBE54:
+ 338               	.LSM37:
+ 339 00da 1F5F      		subi r17,lo8(-(1))
+ 340 00dc 2196      		adiw r28,1
+ 341 00de 1430      		cpi r17,lo8(4)
+ 342 00e0 01F0      		breq .+2
+ 343 00e2 00C0      		rjmp .L35
+ 344 00e4 0093 0000 		sts debouncing,r16
+ 345               	.LBE53:
+ 346               	.LSM38:
+ 347 00e8 0023      		tst r16
+ 348 00ea 01F0      		breq .L36
+ 349               	.LSM39:
+ 350 00ec 802F      		mov r24,r16
+ 351 00ee 8150      		subi r24,lo8(-(-1))
+ 352 00f0 8093 0000 		sts debouncing,r24
+ 353 00f4 8823      		tst r24
+ 354 00f6 01F0      		breq .L37
+ 355               	.LBB69:
+ 356               	.LBB70:
+ 357               	.LBB71:
+ 358               	.LBB72:
+ 359               	.LSM40:
+ 360 00f8 80EA      		ldi r24,lo8(4000)
+ 361 00fa 9FE0      		ldi r25,hi8(4000)
+ 362               	.LVL12:
+ 363               	/* #APP */
+ 364               	 ;  105 "d:/programs/winavr/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 365 00fc 0197      		1: sbiw r24,1
+ 366 00fe 01F4      		brne 1b
+ 367               	 ;  0 "" 2
+ 368               	/* #NOAPP */
+ 369 0100 00C0      		rjmp .L36
+ 370               	.LVL13:
+ 371               	.L37:
+ 372 0102 F701      		movw r30,r14
+ 373 0104 E050      		subi r30,lo8(-(matrix))
+ 374 0106 F040      		sbci r31,hi8(-(matrix))
+ 375 0108 90E0      		ldi r25,lo8(0)
+ 376               	.LVL14:
+ 377               	.L38:
+ 378               	.LBE72:
+ 379               	.LBE71:
+ 380               	.LBE70:
+ 381               	.LBE69:
+ 382               	.LBB73:
+ 383               	.LSM41:
+ 384 010a D601      		movw r26,r12
+ 385 010c 8D91      		ld r24,X+
+ 386 010e 6D01      		movw r12,r26
+ 387 0110 8193      		st Z+,r24
+ 388               	.LSM42:
+ 389 0112 9F5F      		subi r25,lo8(-(1))
+ 390 0114 9430      		cpi r25,lo8(4)
+ 391 0116 01F4      		brne .L38
+ 392               	.LVL15:
+ 393               	.L36:
+ 394               	.LBE73:
+ 395               	.LSM43:
+ 396 0118 81E0      		ldi r24,lo8(1)
+ 397               	.LVL16:
+ 398               	/* epilogue start */
+ 399 011a DF91      		pop r29
+ 400 011c CF91      		pop r28
+ 401 011e 1F91      		pop r17
+ 402               	.LVL17:
+ 403 0120 0F91      		pop r16
+ 404 0122 FF90      		pop r15
+ 405 0124 EF90      		pop r14
+ 406               	.LVL18:
+ 407 0126 DF90      		pop r13
+ 408 0128 CF90      		pop r12
+ 409 012a BF90      		pop r11
+ 410 012c AF90      		pop r10
+ 411 012e 9F90      		pop r9
+ 412 0130 0895      		ret
+ 413               	.LFE9:
+ 415               		.section	.text.matrix_slave_scan,"ax",@progbits
+ 416               	.global	matrix_slave_scan
+ 418               	matrix_slave_scan:
+ 419               	.LFB11:
+ 420               	.LSM44:
+ 421               	/* prologue: function */
+ 422               	/* frame size = 0 */
+ 423               	.LSM45:
+ 424 0000 0E94 0000 		call _matrix_scan
+ 425               	.LSM46:
+ 426 0004 8091 0000 		lds r24,isLeftHand
+ 427 0008 8823      		tst r24
+ 428 000a 01F4      		brne .L44
+ 429 000c 84E0      		ldi r24,lo8(4)
+ 430 000e 90E0      		ldi r25,hi8(4)
+ 431               	.LVL19:
+ 432 0010 00C0      		rjmp .L45
+ 433               	.LVL20:
+ 434               	.L44:
+ 435 0012 80E0      		ldi r24,lo8(0)
+ 436 0014 90E0      		ldi r25,hi8(0)
+ 437               	.LVL21:
+ 438               	.L45:
+ 439 0016 DC01      		movw r26,r24
+ 440 0018 A050      		subi r26,lo8(-(matrix))
+ 441 001a B040      		sbci r27,hi8(-(matrix))
+ 442 001c 20E0      		ldi r18,lo8(0)
+ 443 001e 30E0      		ldi r19,hi8(0)
+ 444               	.LVL22:
+ 445               	.L46:
+ 446               	.LBB74:
+ 447               	.LSM47:
+ 448 0020 8D91      		ld r24,X+
+ 449               	.LVL23:
+ 450 0022 F901      		movw r30,r18
+ 451 0024 E050      		subi r30,lo8(-(serial_slave_buffer))
+ 452 0026 F040      		sbci r31,hi8(-(serial_slave_buffer))
+ 453 0028 8083      		st Z,r24
+ 454               	.LSM48:
+ 455 002a 2F5F      		subi r18,lo8(-(1))
+ 456 002c 3F4F      		sbci r19,hi8(-(1))
+ 457 002e 2430      		cpi r18,4
+ 458 0030 3105      		cpc r19,__zero_reg__
+ 459 0032 01F4      		brne .L46
+ 460               	/* epilogue start */
+ 461               	.LBE74:
+ 462               	.LSM49:
+ 463 0034 0895      		ret
+ 464               	.LFE11:
+ 466               		.section	.text.matrix_key_count,"ax",@progbits
+ 467               	.global	matrix_key_count
+ 469               	matrix_key_count:
+ 470               	.LFB16:
+ 471               	.LSM50:
+ 472 0000 1F93      		push r17
+ 473 0002 CF93      		push r28
+ 474 0004 DF93      		push r29
+ 475               	/* prologue: function */
+ 476               	/* frame size = 0 */
+ 477               	.LSM51:
+ 478 0006 C0E0      		ldi r28,lo8(matrix)
+ 479 0008 D0E0      		ldi r29,hi8(matrix)
+ 480 000a 10E0      		ldi r17,lo8(0)
+ 481               	.LVL24:
+ 482               	.L50:
+ 483               	.LBB75:
+ 484               	.LSM52:
+ 485 000c 8991      		ld r24,Y+
+ 486 000e 90E0      		ldi r25,lo8(0)
+ 487 0010 0E94 0000 		call bitpop16
+ 488 0014 180F      		add r17,r24
+ 489               	.LSM53:
+ 490 0016 80E0      		ldi r24,hi8(matrix+8)
+ 491 0018 C030      		cpi r28,lo8(matrix+8)
+ 492 001a D807      		cpc r29,r24
+ 493 001c 01F4      		brne .L50
+ 494               	.LBE75:
+ 495               	.LSM54:
+ 496 001e 812F      		mov r24,r17
+ 497               	/* epilogue start */
+ 498 0020 DF91      		pop r29
+ 499 0022 CF91      		pop r28
+ 500 0024 1F91      		pop r17
+ 501               	.LVL25:
+ 502 0026 0895      		ret
+ 503               	.LFE16:
+ 505               		.section	.text.matrix_scan,"ax",@progbits
+ 506               	.global	matrix_scan
+ 508               	matrix_scan:
+ 509               	.LFB10:
+ 510               	.LSM55:
+ 511 0000 1F93      		push r17
+ 512 0002 CF93      		push r28
+ 513 0004 DF93      		push r29
+ 514               	/* prologue: function */
+ 515               	/* frame size = 0 */
+ 516               	.LSM56:
+ 517 0006 0E94 0000 		call _matrix_scan
+ 518 000a 182F      		mov r17,r24
+ 519               	.LSM57:
+ 520 000c 8091 0000 		lds r24,isLeftHand
+ 521 0010 8823      		tst r24
+ 522 0012 01F4      		brne .L54
+ 523 0014 C0E0      		ldi r28,lo8(0)
+ 524 0016 D0E0      		ldi r29,hi8(0)
+ 525               	.LVL26:
+ 526 0018 00C0      		rjmp .L55
+ 527               	.LVL27:
+ 528               	.L54:
+ 529 001a C4E0      		ldi r28,lo8(4)
+ 530 001c D0E0      		ldi r29,hi8(4)
+ 531               	.LVL28:
+ 532               	.L55:
+ 533               	.LSM58:
+ 534 001e 0E94 0000 		call serial_transaction
+ 535 0022 9E01      		movw r18,r28
+ 536 0024 2050      		subi r18,lo8(-(matrix))
+ 537 0026 3040      		sbci r19,hi8(-(matrix))
+ 538 0028 892B      		or r24,r25
+ 539 002a 01F0      		breq .L56
+ 540               	.LSM59:
+ 541 002c 5D98      		cbi 43-32,5
+ 542 002e F901      		movw r30,r18
+ 543 0030 80E0      		ldi r24,lo8(0)
+ 544 0032 90E0      		ldi r25,hi8(0)
+ 545               	.LVL29:
+ 546               	.L57:
+ 547               	.LBB76:
+ 548               	.LSM60:
+ 549 0034 1192      		st Z+,__zero_reg__
+ 550               	.LSM61:
+ 551 0036 0196      		adiw r24,1
+ 552 0038 8430      		cpi r24,4
+ 553 003a 9105      		cpc r25,__zero_reg__
+ 554 003c 01F4      		brne .L57
+ 555 003e 00C0      		rjmp .L58
+ 556               	.LVL30:
+ 557               	.L56:
+ 558               	.LBE76:
+ 559               	.LSM62:
+ 560 0040 5D9A      		sbi 43-32,5
+ 561 0042 D901      		movw r26,r18
+ 562 0044 20E0      		ldi r18,lo8(0)
+ 563 0046 30E0      		ldi r19,hi8(0)
+ 564               	.LVL31:
+ 565               	.L59:
+ 566               	.LBB77:
+ 567               	.LSM63:
+ 568 0048 F901      		movw r30,r18
+ 569 004a E050      		subi r30,lo8(-(serial_slave_buffer))
+ 570 004c F040      		sbci r31,hi8(-(serial_slave_buffer))
+ 571 004e 8081      		ld r24,Z
+ 572 0050 8D93      		st X+,r24
+ 573               	.LSM64:
+ 574 0052 2F5F      		subi r18,lo8(-(1))
+ 575 0054 3F4F      		sbci r19,hi8(-(1))
+ 576 0056 2430      		cpi r18,4
+ 577 0058 3105      		cpc r19,__zero_reg__
+ 578 005a 01F4      		brne .L59
+ 579               	.LVL32:
+ 580               	.L58:
+ 581               	.LBE77:
+ 582               	.LSM65:
+ 583 005c 812F      		mov r24,r17
+ 584               	.LVL33:
+ 585               	/* epilogue start */
+ 586 005e DF91      		pop r29
+ 587 0060 CF91      		pop r28
+ 588               	.LVL34:
+ 589 0062 1F91      		pop r17
+ 590 0064 0895      		ret
+ 591               	.LFE10:
+ 593               		.section	.text.matrix_init,"ax",@progbits
+ 594               	.global	matrix_init
+ 596               	matrix_init:
+ 597               	.LFB8:
+ 598               	.LSM66:
+ 599               	/* prologue: function */
+ 600               	/* frame size = 0 */
+ 601               	.LSM67:
+ 602 0000 8091 0000 		lds r24,debug_config
+ 603               	.LSM68:
+ 604 0004 8B60      		ori r24,lo8(11)
+ 605 0006 8093 0000 		sts debug_config,r24
+ 606               	.LSM69:
+ 607 000a 0E94 0000 		call unselect_rows
+ 608               	.LBB81:
+ 609               	.LBB82:
+ 610               	.LSM70:
+ 611 000e 84B1      		in r24,36-32
+ 612 0010 8F7C      		andi r24,lo8(-49)
+ 613 0012 84B9      		out 36-32,r24
+ 614               	.LSM71:
+ 615 0014 85B1      		in r24,37-32
+ 616 0016 8063      		ori r24,lo8(48)
+ 617 0018 85B9      		out 37-32,r24
+ 618               	.LSM72:
+ 619 001a 6E98      		cbi 45-32,6
+ 620               	.LSM73:
+ 621 001c 769A      		sbi 46-32,6
+ 622               	.LSM74:
+ 623 001e 8AB1      		in r24,42-32
+ 624 0020 8F76      		andi r24,lo8(111)
+ 625 0022 8AB9      		out 42-32,r24
+ 626               	.LSM75:
+ 627 0024 8BB1      		in r24,43-32
+ 628 0026 8069      		ori r24,lo8(-112)
+ 629 0028 8BB9      		out 43-32,r24
+ 630               	.LSM76:
+ 631 002a 3E98      		cbi 39-32,6
+ 632               	.LSM77:
+ 633 002c 469A      		sbi 40-32,6
+ 634               	.LBE82:
+ 635               	.LBE81:
+ 636               	.LSM78:
+ 637 002e 0E94 0000 		call serial_master_init
+ 638               	.LSM79:
+ 639 0032 559A      		sbi 42-32,5
+ 640               	.LSM80:
+ 641 0034 5D9A      		sbi 43-32,5
+ 642 0036 80E0      		ldi r24,lo8(0)
+ 643 0038 90E0      		ldi r25,hi8(0)
+ 644               	.L64:
+ 645               	.LBB83:
+ 646               	.LSM81:
+ 647 003a FC01      		movw r30,r24
+ 648 003c E050      		subi r30,lo8(-(matrix))
+ 649 003e F040      		sbci r31,hi8(-(matrix))
+ 650 0040 1082      		st Z,__zero_reg__
+ 651               	.LSM82:
+ 652 0042 FC01      		movw r30,r24
+ 653 0044 E050      		subi r30,lo8(-(matrix_debouncing))
+ 654 0046 F040      		sbci r31,hi8(-(matrix_debouncing))
+ 655 0048 1082      		st Z,__zero_reg__
+ 656 004a 0196      		adiw r24,1
+ 657               	.LSM83:
+ 658 004c 8830      		cpi r24,8
+ 659 004e 9105      		cpc r25,__zero_reg__
+ 660 0050 01F4      		brne .L64
+ 661               	/* epilogue start */
+ 662               	.LBE83:
+ 663               	.LSM84:
+ 664 0052 0895      		ret
+ 665               	.LFE8:
+ 667               		.section	.data.debouncing,"aw",@progbits
+ 670               	debouncing:
+ 671 0000 05        		.byte	5
+ 672               		.section	.bss.matrix,"aw",@nobits
+ 675               	matrix:
+ 676 0000 0000 0000 		.skip 8,0
+ 676      0000 0000 
+ 677               		.section	.bss.matrix_debouncing,"aw",@nobits
+ 680               	matrix_debouncing:
+ 681 0000 0000 0000 		.skip 8,0
+ 681      0000 0000 
+ 794               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 matrix.c
-C:\cygwin64\tmp/cc3fa3AP.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc3fa3AP.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc3fa3AP.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc3fa3AP.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc3fa3AP.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc3fa3AP.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc3fa3AP.s:19     .text.matrix_rows:00000000 matrix_rows
-C:\cygwin64\tmp/cc3fa3AP.s:33     .text.matrix_cols:00000000 matrix_cols
-C:\cygwin64\tmp/cc3fa3AP.s:47     .text.matrix_is_modified:00000000 matrix_is_modified
-C:\cygwin64\tmp/cc3fa3AP.s:671    .data.debouncing:00000000 debouncing
-C:\cygwin64\tmp/cc3fa3AP.s:68     .text.matrix_is_on:00000000 matrix_is_on
-C:\cygwin64\tmp/cc3fa3AP.s:676    .bss.matrix:00000000 matrix
-C:\cygwin64\tmp/cc3fa3AP.s:96     .text.matrix_get_row:00000000 matrix_get_row
-C:\cygwin64\tmp/cc3fa3AP.s:117    .text.matrix_print:00000000 matrix_print
-C:\cygwin64\tmp/cc3fa3AP.s:129    .text.unselect_rows:00000000 unselect_rows
-C:\cygwin64\tmp/cc3fa3AP.s:150    .text._matrix_scan:00000000 _matrix_scan
-C:\cygwin64\tmp/cc3fa3AP.s:681    .bss.matrix_debouncing:00000000 matrix_debouncing
-C:\cygwin64\tmp/cc3fa3AP.s:419    .text.matrix_slave_scan:00000000 matrix_slave_scan
-C:\cygwin64\tmp/cc3fa3AP.s:470    .text.matrix_key_count:00000000 matrix_key_count
-C:\cygwin64\tmp/cc3fa3AP.s:509    .text.matrix_scan:00000000 matrix_scan
-C:\cygwin64\tmp/cc3fa3AP.s:597    .text.matrix_init:00000000 matrix_init
+C:\cygwin64\tmp/ccEi3IcW.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccEi3IcW.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccEi3IcW.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccEi3IcW.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccEi3IcW.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccEi3IcW.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccEi3IcW.s:19     .text.matrix_rows:00000000 matrix_rows
+C:\cygwin64\tmp/ccEi3IcW.s:33     .text.matrix_cols:00000000 matrix_cols
+C:\cygwin64\tmp/ccEi3IcW.s:47     .text.matrix_is_modified:00000000 matrix_is_modified
+C:\cygwin64\tmp/ccEi3IcW.s:670    .data.debouncing:00000000 debouncing
+C:\cygwin64\tmp/ccEi3IcW.s:68     .text.matrix_is_on:00000000 matrix_is_on
+C:\cygwin64\tmp/ccEi3IcW.s:675    .bss.matrix:00000000 matrix
+C:\cygwin64\tmp/ccEi3IcW.s:96     .text.matrix_get_row:00000000 matrix_get_row
+C:\cygwin64\tmp/ccEi3IcW.s:117    .text.matrix_print:00000000 matrix_print
+C:\cygwin64\tmp/ccEi3IcW.s:129    .text.unselect_rows:00000000 unselect_rows
+C:\cygwin64\tmp/ccEi3IcW.s:150    .text._matrix_scan:00000000 _matrix_scan
+C:\cygwin64\tmp/ccEi3IcW.s:680    .bss.matrix_debouncing:00000000 matrix_debouncing
+C:\cygwin64\tmp/ccEi3IcW.s:418    .text.matrix_slave_scan:00000000 matrix_slave_scan
+C:\cygwin64\tmp/ccEi3IcW.s:469    .text.matrix_key_count:00000000 matrix_key_count
+C:\cygwin64\tmp/ccEi3IcW.s:508    .text.matrix_scan:00000000 matrix_scan
+C:\cygwin64\tmp/ccEi3IcW.s:596    .text.matrix_init:00000000 matrix_init
 
 UNDEFINED SYMBOLS
 isLeftHand

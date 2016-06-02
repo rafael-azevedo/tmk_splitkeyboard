@@ -147,9 +147,9 @@ include $(TMK_DIR)/protocol/lufa.mk
 include $(TMK_DIR)/rules.mk
 
 eeprom-left:
-	sleep 3; avrdude -p atmega32u4 -P /dev/ttyACM0 -c avr109 -U eeprom:w:$(TARGET)-left.eep
+	avrdude -p atmega32u4 -P /dev/tty522 -c avr109 -U eeprom:w:$(TARGET)-left.eep
 
 eeprom-right:
-	sleep 3; avrdude -p atmega32u4 -P /dev/ttyACM0 -c avr109 -U eeprom:w:$(TARGET)-right.eep
+	avrdude -c atmega32u4 -P /dev/ttyACM0 -c avr109 -U eeprom:w:$(TARGET)-right.eep
 
 

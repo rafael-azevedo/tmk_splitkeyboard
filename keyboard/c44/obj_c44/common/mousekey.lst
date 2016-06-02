@@ -784,29 +784,29 @@
  896               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 mousekey.c
-C:\cygwin64\tmp/cc5hC8tv.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc5hC8tv.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc5hC8tv.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc5hC8tv.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc5hC8tv.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc5hC8tv.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc5hC8tv.s:18     .text.move_unit:00000000 move_unit
-C:\cygwin64\tmp/cc5hC8tv.s:817    .bss.mousekey_accel:00000000 mousekey_accel
-C:\cygwin64\tmp/cc5hC8tv.s:784    .data.mk_max_speed:00000000 mk_max_speed
-C:\cygwin64\tmp/cc5hC8tv.s:812    .bss.mousekey_repeat:00000000 mousekey_repeat
-C:\cygwin64\tmp/cc5hC8tv.s:790    .data.mk_time_to_max:00000000 mk_time_to_max
-C:\cygwin64\tmp/cc5hC8tv.s:125    .text.wheel_unit:00000000 wheel_unit
-C:\cygwin64\tmp/cc5hC8tv.s:796    .data.mk_wheel_max_speed:00000000 mk_wheel_max_speed
-C:\cygwin64\tmp/cc5hC8tv.s:802    .data.mk_wheel_time_to_max:00000000 mk_wheel_time_to_max
-C:\cygwin64\tmp/cc5hC8tv.s:209    .text.mousekey_on:00000000 mousekey_on
-C:\cygwin64\tmp/cc5hC8tv.s:807    .bss.mouse_report:00000000 mouse_report
-C:\cygwin64\tmp/cc5hC8tv.s:373    .text.mousekey_off:00000000 mousekey_off
-C:\cygwin64\tmp/cc5hC8tv.s:567    .text.mousekey_clear:00000000 mousekey_clear
-C:\cygwin64\tmp/cc5hC8tv.s:592    .text.mousekey_send:00000000 mousekey_send
-C:\cygwin64\tmp/cc5hC8tv.s:822    .bss.last_timer:00000000 last_timer
-C:\cygwin64\tmp/cc5hC8tv.s:613    .text.mousekey_task:00000000 mousekey_task
-C:\cygwin64\tmp/cc5hC8tv.s:778    .data.mk_interval:00000000 mk_interval
-C:\cygwin64\tmp/cc5hC8tv.s:772    .data.mk_delay:00000000 mk_delay
+C:\cygwin64\tmp/ccflZOUG.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccflZOUG.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccflZOUG.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccflZOUG.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccflZOUG.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccflZOUG.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccflZOUG.s:18     .text.move_unit:00000000 move_unit
+C:\cygwin64\tmp/ccflZOUG.s:817    .bss.mousekey_accel:00000000 mousekey_accel
+C:\cygwin64\tmp/ccflZOUG.s:784    .data.mk_max_speed:00000000 mk_max_speed
+C:\cygwin64\tmp/ccflZOUG.s:812    .bss.mousekey_repeat:00000000 mousekey_repeat
+C:\cygwin64\tmp/ccflZOUG.s:790    .data.mk_time_to_max:00000000 mk_time_to_max
+C:\cygwin64\tmp/ccflZOUG.s:125    .text.wheel_unit:00000000 wheel_unit
+C:\cygwin64\tmp/ccflZOUG.s:796    .data.mk_wheel_max_speed:00000000 mk_wheel_max_speed
+C:\cygwin64\tmp/ccflZOUG.s:802    .data.mk_wheel_time_to_max:00000000 mk_wheel_time_to_max
+C:\cygwin64\tmp/ccflZOUG.s:209    .text.mousekey_on:00000000 mousekey_on
+C:\cygwin64\tmp/ccflZOUG.s:807    .bss.mouse_report:00000000 mouse_report
+C:\cygwin64\tmp/ccflZOUG.s:373    .text.mousekey_off:00000000 mousekey_off
+C:\cygwin64\tmp/ccflZOUG.s:567    .text.mousekey_clear:00000000 mousekey_clear
+C:\cygwin64\tmp/ccflZOUG.s:592    .text.mousekey_send:00000000 mousekey_send
+C:\cygwin64\tmp/ccflZOUG.s:822    .bss.last_timer:00000000 last_timer
+C:\cygwin64\tmp/ccflZOUG.s:613    .text.mousekey_task:00000000 mousekey_task
+C:\cygwin64\tmp/ccflZOUG.s:778    .data.mk_interval:00000000 mk_interval
+C:\cygwin64\tmp/ccflZOUG.s:772    .data.mk_delay:00000000 mk_delay
 
 UNDEFINED SYMBOLS
 __divmodhi4

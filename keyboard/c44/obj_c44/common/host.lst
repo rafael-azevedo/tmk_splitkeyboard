@@ -207,24 +207,24 @@
  326               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 host.c
-C:\cygwin64\tmp/cc1vDK90.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc1vDK90.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc1vDK90.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc1vDK90.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc1vDK90.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc1vDK90.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc1vDK90.s:19     .text.host_set_driver:00000000 host_set_driver
-C:\cygwin64\tmp/cc1vDK90.s:236    .bss.driver:00000000 driver
-C:\cygwin64\tmp/cc1vDK90.s:36     .text.host_get_driver:00000000 host_get_driver
-C:\cygwin64\tmp/cc1vDK90.s:51     .text.host_keyboard_leds:00000000 host_keyboard_leds
-C:\cygwin64\tmp/cc1vDK90.s:76     .text.host_keyboard_send:00000000 host_keyboard_send
-C:\cygwin64\tmp/cc1vDK90.s:100    .text.host_mouse_send:00000000 host_mouse_send
-C:\cygwin64\tmp/cc1vDK90.s:124    .text.host_system_send:00000000 host_system_send
-C:\cygwin64\tmp/cc1vDK90.s:231    .bss.last_system_report:00000000 last_system_report
-C:\cygwin64\tmp/cc1vDK90.s:160    .text.host_consumer_send:00000000 host_consumer_send
-C:\cygwin64\tmp/cc1vDK90.s:226    .bss.last_consumer_report:00000000 last_consumer_report
-C:\cygwin64\tmp/cc1vDK90.s:196    .text.host_last_sysytem_report:00000000 host_last_sysytem_report
-C:\cygwin64\tmp/cc1vDK90.s:211    .text.host_last_consumer_report:00000000 host_last_consumer_report
+C:\cygwin64\tmp/ccyiNLQN.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccyiNLQN.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccyiNLQN.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccyiNLQN.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccyiNLQN.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccyiNLQN.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccyiNLQN.s:19     .text.host_set_driver:00000000 host_set_driver
+C:\cygwin64\tmp/ccyiNLQN.s:236    .bss.driver:00000000 driver
+C:\cygwin64\tmp/ccyiNLQN.s:36     .text.host_get_driver:00000000 host_get_driver
+C:\cygwin64\tmp/ccyiNLQN.s:51     .text.host_keyboard_leds:00000000 host_keyboard_leds
+C:\cygwin64\tmp/ccyiNLQN.s:76     .text.host_keyboard_send:00000000 host_keyboard_send
+C:\cygwin64\tmp/ccyiNLQN.s:100    .text.host_mouse_send:00000000 host_mouse_send
+C:\cygwin64\tmp/ccyiNLQN.s:124    .text.host_system_send:00000000 host_system_send
+C:\cygwin64\tmp/ccyiNLQN.s:231    .bss.last_system_report:00000000 last_system_report
+C:\cygwin64\tmp/ccyiNLQN.s:160    .text.host_consumer_send:00000000 host_consumer_send
+C:\cygwin64\tmp/ccyiNLQN.s:226    .bss.last_consumer_report:00000000 last_consumer_report
+C:\cygwin64\tmp/ccyiNLQN.s:196    .text.host_last_sysytem_report:00000000 host_last_sysytem_report
+C:\cygwin64\tmp/ccyiNLQN.s:211    .text.host_last_consumer_report:00000000 host_last_consumer_report
 
 UNDEFINED SYMBOLS
 __do_clear_bss

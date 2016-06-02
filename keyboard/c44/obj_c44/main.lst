@@ -87,13 +87,13 @@
  120               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-C:\cygwin64\tmp/ccgo26ua.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccgo26ua.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccgo26ua.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccgo26ua.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccgo26ua.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccgo26ua.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccgo26ua.s:19     .text.main:00000000 main
+C:\cygwin64\tmp/ccL5NkwT.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccL5NkwT.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccL5NkwT.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccL5NkwT.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccL5NkwT.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccL5NkwT.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccL5NkwT.s:19     .text.main:00000000 main
 
 UNDEFINED SYMBOLS
 setup_hardware

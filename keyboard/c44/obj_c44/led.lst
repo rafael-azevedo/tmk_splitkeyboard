@@ -21,12 +21,12 @@
   54               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 led.c
-C:\cygwin64\tmp/cc1xhNOg.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc1xhNOg.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc1xhNOg.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc1xhNOg.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc1xhNOg.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc1xhNOg.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc1xhNOg.s:19     .text.led_set:00000000 led_set
+C:\cygwin64\tmp/ccZAHvJa.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccZAHvJa.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccZAHvJa.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccZAHvJa.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccZAHvJa.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccZAHvJa.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccZAHvJa.s:19     .text.led_set:00000000 led_set
 
 NO UNDEFINED SYMBOLS

@@ -161,16 +161,16 @@
  208               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 i2c-slave.c
-C:\cygwin64\tmp/ccEyrzuc.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccEyrzuc.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccEyrzuc.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccEyrzuc.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccEyrzuc.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccEyrzuc.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccEyrzuc.s:19     .text.i2c_slave_init:00000000 i2c_slave_init
-C:\cygwin64\tmp/ccEyrzuc.s:39     .text.__vector_36:00000000 __vector_36
-C:\cygwin64\tmp/ccEyrzuc.s:168    .bss.hasSetRegister:00000000 hasSetRegister
-C:\cygwin64\tmp/ccEyrzuc.s:173    .bss.bufferPos:00000000 bufferPos
+C:\cygwin64\tmp/ccP7GFYg.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccP7GFYg.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccP7GFYg.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccP7GFYg.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccP7GFYg.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccP7GFYg.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccP7GFYg.s:19     .text.i2c_slave_init:00000000 i2c_slave_init
+C:\cygwin64\tmp/ccP7GFYg.s:39     .text.__vector_36:00000000 __vector_36
+C:\cygwin64\tmp/ccP7GFYg.s:168    .bss.hasSetRegister:00000000 hasSetRegister
+C:\cygwin64\tmp/ccP7GFYg.s:173    .bss.bufferPos:00000000 bufferPos
                             *COM*:00000010 slaveBuffer
 
 UNDEFINED SYMBOLS

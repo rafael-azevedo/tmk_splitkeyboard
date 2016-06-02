@@ -134,15 +134,15 @@
  179               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 bootloader.c
-C:\cygwin64\tmp/ccTveBPi.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccTveBPi.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccTveBPi.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccTveBPi.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccTveBPi.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccTveBPi.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccTveBPi.s:19     .init3:00000000 bootloader_jump_after_watchdog_reset
-C:\cygwin64\tmp/ccTveBPi.s:145    .noinit:00000000 reset_key
-C:\cygwin64\tmp/ccTveBPi.s:72     .text.bootloader_jump:00000000 bootloader_jump
+C:\cygwin64\tmp/ccLLKROs.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccLLKROs.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccLLKROs.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccLLKROs.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccLLKROs.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccLLKROs.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccLLKROs.s:19     .init3:00000000 bootloader_jump_after_watchdog_reset
+C:\cygwin64\tmp/ccLLKROs.s:145    .noinit:00000000 reset_key
+C:\cygwin64\tmp/ccLLKROs.s:72     .text.bootloader_jump:00000000 bootloader_jump
 
 UNDEFINED SYMBOLS
 USB_Disable

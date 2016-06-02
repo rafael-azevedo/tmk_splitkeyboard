@@ -1779,16 +1779,16 @@
  1842               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 HIDParser.c
-C:\cygwin64\tmp/ccAl9rfw.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccAl9rfw.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccAl9rfw.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccAl9rfw.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccAl9rfw.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccAl9rfw.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccAl9rfw.s:19     .text.USB_GetHIDReportItemInfo:00000000 USB_GetHIDReportItemInfo
-C:\cygwin64\tmp/ccAl9rfw.s:169    .text.USB_SetHIDReportItemInfo:00000000 USB_SetHIDReportItemInfo
-C:\cygwin64\tmp/ccAl9rfw.s:319    .text.USB_GetHIDReportSize:00000000 USB_GetHIDReportSize
-C:\cygwin64\tmp/ccAl9rfw.s:394    .text.USB_ProcessHIDReport:00000000 USB_ProcessHIDReport
+C:\cygwin64\tmp/ccoNKOPw.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccoNKOPw.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccoNKOPw.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccoNKOPw.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccoNKOPw.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccoNKOPw.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccoNKOPw.s:19     .text.USB_GetHIDReportItemInfo:00000000 USB_GetHIDReportItemInfo
+C:\cygwin64\tmp/ccoNKOPw.s:169    .text.USB_SetHIDReportItemInfo:00000000 USB_SetHIDReportItemInfo
+C:\cygwin64\tmp/ccoNKOPw.s:319    .text.USB_GetHIDReportSize:00000000 USB_GetHIDReportSize
+C:\cygwin64\tmp/ccoNKOPw.s:394    .text.USB_ProcessHIDReport:00000000 USB_ProcessHIDReport
 
 UNDEFINED SYMBOLS
 CALLBACK_HIDParser_FilterHIDReportItem

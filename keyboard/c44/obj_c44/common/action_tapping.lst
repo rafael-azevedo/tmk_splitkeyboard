@@ -1269,21 +1269,21 @@
  1345               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 action_tapping.c
-C:\cygwin64\tmp/ccEJ1CPD.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/ccEJ1CPD.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/ccEJ1CPD.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/ccEJ1CPD.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/ccEJ1CPD.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/ccEJ1CPD.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/ccEJ1CPD.s:18     .text.debug_waiting_buffer:00000000 debug_waiting_buffer
-C:\cygwin64\tmp/ccEJ1CPD.s:1282   .bss.waiting_buffer_tail:00000000 waiting_buffer_tail
-C:\cygwin64\tmp/ccEJ1CPD.s:1287   .bss.waiting_buffer:00000000 waiting_buffer
-C:\cygwin64\tmp/ccEJ1CPD.s:1277   .bss.waiting_buffer_head:00000000 waiting_buffer_head
-C:\cygwin64\tmp/ccEJ1CPD.s:70     .text.debug_tapping_key:00000000 debug_tapping_key
-C:\cygwin64\tmp/ccEJ1CPD.s:1272   .bss.tapping_key:00000000 tapping_key
-C:\cygwin64\tmp/ccEJ1CPD.s:90     .text.waiting_buffer_scan_tap:00000000 waiting_buffer_scan_tap
-C:\cygwin64\tmp/ccEJ1CPD.s:241    .text.process_tapping:00000000 process_tapping
-C:\cygwin64\tmp/ccEJ1CPD.s:1034   .text.action_tapping_process:00000000 action_tapping_process
+C:\cygwin64\tmp/ccNBgvEj.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccNBgvEj.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccNBgvEj.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccNBgvEj.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccNBgvEj.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccNBgvEj.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccNBgvEj.s:18     .text.debug_waiting_buffer:00000000 debug_waiting_buffer
+C:\cygwin64\tmp/ccNBgvEj.s:1282   .bss.waiting_buffer_tail:00000000 waiting_buffer_tail
+C:\cygwin64\tmp/ccNBgvEj.s:1287   .bss.waiting_buffer:00000000 waiting_buffer
+C:\cygwin64\tmp/ccNBgvEj.s:1277   .bss.waiting_buffer_head:00000000 waiting_buffer_head
+C:\cygwin64\tmp/ccNBgvEj.s:70     .text.debug_tapping_key:00000000 debug_tapping_key
+C:\cygwin64\tmp/ccNBgvEj.s:1272   .bss.tapping_key:00000000 tapping_key
+C:\cygwin64\tmp/ccNBgvEj.s:90     .text.waiting_buffer_scan_tap:00000000 waiting_buffer_scan_tap
+C:\cygwin64\tmp/ccNBgvEj.s:241    .text.process_tapping:00000000 process_tapping
+C:\cygwin64\tmp/ccNBgvEj.s:1034   .text.action_tapping_process:00000000 action_tapping_process
 
 UNDEFINED SYMBOLS
 debug_record

@@ -249,15 +249,15 @@
  302               	.Letext0:
 DEFINED SYMBOLS
                             *ABS*:00000000 USBController_AVR8.c
-C:\cygwin64\tmp/cc8BLIph.s:2      *ABS*:0000003f __SREG__
-C:\cygwin64\tmp/cc8BLIph.s:3      *ABS*:0000003e __SP_H__
-C:\cygwin64\tmp/cc8BLIph.s:4      *ABS*:0000003d __SP_L__
-C:\cygwin64\tmp/cc8BLIph.s:5      *ABS*:00000034 __CCP__
-C:\cygwin64\tmp/cc8BLIph.s:6      *ABS*:00000000 __tmp_reg__
-C:\cygwin64\tmp/cc8BLIph.s:7      *ABS*:00000001 __zero_reg__
-C:\cygwin64\tmp/cc8BLIph.s:19     .text.USB_Disable:00000000 USB_Disable
-C:\cygwin64\tmp/cc8BLIph.s:82     .text.USB_ResetInterface:00000000 USB_ResetInterface
-C:\cygwin64\tmp/cc8BLIph.s:224    .text.USB_Init:00000000 USB_Init
+C:\cygwin64\tmp/ccC94yof.s:2      *ABS*:0000003f __SREG__
+C:\cygwin64\tmp/ccC94yof.s:3      *ABS*:0000003e __SP_H__
+C:\cygwin64\tmp/ccC94yof.s:4      *ABS*:0000003d __SP_L__
+C:\cygwin64\tmp/ccC94yof.s:5      *ABS*:00000034 __CCP__
+C:\cygwin64\tmp/ccC94yof.s:6      *ABS*:00000000 __tmp_reg__
+C:\cygwin64\tmp/ccC94yof.s:7      *ABS*:00000001 __zero_reg__
+C:\cygwin64\tmp/ccC94yof.s:19     .text.USB_Disable:00000000 USB_Disable
+C:\cygwin64\tmp/ccC94yof.s:82     .text.USB_ResetInterface:00000000 USB_ResetInterface
+C:\cygwin64\tmp/ccC94yof.s:224    .text.USB_Init:00000000 USB_Init
 
 UNDEFINED SYMBOLS
 USB_INT_DisableAllInterrupts
