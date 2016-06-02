@@ -261,12 +261,12 @@ static void  init_cols(void)
 
 static matrix_row_t read_cols(void)
 {
-    return (PINB&(1<<5) ? 0 : (1<<0)) |
-           (PINB&(1<<4) ? 0 : (1<<1)) |
-           (PINE&(1<<6) ? 0 : (1<<2)) |
-           (PIND&(1<<7) ? 0 : (1<<3)) |
-           (PINC&(1<<6) ? 0 : (1<<4)) |
-           (PIND&(1<<4) ? 0 : (1<<5));
+    return (PINB&(1<<5) ? 0 : (1<<5)) |
+           (PINB&(1<<4) ? 0 : (1<<4)) |
+           (PINE&(1<<6) ? 0 : (1<<3)) |
+           (PIND&(1<<7) ? 0 : (1<<2)) |
+           (PINC&(1<<6) ? 0 : (1<<1)) |
+           (PIND&(1<<4) ? 0 : (1<<0));
 }
 
 /* Row pin configuration
